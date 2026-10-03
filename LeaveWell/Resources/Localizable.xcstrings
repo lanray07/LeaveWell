@@ -1,0 +1,4483 @@
+{
+  "sourceLanguage": "en-GB",
+  "strings": {
+    "A calm move starts here.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A calm move starts here."
+          }
+        }
+      }
+    },
+    "A little help with your move.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A little help with your move."
+          }
+        }
+      }
+    },
+    "About LeaveWell": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About LeaveWell"
+          }
+        }
+      }
+    },
+    "AccentColor": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AccentColor"
+          }
+        }
+      }
+    },
+    "Access item": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Access item"
+          }
+        }
+      }
+    },
+    "Access item recorded": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Access item recorded"
+          }
+        }
+      }
+    },
+    "Add": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add"
+          }
+        }
+      }
+    },
+    "Add a record or try a different search.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add a record or try a different search."
+          }
+        }
+      }
+    },
+    "Add a room note": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add a room note"
+          }
+        }
+      }
+    },
+    "Add access item": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add access item"
+          }
+        }
+      }
+    },
+    "Add access item photograph": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add access item photograph"
+          }
+        }
+      }
+    },
+    "Add another property": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add another property"
+          }
+        }
+      }
+    },
+    "Add any proposed deductions": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add any proposed deductions"
+          }
+        }
+      }
+    },
+    "Add evidence": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add evidence"
+          }
+        }
+      }
+    },
+    "Add item": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add item"
+          }
+        }
+      }
+    },
+    "Add meter photograph": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add meter photograph"
+          }
+        }
+      }
+    },
+    "Add meter reading": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add meter reading"
+          }
+        }
+      }
+    },
+    "Add reading": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add reading"
+          }
+        }
+      }
+    },
+    "Add rooms in property details to start your walkthrough.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add rooms in property details to start your walkthrough."
+          }
+        }
+      }
+    },
+    "Add supporting records": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add supporting records"
+          }
+        }
+      }
+    },
+    "Add your property, choose your rooms, and take it one step at a time.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add your property, choose your rooms, and take it one step at a time."
+          }
+        }
+      }
+    },
+    "Added by": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Added by"
+          }
+        }
+      }
+    },
+    "Address": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Address"
+          }
+        }
+      }
+    },
+    "After handover": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "After handover"
+          }
+        }
+      }
+    },
+    "All evidence": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All evidence"
+          }
+        }
+      }
+    },
+    "All selected room checks have been reviewed. Review your evidence before preparing the report.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All selected room checks have been reviewed. Review your evidence before preparing the report."
+          }
+        }
+      }
+    },
+    "An organised record, ready to share.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An organised record, ready to share."
+          }
+        }
+      }
+    },
+    "An original evidence file is missing. The record has been kept.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An original evidence file is missing. The record has been kept."
+          }
+        }
+      }
+    },
+    "An original file failed its integrity check. Export was stopped.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An original file failed its integrity check. Export was stopped."
+          }
+        }
+      }
+    },
+    "Answers come from this record. The assistant can show missing room checks, meter records, keys and matching evidence.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Answers come from this record. The assistant can show missing room checks, meter records, keys and matching evidence."
+          }
+        }
+      }
+    },
+    "Ask LeaveWell": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ask LeaveWell"
+          }
+        }
+      }
+    },
+    "Back door key": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back door key"
+          }
+        }
+      }
+    },
+    "Balcony": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Balcony"
+          }
+        }
+      }
+    },
+    "Basin": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Basin"
+          }
+        }
+      }
+    },
+    "Bath / shower": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bath / shower"
+          }
+        }
+      }
+    },
+    "Bathroom": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bathroom"
+          }
+        }
+      }
+    },
+    "Bedroom": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bedroom"
+          }
+        }
+      }
+    },
+    "Boundaries": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Boundaries"
+          }
+        }
+      }
+    },
+    "Building fob": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Building fob"
+          }
+        }
+      }
+    },
+    "Camera access is disabled. You can import evidence instead.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Camera access is disabled. You can import evidence instead."
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        }
+      }
+    },
+    "Capture a wide photograph from the doorway. Then work through the details below.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Capture a wide photograph from the doorway. Then work through the details below."
+          }
+        }
+      }
+    },
+    "Captured": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Captured"
+          }
+        }
+      }
+    },
+    "Ceiling": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ceiling"
+          }
+        }
+      }
+    },
+    "Check key-return requirements": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check key-return requirements"
+          }
+        }
+      }
+    },
+    "Check unresolved repairs": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check unresolved repairs"
+          }
+        }
+      }
+    },
+    "Checking and exporting originals…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checking and exporting originals…"
+          }
+        }
+      }
+    },
+    "Checking originals and preparing report…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checking originals and preparing report…"
+          }
+        }
+      }
+    },
+    "Checklist review is recorded by the user and does not certify the property condition.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checklist review is recorded by the user and does not certify the property condition."
+          }
+        }
+      }
+    },
+    "Checklist updated": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checklist updated"
+          }
+        }
+      }
+    },
+    "Checkout appointment": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checkout appointment"
+          }
+        }
+      }
+    },
+    "Checkout appointment arranged": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checkout appointment arranged"
+          }
+        }
+      }
+    },
+    "Choose from library": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose from library"
+          }
+        }
+      }
+    },
+    "Cleaning and supporting documents": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cleaning and supporting documents"
+          }
+        }
+      }
+    },
+    "Cloud backup and co-tenant collaboration are not available in this build. Export a copy before changing devices. Losing this device may mean losing your records.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cloud backup and co-tenant collaboration are not available in this build. Export a copy before changing devices. Losing this device may mean losing your records."
+          }
+        }
+      }
+    },
+    "Collect receipts": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Collect receipts"
+          }
+        }
+      }
+    },
+    "Complete": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Complete"
+          }
+        }
+      }
+    },
+    "Complete cleaning": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Complete cleaning"
+          }
+        }
+      }
+    },
+    "Complete walkthrough": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Complete walkthrough"
+          }
+        }
+      }
+    },
+    "Completion summary": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Completion summary"
+          }
+        }
+      }
+    },
+    "Condition": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Condition"
+          }
+        }
+      }
+    },
+    "Confirm checkout arrangements": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirm checkout arrangements"
+          }
+        }
+      }
+    },
+    "Consider cleaning arrangements": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consider cleaning arrangements"
+          }
+        }
+      }
+    },
+    "Contents": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contents"
+          }
+        }
+      }
+    },
+    "Continue": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continue"
+          }
+        }
+      }
+    },
+    "Contributor": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contributor"
+          }
+        }
+      }
+    },
+    "Country": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Country"
+          }
+        }
+      }
+    },
+    "Create a move-out record": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Create a move-out record"
+          }
+        }
+      }
+    },
+    "Create an organised record of your rental property's condition before handing back the keys.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Create an organised record of your rental property's condition before handing back the keys."
+          }
+        }
+      }
+    },
+    "Create my move-out record": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Create my move-out record"
+          }
+        }
+      }
+    },
+    "Created": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Created"
+          }
+        }
+      }
+    },
+    "Cupboards": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cupboards"
+          }
+        }
+      }
+    },
+    "Current photograph": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Current photograph"
+          }
+        }
+      }
+    },
+    "Custom": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Custom"
+          }
+        }
+      }
+    },
+    "Custom meter type": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Custom meter type"
+          }
+        }
+      }
+    },
+    "Custom room name": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Custom room name"
+          }
+        }
+      }
+    },
+    "Declaration": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Declaration"
+          }
+        }
+      }
+    },
+    "Declaration and record information": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Declaration and record information"
+          }
+        }
+      }
+    },
+    "Delete evidence": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete evidence"
+          }
+        }
+      }
+    },
+    "Delete record": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete record"
+          }
+        }
+      }
+    },
+    "Delete this evidence and its original file?": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete this evidence and its original file?"
+          }
+        }
+      }
+    },
+    "Delete this record and all its evidence? This cannot be undone.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete this record and all its evidence? This cannot be undone."
+          }
+        }
+      }
+    },
+    "Deposit amount": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deposit amount"
+          }
+        }
+      }
+    },
+    "Deposit scheme": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deposit scheme"
+          }
+        }
+      }
+    },
+    "Describe what you can see": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Describe what you can see"
+          }
+        }
+      }
+    },
+    "Describe what you documented": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Describe what you documented"
+          }
+        }
+      }
+    },
+    "Description updated": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Description updated"
+          }
+        }
+      }
+    },
+    "Details": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Details"
+          }
+        }
+      }
+    },
+    "Did I record my keys?": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Did I record my keys?"
+          }
+        }
+      }
+    },
+    "Dishwasher": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dishwasher"
+          }
+        }
+      }
+    },
+    "Document": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Document"
+          }
+        }
+      }
+    },
+    "Document vault": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Document vault"
+          }
+        }
+      }
+    },
+    "Doors": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Doors"
+          }
+        }
+      }
+    },
+    "Editable description": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editable description"
+          }
+        }
+      }
+    },
+    "Electricity": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Electricity"
+          }
+        }
+      }
+    },
+    "Enable move-out reminders": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enable move-out reminders"
+          }
+        }
+      }
+    },
+    "England": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "England"
+          }
+        }
+      }
+    },
+    "Enter the digits above, then confirm them against the meter.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter the digits above, then confirm them against the meter."
+          }
+        }
+      }
+    },
+    "Entrance / Hallway": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entrance / Hallway"
+          }
+        }
+      }
+    },
+    "Evidence added": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evidence added"
+          }
+        }
+      }
+    },
+    "Evidence deleted": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evidence deleted"
+          }
+        }
+      }
+    },
+    "Evidence details": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evidence details"
+          }
+        }
+      }
+    },
+    "Evidence timeline": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evidence timeline"
+          }
+        }
+      }
+    },
+    "Excluded from report": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Excluded from report"
+          }
+        }
+      }
+    },
+    "Export all records and original files": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Export all records and original files"
+          }
+        }
+      }
+    },
+    "File created": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "File created"
+          }
+        }
+      }
+    },
+    "Final day": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Final day"
+          }
+        }
+      }
+    },
+    "Find my cleaning receipt.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Find my cleaning receipt."
+          }
+        }
+      }
+    },
+    "Find what is still to do": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Find what is still to do"
+          }
+        }
+      }
+    },
+    "Fixtures": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fixtures"
+          }
+        }
+      }
+    },
+    "Flat": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flat"
+          }
+        }
+      }
+    },
+    "Flooring": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flooring"
+          }
+        }
+      }
+    },
+    "Fridge / freezer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fridge / freezer"
+          }
+        }
+      }
+    },
+    "Front door key": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Front door key"
+          }
+        }
+      }
+    },
+    "Furnished": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Furnished"
+          }
+        }
+      }
+    },
+    "Furniture": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Furniture"
+          }
+        }
+      }
+    },
+    "GB": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "GB"
+          }
+        }
+      }
+    },
+    "Garage": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Garage"
+          }
+        }
+      }
+    },
+    "Garage remote": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Garage remote"
+          }
+        }
+      }
+    },
+    "Garden": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Garden"
+          }
+        }
+      }
+    },
+    "Gas": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gas"
+          }
+        }
+      }
+    },
+    "Generate PDF report": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Generate PDF report"
+          }
+        }
+      }
+    },
+    "Generate report": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Generate report"
+          }
+        }
+      }
+    },
+    "Get Started": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Get Started"
+          }
+        }
+      }
+    },
+    "Ground surface": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ground surface"
+          }
+        }
+      }
+    },
+    "Guided walkthrough": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guided walkthrough"
+          }
+        }
+      }
+    },
+    "Handed over": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Handed over"
+          }
+        }
+      }
+    },
+    "Handed over at": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Handed over at"
+          }
+        }
+      }
+    },
+    "Handover": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Handover"
+          }
+        }
+      }
+    },
+    "Handover method": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Handover method"
+          }
+        }
+      }
+    },
+    "Handover not recorded": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Handover not recorded"
+          }
+        }
+      }
+    },
+    "Have I recorded the electricity meter?": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Have I recorded the electricity meter?"
+          }
+        }
+      }
+    },
+    "Heating": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heating"
+          }
+        }
+      }
+    },
+    "Hob": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hob"
+          }
+        }
+      }
+    },
+    "House": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "House"
+          }
+        }
+      }
+    },
+    "I could not find matching evidence. Try a room, label, or words from your note.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I could not find matching evidence. Try a room, label, or words from your note."
+          }
+        }
+      }
+    },
+    "I have checked the reading": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I have checked the reading"
+          }
+        }
+      }
+    },
+    "I have reviewed these details": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I have reviewed these details"
+          }
+        }
+      }
+    },
+    "Import files": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Import files"
+          }
+        }
+      }
+    },
+    "Imported": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imported"
+          }
+        }
+      }
+    },
+    "Include deposit details": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Include deposit details"
+          }
+        }
+      }
+    },
+    "Include in report": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Include in report"
+          }
+        }
+      }
+    },
+    "Include landlord / agent contact": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Include landlord / agent contact"
+          }
+        }
+      }
+    },
+    "Include my declaration": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Include my declaration"
+          }
+        }
+      }
+    },
+    "Included evidence": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Included evidence"
+          }
+        }
+      }
+    },
+    "Incomplete": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Incomplete"
+          }
+        }
+      }
+    },
+    "Introduction": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Introduction"
+          }
+        }
+      }
+    },
+    "Inventory or photograph": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inventory or photograph"
+          }
+        }
+      }
+    },
+    "Inventory, receipts and correspondence": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inventory, receipts and correspondence"
+          }
+        }
+      }
+    },
+    "Issue documented": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Issue documented"
+          }
+        }
+      }
+    },
+    "Item name": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Item name"
+          }
+        }
+      }
+    },
+    "Keep the displayed digits, including leading zeroes. Add a photograph and confirm the reading yourself.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep the displayed digits, including leading zeroes. Add a photograph and confirm the reading yourself."
+          }
+        }
+      }
+    },
+    "Keep your photos, notes, meter readings and documents organised in one professional move-out report.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep your photos, notes, meter readings and documents organised in one professional move-out report."
+          }
+        }
+      }
+    },
+    "Key handover recorded": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Key handover recorded"
+          }
+        }
+      }
+    },
+    "Key-return method": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Key-return method"
+          }
+        }
+      }
+    },
+    "Keys & access": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keys & access"
+          }
+        }
+      }
+    },
+    "Keys and fobs": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keys and fobs"
+          }
+        }
+      }
+    },
+    "Kitchen": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kitchen"
+          }
+        }
+      }
+    },
+    "Know what to capture": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Know what to capture"
+          }
+        }
+      }
+    },
+    "Label": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Label"
+          }
+        }
+      }
+    },
+    "Label or category": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Label or category"
+          }
+        }
+      }
+    },
+    "Landlord / agent contact": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Landlord / agent contact"
+          }
+        }
+      }
+    },
+    "Landlord / agent name": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Landlord / agent name"
+          }
+        }
+      }
+    },
+    "Language": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Language"
+          }
+        }
+      }
+    },
+    "LeaveWell": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeaveWell"
+          }
+        }
+      }
+    },
+    "LeaveWell assistant": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeaveWell assistant"
+          }
+        }
+      }
+    },
+    "LeaveWell follows your device language. English is used where a reviewed translation is not available.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeaveWell follows your device language. English is used where a reviewed translation is not available."
+          }
+        }
+      }
+    },
+    "LeaveWell guides you room by room so important details don't get forgotten.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeaveWell guides you room by room so important details don't get forgotten."
+          }
+        }
+      }
+    },
+    "LeaveWell onboarding": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeaveWell onboarding"
+          }
+        }
+      }
+    },
+    "LeaveWell organises evidence. It does not make legal decisions.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeaveWell organises evidence. It does not make legal decisions."
+          }
+        }
+      }
+    },
+    "LeaveWell reminder": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeaveWell reminder"
+          }
+        }
+      }
+    },
+    "LeaveWellExports": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeaveWellExports"
+          }
+        }
+      }
+    },
+    "Living room": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Living room"
+          }
+        }
+      }
+    },
+    "Localizable": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Localizable"
+          }
+        }
+      }
+    },
+    "Lock with Face ID or device passcode": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lock with Face ID or device passcode"
+          }
+        }
+      }
+    },
+    "Machine transcription; review against the recording.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Machine transcription; review against the recording."
+          }
+        }
+      }
+    },
+    "Mailbox key": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mailbox key"
+          }
+        }
+      }
+    },
+    "Mark a task complete when you have reviewed it. Evidence and checklist completion are tracked separately.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mark a task complete when you have reviewed it. Evidence and checklist completion are tracked separately."
+          }
+        }
+      }
+    },
+    "Mark reviewed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mark reviewed"
+          }
+        }
+      }
+    },
+    "Matching records are shown below.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Matching records are shown below."
+          }
+        }
+      }
+    },
+    "Meter": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meter"
+          }
+        }
+      }
+    },
+    "Meter details": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meter details"
+          }
+        }
+      }
+    },
+    "Meter photograph": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meter photograph"
+          }
+        }
+      }
+    },
+    "Meter reading recorded": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meter reading recorded"
+          }
+        }
+      }
+    },
+    "Meter readings": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meter readings"
+          }
+        }
+      }
+    },
+    "Meter type": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meter type"
+          }
+        }
+      }
+    },
+    "Meters and access items": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meters and access items"
+          }
+        }
+      }
+    },
+    "Microphone access is disabled. You can type your note instead.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Microphone access is disabled. You can type your note instead."
+          }
+        }
+      }
+    },
+    "Move out organised.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move out organised."
+          }
+        }
+      }
+    },
+    "Move out organised. Leave with the evidence.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move out organised. Leave with the evidence."
+          }
+        }
+      }
+    },
+    "Move out with confidence": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move out with confidence"
+          }
+        }
+      }
+    },
+    "Move slowly and capture the entire room. Narration is included when microphone access is allowed.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move slowly and capture the entire room. Narration is included when microphone access is allowed."
+          }
+        }
+      }
+    },
+    "Move-Out Condition Record": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move-Out Condition Record"
+          }
+        }
+      }
+    },
+    "Move-in": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move-in"
+          }
+        }
+      }
+    },
+    "Move-in vs Move-out": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move-in vs Move-out"
+          }
+        }
+      }
+    },
+    "Move-out": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move-out"
+          }
+        }
+      }
+    },
+    "Move-out date": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move-out date"
+          }
+        }
+      }
+    },
+    "Move-out readiness": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move-out readiness"
+          }
+        }
+      }
+    },
+    "Move-out summary": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move-out summary"
+          }
+        }
+      }
+    },
+    "My move": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My move"
+          }
+        }
+      }
+    },
+    "No access items are recorded yet.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No access items are recorded yet."
+          }
+        }
+      }
+    },
+    "No access items recorded.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No access items recorded."
+          }
+        }
+      }
+    },
+    "No declaration has been made by the user.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No declaration has been made by the user."
+          }
+        }
+      }
+    },
+    "No evidence here yet": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No evidence here yet"
+          }
+        }
+      }
+    },
+    "No evidence included for this room.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No evidence included for this room."
+          }
+        }
+      }
+    },
+    "No issue noted": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No issue noted"
+          }
+        }
+      }
+    },
+    "No matching meter reading is recorded yet.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No matching meter reading is recorded yet."
+          }
+        }
+      }
+    },
+    "No meter readings recorded.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No meter readings recorded."
+          }
+        }
+      }
+    },
+    "No photograph selected": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No photograph selected"
+          }
+        }
+      }
+    },
+    "No reading was found. Enter the digits shown on the meter.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No reading was found. Enter the digits shown on the meter."
+          }
+        }
+      }
+    },
+    "No rooms have been added to this record.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No rooms have been added to this record."
+          }
+        }
+      }
+    },
+    "Northern Ireland": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Northern Ireland"
+          }
+        }
+      }
+    },
+    "Not applicable": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not applicable"
+          }
+        }
+      }
+    },
+    "Notes": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notes"
+          }
+        }
+      }
+    },
+    "Notifications are disabled. You can enable them in iOS Settings.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notifications are disabled. You can enable them in iOS Settings."
+          }
+        }
+      }
+    },
+    "OK": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        }
+      }
+    },
+    "OTHER": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OTHER"
+          }
+        }
+      }
+    },
+    "On-device transcription is unavailable for this language. Your audio stays on this device; type a note instead.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On-device transcription is unavailable for this language. Your audio stays on this device; type a note instead."
+          }
+        }
+      }
+    },
+    "One week before": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "One week before"
+          }
+        }
+      }
+    },
+    "Open iOS Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open iOS Settings"
+          }
+        }
+      }
+    },
+    "Opening your records…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opening your records…"
+          }
+        }
+      }
+    },
+    "Optional details": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Optional details"
+          }
+        }
+      }
+    },
+    "Organise supporting documents": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Organise supporting documents"
+          }
+        }
+      }
+    },
+    "Original evidence": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Original evidence"
+          }
+        }
+      }
+    },
+    "Original file": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Original file"
+          }
+        }
+      }
+    },
+    "Original files": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Original files"
+          }
+        }
+      }
+    },
+    "Original files are preserved. Imported files are labelled with import time; an unknown capture time is left unknown.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Original files are preserved. Imported files are labelled with import time; an unknown capture time is left unknown."
+          }
+        }
+      }
+    },
+    "Original inventory": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Original inventory"
+          }
+        }
+      }
+    },
+    "Original transcription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Original transcription"
+          }
+        }
+      }
+    },
+    "Other": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other"
+          }
+        }
+      }
+    },
+    "Other country": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other country"
+          }
+        }
+      }
+    },
+    "Other fixtures": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other fixtures"
+          }
+        }
+      }
+    },
+    "Other region": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other region"
+          }
+        }
+      }
+    },
+    "Oven": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oven"
+          }
+        }
+      }
+    },
+    "Page": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Page"
+          }
+        }
+      }
+    },
+    "Parking permit": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parking permit"
+          }
+        }
+      }
+    },
+    "Parking space": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parking space"
+          }
+        }
+      }
+    },
+    "Photo": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo"
+          }
+        }
+      }
+    },
+    "Photograph": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photograph"
+          }
+        }
+      }
+    },
+    "Photograph every room": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photograph every room"
+          }
+        }
+      }
+    },
+    "Photograph fixtures": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photograph fixtures"
+          }
+        }
+      }
+    },
+    "Please confirm the reading matches the meter.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Please confirm the reading matches the meter."
+          }
+        }
+      }
+    },
+    "Prepare evidence report": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prepare evidence report"
+          }
+        }
+      }
+    },
+    "Prepayment": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prepayment"
+          }
+        }
+      }
+    },
+    "Preview report": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preview report"
+          }
+        }
+      }
+    },
+    "Privacy & security": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacy & security"
+          }
+        }
+      }
+    },
+    "Private by default. Saved on device.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Private by default. Saved on device."
+          }
+        }
+      }
+    },
+    "Property details": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Property details"
+          }
+        }
+      }
+    },
+    "Property details updated": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Property details updated"
+          }
+        }
+      }
+    },
+    "Property nickname": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Property nickname"
+          }
+        }
+      }
+    },
+    "Property type": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Property type"
+          }
+        }
+      }
+    },
+    "Quantity": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quantity"
+          }
+        }
+      }
+    },
+    "Radiators": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Radiators"
+          }
+        }
+      }
+    },
+    "Read aloud": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Read aloud"
+          }
+        }
+      }
+    },
+    "Reading": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading"
+          }
+        }
+      }
+    },
+    "Reading confirmed by the user.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading confirmed by the user."
+          }
+        }
+      }
+    },
+    "Reading not confirmed.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading not confirmed."
+          }
+        }
+      }
+    },
+    "Reading photograph on device…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading photograph on device…"
+          }
+        }
+      }
+    },
+    "Recipient": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recipient"
+          }
+        }
+      }
+    },
+    "Record a voice note": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record a voice note"
+          }
+        }
+      }
+    },
+    "Record created": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record created"
+          }
+        }
+      }
+    },
+    "Record each access item and who received it. Only mark handover when it has happened.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record each access item and who received it. Only mark handover when it has happened."
+          }
+        }
+      }
+    },
+    "Record information": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record information"
+          }
+        }
+      }
+    },
+    "Record key handover": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record key handover"
+          }
+        }
+      }
+    },
+    "Record keys and fobs": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record keys and fobs"
+          }
+        }
+      }
+    },
+    "Record meters": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record meters"
+          }
+        }
+      }
+    },
+    "Record room walkthrough": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record room walkthrough"
+          }
+        }
+      }
+    },
+    "Record type": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record type"
+          }
+        }
+      }
+    },
+    "Record unavailable": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record unavailable"
+          }
+        }
+      }
+    },
+    "Recorded": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recorded"
+          }
+        }
+      }
+    },
+    "Recorded at": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recorded at"
+          }
+        }
+      }
+    },
+    "Recording could not start. Please try again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recording could not start. Please try again."
+          }
+        }
+      }
+    },
+    "Recording… Tap stop when you have finished.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recording… Tap stop when you have finished."
+          }
+        }
+      }
+    },
+    "Records and originals are stored on this device with iOS file protection. No tenancy data is sent to advertising or analytics services.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Records and originals are stored on this device with iOS file protection. No tenancy data is sent to advertising or analytics services."
+          }
+        }
+      }
+    },
+    "Records unavailable": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Records unavailable"
+          }
+        }
+      }
+    },
+    "Region": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Region"
+          }
+        }
+      }
+    },
+    "Remember your final meter readings.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remember your final meter readings."
+          }
+        }
+      }
+    },
+    "Reminders enabled for future dates.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reminders enabled for future dates."
+          }
+        }
+      }
+    },
+    "Reminders turned off.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reminders turned off."
+          }
+        }
+      }
+    },
+    "Remove belongings": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove belongings"
+          }
+        }
+      }
+    },
+    "Report created": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Report created"
+          }
+        }
+      }
+    },
+    "Retry": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retry"
+          }
+        }
+      }
+    },
+    "Review and edit the text before saving. Your voice recording will also be preserved.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review and edit the text before saving. Your voice recording will also be preserved."
+          }
+        }
+      }
+    },
+    "Review original inventory": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review original inventory"
+          }
+        }
+      }
+    },
+    "Review previously reported issues": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review previously reported issues"
+          }
+        }
+      }
+    },
+    "Review your evidence before exporting. Anyone you share the PDF with can keep a copy.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review your evidence before exporting. Anyone you share the PDF with can keep a copy."
+          }
+        }
+      }
+    },
+    "Review your inventory alongside current evidence": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review your inventory alongside current evidence"
+          }
+        }
+      }
+    },
+    "Review your original inventory alongside the current evidence. Add your own factual observations.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review your original inventory alongside the current evidence. Add your own factual observations."
+          }
+        }
+      }
+    },
+    "Review your original inventory.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review your original inventory."
+          }
+        }
+      }
+    },
+    "Reviewed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reviewed"
+          }
+        }
+      }
+    },
+    "Room": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Room"
+          }
+        }
+      }
+    },
+    "Room by room": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Room by room"
+          }
+        }
+      }
+    },
+    "Room checklist updated": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Room checklist updated"
+          }
+        }
+      }
+    },
+    "Room index": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Room index"
+          }
+        }
+      }
+    },
+    "Room note": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Room note"
+          }
+        }
+      }
+    },
+    "Room records": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Room records"
+          }
+        }
+      }
+    },
+    "Rooms and appliances": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rooms and appliances"
+          }
+        }
+      }
+    },
+    "Rooms to document": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rooms to document"
+          }
+        }
+      }
+    },
+    "Save": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save"
+          }
+        }
+      }
+    },
+    "Save changes": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save changes"
+          }
+        }
+      }
+    },
+    "Save communications": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save communications"
+          }
+        }
+      }
+    },
+    "Save comparison note": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save comparison note"
+          }
+        }
+      }
+    },
+    "Saved on device": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saved on device"
+          }
+        }
+      }
+    },
+    "Saving your evidence…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saving your evidence…"
+          }
+        }
+      }
+    },
+    "Scan document": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scan document"
+          }
+        }
+      }
+    },
+    "Scotland": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scotland"
+          }
+        }
+      }
+    },
+    "Search labels, notes and rooms": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search labels, notes and rooms"
+          }
+        }
+      }
+    },
+    "Search your case or ask what is missing": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search your case or ask what is missing"
+          }
+        }
+      }
+    },
+    "Search your photos, notes and files": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search your photos, notes and files"
+          }
+        }
+      }
+    },
+    "See your move-out plan": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See your move-out plan"
+          }
+        }
+      }
+    },
+    "Select a record": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select a record"
+          }
+        }
+      }
+    },
+    "Serial number": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serial number"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        }
+      }
+    },
+    "Share or save PDF": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share or save PDF"
+          }
+        }
+      }
+    },
+    "Sharing controls": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sharing controls"
+          }
+        }
+      }
+    },
+    "Shed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shed"
+          }
+        }
+      }
+    },
+    "Sink": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sink"
+          }
+        }
+      }
+    },
+    "Sockets": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sockets"
+          }
+        }
+      }
+    },
+    "Something needs attention": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Something needs attention"
+          }
+        }
+      }
+    },
+    "Speak your question": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speak your question"
+          }
+        }
+      }
+    },
+    "Speech recognition is disabled. Your recording is available and you can type a note.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speech recognition is disabled. Your recording is available and you can type a note."
+          }
+        }
+      }
+    },
+    "Start with the whole room": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start with the whole room"
+          }
+        }
+      }
+    },
+    "Still to review:": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Still to review:"
+          }
+        }
+      }
+    },
+    "Stop and transcribe": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stop and transcribe"
+          }
+        }
+      }
+    },
+    "Storage": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Storage"
+          }
+        }
+      }
+    },
+    "Studio": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Studio"
+          }
+        }
+      }
+    },
+    "Suggest reading from photograph": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suggest reading from photograph"
+          }
+        }
+      }
+    },
+    "Suggested digits may include a serial number. Select a draft, then check it against the meter.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suggested digits may include a serial number. Select a draft, then check it against the meter."
+          }
+        }
+      }
+    },
+    "Supporting documents and other records": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supporting documents and other records"
+          }
+        }
+      }
+    },
+    "Take a photograph": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Take a photograph"
+          }
+        }
+      }
+    },
+    "Tenancy end date": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tenancy end date"
+          }
+        }
+      }
+    },
+    "Tenant": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tenant"
+          }
+        }
+      }
+    },
+    "Tenants": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tenants"
+          }
+        }
+      }
+    },
+    "Text note": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Text note"
+          }
+        }
+      }
+    },
+    "The camera is unavailable. Choose a file from your library instead.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The camera is unavailable. Choose a file from your library instead."
+          }
+        }
+      }
+    },
+    "The evidence path could not be opened safely.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The evidence path could not be opened safely."
+          }
+        }
+      }
+    },
+    "The export contains a JSON record and original files. Save all items together. Original filenames in the JSON use an originals/ folder; place the exported media in that folder when archiving.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The export contains a JSON record and original files. Save all items together. Original filenames in the JSON use an originals/ folder; place the exported media in that folder when archiving."
+          }
+        }
+      }
+    },
+    "The finishing details": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The finishing details"
+          }
+        }
+      }
+    },
+    "The property address, tenant name and contributor names appear in the report. Imported documents may contain private information.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The property address, tenant name and contributor names appear in the report. Imported documents may contain private information."
+          }
+        }
+      }
+    },
+    "The purchase could not be verified. Please try restoring purchases.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The purchase could not be verified. Please try restoring purchases."
+          }
+        }
+      }
+    },
+    "The selected file is empty.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The selected file is empty."
+          }
+        }
+      }
+    },
+    "This PDF is a snapshot. Regenerate it after changing evidence or sharing controls.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This PDF is a snapshot. Regenerate it after changing evidence or sharing controls."
+          }
+        }
+      }
+    },
+    "This record is unavailable.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This record is unavailable."
+          }
+        }
+      }
+    },
+    "This report organises information supplied by the user. It does not determine legal liability, fair wear and tear, or the outcome of a deposit dispute.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This report organises information supplied by the user. It does not determine legal liability, fair wear and tear, or the outcome of a deposit dispute."
+          }
+        }
+      }
+    },
+    "Three weeks before": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Three weeks before"
+          }
+        }
+      }
+    },
+    "Timeline includes records selected for this report.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Timeline includes records selected for this report."
+          }
+        }
+      }
+    },
+    "Timestamps are recorded from the device clock. Imported items may have no known capture time. SHA-256 hashes identify stored file bytes; they do not certify when, where or by whom evidence was captured.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Timestamps are recorded from the device clock. Imported items may have no known capture time. SHA-256 hashes identify stored file bytes; they do not certify when, where or by whom evidence was captured."
+          }
+        }
+      }
+    },
+    "To the best of my knowledge, this record reflects the property and information I documented at the stated dates and times.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To the best of my knowledge, this record reflects the property and information I documented at the stated dates and times."
+          }
+        }
+      }
+    },
+    "Toilet": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toilet"
+          }
+        }
+      }
+    },
+    "Transcribing on device…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transcribing on device…"
+          }
+        }
+      }
+    },
+    "Transcription timed out. Your recording is still available.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transcription timed out. Your recording is still available."
+          }
+        }
+      }
+    },
+    "Turn evidence into a report": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn evidence into a report"
+          }
+        }
+      }
+    },
+    "Turn off reminders": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn off reminders"
+          }
+        }
+      }
+    },
+    "Type": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Type"
+          }
+        }
+      }
+    },
+    "Unable to open LeaveWell": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unable to open LeaveWell"
+          }
+        }
+      }
+    },
+    "Undo review": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Undo review"
+          }
+        }
+      }
+    },
+    "United Kingdom": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "United Kingdom"
+          }
+        }
+      }
+    },
+    "Unknown": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unknown"
+          }
+        }
+      }
+    },
+    "Unlock LeaveWell": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlock LeaveWell"
+          }
+        }
+      }
+    },
+    "Unlock your private move-out records.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlock your private move-out records."
+          }
+        }
+      }
+    },
+    "Updated": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Updated"
+          }
+        }
+      }
+    },
+    "User note": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "User note"
+          }
+        }
+      }
+    },
+    "Utility room": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utility room"
+          }
+        }
+      }
+    },
+    "Ventilation": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ventilation"
+          }
+        }
+      }
+    },
+    "Version": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version"
+          }
+        }
+      }
+    },
+    "Video": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Video"
+          }
+        }
+      }
+    },
+    "Video and audio are indexed in this report. Share original media separately using data export.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Video and audio are indexed in this report. Share original media separately using data export."
+          }
+        }
+      }
+    },
+    "View access item evidence": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "View access item evidence"
+          }
+        }
+      }
+    },
+    "View meter evidence": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "View meter evidence"
+          }
+        }
+      }
+    },
+    "View original file": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "View original file"
+          }
+        }
+      }
+    },
+    "Voice meter note": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voice meter note"
+          }
+        }
+      }
+    },
+    "Voice recording": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voice recording"
+          }
+        }
+      }
+    },
+    "Wales": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wales"
+          }
+        }
+      }
+    },
+    "Walls": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Walls"
+          }
+        }
+      }
+    },
+    "Washing machine": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Washing machine"
+          }
+        }
+      }
+    },
+    "Water": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Water"
+          }
+        }
+      }
+    },
+    "What does this record show?": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What does this record show?"
+          }
+        }
+      }
+    },
+    "Which rooms are incomplete?": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Which rooms are incomplete?"
+          }
+        }
+      }
+    },
+    "Whole area": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Whole area"
+          }
+        }
+      }
+    },
+    "Whole room": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Whole room"
+          }
+        }
+      }
+    },
+    "Window key": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Window key"
+          }
+        }
+      }
+    },
+    "Windows": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Windows"
+          }
+        }
+      }
+    },
+    "Worktops": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Worktops"
+          }
+        }
+      }
+    },
+    "Your data": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your data"
+          }
+        }
+      }
+    },
+    "Your dates": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your dates"
+          }
+        }
+      }
+    },
+    "Your evidence report": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your evidence report"
+          }
+        }
+      }
+    },
+    "Your evidence stays private": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your evidence stays private"
+          }
+        }
+      }
+    },
+    "Your final walkthrough is tomorrow.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your final walkthrough is tomorrow."
+          }
+        }
+      }
+    },
+    "Your home. Your evidence. Your privacy.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your home. Your evidence. Your privacy."
+          }
+        }
+      }
+    },
+    "Your move": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your move"
+          }
+        }
+      }
+    },
+    "Your move, in order": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your move, in order"
+          }
+        }
+      }
+    },
+    "Your move-out plan": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your move-out plan"
+          }
+        }
+      }
+    },
+    "Your move-out record": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your move-out record"
+          }
+        }
+      }
+    },
+    "Your name": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your name"
+          }
+        }
+      }
+    },
+    "Your next chapter, well documented.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your next chapter, well documented."
+          }
+        }
+      }
+    },
+    "Your notes": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your notes"
+          }
+        }
+      }
+    },
+    "Your observation": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your observation"
+          }
+        }
+      }
+    },
+    "Your property": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your property"
+          }
+        }
+      }
+    },
+    "Your records are locked. Try again when you are ready.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your records are locked. Try again when you are ready."
+          }
+        }
+      }
+    },
+    "Your records could not be opened. No records have been overwritten.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your records could not be opened. No records have been overwritten."
+          }
+        }
+      }
+    },
+    "Your records stay on this device. You choose what to include and when to share. Keep an export somewhere safe before changing or losing your phone.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your records stay on this device. You choose what to include and when to share. Keep an export somewhere safe before changing or losing your phone."
+          }
+        }
+      }
+    },
+    "Your report includes the evidence you selected, room records, readings, access items and supporting documents.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your report includes the evidence you selected, room records, readings, access items and supporting documents."
+          }
+        }
+      }
+    },
+    "access item records": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "access item records"
+          }
+        }
+      }
+    },
+    "evidence items": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "evidence items"
+          }
+        }
+      }
+    },
+    "meter readings": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "meter readings"
+          }
+        }
+      }
+    },
+    "rooms with evidence": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "rooms with evidence"
+          }
+        }
+      }
+    },
+    "supporting documents": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "supporting documents"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
