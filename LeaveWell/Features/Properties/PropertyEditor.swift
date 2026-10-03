@@ -8,6 +8,7 @@ struct PropertyEditor: View {
     @State private var customRoom = ""
     @State private var checkoutEnabled = false
     @State private var error: String?
+    @State private var busy = false
     private let editing: Bool
     init(record: MoveCase? = nil) {
         _draft = State(initialValue: record ?? MoveCase())
@@ -62,14 +63,16 @@ struct PropertyEditor: View {
                     }
                     if !editing { ForEach(draft.rooms) { Text($0.name) } }
                 }
-            }.navigationTitle(editing ? L("Property details") : L("Your move-out record"))
+            }.disabled(busy).navigationTitle(editing ? L("Property details") : L("Your move-out record"))
                 .toolbar {
-                    ToolbarItem(placement: .cancellationAction) { Button(L("Cancel")) { dismiss() } }
-                    ToolbarItem(placement: .confirmationAction) { Button(L("Save"), action: save).disabled(draft.nickname.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || draft.address.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty) }
-                }.errorAlert($error)
+                    ToolbarItem(placement: .cancellationAction) { Button(L("Cancel")) { dismiss() }.disabled(busy) }
+                    ToolbarItem(placement: .confirmationAction) { Button(L("Save"), action: save).disabled(busy || draft.nickname.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || draft.address.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty) }
+                }.interactiveDismissDisabled(busy).errorAlert($error)
         }
     }
     private func save() {
+        guard !busy else { return }
+        busy = true
         do {
             if !checkoutEnabled { draft.checkoutAt = nil }
             else if draft.checkoutAt == nil { draft.checkoutAt = draft.moveDate }
@@ -88,9 +91,10 @@ struct PropertyEditor: View {
                 try store.add(draft)
             }
             Task {
+                defer { busy = false }
                 do { try await ReminderService.refreshIfScheduled(draft); dismiss() }
                 catch { self.error = error.localizedDescription }
             }
-        } catch { self.error = error.localizedDescription }
+        } catch { busy = false; self.error = error.localizedDescription }
     }
 }
