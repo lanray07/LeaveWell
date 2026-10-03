@@ -3,14 +3,14 @@
   "appId": "6818834817",
   "bundleId": "com.LeaveWell.app",
   "version": "1.0",
-  "build": "22",
-  "buildId": "e2f33ee2-ff1e-4fc3-8977-79adcca85a60",
-  "sourceCommit": "4c27e8423cb2d5cc8c8fa71a8b2c7ff54323623b",
-  "githubRun": "https://github.com/lanray07/LeaveWell/actions/runs/37150860059",
-  "ipaSha256": "67d0c48fa8647c5b159ba56dc54e3794b810ca1095cb7abbee4c373c8dea5a04",
+  "build": "40",
+  "buildId": "7174b346-7c56-40a5-b9e7-27b611b2f876",
+  "sourceCommit": "cfc63818c26cacf5bbc85bf2e6491ce1351bdcc3",
+  "githubRun": "https://github.com/lanray07/LeaveWell/actions/runs/37154369603",
+  "ipaSha256": "8f28dab137d34d4fa8fdbb88f06b274e763e06c5d83adec8cc7c10bdc2c75396",
   "automatedChecks": {
     "coreTests": 7,
-    "iosServiceTests": 5,
+    "iosServiceTests": 14,
     "localizationTests": 5,
     "storeKitLifecycleTests": 6,
     "failures": 0
@@ -30,7 +30,7 @@
   "subscriptionDetailsPending": [],
   "paidAccessImplemented": true,
   "physicalDeviceQaComplete": false,
-  "purchaseVerification": "Six real StoreKit lifecycle tests passed on iOS 18.5 in run 37150860059, including purchase, restore, renewal, expiry, refund, cancellation, pending approval and invalid signature. Physical Apple sandbox-device testing remains pending.",
+  "purchaseVerification": "Six real StoreKit lifecycle tests passed on iOS 18.5 in run 37154369603, including purchase, restore, renewal, expiry, refund, cancellation, pending approval and invalid signature. Physical Apple sandbox-device testing remains pending.",
   "commercePrerequisites": {
     "paidAppsAgreement": "Active",
     "banking": "Active",
@@ -41,9 +41,13 @@
   "subscriptionProductsReviewState": "Ready for Review",
   "subscriptionGroupReviewState": "Ready for Review",
   "draftItems": [
-    "iOS App 1.0 (22)",
+    "iOS App 1.0 (40)",
     "LeaveWell Plus subscription group",
     "LeaveWell Plus Monthly",
     "LeaveWell Plus Annual"
-  ]
+  ],
+  "preSubmissionReview": "docs/PRE_SUBMISSION_REVIEW.md",
+  "draftPreparationRun": "https://github.com/lanray07/LeaveWell/actions/runs/37156674257",
+  "draftSubmissionId": "6f230d74-12ae-41bf-87c0-87f0434e9c96",
+  "draftProof": "proof/pre-submission-ready.png"
 }

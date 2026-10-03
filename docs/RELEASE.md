@@ -4,10 +4,10 @@
 
 | Area | Current behavior | Required before a complete premium release |
 |---|---|---|
-| Native app | SwiftUI iPhone/iPad project targeting iOS 18+, adaptive system controls; Xcode 26.6 app build, 12 core/service Swift tests, six real StoreKit tests on iOS 18.5 and five localization tests passed on GitHub | Broader simulator workflows, physical-device QA, designer review |
+| Native app | SwiftUI iPhone/iPad project targeting iOS 18+, adaptive system controls; Xcode 26.6 app build, 21 core/service Swift tests, six real StoreKit tests on iOS 18.5 and five localization tests passed on GitHub | Broader simulator workflows, physical-device QA, designer review |
 | Onboarding | Four steps with native symbol illustrations | Commission or generate the requested human renter illustration and report artwork |
 | Property setup | Main property/date/deposit/contact fields; GB regions or other jurisdiction | Full international country/region dataset and region-specific reviewed guidance |
-| Plan | Calendar-based checklist and optional reminders | Smarter notifications around actual handover, rescheduling on date changes |
+| Plan | Calendar-based checklist and optional reminders | Smarter notifications around actual handover; physical-device rescheduling/DST checks |
 | Guided capture | Fixture checks, multiple original imports, native camera | Custom AVFoundation grid, wide/detail presets, annotation derivatives |
 | Video | Native high-quality capture with narration, review and import | Dedicated pause/resume, narration editing and long-video lifecycle tests |
 | Voice | Local audio, optional on-device transcription, typed fallback | Broader natural-language navigation, structured voice field suggestions, voice/audio attachments to meters/keys |
@@ -19,7 +19,7 @@
 | Search | AND matching on room/name/notes/transcript/metadata | Document content extraction and semantic search |
 | Report | Paginated PDF, embedded images/PDF pages, original integrity checks, sharing toggles | Generated-PDF device visual QA, arbitrary imported document validation, photo orientation/large corpus stress tests |
 | Integrity | Write-once original descriptors, separate notes, hashes, distinct dates | Tamper-evident signed history, independent time attestation if ever offered, tested schema migration |
-| Privacy | iOS complete file protection, app lock, local-only storage, explicit exports/deletion | Final operator privacy/support policies and App Store privacy label review |
+| Privacy | iOS complete file protection, app lock, local-only storage, explicit exports/deletion | Physical-device lock/capture/export privacy verification; policies and published Data Not Collected label reviewed |
 | Cloud | Contracts only; UI truthfully says saved on device | Private authenticated backend, end-to-end encryption design, retries, conflict handling, per-file verified acknowledgements, remote deletion |
 | Collaboration | Contracts only | Invitations, scoped case roles, verified identity attribution, revocation and conflict tests |
 | Sharing links | Ordinary local PDF sharing only | Expiry/revocation/download-policy backend; never promise that existing downloads can be revoked |
@@ -27,13 +27,15 @@
 | Localization | English catalog plus gated translation workflow | Human-reviewed 16-language translation sets, localized permission prompts, plural variants, locale/date/RTL QA |
 | Account management | No account or credentials required | Sign in with Apple, Keychain tokens, account deletion, server-side erasure if connected edition ships |
 
+The current pre-submission review and fixes are documented in [PRE_SUBMISSION_REVIEW.md](PRE_SUBMISSION_REVIEW.md).
+
 ## Mac verification
 
 1. Regenerate the project and validate resources.
 2. Run core tests and iOS XCTest suite. Fix any SDK-specific type errors before running UI tests.
 3. On a clean simulator: complete onboarding, add an empty case, add custom rooms, review fixtures, add notes, restart and verify persistence.
 4. On a physical iPhone: deny and grant camera/microphone/speech permissions; capture originals; record voice and video; scan multi-page documents; import from Files and Photos (including iCloud-only items).
-5. Move in and out of the background during capture, transcription, file imports and biometric lock. Confirm no evidence disappears, pending work is not duplicated, and private snapshots are masked when app lock is enabled.
+5. Move in and out of the background during capture, transcription, file imports and biometric lock. Confirm no evidence disappears, pending work is not duplicated, and private snapshots are masked when app lock is enabled. Check camera, Quick Look and share-sheet presentations; with VoiceOver, confirm underlying evidence cannot be reached until unlocked.
 6. Change dates across UK DST boundaries. Verify reminders in Notification Settings and cancellation after deleting cases.
 7. OCR leading zeroes, decimal registers and serial numbers. Verify selection never bypasses confirmation.
 8. Create a report with long notes, landscape/portrait HEIC images, rotated PDFs, many rooms and excluded items. Review every page, captions, contents references, margins and missing-file errors.
@@ -42,4 +44,4 @@
 11. Share/export to Files and AirDrop, inspect all exported files, delete evidence and cases, restart and verify orphan-file reconciliation. Confirm no external copy is claimed to be deleted.
 12. Configure signing, owned bundle IDs, StoreKit products, support URL, privacy URL, screenshots, final artwork and App Store metadata. Archive and validate with Xcode before any upload.
 
-GitHub validation run: https://github.com/lanray07/LeaveWell/actions/runs/37141152860. The workflow resolves the existing LeaveWell app through a read-only App Store Connect lookup and uses Apple automatic provisioning/cloud signing for IPA export. A manual upload input validates and uploads the signed binary to App Store Connect. App Review submission and release are not automated.
+GitHub validation run: https://github.com/lanray07/LeaveWell/actions/runs/37154369603. The workflow resolves the existing LeaveWell app through a read-only App Store Connect lookup and uses Apple automatic provisioning/cloud signing for IPA export. A manual upload input validates and uploads the signed binary to App Store Connect. App Review submission and release are not automated.
