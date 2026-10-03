@@ -11,8 +11,8 @@ final class ReportTests: XCTestCase {
         let vault = try EvidenceVault(root: root)
         var record = MoveCase(); record.nickname = "Test property"; record.address = "Sample address"; record.tenant = "Test renter"
         let room = Room(name: "Kitchen", category: "Kitchen"); record.rooms = [room]
-        let visible = Evidence(roomID: room.id, kind: .note, label: "VISIBLE_RECORD", notes: String(repeating: "Long factual note. ", count: 900))
-        var hidden = Evidence(roomID: room.id, kind: .note, label: "EXCLUDED_SECRET_RECORD", notes: "SECRET_PRIVATE_NOTE")
+        let visible = Evidence(roomID: room.id, kind: .note, label: "Oven condition record", notes: String(repeating: "Long factual note. ", count: 900) + "\nFinal observation retained.")
+        var hidden = Evidence(roomID: room.id, kind: .note, label: "Excluded private record", notes: "Private excluded observation.")
         hidden.includedInReport = false; record.evidence = [visible, hidden]
         let url = try await ReportService().generate(record: record, options: ReportOptions(), vault: vault)
         let document = try XCTUnwrap(PDFDocument(url: url)); let text = try XCTUnwrap(document.string)
@@ -31,8 +31,10 @@ final class ReportTests: XCTestCase {
             }
         }
         XCTAssertGreaterThan(document.pageCount, 8)
-        XCTAssertTrue(text.contains("VISIBLE_RECORD"), "Selected evidence title is absent from extracted PDF text: \(text.prefix(4000))")
-        XCTAssertFalse(text.contains("EXCLUDED_SECRET_RECORD")); XCTAssertFalse(text.contains("SECRET_PRIVATE_NOTE"))
+        XCTAssertTrue(text.contains(visible.label), "Selected evidence title is absent from extracted PDF text: \(text.prefix(4000))")
+        XCTAssertTrue(text.contains(visible.reference))
+        XCTAssertTrue(text.contains("Final observation retained."), "Long notes must not be clipped at the final page.")
+        XCTAssertFalse(text.contains(hidden.label)); XCTAssertFalse(text.contains(hidden.notes)); XCTAssertFalse(text.contains(hidden.reference))
         XCTAssertTrue(text.contains(record.reference))
     }
     func testReportStopsForMissingOriginal() async throws {
