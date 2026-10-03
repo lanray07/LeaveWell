@@ -22,9 +22,9 @@ Artifacts are retained for seven days:
 - `LeaveWell-simulator-and-tests`: simulator application and `.xcresult` test results.
 - `LeaveWell-signed-IPA`: distribution IPA and debug symbols, after successful signing/export.
 
-The export destination is `export`, so this workflow does not upload to TestFlight or submit an App Store version. An App Store distribution IPA is intended for distribution through Apple and is not an ad-hoc device-install package. TestFlight upload can be added as an explicitly requested next step.
+The export destination is `export`. The optional **Validate and upload the signed build to App Store Connect** input validates and uploads that IPA using the existing Apple API secrets. Upload alone does not select a build for review, invite testers, submit a version or release the app. An App Store distribution IPA is intended for distribution through Apple and is not an ad-hoc device-install package.
 
-The build number is the GitHub run number. Before adding upload, reconcile this sequence with any existing App Store Connect builds to ensure the next upload has a valid version/build number.
+The marketing version is 1.0, matching the existing App Store Connect version. The build number is the GitHub run number; Apple validation rejects conflicting version/build numbers before upload.
 
 ## Verified run
 

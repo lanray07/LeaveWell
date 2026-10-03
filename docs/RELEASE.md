@@ -42,4 +42,4 @@
 11. Share/export to Files and AirDrop, inspect all exported files, delete evidence and cases, restart and verify orphan-file reconciliation. Confirm no external copy is claimed to be deleted.
 12. Configure signing, owned bundle IDs, StoreKit products, support URL, privacy URL, screenshots, final artwork and App Store metadata. Archive and validate with Xcode before any upload.
 
-GitHub validation run: https://github.com/lanray07/LeaveWell/actions/runs/37141152860. The workflow resolves the existing LeaveWell app through a read-only App Store Connect lookup and can use Apple automatic provisioning/cloud signing for IPA export. No TestFlight upload or App Store version submission is enabled in this workflow.
+GitHub validation run: https://github.com/lanray07/LeaveWell/actions/runs/37141152860. The workflow resolves the existing LeaveWell app through a read-only App Store Connect lookup and uses Apple automatic provisioning/cloud signing for IPA export. A manual upload input validates and uploads the signed binary to App Store Connect. App Review submission and release are not automated.
