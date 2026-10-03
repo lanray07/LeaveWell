@@ -15,7 +15,7 @@ The signed build runs only after validation passes. It uses the existing reposit
 - `APP_STORE_CONNECT_API_KEY_ID`
 - `APP_STORE_CONNECT_API_PRIVATE_KEY`
 
-The private key can be PEM text or base64 PEM. It is written with owner-only permissions to the ephemeral runner's temporary directory, and removed after the job. It is never included in build artifacts or printed. The workflow uses the App Store Connect API to locate exactly one existing app named LeaveWell and obtains its bundle ID; it does not create another app record. Apple cloud signing also requires the API key's role to have access to cloud-managed distribution certificates.
+The private key can be PEM text or base64 PEM. It is written with owner-only permissions to the ephemeral runner's temporary directory, and removed after the job. It is never included in build artifacts or printed. The workflow resolves the permanent App Store Connect app ID `6818834817` and verifies bundle ID `com.LeaveWell.app`, so listing-name changes do not break signing. It does not create another app record. Apple cloud signing also requires the API key's role to have access to cloud-managed distribution certificates.
 
 Artifacts are retained for seven days:
 
@@ -31,3 +31,15 @@ The build number is the GitHub run number. Before adding upload, reconcile this 
 On 3 October 2026, [run 37141152860](https://github.com/lanray07/LeaveWell/actions/runs/37141152860) passed validation and signed export with Xcode 26.6 (17F113). It ran seven core tests, five iOS tests and five translation-gate tests. Both `build` and `archive` jobs completed successfully. The simulator and signed IPA artifacts are available on that run's summary while retained.
 
 This verifies compilation, the supplied automated tests and distribution signing. It does not replace physical-device camera/microphone/biometric tests or a complete production-readiness review.
+
+## App Store screenshots
+
+Enable **Capture ten real app screens on iPhone and iPad**, or run:
+
+```sh
+gh workflow run ios.yml --repo lanray07/LeaveWell --ref main -f screenshots=true
+```
+
+After validation, `scripts/capture_marketing.py` installs the Debug app on available Pro Max and 13-inch iPad simulators. It launches ten real feature views with clearly fictional demo records, waits for each view's readiness marker and saves the native screenshots to `LeaveWell-real-marketing-screens` (30-day retention). The photo fixture is copied into the simulator bundle only during this step. Release builds exclude the capture routes and sample-record code.
+
+Download the captures, then run `python scripts/export_marketing.py --raw marketing/captures` on the Windows artwork workspace to produce deterministic English typography and App Store image dimensions. Final exports and their provenance are under `marketing`.

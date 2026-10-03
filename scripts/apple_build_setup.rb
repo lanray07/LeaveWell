@@ -23,13 +23,13 @@ signing_input = header + '.' + claims
 der = key.sign(OpenSSL::Digest::SHA256.new, signing_input)
 signature = OpenSSL::ASN1.decode(der).value.map { |number| number.value.to_s(16).rjust(64, '0') }.join
 token = signing_input + '.' + b64.call([signature].pack('H*'))
-uri = URI('https://api.appstoreconnect.apple.com/v1/apps?filter%5Bname%5D=LeaveWell&limit=100')
+# Resolve the stable app ID; App Store display names change with localization/ASO.
+uri = URI('https://api.appstoreconnect.apple.com/v1/apps/6818834817')
 request = Net::HTTP::Get.new(uri); request['Authorization'] = 'Bearer ' + token
 response = Net::HTTP.start(uri.host, uri.port, use_ssl: true, open_timeout: 20, read_timeout: 30) { |http| http.request(request) }
 abort "App Store Connect app lookup failed (HTTP #{response.code}). Check the API key permissions." unless response.is_a?(Net::HTTPSuccess)
-apps = JSON.parse(response.body).fetch('data').select { |app| app.fetch('attributes').fetch('name').downcase == 'leavewell' }
-abort 'Expected exactly one existing App Store Connect app named LeaveWell.' unless apps.length == 1
-app = apps.first; bundle = app.fetch('attributes').fetch('bundleId')
+app = JSON.parse(response.body).fetch('data'); bundle = app.fetch('attributes').fetch('bundleId')
+abort 'Apple returned an unexpected LeaveWell app or bundle ID.' unless app.fetch('id') == '6818834817' && bundle == 'com.LeaveWell.app'
 abort 'Invalid bundle identifier from Apple.' unless bundle.match?(/\A[A-Za-z0-9.-]+\z/)
 File.open(ENV.fetch('GITHUB_OUTPUT'), 'a') { |file| file.puts "bundle_id=#{bundle}"; file.puts "app_id=#{app.fetch('id')}" }
 puts "Resolved existing LeaveWell app #{app.fetch('id')} with bundle ID #{bundle}."

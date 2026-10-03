@@ -1,0 +1,25 @@
+name: App Store screenshots
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  screenshots:
+    runs-on: macos-26
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate project
+        run: python3 scripts/validate_project.py
+      - name: Build real Debug application
+        run: xcodebuild -project LeaveWell.xcodeproj -scheme LeaveWell -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath build/DerivedData -configuration Debug CODE_SIGNING_ALLOWED=NO build
+      - name: Capture real iPhone and iPad screens
+        run: python3 scripts/capture_marketing.py
+      - name: Save native captures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: LeaveWell-real-marketing-screens
+          path: build/MarketingRaw
+          if-no-files-found: warn
+          retention-days: 30

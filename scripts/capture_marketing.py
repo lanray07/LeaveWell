@@ -2,21 +2,23 @@
 import json
 import subprocess
 import time
+import os
 from pathlib import Path
 
 def run(*args, check=True):
-    return subprocess.run(args, check=check, capture_output=True, text=True).stdout.strip()
+    return subprocess.run(args, check=check, capture_output=True, text=True, timeout=180).stdout.strip()
 
 devices = json.loads(run('xcrun', 'simctl', 'list', 'devices', 'available', '-j'))['devices']
 available = [device for group in devices.values() for device in group]
 routes = ['home', 'room', 'evidence', 'notes', 'meters', 'keys', 'documents', 'comparison', 'plan', 'report']
 app = Path('build/DerivedData/Build/Products/Debug-iphonesimulator/LeaveWell.app')
 (app / 'DemoKitchen.png').write_bytes(Path('marketing/source/demo-kitchen.png').read_bytes())
-for family, match in [('iphone', 'Pro Max'), ('ipad', 'iPad Pro 13')]:
+run('xcrun', 'simctl', 'shutdown', 'all', check=False)
+for family, match in [('iphone', 'iPhone'), ('ipad', 'iPad Pro 13')]:
     candidates = [d for d in available if match in d['name']]
     if not candidates:
         raise RuntimeError('No available simulator for ' + family)
-    device = candidates[0]['udid']
+    device = next((d['udid'] for d in candidates if d['udid'] == os.environ.get('SIMULATOR_DEVICE')), candidates[0]['udid'])
     print('Capturing', family, candidates[0]['name'], flush=True)
     run('xcrun', 'simctl', 'boot', device, check=False)
     run('xcrun', 'simctl', 'bootstatus', device, '-b')
