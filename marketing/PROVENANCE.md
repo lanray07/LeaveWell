@@ -14,9 +14,9 @@ Lifestyle photography was generated with the built-in Codex Image Generation too
 
 ## Export and listing notes
 
-- iPhone: ten RGB PNGs, 1284 Ã— 2778, for the 6.5-inch slot shown in App Store Connect.
-- iPad: the same ten stories using native tablet interfaces, RGB PNGs, 2064 Ã— 2752, for the 13-inch slot.
-- Subscription artwork: two distinct RGB PNGs, exactly 1024 Ã— 1024, with no plan names, prices or invented benefits.
+- iPhone: ten RGB PNGs, 1284 × 2778, for the 6.5-inch slot shown in App Store Connect.
+- iPad: the same ten stories using native tablet interfaces, RGB PNGs, 2064 × 2752, for the 13-inch slot.
+- Subscription artwork: two distinct RGB PNGs, exactly 1024 × 1024, with no plan names, prices or invented benefits.
 - The two subscription artworks are assigned to LeaveWell Plus Monthly and Annual. They are separate from the actual purchase-flow review screenshot, captured from the production PlusView with StoreKitTest prices and no live charge. LeaveWell Plus monthly (£2.99) and annual (£19.99) unlock the same PDF report features. Current configuration and review status are recorded in subscriptions.json and release-status.json.
 - English U.K. is the only reviewed app language. No unreviewed translated listing is published.
 - Search copy uses relevant renter, move-out, inventory, meter, handover and evidence vocabulary. No keyword search-volume or ranking claim is made.

@@ -30,7 +30,7 @@ In LeaveWell Settings, choose **Delete record** for the property and confirm. Th
 
 For advice about a tenancy or deposit dispute, contact an appropriate tenant adviser. LeaveWell helps organise records and does not make legal decisions.
 
-[About LeaveWell](product.md) Â· [Privacy policy](privacy.md)
+[About LeaveWell](product.md) · [Privacy policy](privacy.md)
 
 ## Purchases, restoration and cancellation
 

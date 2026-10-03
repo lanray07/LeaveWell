@@ -4,9 +4,9 @@ Prepared and saved in App Store Connect on 3 October 2026 for app `6818834817`, 
 
 ## Finished assets
 
-- [iPhone gallery](exports/iphone-6.5/review-board.html): ten 1284 Ã— 2778 RGB PNGs, uploaded to the 6.5-inch slot in order 01â€“10.
-- [iPad gallery](exports/ipad-13/review-board.html): ten 2064 Ã— 2752 RGB PNGs, uploaded to the 13-inch slot in order 01â€“10.
-- [Subscription artwork](exports/subscriptions): two distinct 1024 Ã— 1024 RGB promotional-image drafts. These have no product names, prices or unsupported benefit claims.
+- [iPhone gallery](exports/iphone-6.5/review-board.html): ten 1284 × 2778 RGB PNGs, uploaded to the 6.5-inch slot in order 01–10.
+- [iPad gallery](exports/ipad-13/review-board.html): ten 2064 × 2752 RGB PNGs, uploaded to the 13-inch slot in order 01–10.
+- [Subscription artwork](exports/subscriptions): two distinct 1024 × 1024 RGB promotional-image drafts. These have no product names, prices or unsupported benefit claims.
 - [Listing copy](app-store-en-GB.json), [privacy policy](privacy.md), [final prompts and provenance](PROVENANCE.md), and [export dimensions and hashes](exports/manifest.json).
 
 The native interfaces were captured from the real Debug app by [GitHub Actions run 37143778673](https://github.com/lanray07/LeaveWell/actions/runs/37143778673). Both device-family jobs succeeded. All ten compositions for each device family were visually inspected. Fictional records are labelled Demo; capture routes are excluded from Release. Lifestyle photographs use the built-in ImageGen tool.
