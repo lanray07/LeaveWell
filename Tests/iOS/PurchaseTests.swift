@@ -40,6 +40,13 @@ final class PurchaseTests: XCTestCase {
         window.frame = CGRect(x: 0, y: 0, width: 430, height: 932)
         window.rootViewController = host; window.makeKeyAndVisible()
         try await Task.sleep(for: .seconds(2))
+        // The view's task reloads prices; capture after that request has completed.
+        let loadingDeadline = Date().addingTimeInterval(20)
+        while purchases.loading && Date() < loadingDeadline {
+            try await Task.sleep(for: .milliseconds(200))
+        }
+        XCTAssertFalse(purchases.loading)
+        XCTAssertNil(purchases.errorMessage)
         host.view.layoutIfNeeded()
         let image = UIGraphicsImageRenderer(size: window.bounds.size).image { _ in
             window.drawHierarchy(in: window.bounds, afterScreenUpdates: true)
