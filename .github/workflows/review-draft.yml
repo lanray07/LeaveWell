@@ -1,0 +1,31 @@
+name: Prepare existing App Store review draft
+on:
+  workflow_dispatch:
+    inputs:
+      build_id:
+        description: Processed LeaveWell build UUID to select (does not submit for review)
+        required: true
+        type: string
+      build_number:
+        description: Expected build number
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: leavewell-review-draft
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select validated build and add app to existing draft
+        env:
+          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          APP_STORE_CONNECT_API_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_API_PRIVATE_KEY }}
+          LEAVEWELL_BUILD_ID: ${{ inputs.build_id }}
+          LEAVEWELL_BUILD_NUMBER: ${{ inputs.build_number }}
+        run: ruby scripts/prepare_review_draft.rb
