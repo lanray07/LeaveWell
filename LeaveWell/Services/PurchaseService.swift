@@ -9,7 +9,7 @@ final class PurchaseService {
     private(set) var products: [Product] = []
     private(set) var ownedProductIDs: Set<String> = []
     private let productIDs: Set<String>
-    private var listener: Task<Void, Never>?
+    @ObservationIgnored private var listener: Task<Void, Never>?
     init(productIDs: Set<String>) {
         self.productIDs = productIDs
         listener = Task { [weak self] in
