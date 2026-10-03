@@ -1,10 +1,39 @@
 import XCTest
 import PDFKit
 import UIKit
+import ImageIO
+import UniformTypeIdentifiers
 @testable import LeaveWell
 
 @MainActor
 final class ReportTests: XCTestCase {
+    func testImportedGIFIsEmbeddedAsAnImage() async throws {
+        let root = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: root) }
+        let vault = try EvidenceVault(root: root)
+        let image = UIGraphicsImageRenderer(size: CGSize(width: 20, height: 20)).image { context in
+            UIColor.red.setFill(); context.fill(CGRect(x: 0, y: 0, width: 20, height: 20))
+        }
+        let bytes = NSMutableData()
+        let destination = try XCTUnwrap(CGImageDestinationCreateWithData(bytes, UTType.gif.identifier as CFString, 1, nil))
+        CGImageDestinationAddImage(destination, try XCTUnwrap(image.cgImage), nil)
+        XCTAssertTrue(CGImageDestinationFinalize(destination))
+        let original = try await vault.store(bytes as Data, name: "imported.gif", origin: .imported, capturedAt: nil)
+        var record = MoveCase(); record.evidence = [Evidence(kind: .photo, label: "Imported GIF photograph", original: original)]
+        let url = try await ReportService().generate(record: record, options: ReportOptions(), vault: vault)
+        defer { try? FileManager.default.removeItem(at: url.deletingLastPathComponent()) }
+        let document = try XCTUnwrap(PDFDocument(url: url))
+        var foundImage = false
+        for index in 0..<document.pageCount {
+            if let page = document.page(at: index)?.pageRef {
+                var resources: CGPDFDictionaryRef?; var objects: CGPDFDictionaryRef?
+                if CGPDFDictionaryGetDictionary(page.dictionary, "Resources", &resources), let resources,
+                   CGPDFDictionaryGetDictionary(resources, "XObject", &objects), let objects,
+                   CGPDFDictionaryGetCount(objects) > 0 { foundImage = true }
+            }
+        }
+        XCTAssertTrue(foundImage, "Imported image formats must render in the PDF, not appear only as metadata")
+    }
     func testContactAndDepositAreExcludedByDefaultAndIncludedOnlyWhenSelected() async throws {
         let root = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: root) }

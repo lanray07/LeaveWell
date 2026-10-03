@@ -1,6 +1,7 @@
 import UIKit
 import PDFKit
 import ImageIO
+import UniformTypeIdentifiers
 
 struct ReportOptions {
     var includeContactDetails = false
@@ -36,7 +37,7 @@ final class ReportService: ReportGenerating {
         for item in included {
             if let original = item.original {
                 let url = try await vault.verifiedURL(for: original)
-                if Self.imageExtensions.contains(url.pathExtension.lowercased()) {
+                if Self.isImage(url) {
                     guard let source = CGImageSourceCreateWithURL(url as CFURL, nil),
                           CGImageSourceCreateThumbnailAtIndex(source, 0, [kCGImageSourceCreateThumbnailFromImageAlways: true, kCGImageSourceThumbnailMaxPixelSize: 2000] as CFDictionary) != nil else { throw ReportError.unreadableOriginal }
                 } else if url.pathExtension.lowercased() == "pdf" {
@@ -79,7 +80,9 @@ final class ReportService: ReportGenerating {
         try EvidenceVault.protect(url)
         return url
     }
-    private static let imageExtensions = ["jpg", "jpeg", "png", "heic", "heif", "webp", "tif", "tiff"]
+    private static func isImage(_ url: URL) -> Bool {
+        UTType(filenameExtension: url.pathExtension)?.conforms(to: .image) == true
+    }
     private func buildSections(record: MoveCase, evidence: [Evidence], files: [UUID: URL], options: ReportOptions, generatedAt: Date) -> [SectionRecord] {
         var summary: [Block] = [.title(L("Move-out summary")), .text(record.address),
             .text(L("Tenant") + ": " + record.tenant), .text(L("Move-out date") + ": " + record.moveDate.formatted(date: .long, time: .omitted)),
@@ -153,7 +156,7 @@ final class ReportService: ReportGenerating {
             blocks += [.text(L("Captured") + ": " + (original.capturedAt.map(stamp) ?? L("Unknown"))), .text(L("Original file") + ": " + original.originalName), .text(L("SHA-256") + ": " + original.sha256)]
             if let imported = original.importedAt { blocks.append(.text(L("Imported") + ": " + stamp(imported))) }
             if let url {
-                if Self.imageExtensions.contains(url.pathExtension.lowercased()) { blocks.append(.image(url, item.label + " · " + item.reference)) }
+                if Self.isImage(url) { blocks.append(.image(url, item.label + " · " + item.reference)) }
                 else if url.pathExtension.lowercased() == "pdf", let document = PDFDocument(url: url) {
                     for index in 0..<document.pageCount { blocks.append(.pdf(url, index)) }
                 }
