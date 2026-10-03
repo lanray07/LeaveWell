@@ -8,6 +8,10 @@ on:
         description: Export a signed IPA using the Apple secrets
         type: boolean
         default: false
+      screenshots:
+        description: Capture ten real app screens on iPhone and iPad
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -57,6 +61,17 @@ jobs:
             build/Tests.xcresult
             build/Samples
           retention-days: 7
+      - name: Capture App Store source screens
+        if: github.event_name == 'workflow_dispatch' && inputs.screenshots
+        run: python3 scripts/capture_marketing.py
+      - name: Save App Store source screens
+        if: github.event_name == 'workflow_dispatch' && inputs.screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: LeaveWell-real-marketing-screens
+          path: build/MarketingRaw
+          if-no-files-found: error
+          retention-days: 30
   archive:
     if: github.event_name == 'workflow_dispatch' && inputs.archive
     needs: build

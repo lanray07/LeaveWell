@@ -265,6 +265,28 @@
         }
       }
     },
+    "Agent · Demo": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agent · Demo"
+          }
+        }
+      }
+    },
+    "Alex · Demo": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alex · Demo"
+          }
+        }
+      }
+    },
     "All evidence": {
       "extractionState": "manual",
       "localizations": {
@@ -404,6 +426,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Bedroom"
+          }
+        }
+      }
+    },
+    "Belongings removed. Windows closed. Radiator and sockets checked. Demo record.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Belongings removed. Windows closed. Radiator and sockets checked. Demo record."
           }
         }
       }
@@ -573,6 +606,17 @@
         }
       }
     },
+    "Checkout confirmation · Demo": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checkout confirmation · Demo"
+          }
+        }
+      }
+    },
     "Choose from library": {
       "extractionState": "manual",
       "localizations": {
@@ -591,6 +635,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Cleaning and supporting documents"
+          }
+        }
+      }
+    },
+    "Cleaning receipt · Demo": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cleaning receipt · Demo"
           }
         }
       }
@@ -837,6 +892,28 @@
         }
       }
     },
+    "DEMO-E01": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DEMO-E01"
+          }
+        }
+      }
+    },
+    "DEMO-G01": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DEMO-G01"
+          }
+        }
+      }
+    },
     "Declaration": {
       "extractionState": "manual",
       "localizations": {
@@ -899,6 +976,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Delete this record and all its evidence? This cannot be undone."
+          }
+        }
+      }
+    },
+    "DemoKitchen": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DemoKitchen"
           }
         }
       }
@@ -1046,6 +1134,17 @@
         }
       }
     },
+    "Electricity · 04821": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Electricity · 04821"
+          }
+        }
+      }
+    },
     "Enable move-out reminders": {
       "extractionState": "manual",
       "localizations": {
@@ -1134,6 +1233,17 @@
         }
       }
     },
+    "Example property, England": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Example property, England"
+          }
+        }
+      }
+    },
     "Excluded from report": {
       "extractionState": "manual",
       "localizations": {
@@ -1156,6 +1266,61 @@
         }
       }
     },
+    "Fictional cleaning receipt for screenshot demonstration only.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fictional cleaning receipt for screenshot demonstration only."
+          }
+        }
+      }
+    },
+    "Fictional correspondence: checkout appointment confirmed for 24 October.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fictional correspondence: checkout appointment confirmed for 24 October."
+          }
+        }
+      }
+    },
+    "Fictional demonstration photograph. Worktops and sink photographed from the doorway.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fictional demonstration photograph. Worktops and sink photographed from the doorway."
+          }
+        }
+      }
+    },
+    "Fictional inventory: kitchen worktop edge has a small chip beside the sink.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fictional inventory: kitchen worktop edge has a small chip beside the sink."
+          }
+        }
+      }
+    },
+    "Fictional sample document.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fictional sample document."
+          }
+        }
+      }
+    },
     "File created": {
       "extractionState": "manual",
       "localizations": {
@@ -1174,6 +1339,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Final day"
+          }
+        }
+      }
+    },
+    "Final reading checked against the display. Demo record.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Final reading checked against the display. Demo record."
           }
         }
       }
@@ -1541,6 +1717,17 @@
         }
       }
     },
+    "In person": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In person"
+          }
+        }
+      }
+    },
     "Include deposit details": {
       "extractionState": "manual",
       "localizations": {
@@ -1739,6 +1926,17 @@
         }
       }
     },
+    "Kitchen · whole room": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kitchen · whole room"
+          }
+        }
+      }
+    },
     "Know what to capture": {
       "extractionState": "manual",
       "localizations": {
@@ -1904,6 +2102,17 @@
         }
       }
     },
+    "Living room · final check": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Living room · final check"
+          }
+        }
+      }
+    },
     "Localizable": {
       "extractionState": "manual",
       "localizations": {
@@ -1966,6 +2175,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mark reviewed"
+          }
+        }
+      }
+    },
+    "MarketingReady-": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MarketingReady-"
           }
         }
       }
@@ -2131,6 +2351,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Move-in"
+          }
+        }
+      }
+    },
+    "Move-in inventory · Demo": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move-in inventory · Demo"
           }
         }
       }
@@ -2714,6 +2945,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Private by default. Saved on device."
+          }
+        }
+      }
+    },
+    "Property created": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Property created"
           }
         }
       }
@@ -3488,6 +3730,17 @@
         }
       }
     },
+    "Small chip at the front edge beside the sink. I noted it in the move-in inventory and photographed the same area before leaving. Demo record.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Small chip at the front edge beside the sink. I noted it in the move-in inventory and photographed the same area before leaving. Demo record."
+          }
+        }
+      }
+    },
     "Sockets": {
       "extractionState": "manual",
       "localizations": {
@@ -3884,6 +4137,17 @@
         }
       }
     },
+    "Two keys handed over at the agreed checkout. Demo record.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Two keys handed over at the agreed checkout. Demo record."
+          }
+        }
+      }
+    },
     "Type": {
       "extractionState": "manual",
       "localizations": {
@@ -4181,6 +4445,17 @@
         }
       }
     },
+    "Willow flat · Demo": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Willow flat · Demo"
+          }
+        }
+      }
+    },
     "Window key": {
       "extractionState": "manual",
       "localizations": {
@@ -4199,6 +4474,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Windows"
+          }
+        }
+      }
+    },
+    "Worktop edge · observation": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Worktop edge · observation"
           }
         }
       }

@@ -19,9 +19,7 @@ struct LeaveWellApp: App {
                                 Button(L("Retry")) { Task { await store.load() } }
                             } else { ProgressView(L("Opening your records…")) }
                         }
-                    } else if !onboardingComplete {
-                        OnboardingView { onboardingComplete = true }
-                    } else { HomeView().environment(store) }
+                    } else { appContent(store: store).environment(store) }
                 } else if let startupError {
                     ContentUnavailableView(L("Unable to open LeaveWell"), systemImage: "exclamationmark.triangle", description: Text(startupError))
                 } else { ProgressView() }
@@ -51,5 +49,17 @@ struct LeaveWellApp: App {
                 if enabled { lock.unlocked = false; Task { await lock.unlock() } }
             }
         }
+    }
+    @ViewBuilder private func appContent(store: CaseStore) -> some View {
+        #if DEBUG
+        if let index = ProcessInfo.processInfo.arguments.firstIndex(of: "-marketing-route"),
+           ProcessInfo.processInfo.arguments.indices.contains(index + 1) {
+            MarketingCapture(route: ProcessInfo.processInfo.arguments[index + 1])
+        } else if !onboardingComplete { OnboardingView { onboardingComplete = true } }
+        else { HomeView() }
+        #else
+        if !onboardingComplete { OnboardingView { onboardingComplete = true } }
+        else { HomeView() }
+        #endif
     }
 }
