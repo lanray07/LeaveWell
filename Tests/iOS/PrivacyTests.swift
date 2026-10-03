@@ -1,8 +1,27 @@
 import XCTest
+import UIKit
 @testable import LeaveWell
 
 @MainActor
 final class PrivacyTests: XCTestCase {
+    func testPrivacyShieldCoversPresentedWindowsUntilAuthenticated() async throws {
+        let scene = try XCTUnwrap(UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.first)
+        let authentication = Authentication()
+        let lock = AppLock(makeAuthentication: { authentication })
+        defer { lock.updateShield(enabled: false, active: true) }
+        lock.updateShield(enabled: true, active: true)
+        let shield = try XCTUnwrap(scene.windows.first { $0.windowLevel > .alert && !$0.isHidden })
+        XCTAssertNotNil(shield.rootViewController)
+        XCTAssertFalse(shield.isKeyWindow, "Shield must not steal the app's input window")
+        let request = Task { await lock.unlock() }
+        while authentication.continuation == nil { await Task.yield() }
+        authentication.continuation?.resume(returning: true)
+        await request.value
+        lock.updateShield(enabled: true, active: false)
+        XCTAssertFalse(shield.isHidden, "Inactive scenes stay shielded even after successful authentication")
+        lock.updateShield(enabled: true, active: true)
+        XCTAssertTrue(shield.isHidden)
+    }
     private final class Authentication: DeviceAuthenticating {
         var continuation: CheckedContinuation<Bool, Error>?
         var invalidated = false
