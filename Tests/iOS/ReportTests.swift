@@ -1,5 +1,6 @@
 import XCTest
 import PDFKit
+import UIKit
 @testable import LeaveWell
 
 @MainActor
@@ -15,8 +16,23 @@ final class ReportTests: XCTestCase {
         hidden.includedInReport = false; record.evidence = [visible, hidden]
         let url = try await ReportService().generate(record: record, options: ReportOptions(), vault: vault)
         let document = try XCTUnwrap(PDFDocument(url: url)); let text = try XCTUnwrap(document.string)
+        let samples = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("TestReports")
+        try FileManager.default.createDirectory(at: samples, withIntermediateDirectories: true)
+        try Data(contentsOf: url).write(to: samples.appendingPathComponent("LeaveWell-sample.pdf"))
+        try text.write(to: samples.appendingPathComponent("extracted-text.txt"), atomically: true, encoding: .utf8)
+        for index in 0..<min(document.pageCount, 4) {
+            if let page = document.page(at: index) {
+                let image = UIGraphicsImageRenderer(size: CGSize(width: 595, height: 842)).image { context in
+                    UIColor.white.setFill(); context.fill(CGRect(x: 0, y: 0, width: 595, height: 842))
+                    context.cgContext.translateBy(x: 0, y: 842); context.cgContext.scaleBy(x: 1, y: -1)
+                    page.draw(with: .mediaBox, to: context.cgContext)
+                }
+                try image.pngData()?.write(to: samples.appendingPathComponent("page-\(index + 1).png"))
+            }
+        }
         XCTAssertGreaterThan(document.pageCount, 8)
-        XCTAssertTrue(text.contains("VISIBLE_RECORD")); XCTAssertFalse(text.contains("EXCLUDED_SECRET_RECORD")); XCTAssertFalse(text.contains("SECRET_PRIVATE_NOTE"))
+        XCTAssertTrue(text.contains("VISIBLE_RECORD"), "Selected evidence title is absent from extracted PDF text: \(text.prefix(4000))")
+        XCTAssertFalse(text.contains("EXCLUDED_SECRET_RECORD")); XCTAssertFalse(text.contains("SECRET_PRIVATE_NOTE"))
         XCTAssertTrue(text.contains(record.reference))
     }
     func testReportStopsForMissingOriginal() async throws {

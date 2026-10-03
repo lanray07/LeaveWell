@@ -160,7 +160,7 @@ final class ReportService: ReportGenerating {
         return [.font: UIFont.systemFont(ofSize: title ? 19 : 11, weight: title ? .semibold : .regular), .foregroundColor: ink, .paragraphStyle: paragraph]
     }
     private func textHeight(_ text: String, title: Bool) -> CGFloat {
-        ceil((text as NSString).boundingRect(with: CGSize(width: width - margin * 2, height: .greatestFiniteMagnitude), options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: attributes(title: title), context: nil).height)
+        ceil((text as NSString).boundingRect(with: CGSize(width: width - margin * 2, height: .greatestFiniteMagnitude), options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: attributes(title: title), context: nil).height) + 8
     }
     private func layout(_ blocks: [Block]) -> [[Placed]] {
         var pages: [[Placed]] = [[]]; var y: CGFloat = margin
@@ -200,8 +200,8 @@ final class ReportService: ReportGenerating {
     }
     private func draw(_ placed: Placed, context: CGContext) {
         switch placed.block {
-        case .title(let text): (text as NSString).draw(in: placed.rect, withAttributes: attributes(title: true))
-        case .text(let text): (text as NSString).draw(in: placed.rect, withAttributes: attributes())
+        case .title(let text): (text as NSString).draw(with: placed.rect, options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: attributes(title: true), context: nil)
+        case .text(let text): (text as NSString).draw(with: placed.rect, options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: attributes(), context: nil)
         case .image(let url, let caption):
             if let source = CGImageSourceCreateWithURL(url as CFURL, nil),
                let thumbnail = CGImageSourceCreateThumbnailAtIndex(source, 0, [
