@@ -38,7 +38,7 @@ def sources():
                 value = json.loads('"' + raw + '"')
             except ValueError:
                 continue
-            if value and re.search(r'[A-Za-z]', value) and ((' ' in value or value[0].isupper()) and not value.startswith(('LW-', 'EV-', 'GB-', 'SHA-'))):
+            if value and re.search(r'[A-Za-z]', value) and ((' ' in value or value[0].isupper()) and not value.startswith(('LW-', 'EV-', 'GB-', 'SHA-', 'CFBundle'))):
                 found.add(value)
     return found
 
