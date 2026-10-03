@@ -8,3 +8,5 @@ xcuserdata/
 *.p12
 __pycache__/
 build/
+marketing/proof/
+marketing/*.zip

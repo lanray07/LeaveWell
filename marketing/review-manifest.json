@@ -1,0 +1,12 @@
+[
+  {"index": 1, "output": "01-home.png", "title": "Move-out checklist"},
+  {"index": 2, "output": "02-room.png", "title": "Room photo evidence"},
+  {"index": 3, "output": "03-evidence.png", "title": "Rental records"},
+  {"index": 4, "output": "04-notes.png", "title": "Condition notes"},
+  {"index": 5, "output": "05-meters.png", "title": "Final meter readings"},
+  {"index": 6, "output": "06-keys.png", "title": "Key handover"},
+  {"index": 7, "output": "07-documents.png", "title": "Document vault"},
+  {"index": 8, "output": "08-comparison.png", "title": "Inventory comparison"},
+  {"index": 9, "output": "09-plan.png", "title": "Move-out plan"},
+  {"index": 10, "output": "10-report.png", "title": "PDF evidence report"}
+]

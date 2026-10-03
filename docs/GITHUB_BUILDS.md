@@ -40,6 +40,8 @@ Enable **Capture ten real app screens on iPhone and iPad**, or run:
 gh workflow run ios.yml --repo lanray07/LeaveWell --ref main -f screenshots=true
 ```
 
-After validation, `scripts/capture_marketing.py` installs the Debug app on available Pro Max and 13-inch iPad simulators. It launches ten real feature views with clearly fictional demo records, waits for each view's readiness marker and saves the native screenshots to `LeaveWell-real-marketing-screens` (30-day retention). The photo fixture is copied into the simulator bundle only during this step. Release builds exclude the capture routes and sample-record code.
+After validation, `scripts/capture_marketing.py` installs the Debug app on available iPhone and 13-inch iPad simulators. It launches ten real feature views with clearly fictional demo records, waits for each view's readiness marker and saves the native screenshots to `LeaveWell-real-marketing-screens` (30-day retention). The photo fixture is copied into the simulator bundle only during this step. Release builds exclude the capture routes and sample-record code.
+
+For artwork-only refreshes, **App Store screenshots** (`marketing.yml`) builds the Debug application and captures each device family on an isolated macOS runner. It preserves partial captures on failure and bounds OS boot waits. Download its two family artifacts into `marketing/captures/iphone` and `marketing/captures/ipad`.
 
 Download the captures, then run `python scripts/export_marketing.py --raw marketing/captures` on the Windows artwork workspace to produce deterministic English typography and App Store image dimensions. Final exports and their provenance are under `marketing`.

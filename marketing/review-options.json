@@ -1,0 +1,9 @@
+{
+  "preset": "image-wall",
+  "title": "LeaveWell App Store screenshots",
+  "showCaptions": true,
+  "minTileWidth": 240,
+  "contactSheetOutput": "preview.png",
+  "contactSheetThumb": 620,
+  "contactSheetColumns": 5
+}

@@ -1,0 +1,160 @@
+{
+  "generation": "Built-in ImageGen for lifestyle photography; real GitHub iOS Simulator captures; deterministic Pillow copy and export",
+  "fictionalDemoData": true,
+  "assets": [
+    {
+      "file": "marketing/exports/ipad-13/01-home.png",
+      "width": 2064,
+      "height": 2752,
+      "mode": "RGB",
+      "sha256": "1279561dfd8e836a817ffcd5968abc80225194c6fe3ef03bfc3bebdc22f1c97f"
+    },
+    {
+      "file": "marketing/exports/ipad-13/02-room.png",
+      "width": 2064,
+      "height": 2752,
+      "mode": "RGB",
+      "sha256": "e9bef0d5bda751259d1c7a494c4c327b7a79ff50ebc155a3271922fa493c97b7"
+    },
+    {
+      "file": "marketing/exports/ipad-13/03-evidence.png",
+      "width": 2064,
+      "height": 2752,
+      "mode": "RGB",
+      "sha256": "6b6a42625501c013affc5129f659ed1300f8ed52dcb943d0c856312cc4623297"
+    },
+    {
+      "file": "marketing/exports/ipad-13/04-notes.png",
+      "width": 2064,
+      "height": 2752,
+      "mode": "RGB",
+      "sha256": "ae661d4edbfaecd1cd5ab47069e725054f5e7c3b8f2811f31421caca2604694b"
+    },
+    {
+      "file": "marketing/exports/ipad-13/05-meters.png",
+      "width": 2064,
+      "height": 2752,
+      "mode": "RGB",
+      "sha256": "3ec679449a0ba23e5633ae08e8f04a02658d114ee52894172c294cffaa922987"
+    },
+    {
+      "file": "marketing/exports/ipad-13/06-keys.png",
+      "width": 2064,
+      "height": 2752,
+      "mode": "RGB",
+      "sha256": "68ec2b7367dbb6a9e593842da98194482b79b5ce8cb397ba70ca7b14c954e3b0"
+    },
+    {
+      "file": "marketing/exports/ipad-13/07-documents.png",
+      "width": 2064,
+      "height": 2752,
+      "mode": "RGB",
+      "sha256": "714aefde2a7ce45db77ecde03edef4440c7be480810e62ec5281c0e0faa7530e"
+    },
+    {
+      "file": "marketing/exports/ipad-13/08-comparison.png",
+      "width": 2064,
+      "height": 2752,
+      "mode": "RGB",
+      "sha256": "84327dae20bdc790c9df83e4bb64d1c395e800fc5b93e1946f91e9e11550cb96"
+    },
+    {
+      "file": "marketing/exports/ipad-13/09-plan.png",
+      "width": 2064,
+      "height": 2752,
+      "mode": "RGB",
+      "sha256": "c2d44c54fc66e0b7829cc3cc506511de788e8d101831a733b4e834dc8715a4fd"
+    },
+    {
+      "file": "marketing/exports/ipad-13/10-report.png",
+      "width": 2064,
+      "height": 2752,
+      "mode": "RGB",
+      "sha256": "02eff558bd07603cd3bed8deee615b5dffc5c6e8da8f6aea4f41d2bf0028d56e"
+    },
+    {
+      "file": "marketing/exports/iphone-6.5/01-home.png",
+      "width": 1284,
+      "height": 2778,
+      "mode": "RGB",
+      "sha256": "707717232348edfae836bf3458ee5e0ede0aa76393c37e7bf7eafc9805e7a25a"
+    },
+    {
+      "file": "marketing/exports/iphone-6.5/02-room.png",
+      "width": 1284,
+      "height": 2778,
+      "mode": "RGB",
+      "sha256": "6ea517bd5ad1875a35f34d612c3f61f5965d9055ddd32f9955442c730fcfc5f5"
+    },
+    {
+      "file": "marketing/exports/iphone-6.5/03-evidence.png",
+      "width": 1284,
+      "height": 2778,
+      "mode": "RGB",
+      "sha256": "3b33d17602917a2d0dcbaf08d0678c481b7fb8daa5e9a46b9d105dc2376580aa"
+    },
+    {
+      "file": "marketing/exports/iphone-6.5/04-notes.png",
+      "width": 1284,
+      "height": 2778,
+      "mode": "RGB",
+      "sha256": "f5e8c86b349076fe775f654e045ee93da57ed04d0f06b7dd93350056b72c79bf"
+    },
+    {
+      "file": "marketing/exports/iphone-6.5/05-meters.png",
+      "width": 1284,
+      "height": 2778,
+      "mode": "RGB",
+      "sha256": "8d60d84760e91b233002c7a9539faa18dee094801e164e624fb68d4320da7ef3"
+    },
+    {
+      "file": "marketing/exports/iphone-6.5/06-keys.png",
+      "width": 1284,
+      "height": 2778,
+      "mode": "RGB",
+      "sha256": "25bf07d8ccd944c78adb6be32eccc2e10b9f969f3069a5329e042ed2e0e9419e"
+    },
+    {
+      "file": "marketing/exports/iphone-6.5/07-documents.png",
+      "width": 1284,
+      "height": 2778,
+      "mode": "RGB",
+      "sha256": "092479ab3b4b46c5d2921700bc25dbda24a764d99cb661440afb21893dedd4be"
+    },
+    {
+      "file": "marketing/exports/iphone-6.5/08-comparison.png",
+      "width": 1284,
+      "height": 2778,
+      "mode": "RGB",
+      "sha256": "a8834abda757492b1d5324d009c34010aaf04db9de905d676da2af6c55a30047"
+    },
+    {
+      "file": "marketing/exports/iphone-6.5/09-plan.png",
+      "width": 1284,
+      "height": 2778,
+      "mode": "RGB",
+      "sha256": "cc01a56de440d4b2e116709bf01b4474452c1469b925052a77dee39e0aa7b179"
+    },
+    {
+      "file": "marketing/exports/iphone-6.5/10-report.png",
+      "width": 1284,
+      "height": 2778,
+      "mode": "RGB",
+      "sha256": "d3c86d95ac044fc0d6bb5032fa0c5a4c5aecfa992cce12370bb9fe2dec77a026"
+    },
+    {
+      "file": "marketing/exports/subscriptions/subscription-next-chapter.png",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB",
+      "sha256": "2ae7c2f765fe0f773b67fcc0abd400dc47d4f2850c1b336c0347a5e6864d3ab3"
+    },
+    {
+      "file": "marketing/exports/subscriptions/subscription-organised.png",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB",
+      "sha256": "3638a4b19bc0af3cd0185659f20a6ee38a958d19f35a08b1a95481adba8113b5"
+    }
+  ]
+}
