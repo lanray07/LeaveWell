@@ -5,8 +5,8 @@ import time
 import os
 from pathlib import Path
 
-def run(*args, check=True):
-    return subprocess.run(args, check=check, capture_output=True, text=True, timeout=180).stdout.strip()
+def run(*args, check=True, timeout=180):
+    return subprocess.run(args, check=check, capture_output=True, text=True, timeout=timeout).stdout.strip()
 
 devices = json.loads(run('xcrun', 'simctl', 'list', 'devices', 'available', '-j'))['devices']
 available = [device for group in devices.values() for device in group]
@@ -21,7 +21,8 @@ for family, match in [('iphone', 'iPhone'), ('ipad', 'iPad Pro 13')]:
     device = next((d['udid'] for d in candidates if d['udid'] == os.environ.get('SIMULATOR_DEVICE')), candidates[0]['udid'])
     print('Capturing', family, candidates[0]['name'], flush=True)
     run('xcrun', 'simctl', 'boot', device, check=False)
-    run('xcrun', 'simctl', 'bootstatus', device, '-b')
+    # First boot on hosted macOS can need several minutes for OS migration.
+    run('xcrun', 'simctl', 'bootstatus', device, '-b', timeout=600)
     run('xcrun', 'simctl', 'ui', device, 'appearance', 'light')
     run('xcrun', 'simctl', 'status_bar', device, 'override', '--time', '9:41', '--dataNetwork', 'wifi', '--wifiMode', 'active', '--wifiBars', '3', '--batteryState', 'charged', '--batteryLevel', '100')
     run('xcrun', 'simctl', 'install', device, str(app))
