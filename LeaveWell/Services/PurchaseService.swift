@@ -60,6 +60,7 @@ final class PurchaseService {
             @unknown default: message = L("The purchase has not completed. Please try again.")
             }
         } catch is CancellationError { }
+        catch StoreKitError.userCancelled { }
         catch { errorMessage = error.localizedDescription }
     }
     func restore() async {

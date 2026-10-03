@@ -2,6 +2,7 @@ import XCTest
 import StoreKit
 import StoreKitTest
 import SwiftUI
+import UIKit
 @testable import LeaveWell
 
 @MainActor
@@ -23,7 +24,9 @@ final class PurchaseTests: XCTestCase {
         // Save an actual, unsubscribed purchase screen for App Review; prices come from StoreKit.
         let view = NavigationStack { PlusView() }.environment(purchases)
         let host = UIHostingController(rootView: view)
-        let window = UIWindow(frame: CGRect(x: 0, y: 0, width: 430, height: 932))
+        let scene = try XCTUnwrap(UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.first)
+        let window = UIWindow(windowScene: scene)
+        window.frame = CGRect(x: 0, y: 0, width: 430, height: 932)
         window.rootViewController = host; window.makeKeyAndVisible()
         try await Task.sleep(for: .seconds(2))
         host.view.layoutIfNeeded()
@@ -52,22 +55,30 @@ final class PurchaseTests: XCTestCase {
     }
     func testAnnualRefundRemovesAccessAndRenewalPreservesAccess() async throws {
         let session = try session(); defer { session.clearTransactions() }
-        try session.buyProduct(productIdentifier: PlusPlan.annual)
+        _ = try await session.buyProduct(identifier: PlusPlan.annual, options: [])
         let purchases = PurchaseService(); await purchases.refreshEntitlements()
         XCTAssertTrue(purchases.hasPlus)
         try session.forceRenewalOfSubscription(productIdentifier: PlusPlan.annual)
         await purchases.refreshEntitlements(); XCTAssertTrue(purchases.hasPlus)
-        let transaction = try XCTUnwrap(session.allTransactions().last)
+        let transaction = try XCTUnwrap(session.allTransactions().max { $0.identifier < $1.identifier })
         try session.refundTransaction(identifier: transaction.identifier)
         await purchases.refreshEntitlements(); XCTAssertFalse(purchases.hasPlus)
     }
     func testCancelledPurchaseDoesNotUnlockPlus() async throws {
         let session = try session(); defer { session.clearTransactions() }
-        session.failTransactionsEnabled = true; session.failureError = .paymentCancelled
+        try await session.setSimulatedError(.generic(.userCancelled), forAPI: .purchase)
         let purchases = PurchaseService(); await purchases.load()
         let monthly = try XCTUnwrap(purchases.products.first { $0.id == PlusPlan.monthly })
         await purchases.purchase(monthly)
         XCTAssertFalse(purchases.hasPlus); XCTAssertFalse(purchases.purchasing)
+    }
+    func testUnverifiedPurchaseDoesNotUnlockPlus() async throws {
+        let session = try session(); defer { session.clearTransactions() }
+        try await session.setSimulatedError(.verification(.invalidSignature), forAPI: .verification)
+        let purchases = PurchaseService(); await purchases.load()
+        let monthly = try XCTUnwrap(purchases.products.first { $0.id == PlusPlan.monthly })
+        await purchases.purchase(monthly)
+        XCTAssertFalse(purchases.hasPlus); XCTAssertNotNil(purchases.errorMessage)
     }
     func testPendingPurchaseUnlocksOnlyAfterApproval() async throws {
         let session = try session(); defer { session.clearTransactions() }

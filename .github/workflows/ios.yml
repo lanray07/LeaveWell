@@ -43,7 +43,7 @@ jobs:
           echo "SIMULATOR_DEVICE=$DEVICE" >> "$GITHUB_ENV"
           xcrun simctl boot "$DEVICE" || true
           xcrun simctl bootstatus "$DEVICE" -b
-          xcodebuild -project LeaveWell.xcodeproj -scheme LeaveWell -destination "platform=iOS Simulator,id=$DEVICE,arch=arm64" -parallel-testing-enabled NO -derivedDataPath build/DerivedData -resultBundlePath build/Tests.xcresult CODE_SIGNING_ALLOWED=NO test
+          xcodebuild -project LeaveWell.xcodeproj -scheme LeaveWell -destination "platform=iOS Simulator,id=$DEVICE,arch=arm64" -skip-testing:LeaveWellTests/PurchaseTests -parallel-testing-enabled NO -derivedDataPath build/DerivedData -resultBundlePath build/Tests.xcresult CODE_SIGNING_ALLOWED=NO test
       - name: Collect report samples and simulator screenshot
         if: always() && env.SIMULATOR_DEVICE != ''
         run: |
@@ -76,9 +76,43 @@ jobs:
           path: build/MarketingRaw
           if-no-files-found: error
           retention-days: 30
+  purchases:
+    # Apple FB22237318: iOS 26.5 CLI StoreKitTest returns SKInternalErrorDomain Code=3.
+    # Keep production SDK checks on Xcode 26.6; exercise real StoreKit transactions
+    # on the supported iOS 18.5 simulator instead of skipping purchase verification.
+    runs-on: macos-15
+    timeout-minutes: 25
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run StoreKit purchase lifecycle tests
+        run: |
+          xcodebuild -version
+          DEVICE=$(xcrun simctl list devices available -j | python3 -c 'import json,sys; d=json.load(sys.stdin); print(next(x["udid"] for runtime,devices in d["devices"].items() if runtime.endswith("iOS-18-5") for x in devices if "iPhone" in x["name"]))')
+          echo "SIMULATOR_DEVICE=$DEVICE" >> "$GITHUB_ENV"
+          xcrun simctl boot "$DEVICE" || true
+          xcrun simctl bootstatus "$DEVICE" -b
+          xcodebuild -project LeaveWell.xcodeproj -scheme LeaveWell -destination "platform=iOS Simulator,id=$DEVICE" -only-testing:LeaveWellTests/PurchaseTests -parallel-testing-enabled NO -derivedDataPath build/DerivedData -resultBundlePath build/Purchases.xcresult CODE_SIGNING_ALLOWED=NO test
+      - name: Collect purchase review screenshot
+        if: always() && env.SIMULATOR_DEVICE != ''
+        run: |
+          mkdir -p build/PurchaseSamples
+          CONTAINER=$(xcrun simctl get_app_container "$SIMULATOR_DEVICE" com.leavewell.app data 2>/dev/null || true)
+          if [ -n "$CONTAINER" ] && [ -d "$CONTAINER/Documents/TestReports" ]; then
+            cp -R "$CONTAINER/Documents/TestReports/" build/PurchaseSamples/
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: LeaveWell-purchase-tests
+          path: |
+            build/Purchases.xcresult
+            build/PurchaseSamples
+          retention-days: 7
   archive:
     if: github.event_name == 'workflow_dispatch' && (inputs.archive || inputs.upload)
-    needs: build
+    needs: [build, purchases]
     runs-on: macos-26
     timeout-minutes: 30
     steps:
