@@ -29,7 +29,7 @@
   "subscriptionDetailsPending": [],
   "paidAccessImplemented": true,
   "physicalDeviceQaComplete": false,
-  "pendingSubscriptionBuild": "18",
-  "pendingSubscriptionRun": "https://github.com/lanray07/LeaveWell/actions/runs/37149537972",
-  "purchaseVerification": "Running real StoreKit lifecycle tests on iOS 18.5; iOS 26.5 simulator has Apple-documented StoreKitTest defect"
+  "pendingSubscriptionBuild": "22",
+  "pendingSubscriptionRun": "https://github.com/lanray07/LeaveWell/actions/runs/37150860059",
+  "purchaseVerification": "Run 18 passed four lifecycle tests; immediate expiry/refund assertions failed before entitlement delivery. Run 22 uses bounded waits for those changes and a fully loaded review screenshot."
 }

@@ -19,7 +19,7 @@ The Data Not Collected privacy response was published on 3 October 2026 after th
 
 LeaveWell Plus is configured in group 22437667. Monthly (com.LeaveWell.app.plus.monthly) is £2.99/month in the UK; Annual (com.LeaveWell.app.plus.annual) is £19.99/year billed upfront. Both are service level 1 with identical unlimited PDF report features. Apple equalises other regional prices. Product details are recorded in subscriptions.json. Purchase/restoration/manage UX and verified active entitlement checks are implemented; final build/test and App Review attachment status are recorded in release-status.json. No live purchases were made.
 
-The previous version 1.0 (14) was processed by Apple. Its app item was removed from the draft so the subscription-enabled build can replace it. Build 18 is in validation; the subscription group is Ready for Review. Current build, test and review states are tracked in release-status.json. No final App Review submission or release was made. Physical-device QA and the additional capabilities listed in docs/RELEASE.md remain separate release requirements.
+The previous version 1.0 (14) was processed by Apple. Its app item was removed from the draft so the subscription-enabled build can replace it. Build 22 is in validation; the subscription group is Ready for Review. Current build, test and review states are tracked in release-status.json. No final App Review submission or release was made. Physical-device QA and the additional capabilities listed in docs/RELEASE.md remain separate release requirements.
 
 ## Reproduce
 
