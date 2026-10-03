@@ -7,6 +7,17 @@ import UIKit
 
 @MainActor
 final class PurchaseTests: XCTestCase {
+    // StoreKitTest changes its server immediately, but StoreKit delivers client
+    // entitlement updates asynchronously. Bound the wait and keep real access checks.
+    private func awaitAccess(_ expected: Bool, in purchases: PurchaseService) async throws {
+        let deadline = Date().addingTimeInterval(20)
+        repeat {
+            await purchases.refreshEntitlements()
+            if purchases.hasPlus == expected { return }
+            try await Task.sleep(for: .milliseconds(200))
+        } while Date() < deadline
+        XCTFail("StoreKit did not publish the expected Plus access state: \(expected)")
+    }
     private func session() throws -> SKTestSession {
         let url = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "LeaveWell", withExtension: "storekit"))
         let session = try SKTestSession(contentsOf: url)
@@ -48,7 +59,7 @@ final class PurchaseTests: XCTestCase {
         let restored = PurchaseService(); await restored.restore()
         XCTAssertTrue(restored.hasPlus)
         try session.expireSubscription(productIdentifier: PlusPlan.monthly)
-        await purchases.refreshEntitlements()
+        try await awaitAccess(false, in: purchases)
         XCTAssertFalse(purchases.hasPlus)
         do { try await purchases.requirePlus(); XCTFail("Expired subscriptions must lose report creation") }
         catch { XCTAssertTrue(error is PurchaseError) }
@@ -62,7 +73,9 @@ final class PurchaseTests: XCTestCase {
         await purchases.refreshEntitlements(); XCTAssertTrue(purchases.hasPlus)
         let transaction = try XCTUnwrap(session.allTransactions().max { $0.identifier < $1.identifier })
         try session.refundTransaction(identifier: transaction.identifier)
-        await purchases.refreshEntitlements(); XCTAssertFalse(purchases.hasPlus)
+        try await awaitAccess(false, in: purchases); XCTAssertFalse(purchases.hasPlus)
+        do { try await purchases.requirePlus(); XCTFail("Refunded subscriptions must lose report creation") }
+        catch { XCTAssertTrue(error is PurchaseError) }
     }
     func testCancelledPurchaseDoesNotUnlockPlus() async throws {
         let session = try session(); defer { session.clearTransactions() }
