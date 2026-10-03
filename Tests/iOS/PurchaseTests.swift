@@ -1,0 +1,83 @@
+import XCTest
+import StoreKit
+import StoreKitTest
+import SwiftUI
+@testable import LeaveWell
+
+@MainActor
+final class PurchaseTests: XCTestCase {
+    private func session() throws -> SKTestSession {
+        let url = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "LeaveWell", withExtension: "storekit"))
+        let session = try SKTestSession(contentsOf: url)
+        session.resetToDefaultState(); session.clearTransactions()
+        session.disableDialogs = true; session.storefront = "GBR"; session.locale = Locale(identifier: "en_GB")
+        return session
+    }
+    func testNoPurchaseBlocksReportAccess() async throws {
+        let session = try session(); defer { session.clearTransactions() }
+        let purchases = PurchaseService(); await purchases.load()
+        XCTAssertEqual(Set(purchases.products.map(\.id)), PlusPlan.productIDs)
+        XCTAssertFalse(purchases.hasPlus)
+        do { try await purchases.requirePlus(); XCTFail("Free users must not create premium reports") }
+        catch { XCTAssertTrue(error is PurchaseError) }
+        // Save an actual, unsubscribed purchase screen for App Review; prices come from StoreKit.
+        let view = NavigationStack { PlusView() }.environment(purchases)
+        let host = UIHostingController(rootView: view)
+        let window = UIWindow(frame: CGRect(x: 0, y: 0, width: 430, height: 932))
+        window.rootViewController = host; window.makeKeyAndVisible()
+        try await Task.sleep(for: .seconds(2))
+        host.view.layoutIfNeeded()
+        let image = UIGraphicsImageRenderer(size: window.bounds.size).image { _ in
+            window.drawHierarchy(in: window.bounds, afterScreenUpdates: true)
+        }
+        let out = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("TestReports")
+        try FileManager.default.createDirectory(at: out, withIntermediateDirectories: true)
+        try XCTUnwrap(image.pngData()).write(to: out.appendingPathComponent("LeaveWell-Plus-purchase-review.png"))
+        window.isHidden = true
+    }
+    func testMonthlyPurchaseRestoreAndExpiry() async throws {
+        let session = try session(); defer { session.clearTransactions() }
+        let purchases = PurchaseService(); await purchases.load()
+        let monthly = try XCTUnwrap(purchases.products.first { $0.id == PlusPlan.monthly })
+        await purchases.purchase(monthly)
+        XCTAssertTrue(purchases.hasPlus); XCTAssertNil(purchases.errorMessage)
+        try await purchases.requirePlus()
+        let restored = PurchaseService(); await restored.restore()
+        XCTAssertTrue(restored.hasPlus)
+        try session.expireSubscription(productIdentifier: PlusPlan.monthly)
+        await purchases.refreshEntitlements()
+        XCTAssertFalse(purchases.hasPlus)
+        do { try await purchases.requirePlus(); XCTFail("Expired subscriptions must lose report creation") }
+        catch { XCTAssertTrue(error is PurchaseError) }
+    }
+    func testAnnualRefundRemovesAccessAndRenewalPreservesAccess() async throws {
+        let session = try session(); defer { session.clearTransactions() }
+        try session.buyProduct(productIdentifier: PlusPlan.annual)
+        let purchases = PurchaseService(); await purchases.refreshEntitlements()
+        XCTAssertTrue(purchases.hasPlus)
+        try session.forceRenewalOfSubscription(productIdentifier: PlusPlan.annual)
+        await purchases.refreshEntitlements(); XCTAssertTrue(purchases.hasPlus)
+        let transaction = try XCTUnwrap(session.allTransactions().last)
+        try session.refundTransaction(identifier: transaction.identifier)
+        await purchases.refreshEntitlements(); XCTAssertFalse(purchases.hasPlus)
+    }
+    func testCancelledPurchaseDoesNotUnlockPlus() async throws {
+        let session = try session(); defer { session.clearTransactions() }
+        session.failTransactionsEnabled = true; session.failureError = .paymentCancelled
+        let purchases = PurchaseService(); await purchases.load()
+        let monthly = try XCTUnwrap(purchases.products.first { $0.id == PlusPlan.monthly })
+        await purchases.purchase(monthly)
+        XCTAssertFalse(purchases.hasPlus); XCTAssertFalse(purchases.purchasing)
+    }
+    func testPendingPurchaseUnlocksOnlyAfterApproval() async throws {
+        let session = try session(); defer { session.clearTransactions() }
+        session.askToBuyEnabled = true
+        let purchases = PurchaseService(); await purchases.load()
+        let monthly = try XCTUnwrap(purchases.products.first { $0.id == PlusPlan.monthly })
+        await purchases.purchase(monthly)
+        XCTAssertFalse(purchases.hasPlus); XCTAssertNotNil(purchases.message)
+        let transaction = try XCTUnwrap(session.allTransactions().last)
+        try session.approveAskToBuyTransaction(identifier: transaction.identifier)
+        await purchases.refreshEntitlements(); XCTAssertTrue(purchases.hasPlus)
+    }
+}

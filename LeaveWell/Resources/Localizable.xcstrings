@@ -309,6 +309,17 @@
         }
       }
     },
+    "An active LeaveWell Plus subscription is required to create PDF evidence reports.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An active LeaveWell Plus subscription is required to create PDF evidence reports."
+          }
+        }
+      }
+    },
     "An organised record, ready to share.": {
       "extractionState": "manual",
       "localizations": {
@@ -437,6 +448,39 @@
           "stringUnit": {
             "state": "translated",
             "value": "Belongings removed. Windows closed. Radiator and sockets checked. Demo record."
+          }
+        }
+      }
+    },
+    "Billed annually. Renews automatically.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Billed annually. Renews automatically."
+          }
+        }
+      }
+    },
+    "Billed monthly. Renews automatically.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Billed monthly. Renews automatically."
+          }
+        }
+      }
+    },
+    "Both plans include the same Plus features. The annual plan is billed once a year.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Both plans include the same Plus features. The annual plan is billed once a year."
           }
         }
       }
@@ -617,6 +661,17 @@
         }
       }
     },
+    "Choose evidence and control contact details": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose evidence and control contact details"
+          }
+        }
+      }
+    },
     "Choose from library": {
       "extractionState": "manual",
       "localizations": {
@@ -624,6 +679,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Choose from library"
+          }
+        }
+      }
+    },
+    "Choose your billing period": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose your billing period"
           }
         }
       }
@@ -1255,6 +1321,17 @@
         }
       }
     },
+    "Explore LeaveWell Plus": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Explore LeaveWell Plus"
+          }
+        }
+      }
+    },
     "Export all records and original files": {
       "extractionState": "manual",
       "localizations": {
@@ -1262,6 +1339,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Export all records and original files"
+          }
+        }
+      }
+    },
+    "Feel ready for your next move.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Feel ready for your next move."
           }
         }
       }
@@ -2014,6 +2102,39 @@
         }
       }
     },
+    "LeaveWell Plus": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeaveWell Plus"
+          }
+        }
+      }
+    },
+    "LeaveWell Plus is active": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeaveWell Plus is active"
+          }
+        }
+      }
+    },
+    "LeaveWell Plus is ready. You can now create PDF evidence reports.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeaveWell Plus is ready. You can now create PDF evidence reports."
+          }
+        }
+      }
+    },
     "LeaveWell assistant": {
       "extractionState": "manual",
       "localizations": {
@@ -2113,6 +2234,17 @@
         }
       }
     },
+    "Loading subscription prices…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Loading subscription prices…"
+          }
+        }
+      }
+    },
     "Localizable": {
       "extractionState": "manual",
       "localizations": {
@@ -2153,6 +2285,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mailbox key"
+          }
+        }
+      }
+    },
+    "Manage LeaveWell Plus": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Manage LeaveWell Plus"
+          }
+        }
+      }
+    },
+    "Manage subscription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Manage subscription"
           }
         }
       }
@@ -2450,6 +2604,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "No access items recorded."
+          }
+        }
+      }
+    },
+    "No active LeaveWell Plus subscription was found.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No active LeaveWell Plus subscription was found."
           }
         }
       }
@@ -2806,6 +2971,17 @@
         }
       }
     },
+    "PDF reports are included with LeaveWell Plus.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PDF reports are included with LeaveWell Plus."
+          }
+        }
+      }
+    },
     "Page": {
       "extractionState": "manual",
       "localizations": {
@@ -2835,6 +3011,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Parking space"
+          }
+        }
+      }
+    },
+    "Payment is charged to your Apple Account at confirmation. Your subscription renews automatically unless cancelled at least 24 hours before the current period ends. Renewal is charged within 24 hours before the period ends. Manage or cancel in App Store subscription settings.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Payment is charged to your Apple Account at confirmation. Your subscription renews automatically unless cancelled at least 24 hours before the current period ends. Renewal is charged within 24 hours before the period ends. Manage or cancel in App Store subscription settings."
           }
         }
       }
@@ -2883,6 +3070,28 @@
         }
       }
     },
+    "Photos, notes, checklists, access to your records and export of original files remain free. If Plus ends, your records and previously saved PDFs remain yours. Plus does not include cloud storage or legal advice.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photos, notes, checklists, access to your records and export of original files remain free. If Plus ends, your records and previously saved PDFs remain yours. Plus does not include cloud storage or legal advice."
+          }
+        }
+      }
+    },
+    "Plans are temporarily unavailable. Please try again later. Your records remain available.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plans are temporarily unavailable. Please try again later. Your records remain available."
+          }
+        }
+      }
+    },
     "Please confirm the reading matches the meter.": {
       "extractionState": "manual",
       "localizations": {
@@ -2927,6 +3136,17 @@
         }
       }
     },
+    "Preview, save and share your reports": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preview, save and share your reports"
+          }
+        }
+      }
+    },
     "Privacy & security": {
       "extractionState": "manual",
       "localizations": {
@@ -2934,6 +3154,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Privacy & security"
+          }
+        }
+      }
+    },
+    "Privacy policy": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacy policy"
           }
         }
       }
@@ -3268,6 +3499,17 @@
         }
       }
     },
+    "Regenerate reports as your records change": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Regenerate reports as your records change"
+          }
+        }
+      }
+    },
     "Region": {
       "extractionState": "manual",
       "localizations": {
@@ -3275,6 +3517,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Region"
+          }
+        }
+      }
+    },
+    "Reload plans": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reload plans"
           }
         }
       }
@@ -3330,6 +3583,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Report created"
+          }
+        }
+      }
+    },
+    "Restore purchases": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore purchases"
           }
         }
       }
@@ -3917,6 +4181,17 @@
         }
       }
     },
+    "Terms of use": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terms of use"
+          }
+        }
+      }
+    },
     "Text note": {
       "extractionState": "manual",
       "localizations": {
@@ -3990,6 +4265,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "The purchase could not be verified. Please try restoring purchases."
+          }
+        }
+      }
+    },
+    "The purchase has not completed. Please try again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The purchase has not completed. Please try again."
           }
         }
       }
@@ -4137,6 +4423,17 @@
         }
       }
     },
+    "Turn your rental records into a clear PDF, from move-in checks to the final handover.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn your rental records into a clear PDF, from move-in checks to the final handover."
+          }
+        }
+      }
+    },
     "Two keys handed over at the agreed checkout. Demo record.": {
       "extractionState": "manual",
       "localizations": {
@@ -4159,6 +4456,17 @@
         }
       }
     },
+    "Unable to load subscription prices. Check your connection and try again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unable to load subscription prices. Check your connection and try again."
+          }
+        }
+      }
+    },
     "Unable to open LeaveWell": {
       "extractionState": "manual",
       "localizations": {
@@ -4166,6 +4474,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Unable to open LeaveWell"
+          }
+        }
+      }
+    },
+    "Unable to restore purchases. Check your connection and try again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unable to restore purchases. Check your connection and try again."
           }
         }
       }
@@ -4199,6 +4518,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "Unknown"
+          }
+        }
+      }
+    },
+    "Unlimited PDF evidence reports": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlimited PDF evidence reports"
+          }
+        }
+      }
+    },
+    "Unlimited PDF evidence reports with a monthly or annual subscription.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlimited PDF evidence reports with a monthly or annual subscription."
           }
         }
       }
@@ -4357,6 +4698,17 @@
         }
       }
     },
+    "Waiting for the App Store…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for the App Store…"
+          }
+        }
+      }
+    },
     "Wales": {
       "extractionState": "manual",
       "localizations": {
@@ -4496,6 +4848,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Worktops"
+          }
+        }
+      }
+    },
+    "Your LeaveWell Plus subscription has been restored.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your LeaveWell Plus subscription has been restored."
           }
         }
       }
@@ -4661,6 +5024,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Your property"
+          }
+        }
+      }
+    },
+    "Your purchase is awaiting approval. Plus will unlock when Apple confirms it.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your purchase is awaiting approval. Plus will unlock when Apple confirms it."
           }
         }
       }

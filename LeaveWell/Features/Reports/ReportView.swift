@@ -3,6 +3,7 @@ import QuickLook
 
 struct ReportView: View {
     @Environment(CaseStore.self) private var store
+    @Environment(PurchaseService.self) private var purchases
     let caseID: UUID
     @State private var options = ReportOptions()
     @State private var url: URL?
@@ -29,13 +30,20 @@ struct ReportView: View {
                     Toggle(L("Include my declaration"), isOn: $options.declarationAccepted)
                 }
                 Section {
+                    Text(L("PDF reports are included with LeaveWell Plus.")).font(.footnote).foregroundStyle(.secondary)
+                    if !purchases.hasPlus {
+                        NavigationLink(L("Explore LeaveWell Plus")) { PlusView() }
+                    }
                     Button(L("Generate PDF report")) {
                         Task {
                             busy = true; defer { busy = false }
-                            do { url = try await ReportService().generate(record: record, options: options, vault: store.vault) }
+                            do {
+                                try await purchases.requirePlus()
+                                url = try await ReportService().generate(record: record, options: options, vault: store.vault)
+                            }
                             catch { self.error = error.localizedDescription }
                         }
-                    }.disabled(busy)
+                    }.disabled(busy || !purchases.hasPlus)
                     if busy { ProgressView(L("Checking originals and preparing report…")) }
                     if let url {
                         Button(L("Preview report")) { previewURL = url }

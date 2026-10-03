@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @Environment(CaseStore.self) private var store
+    @Environment(PurchaseService.self) private var purchases
     @AppStorage("appLockEnabled") private var appLockEnabled = false
     @State private var share: SharePayload?
     @State private var deleting: MoveCase?
@@ -9,6 +10,12 @@ struct SettingsView: View {
     @State private var busy = false
     var body: some View {
         Form {
+            Section("LeaveWell Plus") {
+                NavigationLink { PlusView() } label: {
+                    Label(purchases.hasPlus ? L("Manage LeaveWell Plus") : L("Explore LeaveWell Plus"), systemImage: "doc.richtext")
+                }
+                Text(L("Unlimited PDF evidence reports with a monthly or annual subscription.")).font(.footnote).foregroundStyle(.secondary)
+            }
             Section(L("Privacy & security")) {
                 Toggle(L("Lock with Face ID or device passcode"), isOn: $appLockEnabled)
                 Text(L("Records and originals are stored on this device with iOS file protection. No tenancy data is sent to advertising or analytics services.")).font(.footnote).foregroundStyle(.secondary)

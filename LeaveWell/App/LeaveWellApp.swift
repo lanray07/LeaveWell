@@ -5,6 +5,7 @@ struct LeaveWellApp: App {
     @State private var store: CaseStore?
     @State private var startupError: String?
     @State private var lock = AppLock()
+    @State private var purchases = PurchaseService()
     @Environment(\.scenePhase) private var scenePhase
     @AppStorage("onboardingComplete") private var onboardingComplete = false
     @AppStorage("appLockEnabled") private var appLockEnabled = false
@@ -34,6 +35,8 @@ struct LeaveWellApp: App {
                 }
             }
             .tint(Theme.accent)
+            .environment(purchases)
+            .task { await purchases.refreshEntitlements() }
             .task {
                 if appLockEnabled { await lock.unlock() }
                 guard store == nil else { return }
@@ -43,6 +46,7 @@ struct LeaveWellApp: App {
                 } catch { startupError = error.localizedDescription }
             }
             .onChange(of: scenePhase) { _, phase in
+                if phase == .active { Task { await purchases.refreshEntitlements() } }
                 if phase != .active && appLockEnabled { lock.unlocked = false }
             }
             .onChange(of: appLockEnabled) { _, enabled in

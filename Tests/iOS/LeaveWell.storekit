@@ -1,0 +1,74 @@
+{
+  "identifier": "LeaveWellStoreKitTests",
+  "nonRenewingSubscriptions": [],
+  "products": [],
+  "settings": {
+    "_applicationInternalID": "6818834817",
+    "_developerTeamID": "",
+    "_failTransactionsEnabled": false,
+    "_locale": "en_GB",
+    "_storefront": "GBR",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [
+    {
+      "id": "22437667",
+      "localizations": [
+        {
+          "description": "",
+          "displayName": "LeaveWell Plus",
+          "locale": "en_GB"
+        }
+      ],
+      "name": "LeaveWell Plus",
+      "subscriptions": [
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "2.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "plus-monthly",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Unlimited rental evidence PDF reports throughout your tenancy.",
+              "displayName": "LeaveWell Plus Monthly",
+              "locale": "en_GB"
+            }
+          ],
+          "productID": "com.LeaveWell.app.plus.monthly",
+          "recurringSubscriptionPeriod": "P1M",
+          "referenceName": "LeaveWell Plus Monthly",
+          "subscriptionGroupID": "22437667",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "19.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "plus-annual",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Unlimited rental evidence PDF reports throughout your tenancy.",
+              "displayName": "LeaveWell Plus Annual",
+              "locale": "en_GB"
+            }
+          ],
+          "productID": "com.LeaveWell.app.plus.annual",
+          "recurringSubscriptionPeriod": "P1Y",
+          "referenceName": "LeaveWell Plus Annual",
+          "subscriptionGroupID": "22437667",
+          "type": "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version": {
+    "major": 3,
+    "minor": 0
+  }
+}

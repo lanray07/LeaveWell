@@ -15,7 +15,8 @@ def generate():
     app_sources = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / 'LeaveWell').rglob('*.swift'))
     test_sources = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / 'Tests/iOS').rglob('*.swift'))
     resources = ['LeaveWell/Resources/Assets.xcassets', 'LeaveWell/Resources/Localizable.xcstrings', 'LeaveWell/Resources/PrivacyInfo.xcprivacy']
-    files = app_sources + test_sources + resources
+    test_resources = ['Tests/iOS/LeaveWell.storekit']
+    files = app_sources + test_sources + resources + test_resources
     objects = []
     def obj(key, body):
         objects.append(f'{uid(key)} = {{ {body} }};')
@@ -31,7 +32,7 @@ def generate():
     obj('dependency', f'isa = PBXTargetDependency; target = {uid("target:LeaveWell")}; targetProxy = {uid("proxy")};')
     for name, sources in [('LeaveWell', app_sources), ('LeaveWellTests', test_sources)]:
         obj('sources:' + name, 'isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (' + ','.join(uid('build:' + p) for p in sources) + '); runOnlyForDeploymentPostprocessing = 0;')
-        obj('resources:' + name, 'isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (' + (','.join(uid('build:' + p) for p in resources) if name == 'LeaveWell' else '') + '); runOnlyForDeploymentPostprocessing = 0;')
+        obj('resources:' + name, 'isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (' + ','.join(uid('build:' + p) for p in (resources if name == 'LeaveWell' else test_resources)) + '); runOnlyForDeploymentPostprocessing = 0;')
         obj('frameworks:' + name, 'isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;')
         settings = {
             'SDKROOT': 'iphoneos', 'IPHONEOS_DEPLOYMENT_TARGET': '18.0', 'SWIFT_VERSION': '5.0',
