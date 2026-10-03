@@ -25,9 +25,9 @@ final class ReportTests: XCTestCase {
         let document = try XCTUnwrap(PDFDocument(url: url))
         var foundImage = false
         for index in 0..<document.pageCount {
-            if let page = document.page(at: index)?.pageRef {
+            if let page = document.page(at: index)?.pageRef, let dictionary = page.dictionary {
                 var resources: CGPDFDictionaryRef?; var objects: CGPDFDictionaryRef?
-                if CGPDFDictionaryGetDictionary(page.dictionary, "Resources", &resources), let resources,
+                if CGPDFDictionaryGetDictionary(dictionary, "Resources", &resources), let resources,
                    CGPDFDictionaryGetDictionary(resources, "XObject", &objects), let objects,
                    CGPDFDictionaryGetCount(objects) > 0 { foundImage = true }
             }
