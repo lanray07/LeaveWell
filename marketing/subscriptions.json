@@ -2,11 +2,40 @@
   "group": "LeaveWell Plus",
   "groupId": "22437667",
   "sameServiceLevel": true,
-  "features": ["Unlimited PDF evidence reports", "Regenerate reports as records change", "Evidence selection and sharing controls", "Preview, save and share PDFs"],
-  "freeFeatures": ["Evidence capture", "Notes and document storage", "Move-out checklist", "Meters and keys", "Manual inventory comparison", "Access to all records", "Export all records and original files"],
+  "features": [
+    "Unlimited PDF evidence reports",
+    "Regenerate reports as records change",
+    "Evidence selection and sharing controls",
+    "Preview, save and share PDFs"
+  ],
+  "freeFeatures": [
+    "Evidence capture",
+    "Notes and document storage",
+    "Move-out checklist",
+    "Meters and keys",
+    "Manual inventory comparison",
+    "Access to all records",
+    "Export all records and original files"
+  ],
   "plans": [
-    {"name": "LeaveWell Plus Monthly", "productId": "com.LeaveWell.app.plus.monthly", "appleId": "6818861767", "period": "P1M", "ukPriceGBP": "2.99", "description": "Unlimited rental evidence PDF reports. Billed monthly.", "artwork": "exports/subscriptions/subscription-organised.png"},
-    {"name": "LeaveWell Plus Annual", "productId": "com.LeaveWell.app.plus.annual", "appleId": "6818862353", "period": "P1Y", "ukPriceGBP": "19.99", "description": "Unlimited rental evidence PDF reports. Billed annually.", "artwork": "exports/subscriptions/subscription-next-chapter.png"}
+    {
+      "name": "LeaveWell Plus Monthly",
+      "productId": "com.LeaveWell.app.plus.monthly",
+      "appleId": "6818861767",
+      "period": "P1M",
+      "ukPriceGBP": "2.99",
+      "description": "Unlimited rental evidence PDF reports. Billed monthly.",
+      "artwork": "exports/subscriptions/subscription-organised.png"
+    },
+    {
+      "name": "LeaveWell Plus Annual",
+      "productId": "com.LeaveWell.app.plus.annual",
+      "appleId": "6818862353",
+      "period": "P1Y",
+      "ukPriceGBP": "19.99",
+      "description": "Unlimited rental evidence PDF reports. Billed annually.",
+      "artwork": "exports/subscriptions/subscription-next-chapter.png"
+    }
   ],
   "annualSavingVs12MonthlyPaymentsPercent": 44.29,
   "regionalPricing": "Apple automatically equalised from UK GBP; checkout displays StoreKit localized prices",
@@ -14,7 +43,20 @@
   "billingGracePeriod": false,
   "familySharing": false,
   "annualInstallmentCommitment": false,
-  "pricingResearch": ["https://www.miprogram.co.uk/pricing", "https://tofta.co.uk/pricing/"],
+  "pricingResearch": [
+    "https://www.miprogram.co.uk/pricing",
+    "https://tofta.co.uk/pricing/"
+  ],
   "privacyUrl": "https://github.com/lanray07/LeaveWell/blob/main/marketing/privacy.md",
-  "termsUrl": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+  "termsUrl": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+  "reviewState": "Ready for Review",
+  "reviewScreenshot": "review/LeaveWell-Plus-purchase-review.png",
+  "reviewScreenshotSha256": "ccebb77e8eca87d2ea344aff928b41f18df034b30d7f9e4341025c799c9718d3",
+  "storeKitLifecycleTests": {
+    "passed": 6,
+    "failures": 0,
+    "run": "https://github.com/lanray07/LeaveWell/actions/runs/37150860059",
+    "runtime": "iOS 18.5"
+  },
+  "reviewSubmitted": false
 }

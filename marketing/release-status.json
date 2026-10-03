@@ -3,22 +3,23 @@
   "appId": "6818834817",
   "bundleId": "com.LeaveWell.app",
   "version": "1.0",
-  "build": "14",
-  "buildId": "2f6fb43e-5dca-4b1e-bf6b-91b8c3756a0c",
-  "sourceCommit": "69552da6967e984ad2980042d0aa2f64dc2b06f6",
-  "githubRun": "https://github.com/lanray07/LeaveWell/actions/runs/37147044925",
-  "ipaSha256": "1eb6367ef17018360279a80148593329aa79e75637c643cacd3e8d6d5dceeaac",
+  "build": "22",
+  "buildId": "e2f33ee2-ff1e-4fc3-8977-79adcca85a60",
+  "sourceCommit": "4c27e8423cb2d5cc8c8fa71a8b2c7ff54323623b",
+  "githubRun": "https://github.com/lanray07/LeaveWell/actions/runs/37150860059",
+  "ipaSha256": "67d0c48fa8647c5b159ba56dc54e3794b810ca1095cb7abbee4c373c8dea5a04",
   "automatedChecks": {
     "coreTests": 7,
-    "iosTests": 5,
+    "iosServiceTests": 5,
     "localizationTests": 5,
+    "storeKitLifecycleTests": 6,
     "failures": 0
   },
   "appleValidation": "VERIFY SUCCEEDED with no errors",
   "appleUpload": "UPLOAD SUCCEEDED with no errors",
   "appleProcessing": "complete",
-  "listingState": "Prepare for Submission",
-  "draftSubmissionState": "Subscription group ready; app build replacement pending",
+  "listingState": "Ready for Review",
+  "draftSubmissionState": "Items Ready to Submit (4)",
   "reviewSubmitted": false,
   "released": false,
   "privacyResponses": "Data Not Collected; published with owner approval",
@@ -29,7 +30,20 @@
   "subscriptionDetailsPending": [],
   "paidAccessImplemented": true,
   "physicalDeviceQaComplete": false,
-  "pendingSubscriptionBuild": "22",
-  "pendingSubscriptionRun": "https://github.com/lanray07/LeaveWell/actions/runs/37150860059",
-  "purchaseVerification": "Run 18 passed four lifecycle tests; immediate expiry/refund assertions failed before entitlement delivery. Run 22 uses bounded waits for those changes and a fully loaded review screenshot."
+  "purchaseVerification": "Six real StoreKit lifecycle tests passed on iOS 18.5 in run 37150860059, including purchase, restore, renewal, expiry, refund, cancellation, pending approval and invalid signature. Physical Apple sandbox-device testing remains pending.",
+  "commercePrerequisites": {
+    "paidAppsAgreement": "Active",
+    "banking": "Active",
+    "taxForms": "Active",
+    "verifiedDate": "2026-10-03"
+  },
+  "purchaseReviewScreenshot": "review/LeaveWell-Plus-purchase-review.png",
+  "subscriptionProductsReviewState": "Ready for Review",
+  "subscriptionGroupReviewState": "Ready for Review",
+  "draftItems": [
+    "iOS App 1.0 (22)",
+    "LeaveWell Plus subscription group",
+    "LeaveWell Plus Monthly",
+    "LeaveWell Plus Annual"
+  ]
 }

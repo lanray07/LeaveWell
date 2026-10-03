@@ -17,10 +17,13 @@ Lifestyle photography was generated with the built-in Codex Image Generation too
 - iPhone: ten RGB PNGs, 1284 × 2778, for the 6.5-inch slot shown in App Store Connect.
 - iPad: the same ten stories using native tablet interfaces, RGB PNGs, 2064 × 2752, for the 13-inch slot.
 - Subscription artwork: two distinct RGB PNGs, exactly 1024 × 1024, with no plan names, prices or invented benefits.
+- The PDF report views were refreshed from GitHub Actions run 37148975501 to show the Plus access controls.
 - The two subscription artworks are assigned to LeaveWell Plus Monthly and Annual. They are separate from the actual purchase-flow review screenshot, captured from the production PlusView with StoreKitTest prices and no live charge. LeaveWell Plus monthly (£2.99) and annual (£19.99) unlock the same PDF report features. Current configuration and review status are recorded in subscriptions.json and release-status.json.
 - English U.K. is the only reviewed app language. No unreviewed translated listing is published.
 - Search copy uses relevant renter, move-out, inventory, meter, handover and evidence vocabulary. No keyword search-volume or ranking claim is made.
 - Saved metadata is in `app-store-en-GB.json`; asset dimensions and SHA-256 hashes are in `exports/manifest.json`.
-- The subscription group is Ready for Review; the app listing is Prepare for Submission while build 22 is validated and prepared to replace build 14. The Data Not Collected privacy responses were published after the owner explicitly approved Apple's accuracy and legal-compliance declaration. No final review submission or release is performed.
+- The app listing, subscription group and both plans are Ready for Review in one draft with four ready items, including version 1.0 (22). The Data Not Collected privacy responses were published after the owner explicitly approved Apple's accuracy and legal-compliance declaration. No final review submission or release is performed.
 
 Apple references: [screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications), [promoted in-app purchase artwork](https://developer.apple.com/app-store/promoting-in-app-purchases/), [app privacy definitions](https://developer.apple.com/app-store/app-privacy-details/).
+
+Subscription verification: [GitHub run 37150860059](https://github.com/lanray07/LeaveWell/actions/runs/37150860059), six StoreKit lifecycle tests passed; actual purchase review PNG captured from PlusView on iOS 18.5 after prices loaded. Apple validation and upload succeeded; build 22 was processed and selected. [Apple simulator StoreKit issue](https://developer.apple.com/forums/thread/826971).

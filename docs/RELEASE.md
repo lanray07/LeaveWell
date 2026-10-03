@@ -4,7 +4,7 @@
 
 | Area | Current behavior | Required before a complete premium release |
 |---|---|---|
-| Native app | SwiftUI iPhone/iPad project targeting iOS 18+, adaptive system controls; Xcode 26.6 simulator build and 12 Swift tests passed on GitHub | Broader simulator workflows, physical-device QA, designer review |
+| Native app | SwiftUI iPhone/iPad project targeting iOS 18+, adaptive system controls; Xcode 26.6 app build, 12 core/service Swift tests, six real StoreKit tests on iOS 18.5 and five localization tests passed on GitHub | Broader simulator workflows, physical-device QA, designer review |
 | Onboarding | Four steps with native symbol illustrations | Commission or generate the requested human renter illustration and report artwork |
 | Property setup | Main property/date/deposit/contact fields; GB regions or other jurisdiction | Full international country/region dataset and region-specific reviewed guidance |
 | Plan | Calendar-based checklist and optional reminders | Smarter notifications around actual handover, rescheduling on date changes |
