@@ -15,7 +15,7 @@ The native interfaces were captured from the real Debug app by [GitHub Actions r
 
 Saved: app name and subtitle, primary and secondary categories, promotional text, description, keywords, support and marketing URLs, privacy policy and choices URLs, reviewer notes, age questionnaire (4+), and content-rights response. Existing review contact details, free pricing and availability were preserved. Screenshot uploads are complete and ordered for both device families.
 
-The Data Not Collected privacy response remains a draft. Apple's Publish action includes an accuracy and legal-compliance agreement and needs action-time confirmation from the owner before acceptance.
+The Data Not Collected privacy response was published on 3 October 2026 after the owner explicitly approved Apple's accuracy and legal-compliance declaration. App Store Connect confirmed the published status.
 
 No subscription group or product is configured. The owner must provide names, billing periods, prices and paid benefits, and working paid access must be implemented before a subscription can be submitted. The supplied artworks are ready for that future configuration; they are not screenshots of an existing paywall.
 
