@@ -21,6 +21,6 @@ Lifestyle photography was generated with the built-in Codex Image Generation too
 - English U.K. is the only reviewed app language. No unreviewed translated listing is published.
 - Search copy uses relevant renter, move-out, inventory, meter, handover and evidence vocabulary. No keyword search-volume or ranking claim is made.
 - Saved metadata is in `app-store-en-GB.json`; asset dimensions and SHA-256 hashes are in `exports/manifest.json`.
-- The app listing is Ready for Review with version 1.0 (14) selected in a draft submission. The Data Not Collected privacy responses were published after the owner explicitly approved Apple's accuracy and legal-compliance declaration. No final review submission or release is performed.
+- The subscription group is Ready for Review; the app listing is Prepare for Submission while build 18 is validated and prepared to replace build 14. The Data Not Collected privacy responses were published after the owner explicitly approved Apple's accuracy and legal-compliance declaration. No final review submission or release is performed.
 
 Apple references: [screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications), [promoted in-app purchase artwork](https://developer.apple.com/app-store/promoting-in-app-purchases/), [app privacy definitions](https://developer.apple.com/app-store/app-privacy-details/).

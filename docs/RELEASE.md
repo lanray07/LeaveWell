@@ -23,7 +23,7 @@
 | Cloud | Contracts only; UI truthfully says saved on device | Private authenticated backend, end-to-end encryption design, retries, conflict handling, per-file verified acknowledgements, remote deletion |
 | Collaboration | Contracts only | Invitations, scoped case roles, verified identity attribution, revocation and conflict tests |
 | Sharing links | Ordinary local PDF sharing only | Expiry/revocation/download-policy backend; never promise that existing downloads can be revoked |
-| Purchases | StoreKit 2 Plus paywall, verified active subscriptions, restore/manage, monthly £2.99 and annual £19.99 UK products | Apple sandbox account/device verification and subscription review approval |
+| Purchases | StoreKit 2 Plus paywall, verified active subscriptions, restore/manage, monthly Â£2.99 and annual Â£19.99 UK products | Apple sandbox account/device verification and subscription review approval |
 | Localization | English catalog plus gated translation workflow | Human-reviewed 16-language translation sets, localized permission prompts, plural variants, locale/date/RTL QA |
 | Account management | No account or credentials required | Sign in with Apple, Keychain tokens, account deletion, server-side erasure if connected edition ships |
 
