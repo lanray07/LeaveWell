@@ -1,5 +1,7 @@
 import LocalAuthentication
 import Observation
+import SwiftUI
+import UIKit
 
 @MainActor
 protocol DeviceAuthenticating {
@@ -23,11 +25,29 @@ final class AppLock {
     var message: String?
     @ObservationIgnored private let makeAuthentication: () -> any DeviceAuthenticating
     @ObservationIgnored private var authentication: (any DeviceAuthenticating)?
+    @ObservationIgnored private var privacyWindows: [String: UIWindow] = [:]
     private var generation = 0
     init(makeAuthentication: @escaping () -> any DeviceAuthenticating) {
         self.makeAuthentication = makeAuthentication
     }
     convenience init() { self.init(makeAuthentication: { DeviceAuthentication() }) }
+    func updateShield(enabled: Bool, active: Bool) {
+        guard enabled && (!unlocked || !active) else {
+            for window in privacyWindows.values { window.isHidden = true }
+            privacyWindows.removeAll()
+            return
+        }
+        // A separate window also covers presented camera, Quick Look and share
+        // controllers, which can otherwise sit above a SwiftUI root overlay.
+        for scene in UIApplication.shared.connectedScenes.compactMap({ $0 as? UIWindowScene }) {
+            let id = scene.session.persistentIdentifier
+            let window = privacyWindows[id] ?? UIWindow(windowScene: scene)
+            window.windowLevel = .alert + 1
+            window.rootViewController = UIHostingController(rootView: AppLockScreen(lock: self, active: active))
+            window.isHidden = false
+            privacyWindows[id] = window
+        }
+    }
     func lock() {
         generation += 1
         authentication?.invalidate(); authentication = nil
@@ -48,5 +68,22 @@ final class AppLock {
             guard request == generation else { return }
             unlocked = false; message = L("Your records are locked. Try again when you are ready.")
         }
+    }
+}
+
+private struct AppLockScreen: View {
+    let lock: AppLock
+    let active: Bool
+    var body: some View {
+        ZStack {
+            Color(.systemBackground).ignoresSafeArea()
+            VStack(spacing: 24) {
+                Image(systemName: "lock.shield").font(.system(size: 60)).foregroundStyle(Theme.accent)
+                Text(L("Your evidence stays private")).font(.title2.bold())
+                if let message = lock.message { Text(message).foregroundStyle(.secondary) }
+                Button(L("Unlock LeaveWell")) { Task { await lock.unlock() } }
+                    .buttonStyle(PrimaryButton()).disabled(lock.authenticating || !active)
+            }.padding(32)
+        }.tint(Theme.accent)
     }
 }

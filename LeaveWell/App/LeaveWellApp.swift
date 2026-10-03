@@ -38,6 +38,7 @@ struct LeaveWellApp: App {
             .environment(purchases)
             .task { await purchases.refreshEntitlements() }
             .task {
+                lock.updateShield(enabled: appLockEnabled, active: scenePhase == .active)
                 if appLockEnabled { await lock.unlock() }
                 guard store == nil else { return }
                 do {
@@ -50,11 +51,14 @@ struct LeaveWellApp: App {
                 // Authentication temporarily makes the scene inactive. Shield it,
                 // but invalidate the request only when the app actually backgrounds.
                 if phase == .background && appLockEnabled { lock.lock() }
+                lock.updateShield(enabled: appLockEnabled, active: phase == .active)
             }
             .onChange(of: appLockEnabled) { _, enabled in
                 lock.lock()
+                lock.updateShield(enabled: enabled, active: scenePhase == .active)
                 if enabled { Task { await lock.unlock() } }
             }
+            .onChange(of: lock.unlocked) { _, _ in lock.updateShield(enabled: appLockEnabled, active: scenePhase == .active) }
         }
     }
     @ViewBuilder private func appContent(store: CaseStore) -> some View {
