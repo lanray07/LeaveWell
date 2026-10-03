@@ -5,6 +5,10 @@ permissions:
   contents: read
 jobs:
   screenshots:
+    strategy:
+      fail-fast: false
+      matrix:
+        family: [iphone, ipad]
     runs-on: macos-26
     timeout-minutes: 30
     steps:
@@ -14,12 +18,12 @@ jobs:
       - name: Build real Debug application
         run: xcodebuild -project LeaveWell.xcodeproj -scheme LeaveWell -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath build/DerivedData -configuration Debug CODE_SIGNING_ALLOWED=NO build
       - name: Capture real iPhone and iPad screens
-        run: python3 scripts/capture_marketing.py
+        run: python3 scripts/capture_marketing.py --family ${{ matrix.family }}
       - name: Save native captures
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: LeaveWell-real-marketing-screens
-          path: build/MarketingRaw
+          name: LeaveWell-real-marketing-screens-${{ matrix.family }}
+          path: build/MarketingRaw/${{ matrix.family }}
           if-no-files-found: warn
           retention-days: 30

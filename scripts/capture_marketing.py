@@ -3,18 +3,24 @@ import json
 import subprocess
 import time
 import os
+import argparse
 from pathlib import Path
 
 def run(*args, check=True, timeout=180):
     return subprocess.run(args, check=check, capture_output=True, text=True, timeout=timeout).stdout.strip()
 
 devices = json.loads(run('xcrun', 'simctl', 'list', 'devices', 'available', '-j'))['devices']
+parser = argparse.ArgumentParser()
+parser.add_argument('--family', choices=['iphone', 'ipad', 'both'], default='both')
+options = parser.parse_args()
 available = [device for group in devices.values() for device in group]
 routes = ['home', 'room', 'evidence', 'notes', 'meters', 'keys', 'documents', 'comparison', 'plan', 'report']
 app = Path('build/DerivedData/Build/Products/Debug-iphonesimulator/LeaveWell.app')
 (app / 'DemoKitchen.png').write_bytes(Path('marketing/source/demo-kitchen.png').read_bytes())
 run('xcrun', 'simctl', 'shutdown', 'all', check=False)
 for family, match in [('iphone', 'iPhone'), ('ipad', 'iPad Pro 13')]:
+    if options.family not in ('both', family):
+        continue
     candidates = [d for d in available if match in d['name']]
     if not candidates:
         raise RuntimeError('No available simulator for ' + family)
