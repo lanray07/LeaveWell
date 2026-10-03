@@ -62,7 +62,7 @@ struct KeyEditor: View {
                     TextField(L("Recipient"), text: $recipient)
                     if handedOver { DatePicker(L("Handed over at"), selection: $date) }
                     TextField(L("Notes"), text: $notes, axis: .vertical)
-                    Button(voice.recording ? L("Stop and transcribe") : L("Record a voice note")) { Task { if voice.recording { await voice.stopAndTranscribe(); notes = voice.transcript; confirmed = false } else { await voice.start() } } }.disabled(voice.starting || voice.processing)
+                    Button(voice.recording ? L("Stop and transcribe") : L("Record a voice note")) { Task { if voice.recording { await voice.stopAndTranscribe(); if !voice.transcript.isEmpty { notes = [notes, voice.transcript].filter { !$0.isEmpty }.joined(separator: "\n") }; confirmed = false } else { await voice.start() } } }.disabled(voice.starting || voice.processing)
                     if let message = voice.error { Text(message).font(.footnote) }
                     Toggle(L("I have reviewed these details"), isOn: $confirmed)
                 }

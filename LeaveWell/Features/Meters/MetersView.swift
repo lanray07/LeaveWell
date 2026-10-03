@@ -79,7 +79,7 @@ struct MeterEditor: View {
                 }
                 Section(L("Voice meter note")) {
                     Button(voice.recording ? L("Stop and transcribe") : L("Record a voice note")) {
-                        Task { if voice.recording { await voice.stopAndTranscribe(); notes = voice.transcript } else { await voice.start() } }
+                        Task { if voice.recording { await voice.stopAndTranscribe(); if !voice.transcript.isEmpty { notes = [notes, voice.transcript].filter { !$0.isEmpty }.joined(separator: "\n") } } else { await voice.start() } }
                     }.disabled(voice.starting || voice.processing)
                     if !voice.transcript.isEmpty { Text(voice.transcript); Text(L("Enter the digits above, then confirm them against the meter.")).font(.footnote) }
                     if let message = voice.error { Text(message).font(.footnote) }

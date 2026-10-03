@@ -26,7 +26,7 @@ struct AssistantView: View {
                 HStack {
                     Button(L("Ask LeaveWell")) { respond(intent: question) }.buttonStyle(.borderedProminent).disabled(question.isEmpty)
                     Button {
-                        Task { if voice.recording { await voice.stopAndTranscribe(); question = voice.transcript } else { await voice.start() } }
+                        Task { if voice.recording { await voice.stopAndTranscribe(); if !voice.transcript.isEmpty { question = voice.transcript } } else { await voice.start() } }
                     } label: { Image(systemName: voice.recording ? "stop.circle" : "mic").frame(minWidth: 44, minHeight: 44).accessibilityLabel(voice.recording ? L("Stop and transcribe") : L("Speak your question")) }.disabled(voice.starting || voice.processing)
                 }
                 if let error = voice.error { Text(error).font(.footnote).foregroundStyle(.secondary) }
