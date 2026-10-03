@@ -19,7 +19,7 @@ The Data Not Collected privacy response was published on 3 October 2026 after th
 
 No subscription group or product is configured. The owner must provide names, billing periods, prices and paid benefits, and working paid access must be implemented before a subscription can be submitted. The supplied artworks are ready for that future configuration; they are not screenshots of an existing paywall.
 
-The listing remains Prepare for Submission. No build has been uploaded or selected for version 1.0, and no App Review submission or release was made.
+Version **1.0 (14)** was validated, signed and uploaded by [run 37147044925](https://github.com/lanray07/LeaveWell/actions/runs/37147044925), processed by Apple, selected for the listing and added to a draft submission. App Store Connect confirmed **Ready for Review** and **Item Ready to Submit**. No final App Review submission or release was made. Physical-device QA and the additional premium capabilities listed in `docs/RELEASE.md` remain separate release requirements.
 
 ## Reproduce
 

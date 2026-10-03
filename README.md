@@ -4,6 +4,10 @@
 
 A native SwiftUI app for renter-owned move-out records. This repository contains an offline local edition, an Xcode project, a portable Swift domain package, iOS integrity tests and a reviewed-localization workflow.
 
+[About LeaveWell](marketing/product.md) · [Renter support](marketing/support.md) · [Privacy](marketing/privacy.md)
+
+Version **1.0 (14)** passed all automated checks, Apple binary validation, signing and upload in [run 37147044925](https://github.com/lanray07/LeaveWell/actions/runs/37147044925). It is selected in App Store Connect and marked **Ready for Review** in a draft submission. Ten screenshots for each device family, the English U.K. listing and privacy responses are saved. No final App Review submission or release has been made. Subscription products and paid access remain unconfigured; see [the marketing pack status](marketing/README.md) and [remaining release work](docs/RELEASE.md).
+
 ## Open and run
 
 1. On a Mac, open `LeaveWell.xcodeproj` in a current stable Xcode with an iOS 18 or newer SDK.

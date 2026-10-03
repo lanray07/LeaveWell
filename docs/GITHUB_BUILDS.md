@@ -32,6 +32,8 @@ On 3 October 2026, [run 37141152860](https://github.com/lanray07/LeaveWell/actio
 
 This verifies compilation, the supplied automated tests and distribution signing. It does not replace physical-device camera/microphone/biometric tests or a complete production-readiness review.
 
+On 3 October 2026, [run 37147044925](https://github.com/lanray07/LeaveWell/actions/runs/37147044925) passed the same seven core, five iOS and five localisation tests, signed version **1.0 (14)** for `com.LeaveWell.app`, and received **VERIFY SUCCEEDED** and **UPLOAD SUCCEEDED** from Apple with no errors. Its signed IPA SHA-256 is `1eb6367ef17018360279a80148593329aa79e75637c643cacd3e8d6d5dceeaac`. The binary excludes the debug marketing launch route.
+
 ## App Store screenshots
 
 Enable **Capture ten real app screens on iPhone and iPad**, or run:
