@@ -13,6 +13,8 @@ A native SwiftUI app for renter-owned move-out records. This repository contains
 
 No third-party application dependencies, backend credentials or XcodeGen installation are required. The project is checked in. After adding source files, run `python3 scripts/generate_project.py` to refresh it.
 
+To build without a local Mac, use the repository's GitHub Actions workflow. See [`docs/GITHUB_BUILDS.md`](docs/GITHUB_BUILDS.md) for validation, simulator artifacts and signed IPA export using the existing Apple secrets.
+
 ## Implemented local experience
 
 - Four-screen onboarding and calm adaptive SwiftUI layouts, system typography, native navigation, dark color variants and accessible controls.
@@ -32,7 +34,7 @@ No third-party application dependencies, backend credentials or XcodeGen install
 
 ## Verification on the authoring machine
 
-This project was authored on Windows, which cannot compile SwiftUI/UIKit or run an iOS simulator. The portable core was compiled and tested with Swift 6.3.1; seven core tests passed. iOS source parsing and resource/project checks were also run. **An iOS build, simulator run and physical-device QA remain unverified.** The three iOS vault tests and two PDF tests are supplied for execution on a Mac.
+This project was authored on Windows and then built on a GitHub-hosted Mac using **Xcode 26.6 (17F113)**. [The successful run](https://github.com/lanray07/LeaveWell/actions/runs/37141152860) passed the iOS simulator build, seven portable core tests, three iOS vault tests and two PDF tests, then archived and exported a **signed App Store distribution IPA** using the existing Apple secrets and app bundle ID. Five translation-gate tests and project/resource checks also passed. The simulator test host produced sample PDF/page images; the report samples were inspected. **Physical-device capture, permissions, biometrics and broader accessibility/UI QA still need validation.**
 
 Run portable tests:
 

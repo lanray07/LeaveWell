@@ -4,7 +4,7 @@
 
 | Area | Current behavior | Required before a complete premium release |
 |---|---|---|
-| Native app | SwiftUI iPhone/iPad project targeting iOS 18+, adaptive system controls | Compile/type-check on Xcode, simulator and physical-device QA, designer review |
+| Native app | SwiftUI iPhone/iPad project targeting iOS 18+, adaptive system controls; Xcode 26.6 simulator build and 12 Swift tests passed on GitHub | Broader simulator workflows, physical-device QA, designer review |
 | Onboarding | Four steps with native symbol illustrations | Commission or generate the requested human renter illustration and report artwork |
 | Property setup | Main property/date/deposit/contact fields; GB regions or other jurisdiction | Full international country/region dataset and region-specific reviewed guidance |
 | Plan | Calendar-based checklist and optional reminders | Smarter notifications around actual handover, rescheduling on date changes |
@@ -42,4 +42,4 @@
 11. Share/export to Files and AirDrop, inspect all exported files, delete evidence and cases, restart and verify orphan-file reconciliation. Confirm no external copy is claimed to be deleted.
 12. Configure signing, owned bundle IDs, StoreKit products, support URL, privacy URL, screenshots, final artwork and App Store metadata. Archive and validate with Xcode before any upload.
 
-No App Store Connect mutation or release submission was performed. The browser tab supplied as ambient context was not used as authorization to publish.
+GitHub validation run: https://github.com/lanray07/LeaveWell/actions/runs/37141152860. The workflow resolves the existing LeaveWell app through a read-only App Store Connect lookup and can use Apple automatic provisioning/cloud signing for IPA export. No TestFlight upload or App Store version submission is enabled in this workflow.
