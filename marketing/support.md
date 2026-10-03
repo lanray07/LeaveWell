@@ -8,7 +8,7 @@ Your property record also contains your move-out plan, meters, keys, document va
 
 ## How do I save an evidence report?
 
-Open your property's report screen. Choose the evidence to include and review the contact, deposit and declaration options. Generate and preview the PDF, then use the share sheet to save it to Files or share it with your chosen recipient.
+An active LeaveWell Plus subscription is required to create PDF reports. Open your property's report screen. Choose the evidence to include and review the contact, deposit and declaration options. Generate and preview the PDF, then use the share sheet to save it to Files or share it with your chosen recipient.
 
 ## How do I keep a copy of everything?
 
@@ -30,4 +30,12 @@ In LeaveWell Settings, choose **Delete record** for the property and confirm. Th
 
 For advice about a tenancy or deposit dispute, contact an appropriate tenant adviser. LeaveWell helps organise records and does not make legal decisions.
 
-[About LeaveWell](product.md) · [Privacy policy](privacy.md)
+[About LeaveWell](product.md) Â· [Privacy policy](privacy.md)
+
+## Purchases, restoration and cancellation
+
+Open Settings > Explore LeaveWell Plus to choose LeaveWell Plus Monthly or Annual. Both include unlimited PDF report creation and regeneration while subscribed. The purchase screen displays the local App Store price and billing period. UK prices are £2.99/month or £19.99/year billed in full annually. No free trial is offered.
+
+To restore paid access, sign into the purchasing Apple Account and choose Restore purchases on the Plus screen. Restoration does not transfer locally stored property records. To manage or cancel an active subscription, open Manage subscription on that screen or your Apple Account subscription settings. Deleting the app or a property record does not cancel an Apple subscription. Cancel at least 24 hours before renewal to avoid the next charge.
+
+If a purchase is pending, paid access begins after Apple approves it. If plans are unavailable, retry after checking your connection. Your existing records and export of original files remain free, including after a subscription expires. PDFs you already saved outside the app remain available where you saved them.

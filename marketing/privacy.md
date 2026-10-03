@@ -22,6 +22,10 @@ You choose when to export or share records using iOS sharing features. PDF repor
 
 Protected temporary preview and export files are cleared on the next app launch and when deleting a case. Copies you save outside LeaveWell are controlled by you and the destination service.
 
+## Optional LeaveWell Plus subscriptions
+
+LeaveWell Plus uses Apple's StoreKit for purchases and restoration. Apple handles your Apple Account, payment method and billing under its own privacy policy. LeaveWell checks verified subscription transactions on your device to determine whether PDF report creation is available. We do not receive your payment card details or send your purchase history or tenancy evidence to a LeaveWell server. No third-party purchase analytics service is used.
+
 ## Deleting records
 
 You can delete individual evidence or an entire property case in the app. Deleting a case also cancels its local reminders. LeaveWell cannot delete copies you have already saved elsewhere or shared with another person.
@@ -30,4 +34,4 @@ You can delete individual evidence or an entire property case in the app. Deleti
 
 You can contact the LeaveWell developer through [GitHub Issues](https://github.com/lanray07/LeaveWell/issues). Issues are public: do not post private tenancy records, addresses, financial information or other sensitive evidence. Information you submit to GitHub is handled under GitHub's privacy policy.
 
-This policy will be updated before changes to the app's data practices. Connected services or paid features, if introduced in a future version, will be explained separately before you use them.
+This policy will be updated before changes to the app's data practices. Any future connected services will be explained separately before you use them.

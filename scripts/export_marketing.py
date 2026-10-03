@@ -17,12 +17,12 @@ STORY = [
     ('room', ['Photo evidence.', 'Room by room.'], 'From the whole room to the small details.', 'demo-kitchen', True, 'GUIDED ROOM RECORDS'),
     ('evidence', ['Your rental records.', 'All together.'], 'Find photos, notes and supporting files.', 'demo-kitchen', False, 'PROPERTY EVIDENCE'),
     ('notes', ['The little details', 'deserve a note.'], 'Write what you observed while it is fresh.', 'subscription-organised', False, 'FACTUAL CONDITION NOTES'),
-    ('meters', ['Final meter readings.', 'Clearly recorded.'], 'Save the digits. Check the details yourself.', None, True, 'ELECTRICITY · GAS · WATER'),
+    ('meters', ['Final meter readings.', 'Clearly recorded.'], 'Save the digits. Check the details yourself.', None, True, 'ELECTRICITY Â· GAS Â· WATER'),
     ('keys', ['Keys handed over.', 'Details kept.'], 'Record quantities, recipients and dates.', 'lifestyle-keys', False, 'KEY & FOB HANDOVER'),
     ('documents', ['Inventory. Receipts.', 'One document vault.'], 'Keep the paperwork with your move.', 'subscription-organised', False, 'RENTAL DOCUMENTS'),
     ('comparison', ['Move-in to move-out.', 'Make your own notes.'], 'Review your inventory and current evidence.', 'demo-kitchen', True, 'INVENTORY COMPARISON'),
     ('plan', ['A calmer move-out', 'starts with a plan.'], 'A dated checklist you can work through.', 'lifestyle-home', False, 'TENANT MOVE-OUT PLAN'),
-    ('report', ['An evidence report', 'you can share.'], 'Review, export and save a structured PDF.', 'subscription-next-chapter', True, 'PDF EVIDENCE REPORT'),
+    ('report', ['An evidence report', 'you can share.'], 'Create unlimited PDF reports with LeaveWell Plus.', 'subscription-next-chapter', True, 'PDF REPORTS · PAID SUBSCRIPTION'),
 ]
 
 def font(size, bold=False):
@@ -88,7 +88,7 @@ def export_iphone(raw):
             draw.text((973, 1880), 'BY YOU', font=font(26, True), fill=CREAM, anchor='mm')
             phone(canvas, raw / f'{index:02d}-{route}.png', (87, 755, 830))
         draw = ImageDraw.Draw(canvas)
-        draw.text((82, 2670), 'Real app views · Fictional demo records', font=font(26), fill=secondary)
+        draw.text((82, 2670), 'Real app views Â· Fictional demo records', font=font(26), fill=secondary)
         draw.text((1202, 2670), f'{index:02d} / 10', font=font(26), fill=secondary, anchor='ra')
         canvas.convert('RGB').save(out / f'{index:02d}-{route}.png', optimize=True)
 
@@ -98,7 +98,7 @@ def export_ipad(raw):
         canvas = Image.new('RGBA', (2064, 2752), TEAL if dark else CREAM)
         draw = ImageDraw.Draw(canvas)
         fg = CREAM if dark else TEAL; sub = '#CBDAD4' if dark else MUTED
-        draw.text((122, 82), 'LEAVEWELL · ' + kicker, font=font(35, True), fill=sub)
+        draw.text((122, 82), 'LEAVEWELL Â· ' + kicker, font=font(35, True), fill=sub)
         face, size = fitted(draw, headlines, 1820, 118)
         for row, line in enumerate(headlines): draw.text((112, 180+row*(size+18)), line, font=face, fill=fg)
         draw.text((122, 493), subtitle, font=font(46), fill=sub)
@@ -106,14 +106,14 @@ def export_ipad(raw):
         # Tablet screenshots retain their native layout and aspect ratio.
         phone(canvas, raw / f'{index:02d}-{route}.png', (124, 692, 1360), corner=0.04)
         draw = ImageDraw.Draw(canvas)
-        draw.text((122, 2620), 'Real app views · Fictional demo records', font=font(34), fill=sub)
+        draw.text((122, 2620), 'Real app views Â· Fictional demo records', font=font(34), fill=sub)
         draw.text((1942, 2620), f'{index:02d} / 10', font=font(34), fill=sub, anchor='ra')
         canvas.convert('RGB').save(out / f'{index:02d}-{route}.png', optimize=True)
 
 def subscriptions():
     out = DEST / 'subscriptions'; out.mkdir(parents=True, exist_ok=True)
     for name in ['subscription-organised', 'subscription-next-chapter']:
-        # Deliberately no plan names, prices or benefits until those are supplied.
+        # Promotional imagery is separate from the actual StoreKit purchase-review screenshot.
         image = Image.open(SOURCE / (name + '.png')).convert('RGB')
         ImageOps.fit(image, (1024, 1024), method=Image.Resampling.LANCZOS).save(out / (name + '.png'), optimize=True)
 
