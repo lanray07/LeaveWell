@@ -38,7 +38,7 @@ def generate():
             'TARGETED_DEVICE_FAMILY': '"1,2"', 'CODE_SIGN_STYLE': 'Automatic',
             'SWIFT_EMIT_LOC_STRINGS': 'YES', 'SWIFT_STRICT_CONCURRENCY': 'targeted',
             'PRODUCT_NAME': '"$(TARGET_NAME)"', 'PRODUCT_BUNDLE_IDENTIFIER': 'com.leavewell.' + ('app' if name == 'LeaveWell' else 'tests'),
-            'MARKETING_VERSION': '0.1.0', 'CURRENT_PROJECT_VERSION': '1',
+            'MARKETING_VERSION': '1.0', 'CURRENT_PROJECT_VERSION': '1',
         }
         if name == 'LeaveWell':
             settings.update(INFOPLIST_FILE='LeaveWell/Resources/Info.plist', ASSETCATALOG_COMPILER_APPICON_NAME='AppIcon', ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME='AccentColor', ENABLE_PREVIEWS='YES', LD_RUNPATH_SEARCH_PATHS='"$(inherited) @executable_path/Frameworks"')

@@ -12,6 +12,10 @@ on:
         description: Capture ten real app screens on iPhone and iPad
         type: boolean
         default: false
+      upload:
+        description: Validate and upload the signed build to App Store Connect (no review submission)
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -73,7 +77,7 @@ jobs:
           if-no-files-found: error
           retention-days: 30
   archive:
-    if: github.event_name == 'workflow_dispatch' && inputs.archive
+    if: github.event_name == 'workflow_dispatch' && (inputs.archive || inputs.upload)
     needs: build
     runs-on: macos-26
     timeout-minutes: 30
@@ -117,6 +121,24 @@ jobs:
             build/LeaveWell.xcarchive/dSYMs
           if-no-files-found: error
           retention-days: 7
+      - name: Validate and upload to App Store Connect
+        if: inputs.upload
+        env:
+          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          API_PRIVATE_KEYS_DIR: ${{ runner.temp }}/LeaveWellUploadKeys
+        run: |
+          mkdir -p "$API_PRIVATE_KEYS_DIR"
+          cp "$RUNNER_TEMP/LeaveWellSigning.p8" "$API_PRIVATE_KEYS_DIR/AuthKey_${APP_STORE_CONNECT_API_KEY_ID}.p8"
+          chmod 600 "$API_PRIVATE_KEYS_DIR/AuthKey_${APP_STORE_CONNECT_API_KEY_ID}.p8"
+          IPA=$(find build/export -maxdepth 1 -name '*.ipa' -print -quit)
+          test -n "$IPA"
+          xcrun altool --validate-app -f "$IPA" -t ios \
+            --apiKey "$APP_STORE_CONNECT_API_KEY_ID" --apiIssuer "$APP_STORE_CONNECT_API_ISSUER_ID"
+          xcrun altool --upload-app -f "$IPA" -t ios \
+            --apiKey "$APP_STORE_CONNECT_API_KEY_ID" --apiIssuer "$APP_STORE_CONNECT_API_ISSUER_ID"
       - name: Remove signing material
         if: always()
-        run: rm -f "$RUNNER_TEMP/LeaveWellSigning.p8" "$RUNNER_TEMP/LeaveWellExportOptions.plist"
+        run: |
+          rm -f "$RUNNER_TEMP/LeaveWellSigning.p8" "$RUNNER_TEMP/LeaveWellExportOptions.plist"
+          rm -rf "$RUNNER_TEMP/LeaveWellUploadKeys"
