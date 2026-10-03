@@ -26,6 +26,7 @@ final class AppLock {
     @ObservationIgnored private let makeAuthentication: () -> any DeviceAuthenticating
     @ObservationIgnored private var authentication: (any DeviceAuthenticating)?
     @ObservationIgnored private var privacyWindows: [String: UIWindow] = [:]
+    @ObservationIgnored private var hiddenAccessibilityWindows: [(UIWindow, Bool)] = []
     private var generation = 0
     init(makeAuthentication: @escaping () -> any DeviceAuthenticating) {
         self.makeAuthentication = makeAuthentication
@@ -38,6 +39,8 @@ final class AppLock {
         guard enabled && (!unlocked || !active) else {
             for window in privacyWindows.values { window.isHidden = true }
             privacyWindows.removeAll()
+            for (window, wasHidden) in hiddenAccessibilityWindows { window.accessibilityElementsHidden = wasHidden }
+            hiddenAccessibilityWindows.removeAll()
             return
         }
         // A separate window also covers presented camera, Quick Look and share
@@ -45,8 +48,15 @@ final class AppLock {
         for scene in UIApplication.shared.connectedScenes.compactMap({ $0 as? UIWindowScene }) {
             let id = scene.session.persistentIdentifier
             let window = privacyWindows[id] ?? UIWindow(windowScene: scene)
+            for underlying in scene.windows where underlying !== window && !privacyWindows.values.contains(where: { $0 === underlying }) {
+                if !hiddenAccessibilityWindows.contains(where: { $0.0 === underlying }) {
+                    hiddenAccessibilityWindows.append((underlying, underlying.accessibilityElementsHidden))
+                }
+                underlying.accessibilityElementsHidden = true
+            }
             window.windowLevel = .alert + 1
             window.rootViewController = UIHostingController(rootView: AppLockScreen(lock: self, active: active))
+            window.rootViewController?.view.accessibilityViewIsModal = true
             window.isHidden = false
             privacyWindows[id] = window
         }

@@ -9,9 +9,12 @@ final class PrivacyTests: XCTestCase {
         let authentication = Authentication()
         let lock = AppLock(makeAuthentication: { authentication })
         defer { lock.updateShield(enabled: false, active: true) }
+        let underlying = scene.windows.map { ($0, $0.accessibilityElementsHidden) }
         lock.updateShield(enabled: true, active: true)
         let shield = try XCTUnwrap(scene.windows.first { $0.windowLevel > .alert && !$0.isHidden })
         XCTAssertNotNil(shield.rootViewController)
+        XCTAssertEqual(shield.rootViewController?.view.accessibilityViewIsModal, true)
+        XCTAssertTrue(underlying.allSatisfy { $0.0.accessibilityElementsHidden }, "Locked content must also be hidden from accessibility")
         XCTAssertFalse(shield.isKeyWindow, "Shield must not steal the app's input window")
         let request = Task { await lock.unlock() }
         while authentication.continuation == nil { await Task.yield() }
@@ -21,6 +24,7 @@ final class PrivacyTests: XCTestCase {
         XCTAssertFalse(shield.isHidden, "Inactive scenes stay shielded even after successful authentication")
         lock.updateShield(enabled: true, active: true)
         XCTAssertTrue(shield.isHidden)
+        XCTAssertTrue(underlying.allSatisfy { $0.0.accessibilityElementsHidden == $0.1 })
     }
     private final class Authentication: DeviceAuthenticating {
         var continuation: CheckedContinuation<Bool, Error>?
