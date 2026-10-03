@@ -34,7 +34,7 @@ struct SettingsView: View {
             Section(L("About LeaveWell")) {
                 Text(L("Move out organised. Leave with the evidence."))
                 Text(L("LeaveWell organises evidence. It does not make legal decisions.")).font(.footnote).foregroundStyle(.secondary)
-                LabeledContent(L("Version"), value: "0.1.0")
+                LabeledContent(L("Version"), value: Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0")
             }
         }.navigationTitle(L("Settings")).sheet(item: $share) { ShareSheet(urls: $0.urls) }
             .confirmationDialog(L("Delete this record and all its evidence? This cannot be undone."), isPresented: Binding(get: { deleting != nil }, set: { if !$0 { deleting = nil } }), titleVisibility: .visible) {
