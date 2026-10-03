@@ -12,6 +12,7 @@
     <key>ITSAppUsesNonExemptEncryption</key><false/>
     <key>UILaunchScreen</key><dict/>
     <key>UISupportedInterfaceOrientations</key><array><string>UIInterfaceOrientationPortrait</string><string>UIInterfaceOrientationLandscapeLeft</string><string>UIInterfaceOrientationLandscapeRight</string></array>
+    <key>UISupportedInterfaceOrientations~ipad</key><array><string>UIInterfaceOrientationPortrait</string><string>UIInterfaceOrientationPortraitUpsideDown</string><string>UIInterfaceOrientationLandscapeLeft</string><string>UIInterfaceOrientationLandscapeRight</string></array>
     <key>NSCameraUsageDescription</key><string>Photograph rooms, fixtures, meters and access items for your move-out record.</string>
     <key>NSMicrophoneUsageDescription</key><string>Record condition notes and narrate your room walkthroughs.</string>
     <key>NSSpeechRecognitionUsageDescription</key><string>Turn your voice notes into editable text using on-device speech recognition where available.</string>
