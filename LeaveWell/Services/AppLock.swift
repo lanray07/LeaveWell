@@ -31,6 +31,9 @@ final class AppLock {
         self.makeAuthentication = makeAuthentication
     }
     convenience init() { self.init(makeAuthentication: { DeviceAuthentication() }) }
+    static var authenticationAvailable: Bool {
+        LAContext().canEvaluatePolicy(.deviceOwnerAuthentication, error: nil)
+    }
     func updateShield(enabled: Bool, active: Bool) {
         guard enabled && (!unlocked || !active) else {
             for window in privacyWindows.values { window.isHidden = true }

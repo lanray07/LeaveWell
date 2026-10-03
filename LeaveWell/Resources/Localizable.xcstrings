@@ -3950,6 +3950,17 @@
         }
       }
     },
+    "Set up a device passcode in iOS Settings before enabling app lock.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set up a device passcode in iOS Settings before enabling app lock."
+          }
+        }
+      }
+    },
     "Settings": {
       "extractionState": "manual",
       "localizations": {

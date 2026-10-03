@@ -17,7 +17,11 @@ struct SettingsView: View {
                 Text(L("Unlimited PDF evidence reports with a monthly or annual subscription.")).font(.footnote).foregroundStyle(.secondary)
             }
             Section(L("Privacy & security")) {
-                Toggle(L("Lock with Face ID or device passcode"), isOn: $appLockEnabled)
+                Toggle(L("Lock with Face ID or device passcode"), isOn: Binding(get: { appLockEnabled }, set: { enabled in
+                    if enabled && !AppLock.authenticationAvailable {
+                        error = L("Set up a device passcode in iOS Settings before enabling app lock.")
+                    } else { appLockEnabled = enabled }
+                }))
                 Text(L("Records and originals are stored on this device with iOS file protection. No tenancy data is sent to advertising or analytics services.")).font(.footnote).foregroundStyle(.secondary)
                 Text(L("Cloud backup and co-tenant collaboration are not available in this build. Export a copy before changing devices. Losing this device may mean losing your records.")).font(.footnote).foregroundStyle(.secondary)
             }
