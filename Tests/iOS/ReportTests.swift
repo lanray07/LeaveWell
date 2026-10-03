@@ -5,6 +5,36 @@ import UIKit
 
 @MainActor
 final class ReportTests: XCTestCase {
+    func testContactAndDepositAreExcludedByDefaultAndIncludedOnlyWhenSelected() async throws {
+        let root = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: root) }
+        let vault = try EvidenceVault(root: root)
+        var record = MoveCase()
+        record.agentName = "Private agent name"; record.agentContact = "private-agent@example.invalid"
+        record.depositAmount = "1234.56"; record.depositScheme = "Private deposit scheme"
+        let privateURL = try await ReportService().generate(record: record, options: ReportOptions(), vault: vault)
+        let sharedURL = try await ReportService().generate(record: record, options: ReportOptions(includeContactDetails: true, includeDepositDetails: true), vault: vault)
+        defer {
+            try? FileManager.default.removeItem(at: privateURL.deletingLastPathComponent())
+            try? FileManager.default.removeItem(at: sharedURL.deletingLastPathComponent())
+        }
+        let privateText = try XCTUnwrap(PDFDocument(url: privateURL)?.string)
+        let sharedText = try XCTUnwrap(PDFDocument(url: sharedURL)?.string)
+        for value in [record.agentName, record.agentContact, record.depositAmount, record.depositScheme] {
+            XCTAssertFalse(privateText.contains(value)); XCTAssertTrue(sharedText.contains(value))
+        }
+    }
+    func testUnreadableIncludedImageOrPDFStopsReportInsteadOfSilentlyOmittingIt() async throws {
+        let root = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: root) }
+        let vault = try EvidenceVault(root: root)
+        for name in ["invalid.jpg", "invalid.pdf"] {
+            let original = try await vault.store(Data("Unreadable media".utf8), name: name, origin: .imported, capturedAt: nil)
+            var record = MoveCase(); record.evidence = [Evidence(kind: .document, label: name, original: original)]
+            do { _ = try await ReportService().generate(record: record, options: ReportOptions(), vault: vault); XCTFail("Unreadable included originals must stop the report") }
+            catch { XCTAssertTrue(error is ReportError) }
+        }
+    }
     func testReportExcludesUnselectedEvidenceAndPaginatesLongNotes() async throws {
         let root = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: root); try? ExportWorkspace.clear() }

@@ -35,8 +35,10 @@ struct ReportView: View {
                         NavigationLink(L("Explore LeaveWell Plus")) { PlusView() }
                     }
                     Button(L("Generate PDF report")) {
+                        guard !busy else { return }
+                        busy = true
                         Task {
-                            busy = true; defer { busy = false }
+                            defer { busy = false }
                             do {
                                 try await purchases.requirePlus()
                                 url = try await ReportService().generate(record: record, options: options, vault: store.vault)
@@ -52,7 +54,7 @@ struct ReportView: View {
                     }
                 }
             }
-        }.navigationTitle(L("Your evidence report")).quickLookPreview($previewURL)
+        }.disabled(busy).navigationTitle(L("Your evidence report")).quickLookPreview($previewURL)
             .sheet(item: $share) { ShareSheet(urls: $0.urls) }.errorAlert($error)
             .onChange(of: options.includeContactDetails) { _, _ in url = nil }
             .onChange(of: options.includeDepositDetails) { _, _ in url = nil }

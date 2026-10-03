@@ -2,6 +2,11 @@ import Foundation
 import UserNotifications
 
 enum ReminderService {
+    static func refreshIfScheduled(_ record: MoveCase) async throws {
+        let pending = await UNUserNotificationCenter.current().pendingNotificationRequests()
+        guard pending.contains(where: { $0.identifier.hasPrefix(record.id.uuidString + "-") }) else { return }
+        try await schedule(record)
+    }
     static func schedule(_ record: MoveCase) async throws {
         let center = UNUserNotificationCenter.current()
         guard try await center.requestAuthorization(options: [.alert, .sound]) else { throw ReminderError.denied }

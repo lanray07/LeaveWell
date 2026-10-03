@@ -6,6 +6,7 @@ import Observation
 @MainActor @Observable
 final class VoiceService {
     var recording = false
+    private(set) var starting = false
     var processing = false
     var transcript = ""
     var error: String?
@@ -13,9 +14,19 @@ final class VoiceService {
     private var recognition: SFSpeechRecognitionTask?
     private(set) var recordingURL: URL?
     private(set) var startedAt: Date?
+    @ObservationIgnored private let requestPermission: () async -> Bool
+    private var generation = 0
+    init(requestPermission: @escaping () async -> Bool) { self.requestPermission = requestPermission }
+    convenience init() { self.init(requestPermission: { await AVAudioApplication.requestRecordPermission() }) }
     func start() async {
+        guard !starting && !recording && !processing else { return }
+        starting = true
+        let request = generation
+        defer { if request == generation { starting = false } }
         do {
-            guard await AVAudioApplication.requestRecordPermission() else { throw VoiceError.microphoneDenied }
+            let permitted = await requestPermission()
+            guard request == generation else { return }
+            guard permitted else { throw VoiceError.microphoneDenied }
             let directory = try ExportWorkspace.make()
             let url = directory.appendingPathComponent("voice.m4a")
             let session = AVAudioSession.sharedInstance()
@@ -46,6 +57,7 @@ final class VoiceService {
         } catch { self.error = error.localizedDescription }
     }
     func stop() {
+        generation += 1; starting = false
         recorder?.stop(); recorder = nil; recording = false
         try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
     }

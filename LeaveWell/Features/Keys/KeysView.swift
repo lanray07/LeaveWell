@@ -42,6 +42,7 @@ struct KeyEditor: View {
     @State private var notes = ""
     @State private var evidenceID: UUID?
     @State private var error: String?
+    @Environment(\.scenePhase) private var scenePhase
     @State private var voice = VoiceService()
     var body: some View {
         NavigationStack {
@@ -61,7 +62,7 @@ struct KeyEditor: View {
                     TextField(L("Recipient"), text: $recipient)
                     if handedOver { DatePicker(L("Handed over at"), selection: $date) }
                     TextField(L("Notes"), text: $notes, axis: .vertical)
-                    Button(voice.recording ? L("Stop and transcribe") : L("Record a voice note")) { Task { if voice.recording { await voice.stopAndTranscribe(); notes = voice.transcript; confirmed = false } else { await voice.start() } } }.disabled(voice.processing)
+                    Button(voice.recording ? L("Stop and transcribe") : L("Record a voice note")) { Task { if voice.recording { await voice.stopAndTranscribe(); notes = voice.transcript; confirmed = false } else { await voice.start() } } }.disabled(voice.starting || voice.processing)
                     if let message = voice.error { Text(message).font(.footnote) }
                     Toggle(L("I have reviewed these details"), isOn: $confirmed)
                 }
@@ -73,8 +74,8 @@ struct KeyEditor: View {
                             let item = AccessItem(type: type == "Other" ? custom : type, quantity: quantity, method: method, recipient: recipient, handedOverAt: handedOver ? date : nil, notes: notes, evidenceID: evidenceID)
                             try store.update(caseID, action: handedOver ? "Key handover recorded" : "Access item recorded", detail: L(item.type)) { $0.accessItems.append(item) }; dismiss()
                         } catch { self.error = error.localizedDescription }
-                    }.disabled(!confirmed || voice.recording || voice.processing || (type == "Other" && custom.isEmpty) || (handedOver && recipient.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)) }
-                }.onDisappear { voice.cancel() }.errorAlert($error)
+                    }.disabled(!confirmed || voice.starting || voice.recording || voice.processing || (type == "Other" && custom.isEmpty) || (handedOver && recipient.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)) }
+                }.onChange(of: scenePhase) { _, phase in if phase == .background { voice.stop() } }.onDisappear { voice.cancel() }.errorAlert($error)
         }
     }
 }

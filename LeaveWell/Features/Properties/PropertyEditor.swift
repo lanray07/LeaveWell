@@ -87,8 +87,10 @@ struct PropertyEditor: View {
                 draft.activities.append(Activity(action: "Record created", detail: draft.nickname, contributor: draft.tenant))
                 try store.add(draft)
             }
-            Task { await ReminderService.cancel(caseID: draft.id) }
-            dismiss()
+            Task {
+                do { try await ReminderService.refreshIfScheduled(draft); dismiss() }
+                catch { self.error = error.localizedDescription }
+            }
         } catch { self.error = error.localizedDescription }
     }
 }

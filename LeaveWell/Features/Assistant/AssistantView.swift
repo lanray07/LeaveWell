@@ -8,6 +8,7 @@ struct AssistantView: View {
     @State private var question = ""
     @State private var answer = ""
     @State private var matches: [Evidence] = []
+    @Environment(\.scenePhase) private var scenePhase
     @State private var voice = VoiceService()
     @State private var speaker = AVSpeechSynthesizer()
     private let suggestions = ["Which rooms are incomplete?", "Have I recorded the electricity meter?", "Did I record my keys?", "Find my cleaning receipt."]
@@ -26,7 +27,7 @@ struct AssistantView: View {
                     Button(L("Ask LeaveWell")) { respond(intent: question) }.buttonStyle(.borderedProminent).disabled(question.isEmpty)
                     Button {
                         Task { if voice.recording { await voice.stopAndTranscribe(); question = voice.transcript } else { await voice.start() } }
-                    } label: { Image(systemName: voice.recording ? "stop.circle" : "mic").frame(minWidth: 44, minHeight: 44).accessibilityLabel(voice.recording ? L("Stop and transcribe") : L("Speak your question")) }.disabled(voice.processing)
+                    } label: { Image(systemName: voice.recording ? "stop.circle" : "mic").frame(minWidth: 44, minHeight: 44).accessibilityLabel(voice.recording ? L("Stop and transcribe") : L("Speak your question")) }.disabled(voice.starting || voice.processing)
                 }
                 if let error = voice.error { Text(error).font(.footnote).foregroundStyle(.secondary) }
                 if !answer.isEmpty {
@@ -45,7 +46,7 @@ struct AssistantView: View {
                 Text(L("LeaveWell organises evidence. It does not make legal decisions.")).font(.footnote).foregroundStyle(.secondary)
             }.padding(24)
         }.background(Theme.background).navigationTitle(L("LeaveWell assistant"))
-            .onDisappear { voice.cancel(); speaker.stopSpeaking(at: .immediate) }
+            .onChange(of: scenePhase) { _, phase in if phase == .background { voice.stop() } }.onDisappear { voice.cancel(); speaker.stopSpeaking(at: .immediate) }
     }
     private func respond(intent: String) {
         guard let record = store.record(caseID) else { answer = L("This record is unavailable."); return }

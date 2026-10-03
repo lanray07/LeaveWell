@@ -8,9 +8,12 @@ final class CaseStore {
     var errorMessage: String?
     let vault: EvidenceVault
     private let indexURL: URL
-    init() throws {
+    convenience init() throws {
         let support = try FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
         let root = support.appendingPathComponent("LeaveWell", isDirectory: true)
+        try self.init(root: root)
+    }
+    init(root: URL) throws {
         vault = try EvidenceVault(root: root); indexURL = root.appendingPathComponent("records.json")
     }
     func load() async {
@@ -59,11 +62,12 @@ final class CaseStore {
         await ReminderService.cancel(caseID: id)
     }
     func exportData() async throws -> [URL] {
+        let snapshot = archive
         let directory = try ExportWorkspace.make()
         let manifest = directory.appendingPathComponent("records.json")
-        try ArchiveCodec.encode(archive).write(to: manifest, options: [.atomic, .completeFileProtection])
+        try ArchiveCodec.encode(snapshot).write(to: manifest, options: [.atomic, .completeFileProtection])
         var urls = [manifest]
-        for item in archive.cases.flatMap(\.evidence) {
+        for item in snapshot.cases.flatMap(\.evidence) {
             for original in [item.original].compactMap({ $0 }) + item.derivatives {
                 let source = try await vault.verifiedURL(for: original)
                 let target = directory.appendingPathComponent(source.lastPathComponent)

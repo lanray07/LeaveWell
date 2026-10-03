@@ -320,6 +320,17 @@
         }
       }
     },
+    "An included image or PDF could not be opened. Check the original file or exclude it from this report before trying again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An included image or PDF could not be opened. Check the original file or exclude it from this report before trying again."
+          }
+        }
+      }
+    },
     "An organised record, ready to share.": {
       "extractionState": "manual",
       "localizations": {

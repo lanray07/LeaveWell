@@ -57,7 +57,7 @@ struct EvidenceComposer: View {
                             else { await voice.start() }
                         }
                     } label: { Label(voice.recording ? L("Stop and transcribe") : L("Record a voice note"), systemImage: voice.recording ? "stop.circle.fill" : "mic") }
-                    .disabled(voice.processing)
+                    .disabled(voice.starting || voice.processing)
                     if voice.processing { ProgressView(L("Transcribing on device…")) }
                     if voice.recording { Text(L("Recording… Tap stop when you have finished.")).foregroundStyle(Theme.accent) }
                     if let voiceError = voice.error { Text(voiceError).font(.footnote).foregroundStyle(.secondary) }
@@ -72,7 +72,7 @@ struct EvidenceComposer: View {
                     ToolbarItem(placement: .confirmationAction) { Button(L("Save")) { Task { await save() } }.disabled(!canSave || busy) }
                 }
                 .fileImporter(isPresented: $showImporter, allowedContentTypes: allowedTypes, allowsMultipleSelection: true) { result in
-                    Task { do { for url in try result.get() { try await importURL(url, origin: .imported, captured: nil) } } catch { self.error = error.localizedDescription } }
+                    Task { busy = true; defer { busy = false }; do { for url in try result.get() { try await importURL(url, origin: .imported, captured: nil) } } catch { self.error = error.localizedDescription } }
                 }
                 .fullScreenCover(item: $capture) { modal in
                     switch modal {
@@ -93,6 +93,7 @@ struct EvidenceComposer: View {
                     case .scanner:
                         DocumentScanner { result in
                             Task {
+                                busy = true; defer { busy = false }
                                 do {
                                     if let result { for (index, page) in try result.get().enumerated() { let file = try await store.vault.store(page, name: "scan-\(index + 1).jpg", origin: .scanned, capturedAt: Date()); originals.append(file) } }
                                 } catch { self.error = error.localizedDescription }
@@ -111,7 +112,7 @@ struct EvidenceComposer: View {
         }
     }
     private var canSave: Bool {
-        !label.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && !voice.recording && !voice.processing &&
+        !label.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && !voice.starting && !voice.recording && !voice.processing &&
         (kind == .note ? !notes.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty : (kind == .audio ? voice.recordingURL != nil : !originals.isEmpty))
     }
     private var allowedTypes: [UTType] {
@@ -124,7 +125,6 @@ struct EvidenceComposer: View {
         capture = .camera
     }
     private func importURL(_ url: URL, origin: CaptureOrigin, captured: Date?) async throws {
-        busy = true; defer { busy = false }
         let file = try await store.vault.importFile(at: url, origin: origin, capturedAt: captured); originals.append(file)
     }
     private func importPhotos(_ items: [PhotosPickerItem]) async {

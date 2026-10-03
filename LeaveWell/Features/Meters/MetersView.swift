@@ -39,6 +39,7 @@ struct MeterEditor: View {
     @State private var evidenceID: UUID?
     @State private var confirmed = false
     @State private var error: String?
+    @Environment(\.scenePhase) private var scenePhase
     @State private var voice = VoiceService()
     @State private var suggestions: [String] = []
     @State private var recognizing = false
@@ -79,7 +80,7 @@ struct MeterEditor: View {
                 Section(L("Voice meter note")) {
                     Button(voice.recording ? L("Stop and transcribe") : L("Record a voice note")) {
                         Task { if voice.recording { await voice.stopAndTranscribe(); notes = voice.transcript } else { await voice.start() } }
-                    }.disabled(voice.processing)
+                    }.disabled(voice.starting || voice.processing)
                     if !voice.transcript.isEmpty { Text(voice.transcript); Text(L("Enter the digits above, then confirm them against the meter.")).font(.footnote) }
                     if let message = voice.error { Text(message).font(.footnote) }
                 }
@@ -96,8 +97,8 @@ struct MeterEditor: View {
                             guard meter.isValid else { return }
                             try store.update(caseID, action: "Meter reading recorded", detail: L(meter.type)) { $0.meters.append(meter) }; dismiss()
                         } catch { self.error = error.localizedDescription }
-                    }.disabled(!confirmed || reading.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || (type == "Custom" && customType.isEmpty) || voice.recording || voice.processing) }
-                }.onDisappear { voice.cancel() }.errorAlert($error)
+                    }.disabled(!confirmed || reading.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || (type == "Custom" && customType.isEmpty) || voice.starting || voice.recording || voice.processing) }
+                }.onChange(of: scenePhase) { _, phase in if phase == .background { voice.stop() } }.onDisappear { voice.cancel() }.errorAlert($error)
         }
     }
 }

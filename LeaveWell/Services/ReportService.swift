@@ -34,7 +34,16 @@ final class ReportService: ReportGenerating {
         let included = record.evidence.filter(\.includedInReport)
         var files: [UUID: URL] = [:]
         for item in included {
-            if let original = item.original { files[item.id] = try await vault.verifiedURL(for: original) }
+            if let original = item.original {
+                let url = try await vault.verifiedURL(for: original)
+                if Self.imageExtensions.contains(url.pathExtension.lowercased()) {
+                    guard let source = CGImageSourceCreateWithURL(url as CFURL, nil),
+                          CGImageSourceCreateThumbnailAtIndex(source, 0, [kCGImageSourceCreateThumbnailFromImageAlways: true, kCGImageSourceThumbnailMaxPixelSize: 2000] as CFDictionary) != nil else { throw ReportError.unreadableOriginal }
+                } else if url.pathExtension.lowercased() == "pdf" {
+                    guard let document = PDFDocument(url: url), !document.isLocked, document.pageCount > 0 else { throw ReportError.unreadableOriginal }
+                }
+                files[item.id] = url
+            }
         }
         let generatedAt = Date()
         let sections = buildSections(record: record, evidence: included, files: files, options: options, generatedAt: generatedAt)
@@ -70,6 +79,7 @@ final class ReportService: ReportGenerating {
         try EvidenceVault.protect(url)
         return url
     }
+    private static let imageExtensions = ["jpg", "jpeg", "png", "heic", "heif", "webp", "tif", "tiff"]
     private func buildSections(record: MoveCase, evidence: [Evidence], files: [UUID: URL], options: ReportOptions, generatedAt: Date) -> [SectionRecord] {
         var summary: [Block] = [.title(L("Move-out summary")), .text(record.address),
             .text(L("Tenant") + ": " + record.tenant), .text(L("Move-out date") + ": " + record.moveDate.formatted(date: .long, time: .omitted)),
@@ -143,7 +153,7 @@ final class ReportService: ReportGenerating {
             blocks += [.text(L("Captured") + ": " + (original.capturedAt.map(stamp) ?? L("Unknown"))), .text(L("Original file") + ": " + original.originalName), .text(L("SHA-256") + ": " + original.sha256)]
             if let imported = original.importedAt { blocks.append(.text(L("Imported") + ": " + stamp(imported))) }
             if let url {
-                if ["jpg", "jpeg", "png", "heic", "heif", "webp", "tif", "tiff"].contains(url.pathExtension.lowercased()) { blocks.append(.image(url, item.label + " · " + item.reference)) }
+                if Self.imageExtensions.contains(url.pathExtension.lowercased()) { blocks.append(.image(url, item.label + " · " + item.reference)) }
                 else if url.pathExtension.lowercased() == "pdf", let document = PDFDocument(url: url) {
                     for index in 0..<document.pageCount { blocks.append(.pdf(url, index)) }
                 }
@@ -241,4 +251,9 @@ final class ReportService: ReportGenerating {
         let text = reference + " · " + L("Page") + " \(page) / \(total)"
         (text as NSString).draw(in: CGRect(x: margin, y: height - 43, width: width - margin * 2, height: 26), withAttributes: [.font: UIFont.systemFont(ofSize: 8), .foregroundColor: UIColor.secondaryLabel])
     }
+}
+
+enum ReportError: LocalizedError {
+    case unreadableOriginal
+    var errorDescription: String? { L("An included image or PDF could not be opened. Check the original file or exclude it from this report before trying again.") }
 }

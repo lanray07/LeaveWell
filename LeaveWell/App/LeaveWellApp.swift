@@ -24,13 +24,13 @@ struct LeaveWellApp: App {
                 } else if let startupError {
                     ContentUnavailableView(L("Unable to open LeaveWell"), systemImage: "exclamationmark.triangle", description: Text(startupError))
                 } else { ProgressView() }
-                if appLockEnabled && !lock.unlocked {
+                if appLockEnabled && (!lock.unlocked || scenePhase != .active) {
                     Color(.systemBackground).ignoresSafeArea()
                     VStack(spacing: 24) {
                         Image(systemName: "lock.shield").font(.system(size: 60)).foregroundStyle(Theme.accent)
                         Text(L("Your evidence stays private")).font(.title2.bold())
                         if let message = lock.message { Text(message).foregroundStyle(.secondary) }
-                        Button(L("Unlock LeaveWell")) { Task { await lock.unlock() } }.buttonStyle(PrimaryButton())
+                        Button(L("Unlock LeaveWell")) { Task { await lock.unlock() } }.buttonStyle(PrimaryButton()).disabled(lock.authenticating || scenePhase != .active)
                     }.padding(32)
                 }
             }
@@ -47,10 +47,13 @@ struct LeaveWellApp: App {
             }
             .onChange(of: scenePhase) { _, phase in
                 if phase == .active { Task { await purchases.refreshEntitlements() } }
-                if phase != .active && appLockEnabled { lock.unlocked = false }
+                // Authentication temporarily makes the scene inactive. Shield it,
+                // but invalidate the request only when the app actually backgrounds.
+                if phase == .background && appLockEnabled { lock.lock() }
             }
             .onChange(of: appLockEnabled) { _, enabled in
-                if enabled { lock.unlocked = false; Task { await lock.unlock() } }
+                lock.lock()
+                if enabled { Task { await lock.unlock() } }
             }
         }
     }
