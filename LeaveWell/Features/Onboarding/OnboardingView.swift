@@ -4,7 +4,7 @@ struct OnboardingView: View {
     let finish: () -> Void
     @State private var page = 0
     private let pages: [(String, String, String)] = [
-        ("Move out with confidence", "Create an organised record of your rental property's condition before handing back the keys.", "person.crop.rectangle.badge.camera"),
+        ("Move out with confidence", "Create an organised record of your rental property's condition before handing back the keys.", "person.crop.rectangle"),
         ("Know what to capture", "LeaveWell guides you room by room so important details don't get forgotten.", "checklist"),
         ("Turn evidence into a report", "Keep your photos, notes, meter readings and documents organised in one professional move-out report.", "doc.richtext"),
         ("Your home. Your evidence. Your privacy.", "Your records stay on this device. You choose what to include and when to share. Keep an export somewhere safe before changing or losing your phone.", "lock.shield")
@@ -19,6 +19,10 @@ struct OnboardingView: View {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 36).fill(Theme.accent.opacity(0.08)).frame(height: 270)
                                 Image(systemName: pages[index].2).font(.system(size: 96, weight: .light)).foregroundStyle(Theme.accent)
+                                if index == 0 {
+                                    Image(systemName: "camera.fill").font(.system(size: 30)).foregroundStyle(Theme.accent)
+                                        .padding(14).background(Theme.card, in: Circle()).offset(x: 58, y: 38)
+                                }
                             }.accessibilityHidden(true)
                             Text(L(pages[index].0)).font(.largeTitle.bold()).fixedSize(horizontal: false, vertical: true)
                             Text(L(pages[index].1)).font(.title3).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
