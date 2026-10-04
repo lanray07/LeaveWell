@@ -36,7 +36,7 @@ Meter/key dictation saves reviewed text; use Add evidence with an audio record w
 
 A physical iPhone/iPad is not available in this Windows session. Before final submission, run the device checklist in RELEASE.md: live camera/video/scanning, Apple sandbox purchases/restore/manage, biometric/passcode and modal lock transitions, notifications/date changes, iCloud-only imports, Files/AirDrop sharing, large/rotated attachments, VoiceOver and maximum Dynamic Type. Simulator tests and image inspection do not establish these physical-device results.
 
-App Review submission and public release are not performed by this review.
+The 3 October review ended with an unsubmitted draft. On 4 October 2026, the follow-up submission was completed: Apple confirmed 4 Items Submitted, and the app 1.0 (40), LeaveWell Plus group, Monthly and Annual products each show Waiting for Review. Submission ID: 6f230d74-12ae-41bf-87c0-87f0434e9c96. The existing automatic-release-after-approval setting remains in place. Physical-device and Apple sandbox-device QA remain unperformed; submission does not establish those results. Public release has not occurred.
 
 ## Apple references checked
 

@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-03",
+  "asOf": "2026-10-04",
   "appId": "6818834817",
   "bundleId": "com.LeaveWell.app",
   "version": "1.0",
@@ -18,9 +18,9 @@
   "appleValidation": "VERIFY SUCCEEDED with no errors",
   "appleUpload": "UPLOAD SUCCEEDED with no errors",
   "appleProcessing": "complete",
-  "listingState": "Ready for Review",
-  "draftSubmissionState": "Items Ready to Submit (4)",
-  "reviewSubmitted": false,
+  "listingState": "Waiting for Review",
+  "draftSubmissionState": "No remaining draft items; 4 items submitted",
+  "reviewSubmitted": true,
   "released": false,
   "privacyResponses": "Data Not Collected; published with owner approval",
   "iphoneScreenshots": 10,
@@ -38,8 +38,8 @@
     "verifiedDate": "2026-10-03"
   },
   "purchaseReviewScreenshot": "review/LeaveWell-Plus-purchase-review.png",
-  "subscriptionProductsReviewState": "Ready for Review",
-  "subscriptionGroupReviewState": "Ready for Review",
+  "subscriptionProductsReviewState": "Waiting for Review",
+  "subscriptionGroupReviewState": "Waiting for Review",
   "draftItems": [
     "iOS App 1.0 (40)",
     "LeaveWell Plus subscription group",
@@ -49,5 +49,19 @@
   "preSubmissionReview": "docs/PRE_SUBMISSION_REVIEW.md",
   "draftPreparationRun": "https://github.com/lanray07/LeaveWell/actions/runs/37156674257",
   "draftSubmissionId": "6f230d74-12ae-41bf-87c0-87f0434e9c96",
-  "draftProof": "proof/pre-submission-ready.png"
+  "draftProof": "proof/pre-submission-ready.png",
+  "submissionState": "Waiting for Review",
+  "submissionId": "6f230d74-12ae-41bf-87c0-87f0434e9c96",
+  "submissionDate": "2026-10-04",
+  "submissionTimeDisplayed": "Oct 4, 2026 at 3:10 AM",
+  "submissionUrl": "https://appstoreconnect.apple.com/apps/6818834817/distribution/reviewsubmissions/details/6f230d74-12ae-41bf-87c0-87f0434e9c96",
+  "submissionProof": "proof/submission-waiting-for-review-2026-10-04.png",
+  "submissionConfirmationProof": "proof/submission-confirmed-2026-10-04.png",
+  "releaseMode": "Automatically after Apple approval",
+  "submittedItems": [
+    "iOS App 1.0 (40)",
+    "LeaveWell Plus subscription group",
+    "LeaveWell Plus Monthly",
+    "LeaveWell Plus Annual"
+  ]
 }

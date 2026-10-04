@@ -49,7 +49,7 @@
   ],
   "privacyUrl": "https://github.com/lanray07/LeaveWell/blob/main/marketing/privacy.md",
   "termsUrl": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
-  "reviewState": "Ready for Review",
+  "reviewState": "Waiting for Review",
   "reviewScreenshot": "review/LeaveWell-Plus-purchase-review.png",
   "reviewScreenshotSha256": "ccebb77e8eca87d2ea344aff928b41f18df034b30d7f9e4341025c799c9718d3",
   "storeKitLifecycleTests": {
@@ -58,5 +58,7 @@
     "run": "https://github.com/lanray07/LeaveWell/actions/runs/37154369603",
     "runtime": "iOS 18.5"
   },
-  "reviewSubmitted": false
+  "reviewSubmitted": true,
+  "submissionDate": "2026-10-04",
+  "submissionId": "6f230d74-12ae-41bf-87c0-87f0434e9c96"
 }
