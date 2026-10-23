@@ -38,6 +38,8 @@ final class CheckoutTests: XCTestCase {
     }
     func testCheckpointSurvivesPersistenceButContentEditsMakeItStale() throws {
         var record = completeCase(); XCTAssertTrue(record.checkoutGaps.isEmpty)
+        record.completedTasks = ["plan-0-0", "plan-0-1", "plan-1-0"]
+        record.rooms[0].reviewedItems = ["Window", "stale fixture"]
         try record.finishCheckoutReview(); XCTAssertTrue(record.checkoutReviewIsCurrent)
         var archive = Archive(); archive.cases = [record]
         var decoded = try ArchiveCodec.decode(ArchiveCodec.encode(archive)).cases[0]

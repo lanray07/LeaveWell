@@ -141,6 +141,9 @@ struct FixtureReviewView: View {
                             VStack(alignment: .leading) { Text(item.label); Text(item.reference).font(.caption).foregroundStyle(.secondary) }
                         }
                     }
+                    ForEach(selected.filter { id in !record.evidence.contains { $0.id == id && $0.roomID == roomID } }.sorted { $0.uuidString < $1.uuidString }, id: \.self) { id in
+                        Button(L("Remove missing evidence link")) { selected.remove(id) }
+                    }
                     Text(L("A condition to explain requires a factual note and at least one evidence record. Other checks need a note or evidence; not-applicable checks need a reason.")).font(.footnote)
                 }
                 Section {

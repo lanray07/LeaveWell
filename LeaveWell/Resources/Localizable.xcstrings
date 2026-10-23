@@ -4654,6 +4654,17 @@
         }
       }
     },
+    "Remove missing evidence link": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove missing evidence link"
+          }
+        }
+      }
+    },
     "Remove this comparison?": {
       "extractionState": "manual",
       "localizations": {
