@@ -59,6 +59,8 @@ final class CheckoutTests: XCTestCase {
         XCTAssertTrue(record.checkoutGaps.contains { $0.area == .meters })
         record.meters[0].confirmedByUser = true
         XCTAssertFalse(record.checkoutGaps.contains { $0.area == .meters })
+        record.meters[0].recordedAt = Date().addingTimeInterval(3600)
+        XCTAssertTrue(record.checkoutGaps.contains { $0.area == .meters }, "A future-dated reading cannot satisfy a final handover check")
     }
     func testDeletedComparisonEvidenceIsFlaggedRatherThanLosingObservation() throws {
         var record = completeCase()

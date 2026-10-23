@@ -101,7 +101,7 @@ extension MoveCase {
         }
         let session = checkout ?? CheckoutSession()
         for requirement in session.meters where requirement.exclusionReason.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            if !meters.contains(where: { $0.type == requirement.type && $0.isValid }) {
+            if !meters.contains(where: { $0.type == requirement.type && $0.isValid && $0.recordedAt <= Date() }) {
                 gaps.append(.init(id: "meter-" + requirement.type, area: .meters, title: requirement.type,
                                   detail: "Add a confirmed reading or explain why this meter is not applicable."))
             }
