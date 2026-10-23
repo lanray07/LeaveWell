@@ -1,6 +1,50 @@
 {
   "sourceLanguage": "en-GB",
   "strings": {
+    "1 · Walk the property": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 · Walk the property"
+          }
+        }
+      }
+    },
+    "2 · Explain what changed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "2 · Explain what changed"
+          }
+        }
+      }
+    },
+    "3 · Close the handover": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "3 · Close the handover"
+          }
+        }
+      }
+    },
+    ": EV-": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ": EV-"
+          }
+        }
+      }
+    },
     "A calm move starts here.": {
       "extractionState": "manual",
       "localizations": {
@@ -12,6 +56,39 @@
         }
       }
     },
+    "A checkpoint records that you reviewed this version. Editing the case makes it stale. It is not a legal certification or a guarantee of completeness beyond your configured scope.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A checkpoint records that you reviewed this version. Editing the case makes it stale. It is not a legal certification or a guarantee of completeness beyond your configured scope."
+          }
+        }
+      }
+    },
+    "A condition to explain requires a factual note and at least one evidence record. Other checks need a note or evidence; not-applicable checks need a reason.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A condition to explain requires a factual note and at least one evidence record. Other checks need a note or evidence; not-applicable checks need a reason."
+          }
+        }
+      }
+    },
+    "A linked record is missing or the observation is incomplete.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A linked record is missing or the observation is incomplete."
+          }
+        }
+      }
+    },
     "A little help with your move.": {
       "extractionState": "manual",
       "localizations": {
@@ -19,6 +96,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "A little help with your move."
+          }
+        }
+      }
+    },
+    "A review is your record of checks, not a certification of condition or a deposit decision.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A review is your record of checks, not a certification of condition or a deposit decision."
           }
         }
       }
@@ -41,6 +129,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "AccentColor"
+          }
+        }
+      }
+    },
+    "Access inventory": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Access inventory"
+          }
+        }
+      }
+    },
+    "Access inventory exception": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Access inventory exception"
           }
         }
       }
@@ -78,6 +188,17 @@
         }
       }
     },
+    "Add a confirmed reading or explain why this meter is not applicable.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add a confirmed reading or explain why this meter is not applicable."
+          }
+        }
+      }
+    },
     "Add a record or try a different search.": {
       "extractionState": "manual",
       "localizations": {
@@ -85,6 +206,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Add a record or try a different search."
+          }
+        }
+      }
+    },
+    "Add a room": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add a room"
           }
         }
       }
@@ -188,6 +320,17 @@
         }
       }
     },
+    "Add or inspect final readings": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add or inspect final readings"
+          }
+        }
+      }
+    },
     "Add reading": {
       "extractionState": "manual",
       "localizations": {
@@ -195,6 +338,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Add reading"
+          }
+        }
+      }
+    },
+    "Add rooms in property details": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add rooms in property details"
           }
         }
       }
@@ -239,6 +393,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Added by"
+          }
+        }
+      }
+    },
+    "Additional meter type": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Additional meter type"
           }
         }
       }
@@ -294,6 +459,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "All evidence"
+          }
+        }
+      }
+    },
+    "All evidence & report inclusion": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All evidence & report inclusion"
+          }
+        }
+      }
+    },
+    "All property records & tools": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All property records & tools"
           }
         }
       }
@@ -375,6 +562,17 @@
         }
       }
     },
+    "Areas needing attention": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Areas needing attention"
+          }
+        }
+      }
+    },
     "Ask LeaveWell": {
       "extractionState": "manual",
       "localizations": {
@@ -448,6 +646,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Bedroom"
+          }
+        }
+      }
+    },
+    "Before you close the door": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Before you close the door"
           }
         }
       }
@@ -551,6 +760,28 @@
         }
       }
     },
+    "Capture or import evidence": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Capture or import evidence"
+          }
+        }
+      }
+    },
+    "Capture time unknown": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Capture time unknown"
+          }
+        }
+      }
+    },
     "Captured": {
       "extractionState": "manual",
       "localizations": {
@@ -584,6 +815,39 @@
         }
       }
     },
+    "Check outcome": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check outcome"
+          }
+        }
+      }
+    },
+    "Check the access inventory": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the access inventory"
+          }
+        }
+      }
+    },
+    "Check the evidence trail, final readings and actual access handover. Missing details remain visible in the report; they are never silently marked complete.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the evidence trail, final readings and actual access handover. Missing details remain visible in the report; they are never silently marked complete."
+          }
+        }
+      }
+    },
     "Check unresolved repairs": {
       "extractionState": "manual",
       "localizations": {
@@ -591,6 +855,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Check unresolved repairs"
+          }
+        }
+      }
+    },
+    "Checked condition": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checked condition"
           }
         }
       }
@@ -672,6 +947,39 @@
         }
       }
     },
+    "Checkout evidence package": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checkout evidence package"
+          }
+        }
+      }
+    },
+    "Checkout started": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checkout started"
+          }
+        }
+      }
+    },
+    "Checkout workspace": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checkout workspace"
+          }
+        }
+      }
+    },
     "Choose evidence and control contact details": {
       "extractionState": "manual",
       "localizations": {
@@ -690,6 +998,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Choose from library"
+          }
+        }
+      }
+    },
+    "Choose the evidence pair": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose the evidence pair"
           }
         }
       }
@@ -749,6 +1068,28 @@
         }
       }
     },
+    "Compare move-in and move-out evidence": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compare move-in and move-out evidence"
+          }
+        }
+      }
+    },
+    "Comparison saved to this property": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comparison saved to this property"
+          }
+        }
+      }
+    },
     "Complete": {
       "extractionState": "manual",
       "localizations": {
@@ -804,6 +1145,28 @@
         }
       }
     },
+    "Condition to explain": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Condition to explain"
+          }
+        }
+      }
+    },
+    "Confirm access handover": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirm access handover"
+          }
+        }
+      }
+    },
     "Confirm checkout arrangements": {
       "extractionState": "manual",
       "localizations": {
@@ -811,6 +1174,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Confirm checkout arrangements"
+          }
+        }
+      }
+    },
+    "Confirm that all keys, fobs and other access items are listed.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirm that all keys, fobs and other access items are listed."
           }
         }
       }
@@ -921,6 +1295,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Cupboards"
+          }
+        }
+      }
+    },
+    "Current handover review saved": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Current handover review saved"
           }
         }
       }
@@ -1086,6 +1471,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "Deposit scheme"
+          }
+        }
+      }
+    },
+    "Describe only what you observed. Choose a reason when a fixture does not apply.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Describe only what you observed. Choose a reason when a fixture does not apply."
+          }
+        }
+      }
+    },
+    "Describe the visible difference or unchanged condition": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Describe the visible difference or unchanged condition"
           }
         }
       }
@@ -1277,6 +1684,17 @@
         }
       }
     },
+    "Evidence comparison board": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evidence comparison board"
+          }
+        }
+      }
+    },
     "Evidence deleted": {
       "extractionState": "manual",
       "localizations": {
@@ -1295,6 +1713,61 @@
           "stringUnit": {
             "state": "translated",
             "value": "Evidence details"
+          }
+        }
+      }
+    },
+    "Evidence linked to this fixture": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evidence linked to this fixture"
+          }
+        }
+      }
+    },
+    "Evidence pair removed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evidence pair removed"
+          }
+        }
+      }
+    },
+    "Evidence pair saved": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evidence pair saved"
+          }
+        }
+      }
+    },
+    "Evidence pair updated": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evidence pair updated"
+          }
+        }
+      }
+    },
+    "Evidence pair · Demo": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evidence pair · Demo"
           }
         }
       }
@@ -1332,6 +1805,28 @@
         }
       }
     },
+    "Existing files and checklists are kept. Previous checklist ticks are not treated as documented fixture observations.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Existing files and checklists are kept. Previous checklist ticks are not treated as documented fixture observations."
+          }
+        }
+      }
+    },
+    "Expected meters": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expected meters"
+          }
+        }
+      }
+    },
     "Explore LeaveWell Plus": {
       "extractionState": "manual",
       "localizations": {
@@ -1350,6 +1845,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Export all records and original files"
+          }
+        }
+      }
+    },
+    "Factual observation": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Factual observation"
           }
         }
       }
@@ -1383,6 +1889,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "Fictional correspondence: checkout appointment confirmed for 24 October."
+          }
+        }
+      }
+    },
+    "Fictional demo: checked and photographed.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fictional demo: checked and photographed."
+          }
+        }
+      }
+    },
+    "Fictional demo: the inventory records a chip beside the sink; compare with the current photograph.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fictional demo: the inventory records a chip beside the sink; compare with the current photograph."
           }
         }
       }
@@ -1442,6 +1970,17 @@
         }
       }
     },
+    "Final handover review": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Final handover review"
+          }
+        }
+      }
+    },
     "Final reading checked against the display. Demo record.": {
       "extractionState": "manual",
       "localizations": {
@@ -1471,6 +2010,39 @@
           "stringUnit": {
             "state": "translated",
             "value": "Find what is still to do"
+          }
+        }
+      }
+    },
+    "Fixture observation saved": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fixture observation saved"
+          }
+        }
+      }
+    },
+    "Fixture observations": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fixture observations"
+          }
+        }
+      }
+    },
+    "Fixture route": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fixture route"
           }
         }
       }
@@ -1717,6 +2289,61 @@
         }
       }
     },
+    "Handover review checkpoint": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Handover review checkpoint"
+          }
+        }
+      }
+    },
+    "Handover review saved": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Handover review saved"
+          }
+        }
+      }
+    },
+    "Handover review still needed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Handover review still needed"
+          }
+        }
+      }
+    },
+    "Handover scope reviewed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Handover scope reviewed"
+          }
+        }
+      }
+    },
+    "Handover still to record": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Handover still to record"
+          }
+        }
+      }
+    },
     "Have I recorded the electricity meter?": {
       "extractionState": "manual",
       "localizations": {
@@ -1757,6 +2384,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "House"
+          }
+        }
+      }
+    },
+    "I checked that every access item is listed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I checked that every access item is listed"
           }
         }
       }
@@ -1805,6 +2443,17 @@
         }
       }
     },
+    "Import inventory or inspect older comparison notes": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Import inventory or inspect older comparison notes"
+          }
+        }
+      }
+    },
     "Imported": {
       "extractionState": "manual",
       "localizations": {
@@ -1827,6 +2476,17 @@
         }
       }
     },
+    "Include comparison in report": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Include comparison in report"
+          }
+        }
+      }
+    },
     "Include deposit details": {
       "extractionState": "manual",
       "localizations": {
@@ -1834,6 +2494,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Include deposit details"
+          }
+        }
+      }
+    },
+    "Include fixture observation in report": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Include fixture observation in report"
           }
         }
       }
@@ -1893,6 +2564,28 @@
         }
       }
     },
+    "Inspect final handover review": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inspect final handover review"
+          }
+        }
+      }
+    },
+    "Inspect the record": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inspect the record"
+          }
+        }
+      }
+    },
     "Introduction": {
       "extractionState": "manual",
       "localizations": {
@@ -1948,6 +2641,17 @@
         }
       }
     },
+    "Keep both sides of the story": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep both sides of the story"
+          }
+        }
+      }
+    },
     "Keep the displayed digits, including leading zeroes. Add a photograph and confirm the reading yourself.": {
       "extractionState": "manual",
       "localizations": {
@@ -1977,6 +2681,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Key handover recorded"
+          }
+        }
+      }
+    },
+    "Key handover reviewed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Key handover reviewed"
           }
         }
       }
@@ -2102,6 +2817,28 @@
         }
       }
     },
+    "Last review": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last review"
+          }
+        }
+      }
+    },
+    "Leave a meter reason blank when a final reading is needed. If a supply is absent or included in another service, record that explicitly.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leave a meter reason blank when a final reading is needed. If a supply is absent or included in another service, record that explicitly."
+          }
+        }
+      }
+    },
     "LeaveWell": {
       "extractionState": "manual",
       "localizations": {
@@ -2223,6 +2960,61 @@
         }
       }
     },
+    "Linked comparison": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Linked comparison"
+          }
+        }
+      }
+    },
+    "Linked evidence needs attention": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Linked evidence needs attention"
+          }
+        }
+      }
+    },
+    "Linked move-in and move-out comparisons": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Linked move-in and move-out comparisons"
+          }
+        }
+      }
+    },
+    "List keys, fobs and access items": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "List keys, fobs and access items"
+          }
+        }
+      }
+    },
+    "List the items to hand over or explain why none apply.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "List the items to hand over or explain why none apply."
+          }
+        }
+      }
+    },
     "Living room": {
       "extractionState": "manual",
       "localizations": {
@@ -2274,6 +3066,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lock with Face ID or device passcode"
+          }
+        }
+      }
+    },
+    "Look, document, then review": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Look, document, then review"
           }
         }
       }
@@ -2421,6 +3224,17 @@
         }
       }
     },
+    "Meter requirements & access inventory": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meter requirements & access inventory"
+          }
+        }
+      }
+    },
     "Meter type": {
       "extractionState": "manual",
       "localizations": {
@@ -2520,6 +3334,17 @@
         }
       }
     },
+    "Move-in inventory or photograph": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move-in inventory or photograph"
+          }
+        }
+      }
+    },
     "Move-in inventory · Demo": {
       "extractionState": "manual",
       "localizations": {
@@ -2564,6 +3389,17 @@
         }
       }
     },
+    "Move-out photograph": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move-out photograph"
+          }
+        }
+      }
+    },
     "Move-out readiness": {
       "extractionState": "manual",
       "localizations": {
@@ -2593,6 +3429,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "My move"
+          }
+        }
+      }
+    },
+    "Needs attention": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Needs attention"
           }
         }
       }
@@ -2663,6 +3510,17 @@
         }
       }
     },
+    "No evidence pairs saved yet. Comparisons are optional when no move-in evidence is available.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No evidence pairs saved yet. Comparisons are optional when no move-in evidence is available."
+          }
+        }
+      }
+    },
     "No issue noted": {
       "extractionState": "manual",
       "localizations": {
@@ -2692,6 +3550,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "No meter readings recorded."
+          }
+        }
+      }
+    },
+    "No outstanding checks in the configured scope": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No outstanding checks in the configured scope"
           }
         }
       }
@@ -2751,6 +3620,28 @@
         }
       }
     },
+    "Not applicable reason (otherwise reading required)": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not applicable reason (otherwise reading required)"
+          }
+        }
+      }
+    },
+    "Not checked": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not checked"
+          }
+        }
+      }
+    },
     "Notes": {
       "extractionState": "manual",
       "localizations": {
@@ -2795,6 +3686,17 @@
         }
       }
     },
+    "Observation or reason": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Observation or reason"
+          }
+        }
+      }
+    },
     "On-device transcription is unavailable for this language. Your audio stays on this device; type a note instead.": {
       "extractionState": "manual",
       "localizations": {
@@ -2817,6 +3719,17 @@
         }
       }
     },
+    "Only confirm a handover after it has happened. This records your account; it is not the recipient's signature.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Only confirm a handover after it has happened. This records your account; it is not the recipient's signature."
+          }
+        }
+      }
+    },
     "Open iOS Settings": {
       "extractionState": "manual",
       "localizations": {
@@ -2824,6 +3737,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Open iOS Settings"
+          }
+        }
+      }
+    },
+    "Open original": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open original"
           }
         }
       }
@@ -2971,6 +3895,17 @@
         }
       }
     },
+    "Outstanding areas": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Outstanding areas"
+          }
+        }
+      }
+    },
     "Oven": {
       "extractionState": "manual",
       "localizations": {
@@ -3000,6 +3935,39 @@
           "stringUnit": {
             "state": "translated",
             "value": "Page"
+          }
+        }
+      }
+    },
+    "Pair an original inventory or move-in photograph with a current photograph. Write your own observation; LeaveWell does not assess damage or decide responsibility.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pair an original inventory or move-in photograph with a current photograph. Write your own observation; LeaveWell does not assess damage or decide responsibility."
+          }
+        }
+      }
+    },
+    "Pair original inventory records with current photographs": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pair original inventory records with current photographs"
+          }
+        }
+      }
+    },
+    "Paired evidence & observations": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paired evidence & observations"
           }
         }
       }
@@ -3114,6 +4082,17 @@
         }
       }
     },
+    "Preparation dates & reminders": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preparation dates & reminders"
+          }
+        }
+      }
+    },
     "Prepare evidence report": {
       "extractionState": "manual",
       "localizations": {
@@ -3121,6 +4100,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Prepare evidence report"
+          }
+        }
+      }
+    },
+    "Prepare handover evidence package": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prepare handover evidence package"
           }
         }
       }
@@ -3323,6 +4313,28 @@
         }
       }
     },
+    "Readings & access scope": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Readings & access scope"
+          }
+        }
+      }
+    },
+    "Readings and access scope": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Readings and access scope"
+          }
+        }
+      }
+    },
     "Recipient": {
       "extractionState": "manual",
       "localizations": {
@@ -3341,6 +4353,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Record a voice note"
+          }
+        }
+      }
+    },
+    "Record access items": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record access items"
           }
         }
       }
@@ -3411,6 +4434,17 @@
         }
       }
     },
+    "Record quantity, recipient, method and the actual handover date.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record quantity, recipient, method and the actual handover date."
+          }
+        }
+      }
+    },
     "Record room walkthrough": {
       "extractionState": "manual",
       "localizations": {
@@ -3440,6 +4474,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Record unavailable"
+          }
+        }
+      }
+    },
+    "Record what applies to this property, including exceptions": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record what applies to this property, including exceptions"
           }
         }
       }
@@ -3495,6 +4540,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Records and originals are stored on this device with iOS file protection. No tenancy data is sent to advertising or analytics services."
+          }
+        }
+      }
+    },
+    "Records changed after that review, or checks are incomplete. Review again before relying on the earlier checkpoint.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Records changed after that review, or checks are incomplete. Review again before relying on the earlier checkpoint."
           }
         }
       }
@@ -3587,6 +4643,50 @@
         }
       }
     },
+    "Remove comparison": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove comparison"
+          }
+        }
+      }
+    },
+    "Remove this comparison?": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove this comparison?"
+          }
+        }
+      }
+    },
+    "Removing a pair keeps its original evidence records.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Removing a pair keeps its original evidence records."
+          }
+        }
+      }
+    },
+    "Repair an evidence comparison": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repair an evidence comparison"
+          }
+        }
+      }
+    },
     "Report created": {
       "extractionState": "manual",
       "localizations": {
@@ -3627,6 +4727,50 @@
           "stringUnit": {
             "state": "translated",
             "value": "Review and edit the text before saving. Your voice recording will also be preserved."
+          }
+        }
+      }
+    },
+    "Review handover & prepare report": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review handover & prepare report"
+          }
+        }
+      }
+    },
+    "Review handover details": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review handover details"
+          }
+        }
+      }
+    },
+    "Review matches current records": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review matches current records"
+          }
+        }
+      }
+    },
+    "Review needed for current records": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review needed for current records"
           }
         }
       }
@@ -3741,6 +4885,17 @@
         }
       }
     },
+    "Room evidence & original checklist": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Room evidence & original checklist"
+          }
+        }
+      }
+    },
     "Room index": {
       "extractionState": "manual",
       "localizations": {
@@ -3836,6 +4991,72 @@
           "stringUnit": {
             "state": "translated",
             "value": "Save comparison note"
+          }
+        }
+      }
+    },
+    "Save fixture check": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save fixture check"
+          }
+        }
+      }
+    },
+    "Save handover": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save handover"
+          }
+        }
+      }
+    },
+    "Save linked comparison": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save linked comparison"
+          }
+        }
+      }
+    },
+    "Save property scope": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save property scope"
+          }
+        }
+      }
+    },
+    "Save review checkpoint": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save review checkpoint"
+          }
+        }
+      }
+    },
+    "Saved evidence pairs": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saved evidence pairs"
           }
         }
       }
@@ -3939,6 +5160,28 @@
         }
       }
     },
+    "Select evidence or open the original": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select evidence or open the original"
+          }
+        }
+      }
+    },
+    "Select two existing records and add an observation.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select two existing records and add an observation."
+          }
+        }
+      }
+    },
     "Serial number": {
       "extractionState": "manual",
       "localizations": {
@@ -3950,6 +5193,17 @@
         }
       }
     },
+    "Set the scope for this property": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set the scope for this property"
+          }
+        }
+      }
+    },
     "Set up a device passcode in iOS Settings before enabling app lock.": {
       "extractionState": "manual",
       "localizations": {
@@ -3957,6 +5211,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Set up a device passcode in iOS Settings before enabling app lock."
+          }
+        }
+      }
+    },
+    "Set up the rooms in property details before starting the walkthrough.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set up the rooms in property details before starting the walkthrough."
           }
         }
       }
@@ -4067,6 +5332,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "Speech recognition is disabled. Your recording is available and you can type a note."
+          }
+        }
+      }
+    },
+    "Start at the doorway and follow the fixtures in order. Each check keeps its own observation and evidence links. A photo alone does not complete a check.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start at the doorway and follow the fixtures in order. Each check keeps its own observation and evidence links. A photo alone does not complete a check."
+          }
+        }
+      }
+    },
+    "Start checkout walkthrough": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start checkout walkthrough"
           }
         }
       }
@@ -4225,6 +5512,17 @@
         }
       }
     },
+    "The PDF contains only selected evidence. A current case review does not mean every source record is included in this export.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The PDF contains only selected evidence. A current case review does not mean every source record is included in this export."
+          }
+        }
+      }
+    },
     "The camera is unavailable. Choose a file from your library instead.": {
       "extractionState": "manual",
       "localizations": {
@@ -4265,6 +5563,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "The finishing details"
+          }
+        }
+      }
+    },
+    "The observation is exported only when both linked records are also included. Excluding either record excludes the comparison from the PDF.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The observation is exported only when both linked records are also included. Excluding either record excludes the comparison from the PDF."
           }
         }
       }
@@ -4320,6 +5629,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "This PDF is a snapshot. Regenerate it after changing evidence or sharing controls."
+          }
+        }
+      }
+    },
+    "This handover has happened": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This handover has happened"
+          }
+        }
+      }
+    },
+    "This is the renter's review checkpoint, not certification of property condition or recipient acceptance.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This is the renter's review checkpoint, not certification of property condition or recipient acceptance."
           }
         }
       }
@@ -4518,6 +5849,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Undo review"
+          }
+        }
+      }
+    },
+    "Unfinished checks are shown in the PDF. Comparisons and fixture observations linked to excluded evidence are omitted. Check inclusion before sharing.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unfinished checks are shown in the PDF. Comparisons and fixture observations linked to excluded evidence are omitted. Check inclusion before sharing."
           }
         }
       }
@@ -4819,6 +6161,17 @@
         }
       }
     },
+    "Why no keys or access items apply": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Why no keys or access items apply"
+          }
+        }
+      }
+    },
     "Willow flat · Demo": {
       "extractionState": "manual",
       "localizations": {
@@ -4852,6 +6205,17 @@
         }
       }
     },
+    "Work through each room, explain changes, then review readings and access handover. Saved work stays available as you go.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Work through each room, explain changes, then review readings and access handover. Saved work stays available as you go."
+          }
+        }
+      }
+    },
     "Worktop edge · observation": {
       "extractionState": "manual",
       "localizations": {
@@ -4881,6 +6245,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Your LeaveWell Plus subscription has been restored."
+          }
+        }
+      }
+    },
+    "Your checkout, one connected record": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your checkout, one connected record"
           }
         }
       }
@@ -5112,6 +6487,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "access item records"
+          }
+        }
+      }
+    },
+    "documented fixture checks": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "documented fixture checks"
           }
         }
       }
