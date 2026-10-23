@@ -94,8 +94,16 @@ final class PurchaseTests: XCTestCase {
     }
     func testUnverifiedPurchaseDoesNotUnlockPlus() async throws {
         let session = try session(); defer { session.clearTransactions() }
+        let purchases = PurchaseService()
+        // Clearing the test server does not synchronously invalidate StoreKit's
+        // client cache. Establish the locked starting state before injecting an
+        // invalid signature, so an earlier approval cannot masquerade as access.
+        try await awaitAccess(false, in: purchases)
+        XCTAssertFalse(purchases.hasPlus)
         try await session.setSimulatedError(.verification(.invalidSignature), forAPI: .verification)
-        let purchases = PurchaseService(); await purchases.load()
+        let simulated = await session.simulatedError(forAPI: .verification)
+        XCTAssertNotNil(simulated, "The test must inject an invalid signature")
+        await purchases.load()
         let monthly = try XCTUnwrap(purchases.products.first { $0.id == PlusPlan.monthly })
         await purchases.purchase(monthly)
         XCTAssertFalse(purchases.hasPlus); XCTAssertNotNil(purchases.errorMessage)
@@ -108,7 +116,11 @@ final class PurchaseTests: XCTestCase {
         await purchases.purchase(monthly)
         XCTAssertFalse(purchases.hasPlus); XCTAssertNotNil(purchases.message)
         let transaction = try XCTUnwrap(session.allTransactions().last)
+        XCTAssertTrue(transaction.pendingAskToBuyConfirmation)
         try session.approveAskToBuyTransaction(identifier: transaction.identifier)
-        await purchases.refreshEntitlements(); XCTAssertTrue(purchases.hasPlus)
+        // Approval returns before StoreKit delivers the verified entitlement.
+        // Wait for the same real access signal used by expiry/refund tests.
+        try await awaitAccess(true, in: purchases)
+        XCTAssertTrue(purchases.hasPlus)
     }
 }
