@@ -10,6 +10,9 @@ on:
         type: string
       recipient_public_key:
         type: string
+      reuse_run:
+        description: Existing unsigned helper build to reuse
+        type: string
       register_device:
         type: boolean
         default: false
@@ -19,9 +22,10 @@ on:
         type: string
 permissions:
   contents: read
+  actions: read
 jobs:
   build:
-    if: inputs.operation == 'build'
+    if: inputs.operation == 'build' && inputs.reuse_run == ''
     runs-on: macos-26
     timeout-minutes: 25
     steps:
@@ -47,7 +51,7 @@ jobs:
           path: build/unsigned-runner.zip
           retention-days: 1
   sign:
-    if: inputs.operation == 'build'
+    if: always() && inputs.operation == 'build' && (needs.build.result == 'success' || inputs.reuse_run != '')
     needs: build
     runs-on: macos-26
     timeout-minutes: 15
@@ -59,6 +63,8 @@ jobs:
         with:
           name: unsigned-device-runner
           path: build
+          run-id: ${{ inputs.reuse_run || github.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Sign and encrypt runner for the connected device
         env:
           APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
@@ -78,7 +84,7 @@ jobs:
         if: always()
         run: |
           security delete-keychain "$RUNNER_TEMP/LeaveWellDeviceQA.keychain-db" || true
-          rm -f "$RUNNER_TEMP/LeaveWellDeviceQA.p12"
+          rm -f "$RUNNER_TEMP/LeaveWellDeviceQA.p12" "$RUNNER_TEMP/LeaveWellDeviceQA.key" "$RUNNER_TEMP/LeaveWellDeviceQA.cer"
   cleanup:
     if: inputs.operation == 'cleanup'
     runs-on: macos-26

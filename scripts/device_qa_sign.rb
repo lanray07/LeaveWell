@@ -33,8 +33,11 @@ def create(type, attributes, relationships = nil)
   api('POST', type, data: data).fetch('data')
 end
 def command(*args)
-  out, _err, status = Open3.capture3(*args)
-  raise "Signing operation failed: #{File.basename(args[0])}" unless status.success?
+  out, err, status = Open3.capture3(*args)
+  unless status.success?
+    ['QA_P12_PASSWORD','QA_DEVICE_UDID','APP_STORE_CONNECT_API_PRIVATE_KEY'].each { |n| err=err.gsub(ENV[n],'<redacted>') if ENV[n] && !ENV[n].empty? }
+    raise "Signing operation failed: #{File.basename(args[0])}: #{err.lines.first(3).join[0,500]}"
+  end
   out
 end
 def linked(type, id); {data: {type: type, id: id}}; end
@@ -66,6 +69,8 @@ FileUtils.mkdir_p('build/runner')
 command('ditto', '-x', '-k', 'build/unsigned-runner.zip', 'build/runner')
 app = Dir.glob('build/runner/*.app').first or raise 'Missing runner'
 raise 'Unexpected runner id' unless command('/usr/libexec/PlistBuddy','-c','Print :CFBundleIdentifier', app+'/Info.plist').strip == RUNNER_ID
+# Only the helper exposes its own generated QA fixtures in Files, not LeaveWell's records.
+command('python3','-c', 'import plistlib,sys; f=sys.argv[1]; p=plistlib.load(open(f,"rb")); p.update(UIFileSharingEnabled=True,LSSupportsOpeningDocumentsInPlace=True,CFBundleDisplayName="LeaveWell Device QA"); plistlib.dump(p,open(f,"wb"))', app+'/Info.plist')
 # Preinstalled WDA must use the device DDI's XCTest libraries on iOS 17+.
 Dir.glob(app+'/Frameworks/XC*.framework').each { |path| FileUtils.remove_entry(path) }
 ['Testing.framework','libXCTestSwiftSupport.dylib'].each do |name|
@@ -81,7 +86,11 @@ begin
   signing_cert = OpenSSL::X509::Certificate.new(Base64.strict_decode64(cert.dig('attributes','certificateContent')))
   pass = SecureRandom.hex(24); puts "::add-mask::#{pass}"
   p12 = File.join(temp,'LeaveWellDeviceQA.p12'); kc = File.join(temp,'LeaveWellDeviceQA.keychain-db')
-  File.binwrite(p12,OpenSSL::PKCS12.create(pass,'LeaveWell Device QA',key,signing_cert).to_der)
+  keyfile=File.join(temp,'LeaveWellDeviceQA.key'); certfile=File.join(temp,'LeaveWellDeviceQA.cer')
+  File.write(keyfile,key.to_pem,mode:'w',perm:0600); File.write(certfile,signing_cert.to_pem)
+  ENV['QA_P12_PASSWORD']=pass
+  command('/usr/bin/openssl','pkcs12','-export','-inkey',keyfile,'-in',certfile,'-out',p12,'-passout','env:QA_P12_PASSWORD','-keypbe','PBE-SHA1-3DES','-certpbe','PBE-SHA1-3DES','-macalg','sha1')
+  File.delete(keyfile)
   command('security','create-keychain','-p',pass,kc); command('security','unlock-keychain','-p',pass,kc)
   search = command('security','list-keychains','-d','user').shellsplit
   command('security','list-keychains','-d','user','-s',kc,*search)
