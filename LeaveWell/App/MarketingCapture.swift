@@ -25,6 +25,10 @@ struct MarketingCapture: View {
                             case "comparison": ComparisonView(caseID: record.id)
                             case "plan": PlanView(caseID: record.id)
                             case "report": ReportView(caseID: record.id)
+                            case "checkout": CheckoutWorkspaceView(caseID: record.id)
+                            case "walkthrough": RoomCheckoutView(caseID: record.id, roomID: record.rooms[0].id)
+                            case "handover": HandoverReviewView(caseID: record.id)
+                            case "pair": EvidencePairView(record: record, beforeID: record.evidence.first { $0.kind == .document }?.id, afterID: record.evidence.first { $0.kind == .photo }?.id).padding(24).navigationTitle("Evidence pair · Demo")
                             default: CaseView(caseID: record.id)
                             }
                         }
@@ -70,6 +74,13 @@ struct MarketingCapture: View {
         demo.meters = [MeterReading(type: "Electricity", reading: "04821", serialNumber: "DEMO-E01", notes: "Final reading checked against the display. Demo record.", recordedAt: date, confirmedByUser: true), MeterReading(type: "Gas", reading: "01276", serialNumber: "DEMO-G01", recordedAt: date, confirmedByUser: true), MeterReading(type: "Water", reading: "00318", recordedAt: date, confirmedByUser: true)]
         demo.accessItems = [AccessItem(type: "Front door key", quantity: 2, method: "In person", recipient: "Agent · Demo", handedOverAt: date.addingTimeInterval(3600), notes: "Two keys handed over at the agreed checkout. Demo record."), AccessItem(type: "Building fob", quantity: 1, method: "In person", recipient: "Agent · Demo", handedOverAt: date.addingTimeInterval(3600))]
         demo.completedTasks = Set(MovePlan.tasks(moveDate: date).prefix(13).map(\.id))
+        demo.checkout = CheckoutSession(startedAt: date)
+        demo.checkout?.fixtures = kitchen.items.prefix(6).map { fixture in
+            FixtureReview(roomID: kitchen.id, fixture: fixture, outcome: .checked,
+                          observation: "Fictional demo: checked and photographed.", evidenceIDs: [demo.evidence[0].id], reviewedAt: date)
+        }
+        demo.checkout?.comparisons = [EvidenceComparison(beforeID: demo.evidence.first { $0.kind == .document }!.id,
+            afterID: demo.evidence[0].id, observation: "Fictional demo: the inventory records a chip beside the sink; compare with the current photograph.", createdAt: date)]
         demo.activities = [Activity(action: "Property created", detail: "Willow flat · Demo", contributor: demo.tenant, date: date.addingTimeInterval(-86400*21)), Activity(action: "Evidence added", detail: "Kitchen · whole room", contributor: demo.tenant, date: date), Activity(action: "Meter reading recorded", detail: "Electricity · 04821", contributor: demo.tenant, date: date.addingTimeInterval(600))]
         return demo
     }

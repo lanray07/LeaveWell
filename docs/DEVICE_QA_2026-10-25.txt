@@ -1,0 +1,45 @@
+LeaveWell physical-device QA â€” 25 October 2026
+
+Device: iPad11,6; iPadOS 26.7; TestFlight version 1.0 (51), verified from installed application metadata.
+Operator: agent using signed XCTest helper over USB. These are device checks with fictional data, not independent renter beta feedback.
+Case: Agent QA 25 Oct / Fictional test property / QA Tester / Parking space only.
+
+Directly observed passes in build 51:
+- Created property and started connected checkout walkthrough.
+- Empty fixture check could not be saved.
+- Imported move-out.png through native Files picker; original shown as saved on device.
+- Linked imported evidence to Whole area and saved factual observation.
+- Saved Ground surface with linked evidence alone; saved Boundaries with a note alone.
+- Not-applicable Fixtures check could not save without reason; saved after adding explicit reason.
+- All four fixtures showed documented checks; workspace continued to flag incomplete meter/access scope.
+- Saved three explicit no-supply reasons plus checked access inventory and no-key reason.
+- Final review showed no outstanding checks and saved a current checkpoint.
+- Edited Ground surface; workspace and final review marked the checkpoint stale and retained prior review time.
+- Saved checkpoint again, terminated and relaunched LeaveWell; property, four checks and current checkpoint persisted.
+- Imported separate move-in.png; comparison selector excluded the selected move-in source from move-out choices.
+- Saved a linked comparison with factual synthetic observation; reopened saved note and both original-file previews.
+- Adding evidence/comparison correctly made the earlier review stale; checkpoint could be refreshed.
+- Live StoreKit products loaded Monthly $2.99/month and Annual $19.99/year on this account.
+- PDF generation correctly unavailable without active Plus entitlement.
+- Restore Purchases opened Apple's account-authentication prompt. Password entry is left to owner on device.
+- No LeaveWell crash report found after these checks. This does not establish that every runtime path is crash-free.
+
+Issues found and fixed in source after device inspection:
+1. Home card displayed legacy preparation-task readiness (0%) despite complete checkout and current review. Replaced with checkout review status and outstanding-area count, using the same model as the workspace. Unstarted cases show Start checkout walkthrough.
+2. Opening one original in the paired Form row queued both original previews. Applied borderless button style so each source action is independent, and added source-specific accessibility labels.
+
+Follow-up verified on 25 October:
+- Build 57 (commit f362ccab18fa0c65d5fa924796789795aed907d9) passed 13 core, 15 native service, six StoreKit lifecycle and five localization checks. Apple VERIFY and UPLOAD succeeded. Delivery 89b6b7bd-09f0-4931-8296-8bf3782f1330.
+- Apple processed build 57; assigned it to the existing Owner Device Testing internal group only. Installed through TestFlight, and USB metadata confirms com.LeaveWell.app 1.0 (57).
+- Existing QA case, four fixture checks, source records and saved pair survived the update.
+- Home card now correctly shows the stale checkout review and zero outstanding areas, matching the workspace.
+- Move-in and move-out original buttons each open only their own file; one Close returns directly to the comparison, with no queued second preview.
+- Enabled app lock on build 57: records were shielded behind native Touch ID. Owner authenticated; agent observed return to Settings with protection still enabled. App lock remains ON.
+- Successful free monthly TestFlight purchase directly observed in build 51: Plus active. Entitlement remained recognised on later reopen and build 57 Settings.
+- Generated and saved actual device PDFs in build 51. Included export: 77,476 bytes / 16 pages, paired observation and edited fixture note present. Excluded export: 56,278 bytes / 13 pages, move-in source and paired observation absent; unrelated fixture note retained; stale review disclosed. Original-file hashes match local synthetic fixtures. Rendered comparison page inspected. Local PDFs: build/device-testing/2026-10-25/device-report-included.pdf and device-report-excluded.pdf.
+
+Unresolved / release limits:
+- Restore Purchases returned the generic failure message after owner-reported Apple password authentication on three attempts, including after a successful purchase. A later reopen still recognised Plus. Root cause is not established; do not label restore as passed or infer a normal expiry/account failure. A short local daemon-log capture contained no diagnostic entries. No entitlement bypass was added.
+- Independent renter beta feedback has not been collected. No App Review submission was made during this QA session.
+
+Evidence: local build/device-testing/2026-10-25/wda-screens contains numbered native screenshots and XML; wda-actions.jsonl records actions. checkpoint-invalidated.png captures stale final review. Test fixtures contain synthetic data only.

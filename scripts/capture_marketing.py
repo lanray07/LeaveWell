@@ -14,7 +14,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--family', choices=['iphone', 'ipad', 'both'], default='both')
 options = parser.parse_args()
 available = [device for group in devices.values() for device in group]
-routes = ['home', 'room', 'evidence', 'notes', 'meters', 'keys', 'documents', 'comparison', 'plan', 'report']
+routes = ['home', 'room', 'evidence', 'notes', 'meters', 'keys', 'documents', 'comparison', 'plan', 'report', 'checkout', 'walkthrough', 'handover', 'pair']
 app = Path('build/DerivedData/Build/Products/Debug-iphonesimulator/LeaveWell.app')
 (app / 'DemoKitchen.png').write_bytes(Path('marketing/source/demo-kitchen.png').read_bytes())
 run('xcrun', 'simctl', 'shutdown', 'all', check=False)
