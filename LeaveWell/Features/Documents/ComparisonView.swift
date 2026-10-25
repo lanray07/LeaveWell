@@ -95,7 +95,9 @@ struct EvidencePairCard: View {
                 Text(item.reference).font(.caption2.monospaced()).textSelection(.enabled)
                 Text(item.original?.capturedAt.map { $0.formatted(date: .abbreviated, time: .shortened) } ?? L("Capture time unknown")).font(.caption).foregroundStyle(.secondary)
                 if let original = item.original {
-                    Button(L("Open original")) { Task { do { previewURL = try await store.vault.verifiedURL(for: original) } catch { self.error = error.localizedDescription } } }.font(.caption)
+                    Button(L("Open original")) { Task { do { previewURL = try await store.vault.verifiedURL(for: original) } catch { self.error = error.localizedDescription } } }
+                        .buttonStyle(.borderless).font(.caption)
+                        .accessibilityLabel(title + ": " + L("Open original"))
                 }
             }
             if let error { Text(error).font(.caption).foregroundStyle(.red) }

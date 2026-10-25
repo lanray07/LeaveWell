@@ -28,8 +28,13 @@ struct HomeView: View {
                                             Text(record.nickname).font(.title2.bold()).foregroundStyle(.primary)
                                             Text(record.address).foregroundStyle(.secondary).multilineTextAlignment(.leading)
                                             Label(record.moveDate.formatted(date: .abbreviated, time: .omitted), systemImage: "calendar").font(.subheadline).foregroundStyle(.secondary)
-                                            ProgressView(value: record.readiness).tint(Theme.accent)
-                                            Text(L("Move-out readiness") + " · " + record.readiness.formatted(.percent.precision(.fractionLength(0)))).font(.caption).foregroundStyle(Theme.accent)
+                                            if record.checkout != nil {
+                                                Label(record.checkoutReviewIsCurrent ? L("Current handover review saved") : L("Handover review still needed"), systemImage: record.checkoutReviewIsCurrent ? "checkmark.seal" : "list.bullet.clipboard")
+                                                    .font(.caption).foregroundStyle(Theme.accent)
+                                                Text(L("Areas needing attention") + ": \(record.checkoutGaps.count)").font(.caption).foregroundStyle(.secondary)
+                                            } else {
+                                                Text(L("Start checkout walkthrough")).font(.caption).foregroundStyle(Theme.accent)
+                                            }
                                         }
                                     }
                                 }.buttonStyle(.plain)

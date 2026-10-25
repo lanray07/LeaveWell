@@ -1,0 +1,37 @@
+LeaveWell physical-device QA — 25 October 2026
+
+Device: iPad11,6; iPadOS 26.7; TestFlight version 1.0 (51), verified from installed application metadata.
+Operator: agent using signed XCTest helper over USB. These are device checks with fictional data, not independent renter beta feedback.
+Case: Agent QA 25 Oct / Fictional test property / QA Tester / Parking space only.
+
+Directly observed passes in build 51:
+- Created property and started connected checkout walkthrough.
+- Empty fixture check could not be saved.
+- Imported move-out.png through native Files picker; original shown as saved on device.
+- Linked imported evidence to Whole area and saved factual observation.
+- Saved Ground surface with linked evidence alone; saved Boundaries with a note alone.
+- Not-applicable Fixtures check could not save without reason; saved after adding explicit reason.
+- All four fixtures showed documented checks; workspace continued to flag incomplete meter/access scope.
+- Saved three explicit no-supply reasons plus checked access inventory and no-key reason.
+- Final review showed no outstanding checks and saved a current checkpoint.
+- Edited Ground surface; workspace and final review marked the checkpoint stale and retained prior review time.
+- Saved checkpoint again, terminated and relaunched LeaveWell; property, four checks and current checkpoint persisted.
+- Imported separate move-in.png; comparison selector excluded the selected move-in source from move-out choices.
+- Saved a linked comparison with factual synthetic observation; reopened saved note and both original-file previews.
+- Adding evidence/comparison correctly made the earlier review stale; checkpoint could be refreshed.
+- Live StoreKit products loaded Monthly $2.99/month and Annual $19.99/year on this account.
+- PDF generation correctly unavailable without active Plus entitlement.
+- Restore Purchases opened Apple's account-authentication prompt. Password entry is left to owner on device.
+- No LeaveWell crash report found after these checks. This does not establish that every runtime path is crash-free.
+
+Issues found and fixed in source after device inspection:
+1. Home card displayed legacy preparation-task readiness (0%) despite complete checkout and current review. Replaced with checkout review status and outstanding-area count, using the same model as the workspace. Unstarted cases show Start checkout walkthrough.
+2. Opening one original in the paired Form row queued both original previews. Applied borderless button style so each source action is independent, and added source-specific accessibility labels.
+
+Pending:
+- Signed replacement build, then repeat the two corrected UI checks on physical device.
+- Authenticated restore/purchase, physical-device PDF generation/save and source-exclusion comparison verification.
+- Physical app-lock authentication check for the replacement build.
+- Independent renter beta testing remains outstanding.
+
+Evidence: local build/device-testing/2026-10-25/wda-screens contains numbered native screenshots and XML; wda-actions.jsonl records actions. checkpoint-invalidated.png captures stale final review. Test fixtures contain synthetic data only.
