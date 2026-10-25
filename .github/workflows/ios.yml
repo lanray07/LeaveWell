@@ -1,178 +1,97 @@
-name: iOS validation
+name: Temporary physical-device QA runner
 on:
-  push:
-  pull_request:
   workflow_dispatch:
     inputs:
-      archive:
-        description: Export a signed IPA using the Apple secrets
+      operation:
+        type: choice
+        options: [build, cleanup]
+        default: build
+      device_udid:
+        type: string
+      recipient_public_key:
+        type: string
+      register_device:
         type: boolean
         default: false
-      screenshots:
-        description: Capture ten real app screens on iPhone and iPad
-        type: boolean
-        default: false
-      upload:
-        description: Validate and upload the signed build to App Store Connect (no review submission)
-        type: boolean
-        default: false
+      certificate_id:
+        type: string
+      profile_id:
+        type: string
 permissions:
   contents: read
-concurrency:
-  group: ios-${{ github.ref }}
-  cancel-in-progress: true
 jobs:
   build:
+    if: inputs.operation == 'build'
     runs-on: macos-26
-    timeout-minutes: 35
-    steps:
-      - uses: actions/checkout@v4
-      - name: Show Xcode toolchain
-        run: xcodebuild -version
-      - name: Validate localization
-        run: |
-          python3 scripts/validate_project.py
-          python3 scripts/test_localization.py
-      - name: Core tests
-        run: swift test
-      - name: Build iOS application
-        run: xcodebuild -project LeaveWell.xcodeproj -scheme LeaveWell -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath build/DerivedData -configuration Debug CODE_SIGNING_ALLOWED=NO build
-      - name: Run iOS service tests
-        run: |
-          DEVICE=$(xcrun simctl list devices available -j | python3 -c 'import json,sys; d=json.load(sys.stdin); print(next(x["udid"] for devices in d["devices"].values() for x in devices if "iPhone" in x["name"]))')
-          echo "SIMULATOR_DEVICE=$DEVICE" >> "$GITHUB_ENV"
-          xcrun simctl boot "$DEVICE" || true
-          xcrun simctl bootstatus "$DEVICE" -b
-          xcodebuild -project LeaveWell.xcodeproj -scheme LeaveWell -destination "platform=iOS Simulator,id=$DEVICE,arch=arm64" -skip-testing:LeaveWellTests/PurchaseTests -parallel-testing-enabled NO -derivedDataPath build/DerivedData -resultBundlePath build/Tests.xcresult CODE_SIGNING_ALLOWED=NO test
-      - name: Collect report samples and simulator screenshot
-        if: always() && env.SIMULATOR_DEVICE != ''
-        run: |
-          mkdir -p build/Samples
-          CONTAINER=$(xcrun simctl get_app_container "$SIMULATOR_DEVICE" com.leavewell.app data 2>/dev/null || true)
-          if [ -n "$CONTAINER" ] && [ -d "$CONTAINER/Documents/TestReports" ]; then
-            cp -R "$CONTAINER/Documents/TestReports/" build/Samples/
-          fi
-          xcrun simctl launch "$SIMULATOR_DEVICE" com.leavewell.app || true
-          sleep 3
-          xcrun simctl io "$SIMULATOR_DEVICE" screenshot build/Samples/LeaveWell-onboarding.png || true
-      - name: Save simulator application and test results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: LeaveWell-simulator-and-tests
-          path: |
-            build/DerivedData/Build/Products/Debug-iphonesimulator/LeaveWell.app
-            build/Tests.xcresult
-            build/Samples
-          retention-days: 7
-      - name: Capture App Store source screens
-        if: github.event_name == 'workflow_dispatch' && inputs.screenshots
-        run: python3 scripts/capture_marketing.py
-      - name: Save App Store source screens
-        if: always() && github.event_name == 'workflow_dispatch' && inputs.screenshots
-        uses: actions/upload-artifact@v4
-        with:
-          name: LeaveWell-real-marketing-screens
-          path: build/MarketingRaw
-          if-no-files-found: error
-          retention-days: 30
-  purchases:
-    # Apple FB22237318: iOS 26.5 CLI StoreKitTest returns SKInternalErrorDomain Code=3.
-    # Keep production SDK checks on Xcode 26.6; exercise real StoreKit transactions
-    # on the supported iOS 18.5 simulator instead of skipping purchase verification.
-    runs-on: macos-15
     timeout-minutes: 25
-    env:
-      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
     steps:
       - uses: actions/checkout@v4
-      - name: Run StoreKit purchase lifecycle tests
-        run: |
-          xcodebuild -version
-          DEVICE=$(xcrun simctl list devices available -j | python3 -c 'import json,sys; d=json.load(sys.stdin); print(next(x["udid"] for runtime,devices in d["devices"].items() if runtime.endswith("iOS-18-5") for x in devices if "iPhone" in x["name"]))')
-          echo "SIMULATOR_DEVICE=$DEVICE" >> "$GITHUB_ENV"
-          xcrun simctl boot "$DEVICE" || true
-          xcrun simctl bootstatus "$DEVICE" -b
-          xcodebuild -project LeaveWell.xcodeproj -scheme LeaveWell -destination "platform=iOS Simulator,id=$DEVICE" -only-testing:LeaveWellTests/PurchaseTests -parallel-testing-enabled NO -derivedDataPath build/DerivedData -resultBundlePath build/Purchases.xcresult CODE_SIGNING_ALLOWED=NO test
-      - name: Collect purchase review screenshot
-        if: always() && env.SIMULATOR_DEVICE != ''
-        run: |
-          mkdir -p build/PurchaseSamples
-          CONTAINER=$(xcrun simctl get_app_container "$SIMULATOR_DEVICE" com.leavewell.app data 2>/dev/null || true)
-          if [ -n "$CONTAINER" ] && [ -d "$CONTAINER/Documents/TestReports" ]; then
-            cp -R "$CONTAINER/Documents/TestReports/" build/PurchaseSamples/
-          fi
-      - uses: actions/upload-artifact@v4
-        if: always()
         with:
-          name: LeaveWell-purchase-tests
-          path: |
-            build/Purchases.xcresult
-            build/PurchaseSamples
-          retention-days: 7
-  archive:
-    if: github.event_name == 'workflow_dispatch' && (inputs.archive || inputs.upload)
-    needs: [build, purchases]
+          repository: appium/WebDriverAgent
+          ref: 02cb92f0e93c8b021443bcbb8eeb80932c113220
+          path: wda
+          persist-credentials: false
+      - name: Build official Appium UI-test runner
+        run: |
+          mkdir -p wda/Resources/WebDriverAgent.bundle build
+          xcodebuild -project wda/WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner \
+            -destination 'generic/platform=iOS' -derivedDataPath build/WDA \
+            -configuration Debug CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO \
+            PRODUCT_BUNDLE_IDENTIFIER=com.LeaveWell.DeviceQA.WebDriverAgentRunner build-for-testing > build/wda-build.log 2>&1 || { tail -70 build/wda-build.log; exit 1; }
+          APP=$(find build/WDA/Build/Products/Debug-iphoneos -maxdepth 1 -name '*Runner.app' -print -quit)
+          test -n "$APP"
+          ditto -c -k --keepParent "$APP" build/unsigned-runner.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: unsigned-device-runner
+          path: build/unsigned-runner.zip
+          retention-days: 1
+  sign:
+    if: inputs.operation == 'build'
+    needs: build
     runs-on: macos-26
-    timeout-minutes: 30
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-      - name: Resolve existing Apple app and prepare signing key
-        id: apple
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: unsigned-device-runner
+          path: build
+      - name: Sign and encrypt runner for the connected device
         env:
           APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
           APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
           APP_STORE_CONNECT_API_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_API_PRIVATE_KEY }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-        run: ruby scripts/apple_build_setup.rb
-      - name: Archive iOS application
-        env:
-          APP_BUNDLE_ID: ${{ steps.apple.outputs.bundle_id }}
-          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-        run: |
-          xcodebuild -project LeaveWell.xcodeproj -scheme LeaveWell -configuration Release \
-            -destination 'generic/platform=iOS' -archivePath build/LeaveWell.xcarchive \
-            PRODUCT_BUNDLE_IDENTIFIER="$APP_BUNDLE_ID" CURRENT_PROJECT_VERSION="$GITHUB_RUN_NUMBER" \
-            DEVELOPMENT_TEAM="$APPLE_TEAM_ID" \
-            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO archive
-      - name: Export signed IPA with Apple cloud signing
-        env:
-          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
-          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
-        run: |
-          xcodebuild -exportArchive -archivePath build/LeaveWell.xcarchive \
-            -exportPath build/export -exportOptionsPlist "$RUNNER_TEMP/LeaveWellExportOptions.plist" \
-            -allowProvisioningUpdates \
-            -authenticationKeyPath "$RUNNER_TEMP/LeaveWellSigning.p8" \
-            -authenticationKeyID "$APP_STORE_CONNECT_API_KEY_ID" \
-            -authenticationKeyIssuerID "$APP_STORE_CONNECT_API_ISSUER_ID"
-      - name: Save signed build
-        uses: actions/upload-artifact@v4
+          QA_DEVICE_UDID: ${{ inputs.device_udid }}
+          QA_PUBLIC_KEY: ${{ inputs.recipient_public_key }}
+          QA_REGISTER_DEVICE: ${{ inputs.register_device }}
+        run: ruby scripts/device_qa_sign.rb
+      - uses: actions/upload-artifact@v4
         with:
-          name: LeaveWell-signed-IPA
-          path: |
-            build/export/*.ipa
-            build/LeaveWell.xcarchive/dSYMs
-          if-no-files-found: error
-          retention-days: 7
-      - name: Validate and upload to App Store Connect
-        if: inputs.upload
-        env:
-          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
-          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
-          API_PRIVATE_KEYS_DIR: ${{ runner.temp }}/LeaveWellUploadKeys
-        run: |
-          mkdir -p "$API_PRIVATE_KEYS_DIR"
-          cp "$RUNNER_TEMP/LeaveWellSigning.p8" "$API_PRIVATE_KEYS_DIR/AuthKey_${APP_STORE_CONNECT_API_KEY_ID}.p8"
-          chmod 600 "$API_PRIVATE_KEYS_DIR/AuthKey_${APP_STORE_CONNECT_API_KEY_ID}.p8"
-          IPA=$(find build/export -maxdepth 1 -name '*.ipa' -print -quit)
-          test -n "$IPA"
-          xcrun altool --validate-app -f "$IPA" -t ios \
-            --apiKey "$APP_STORE_CONNECT_API_KEY_ID" --apiIssuer "$APP_STORE_CONNECT_API_ISSUER_ID"
-          xcrun altool --upload-app -f "$IPA" -t ios \
-            --apiKey "$APP_STORE_CONNECT_API_KEY_ID" --apiIssuer "$APP_STORE_CONNECT_API_ISSUER_ID"
-      - name: Remove signing material
+          name: encrypted-device-runner
+          path: build/runner.encrypted.json
+          retention-days: 1
+      - name: Remove temporary keychain and signing files
         if: always()
         run: |
-          rm -f "$RUNNER_TEMP/LeaveWellSigning.p8" "$RUNNER_TEMP/LeaveWellExportOptions.plist"
-          rm -rf "$RUNNER_TEMP/LeaveWellUploadKeys"
+          security delete-keychain "$RUNNER_TEMP/LeaveWellDeviceQA.keychain-db" || true
+          rm -f "$RUNNER_TEMP/LeaveWellDeviceQA.p12"
+  cleanup:
+    if: inputs.operation == 'cleanup'
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Remove only this helper's dedicated signing resources
+        env:
+          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          APP_STORE_CONNECT_API_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_API_PRIVATE_KEY }}
+          QA_OPERATION: cleanup
+          QA_CERTIFICATE_ID: ${{ inputs.certificate_id }}
+          QA_PROFILE_ID: ${{ inputs.profile_id }}
+        run: ruby scripts/device_qa_sign.rb
