@@ -66,6 +66,12 @@ FileUtils.mkdir_p('build/runner')
 command('ditto', '-x', '-k', 'build/unsigned-runner.zip', 'build/runner')
 app = Dir.glob('build/runner/*.app').first or raise 'Missing runner'
 raise 'Unexpected runner id' unless command('/usr/libexec/PlistBuddy','-c','Print :CFBundleIdentifier', app+'/Info.plist').strip == RUNNER_ID
+# Preinstalled WDA must use the device DDI's XCTest libraries on iOS 17+.
+Dir.glob(app+'/Frameworks/XC*.framework').each { |path| FileUtils.remove_entry(path) }
+['Testing.framework','libXCTestSwiftSupport.dylib'].each do |name|
+  path=app+'/Frameworks/'+name
+  FileUtils.remove_entry(path) if File.exist?(path)
+end
 key = OpenSSL::PKey::RSA.new(2048)
 csr = OpenSSL::X509::Request.new; csr.version = 0; csr.subject = OpenSSL::X509::Name.parse('/CN=LeaveWell Temporary Device QA'); csr.public_key = key.public_key; csr.sign(key,OpenSSL::Digest::SHA256.new)
 cert = nil; profile = nil
