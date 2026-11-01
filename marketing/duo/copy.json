@@ -1,22 +1,288 @@
 {
-  "routes": ["home", "checkout", "walkthrough", "evidence", "notes", "meters", "keys", "documents", "pair", "report"],
+  "routes": [
+    "home",
+    "checkout",
+    "walkthrough",
+    "evidence",
+    "notes",
+    "meters",
+    "keys",
+    "documents",
+    "pair",
+    "report"
+  ],
   "locales": {
-    "en-GB": {"footer":"Fictional demo records", "paid":"PDF reports require LeaveWell Plus", "headlines":["Your move-out,\nclearly organised.","See what still\nneeds attention.","Check each fixture.\nKeep the evidence.","Rental photos,\nready to find.","Record the details\nwhile they’re fresh.","Final meter readings.\nClearly recorded.","Keys handed over.\nDetails kept.","Your rental paperwork,\nin one place.","Move-in to move-out.\nCompare the evidence.","Your evidence,\nin a shareable PDF."]},
-    "fr": {"footer":"Données de démonstration fictives", "paid":"Rapports PDF avec LeaveWell Plus", "headlines":["Votre départ,\nbien organisé.","Repérez les points\nà vérifier.","Vérifiez chaque élément.\nGardez les preuves.","Vos photos du logement,\nfaciles à retrouver.","Notez les détails\nsur le moment.","Derniers relevés.\nTout est consigné.","Clés remises.\nDétails conservés.","Vos documents locatifs,\nau même endroit.","De l’entrée à la sortie.\nComparez vos preuves.","Vos preuves,\ndans un PDF à partager."]},
-    "es": {"footer":"Datos ficticios de demostración", "paid":"Informes PDF con LeaveWell Plus", "headlines":["Tu salida del piso,\nbien organizada.","Descubre qué queda\npor revisar.","Revisa cada elemento.\nGuarda las pruebas.","Fotos del alquiler,\nfáciles de encontrar.","Anota los detalles\nen el momento.","Lecturas finales.\nTodo registrado.","Llaves entregadas.\nDetalles guardados.","Los documentos del alquiler,\nen un solo lugar.","De la entrada a la salida.\nCompara las pruebas.","Tus pruebas,\nen un PDF para compartir."]},
-    "de": {"footer":"Fiktive Demodaten", "paid":"PDF-Berichte mit LeaveWell Plus", "headlines":["Dein Auszug,\nklar organisiert.","Sieh, was noch\ngeprüft werden muss.","Prüfe jedes Detail.\nSichere die Belege.","Wohnungsfotos,\nschnell gefunden.","Halte Details fest,\nsolange sie frisch sind.","Letzte Zählerstände.\nKlar dokumentiert.","Schlüssel übergeben.\nDetails festgehalten.","Deine Mietunterlagen,\nan einem Ort.","Vom Einzug zum Auszug.\nVergleiche deine Belege.","Deine Belege,\nals PDF zum Teilen."]},
-    "it": {"footer":"Dati dimostrativi fittizi", "paid":"Report PDF con LeaveWell Plus", "headlines":["Il tuo trasloco,\nben organizzato.","Scopri cosa resta\nda controllare.","Controlla ogni elemento.\nConserva le prove.","Foto dell’alloggio,\nfacili da trovare.","Annota i dettagli\nsul momento.","Letture finali.\nTutto registrato.","Chiavi consegnate.\nDettagli conservati.","I documenti dell’affitto,\nin un solo posto.","Dall’ingresso all’uscita.\nConfronta le prove.","Le tue prove,\nin un PDF da condividere."]},
-    "pt-BR": {"footer":"Dados fictícios de demonstração", "paid":"Relatórios PDF com LeaveWell Plus", "headlines":["Sua saída do imóvel,\nbem organizada.","Veja o que ainda\nprecisa de atenção.","Confira cada item.\nGuarde as evidências.","Fotos do imóvel,\nfáceis de encontrar.","Registre os detalhes\nna hora.","Leituras finais.\nTudo registrado.","Chaves entregues.\nDetalhes guardados.","Os documentos do aluguel,\nem um só lugar.","Da entrada à saída.\nCompare as evidências.","Suas evidências,\nem um PDF para compartilhar."]},
-    "nl": {"footer":"Fictieve demogegevens", "paid":"PDF-rapporten met LeaveWell Plus", "headlines":["Je verhuizing,\nhelder geregeld.","Zie wat nog\naandacht nodig heeft.","Controleer elk onderdeel.\nBewaar het bewijs.","Woningfoto’s,\nsnel teruggevonden.","Leg details vast\nterwijl ze nog vers zijn.","Eindmeterstanden.\nDuidelijk vastgelegd.","Sleutels ingeleverd.\nDetails bewaard.","Je huurdocumenten,\nop één plek.","Van intrek tot vertrek.\nVergelijk je bewijs.","Je bewijs,\nin een deelbare PDF."]},
-    "pl": {"footer":"Fikcyjne dane demonstracyjne", "paid":"Raporty PDF z LeaveWell Plus", "headlines":["Twoja wyprowadzka,\ndobrze zorganizowana.","Sprawdź, co jeszcze\nwymaga uwagi.","Sprawdź każdy element.\nZachowaj dowody.","Zdjęcia mieszkania,\nłatwe do znalezienia.","Zapisuj szczegóły\nna bieżąco.","Końcowe stany liczników.\nJasno zapisane.","Klucze przekazane.\nSzczegóły zachowane.","Dokumenty najmu,\nw jednym miejscu.","Od wprowadzenia do wyprowadzki.\nPorównaj dowody.","Twoje dowody,\nw pliku PDF do udostępnienia."]},
-    "ar": {"footer":"بيانات توضيحية خيالية", "paid":"تقارير PDF مع LeaveWell Plus", "headlines":["مغادرة منزلك،\nبتنظيم ووضوح.","اعرف ما لا يزال\nبحاجة إلى اهتمام.","افحص كل عنصر.\nواحتفظ بالأدلة.","صور العقار،\nيسهل العثور عليها.","دوّن التفاصيل\nفي وقتها.","القراءات النهائية للعدادات.\nموثّقة بوضوح.","سُلّمت المفاتيح.\nوحُفظت التفاصيل.","مستندات إيجارك،\nفي مكان واحد.","من الاستلام إلى التسليم.\nقارن الأدلة.","أدلتك،\nفي ملف PDF للمشاركة."]},
-    "hi": {"footer":"काल्पनिक डेमो रिकॉर्ड", "paid":"LeaveWell Plus के साथ PDF रिपोर्ट", "headlines":["घर छोड़ने की तैयारी,\nपूरी तरह व्यवस्थित।", "देखें, किन बातों पर\nअभी ध्यान देना है।", "हर चीज़ जाँचें।\nसबूत सँभालें।", "घर की तस्वीरें,\nआसानी से खोजें।", "विवरण याद रहते ही\nलिख लें।", "मीटर की अंतिम रीडिंग।\nसाफ़-साफ़ दर्ज।", "चाबियाँ सौंप दीं।\nविवरण सुरक्षित हैं।", "किराये के दस्तावेज़,\nएक ही जगह।", "आने से जाने तक।\nसबूतों की तुलना करें।", "आपके सबूत,\nसाझा करने योग्य PDF में।"]},
-    "ja": {"footer":"架空のデモ記録", "paid":"PDFレポートはLeaveWell Plusで利用可能", "headlines":["退去の準備を、\nすっきり整理。", "まだ確認が必要な\n項目がわかる。", "設備を一つずつ確認。\n証拠を残そう。", "住まいの写真を、\nすぐに見つける。", "気づいたことは、\nその場で記録。", "最終メーター値を、\nわかりやすく記録。", "鍵の返却も、\n詳細まで記録。", "賃貸の書類を、\nひとまとめに。", "入居時から退去時へ。\n記録を見比べる。", "記録をまとめて、\n共有できるPDFに。"]},
-    "ko": {"footer":"가상의 데모 기록", "paid":"PDF 보고서는 LeaveWell Plus에서 제공", "headlines":["퇴거 준비를,\n체계적으로.", "아직 확인할 내용을\n한눈에.", "시설을 하나씩 확인하고\n증거를 남기세요.", "집 사진을,\n쉽게 찾아보세요.", "기억이 생생할 때\n세부 사항을 기록하세요.", "최종 계량기 수치,\n명확하게 기록하세요.", "열쇠 반납,\n세부 사항까지 기록하세요.", "임대 관련 서류를,\n한곳에.", "입주부터 퇴거까지.\n증거를 비교하세요.", "증거를 모아,\n공유할 수 있는 PDF로."]},
-    "zh-Hans": {"footer":"虚构的演示记录", "paid":"PDF 报告需订阅 LeaveWell Plus", "headlines":["退租准备，\n井井有条。", "还有哪些待办，\n一目了然。", "逐项检查设施。\n保留相关凭证。", "房屋照片，\n随时轻松查找。", "趁记忆清晰，\n记下细节。", "最终表计读数，\n清晰记录。", "钥匙已交接。\n细节有记录。", "租房文件，\n集中收纳。", "从入住到退租，\n对比相关凭证。", "整理相关凭证，\n导出可分享的 PDF。"]},
-    "zh-Hant": {"footer":"虛構的示範紀錄", "paid":"PDF 報告需訂閱 LeaveWell Plus", "headlines":["退租準備，\n井井有條。", "還有哪些待辦，\n一目了然。", "逐項檢查設施。\n保留相關佐證。", "房屋照片，\n隨時輕鬆查找。", "趁記憶清晰，\n記下細節。", "最終錶計讀數，\n清楚記錄。", "鑰匙已交接。\n細節有紀錄。", "租屋文件，\n集中收納。", "從入住到退租，\n比對相關佐證。", "整理相關佐證，\n匯出可分享的 PDF。"]},
-    "tr": {"footer":"Kurgusal demo kayıtları", "paid":"LeaveWell Plus ile PDF raporları", "headlines":["Taşınma süreciniz,\ndüzenli ve net.", "Nelerin hâlâ\nilgi beklediğini görün.", "Her öğeyi kontrol edin.\nKanıtları saklayın.", "Evin fotoğraflarını\nkolayca bulun.", "Ayrıntıları unutmadan\nkaydedin.", "Son sayaç okumaları.\nAçıkça kayıtlı.", "Anahtarlar teslim edildi.\nAyrıntılar kaydedildi.", "Kira belgeleriniz,\ntek bir yerde.", "Girişten çıkışa.\nKanıtları karşılaştırın.", "Kanıtlarınız,\npaylaşılabilir bir PDF’te."]},
-    "id": {"footer":"Catatan demo fiktif", "paid":"Laporan PDF dengan LeaveWell Plus", "headlines":["Persiapan pindah,\nlebih tertata.", "Lihat yang masih\nperlu diperiksa.", "Periksa setiap bagian.\nSimpan buktinya.", "Foto hunian,\nmudah ditemukan.", "Catat detailnya\nselagi masih ingat.", "Angka meter akhir.\nTercatat dengan jelas.", "Kunci diserahkan.\nDetailnya tersimpan.", "Dokumen sewa Anda,\ndi satu tempat.", "Dari masuk hingga keluar.\nBandingkan buktinya.", "Bukti Anda,\ndalam PDF untuk dibagikan."]},
-    "sv": {"footer":"Fiktiva demouppgifter", "paid":"PDF-rapporter med LeaveWell Plus", "headlines":["Din utflytt,\ntydligt organiserad.", "Se vad som fortfarande\nbehöver ses över.", "Kontrollera varje del.\nSpara underlagen.", "Bilder från bostaden,\nlätta att hitta.", "Anteckna detaljerna\nmedan du minns dem.", "Slutliga mätarställningar.\nTydligt dokumenterade.", "Nycklarna överlämnade.\nDetaljerna sparade.", "Dina hyresdokument,\npå ett ställe.", "Från inflytt till utflytt.\nJämför underlagen.", "Dina underlag,\ni en PDF att dela."]}
+    "en-GB": {
+      "footer": "Fictional demo records",
+      "paid": "PDF reports require a paid LeaveWell Plus subscription",
+      "headlines": [
+        "Your move-out,\nclearly organised.",
+        "See what still\nneeds attention.",
+        "Check each fixture.\nKeep the evidence.",
+        "Rental photos,\nready to find.",
+        "Record the details\nwhile they’re fresh.",
+        "Final meter readings.\nClearly recorded.",
+        "Keys handed over.\nDetails kept.",
+        "Your rental paperwork,\nin one place.",
+        "Move-in to move-out.\nCompare the evidence.",
+        "Your evidence,\nin a shareable PDF."
+      ]
+    },
+    "fr": {
+      "footer": "Données de démonstration fictives",
+      "paid": "PDF : abonnement payant LeaveWell Plus requis",
+      "headlines": [
+        "Votre départ,\nbien organisé.",
+        "Repérez les points\nà vérifier.",
+        "Vérifiez chaque élément.\nGardez les preuves.",
+        "Vos photos du logement,\nfaciles à retrouver.",
+        "Notez les détails\nsur le moment.",
+        "Derniers relevés.\nTout est consigné.",
+        "Clés remises.\nDétails conservés.",
+        "Vos documents locatifs,\nau même endroit.",
+        "De l’entrée à la sortie.\nComparez vos preuves.",
+        "Vos preuves,\ndans un PDF à partager."
+      ]
+    },
+    "es": {
+      "footer": "Datos ficticios de demostración",
+      "paid": "Los informes PDF requieren una suscripción de pago a LeaveWell Plus",
+      "headlines": [
+        "Tu salida del piso,\nbien organizada.",
+        "Descubre qué queda\npor revisar.",
+        "Revisa cada elemento.\nGuarda las pruebas.",
+        "Fotos del alquiler,\nfáciles de encontrar.",
+        "Anota los detalles\nen el momento.",
+        "Lecturas finales.\nTodo registrado.",
+        "Llaves entregadas.\nDetalles guardados.",
+        "Los documentos del alquiler,\nen un solo lugar.",
+        "De la entrada a la salida.\nCompara las pruebas.",
+        "Tus pruebas,\nen un PDF para compartir."
+      ]
+    },
+    "de": {
+      "footer": "Fiktive Demodaten",
+      "paid": "PDF-Berichte erfordern ein kostenpflichtiges LeaveWell Plus-Abo",
+      "headlines": [
+        "Dein Auszug,\nklar organisiert.",
+        "Sieh, was noch\ngeprüft werden muss.",
+        "Prüfe jedes Detail.\nSichere die Belege.",
+        "Wohnungsfotos,\nschnell gefunden.",
+        "Halte Details fest,\nsolange sie frisch sind.",
+        "Letzte Zählerstände.\nKlar dokumentiert.",
+        "Schlüssel übergeben.\nDetails festgehalten.",
+        "Deine Mietunterlagen,\nan einem Ort.",
+        "Vom Einzug zum Auszug.\nVergleiche deine Belege.",
+        "Deine Belege,\nals PDF zum Teilen."
+      ]
+    },
+    "it": {
+      "footer": "Dati dimostrativi fittizi",
+      "paid": "I report PDF richiedono un abbonamento a pagamento LeaveWell Plus",
+      "headlines": [
+        "Il tuo trasloco,\nben organizzato.",
+        "Scopri cosa resta\nda controllare.",
+        "Controlla ogni elemento.\nConserva le prove.",
+        "Foto dell’alloggio,\nfacili da trovare.",
+        "Annota i dettagli\nsul momento.",
+        "Letture finali.\nTutto registrato.",
+        "Chiavi consegnate.\nDettagli conservati.",
+        "I documenti dell’affitto,\nin un solo posto.",
+        "Dall’ingresso all’uscita.\nConfronta le prove.",
+        "Le tue prove,\nin un PDF da condividere."
+      ]
+    },
+    "pt-BR": {
+      "footer": "Dados fictícios de demonstração",
+      "paid": "Relatórios PDF exigem assinatura paga do LeaveWell Plus",
+      "headlines": [
+        "Sua saída do imóvel,\nbem organizada.",
+        "Veja o que ainda\nprecisa de atenção.",
+        "Confira cada item.\nGuarde as evidências.",
+        "Fotos do imóvel,\nfáceis de encontrar.",
+        "Registre os detalhes\nna hora.",
+        "Leituras finais.\nTudo registrado.",
+        "Chaves entregues.\nDetalhes guardados.",
+        "Os documentos do aluguel,\nem um só lugar.",
+        "Da entrada à saída.\nCompare as evidências.",
+        "Suas evidências,\nem um PDF para compartilhar."
+      ]
+    },
+    "nl": {
+      "footer": "Fictieve demogegevens",
+      "paid": "Voor PDF-rapporten is een betaald LeaveWell Plus-abonnement nodig",
+      "headlines": [
+        "Je verhuizing,\nhelder geregeld.",
+        "Zie wat nog\naandacht nodig heeft.",
+        "Controleer elk onderdeel.\nBewaar het bewijs.",
+        "Woningfoto’s,\nsnel teruggevonden.",
+        "Leg details vast\nterwijl ze nog vers zijn.",
+        "Eindmeterstanden.\nDuidelijk vastgelegd.",
+        "Sleutels ingeleverd.\nDetails bewaard.",
+        "Je huurdocumenten,\nop één plek.",
+        "Van intrek tot vertrek.\nVergelijk je bewijs.",
+        "Je bewijs,\nin een deelbare PDF."
+      ]
+    },
+    "pl": {
+      "footer": "Fikcyjne dane demonstracyjne",
+      "paid": "Raporty PDF wymagają płatnej subskrypcji LeaveWell Plus",
+      "headlines": [
+        "Twoja wyprowadzka,\ndobrze zorganizowana.",
+        "Sprawdź, co jeszcze\nwymaga uwagi.",
+        "Sprawdź każdy element.\nZachowaj dowody.",
+        "Zdjęcia mieszkania,\nłatwe do znalezienia.",
+        "Zapisuj szczegóły\nna bieżąco.",
+        "Końcowe stany liczników.\nJasno zapisane.",
+        "Klucze przekazane.\nSzczegóły zachowane.",
+        "Dokumenty najmu,\nw jednym miejscu.",
+        "Od wprowadzenia do wyprowadzki.\nPorównaj dowody.",
+        "Twoje dowody,\nw pliku PDF do udostępnienia."
+      ]
+    },
+    "ar": {
+      "footer": "بيانات توضيحية خيالية",
+      "paid": "تتطلب تقارير PDF اشتراك LeaveWell Plus مدفوعًا",
+      "headlines": [
+        "مغادرة منزلك،\nبتنظيم ووضوح.",
+        "اعرف ما لا يزال\nبحاجة إلى اهتمام.",
+        "افحص كل عنصر.\nواحتفظ بالأدلة.",
+        "صور العقار،\nيسهل العثور عليها.",
+        "دوّن التفاصيل\nفي وقتها.",
+        "القراءات النهائية للعدادات.\nموثّقة بوضوح.",
+        "سُلّمت المفاتيح.\nوحُفظت التفاصيل.",
+        "مستندات إيجارك،\nفي مكان واحد.",
+        "من الاستلام إلى التسليم.\nقارن الأدلة.",
+        "أدلتك،\nفي ملف PDF للمشاركة."
+      ]
+    },
+    "hi": {
+      "footer": "काल्पनिक डेमो रिकॉर्ड",
+      "paid": "PDF रिपोर्ट के लिए LeaveWell Plus की सशुल्क सदस्यता ज़रूरी है",
+      "headlines": [
+        "घर छोड़ने की तैयारी,\nपूरी तरह व्यवस्थित।",
+        "देखें, किन बातों पर\nअभी ध्यान देना है।",
+        "हर चीज़ जाँचें।\nसबूत सँभालें।",
+        "घर की तस्वीरें,\nआसानी से खोजें।",
+        "विवरण याद रहते ही\nलिख लें।",
+        "मीटर की अंतिम रीडिंग।\nसाफ़-साफ़ दर्ज।",
+        "चाबियाँ सौंप दीं।\nविवरण सुरक्षित हैं।",
+        "किराये के दस्तावेज़,\nएक ही जगह।",
+        "आने से जाने तक।\nसबूतों की तुलना करें।",
+        "आपके सबूत,\nसाझा करने योग्य PDF में।"
+      ]
+    },
+    "ja": {
+      "footer": "架空のデモ記録",
+      "paid": "PDFレポートにはLeaveWell Plusの有料サブスクリプションが必要です",
+      "headlines": [
+        "退去の準備を、\nすっきり整理。",
+        "まだ確認が必要な\n項目がわかる。",
+        "設備を一つずつ確認。\n証拠を残そう。",
+        "住まいの写真を、\nすぐに見つける。",
+        "気づいたことは、\nその場で記録。",
+        "最終メーター値を、\nわかりやすく記録。",
+        "鍵の返却も、\n詳細まで記録。",
+        "賃貸の書類を、\nひとまとめに。",
+        "入居時から退去時へ。\n記録を見比べる。",
+        "記録をまとめて、\n共有できるPDFに。"
+      ]
+    },
+    "ko": {
+      "footer": "가상의 데모 기록",
+      "paid": "PDF 보고서는 유료 LeaveWell Plus 구독이 필요합니다",
+      "headlines": [
+        "퇴거 준비를,\n체계적으로.",
+        "아직 확인할 내용을\n한눈에.",
+        "시설을 하나씩 확인하고\n증거를 남기세요.",
+        "집 사진을,\n쉽게 찾아보세요.",
+        "기억이 생생할 때\n세부 사항을 기록하세요.",
+        "최종 계량기 수치,\n명확하게 기록하세요.",
+        "열쇠 반납,\n세부 사항까지 기록하세요.",
+        "임대 관련 서류를,\n한곳에.",
+        "입주부터 퇴거까지.\n증거를 비교하세요.",
+        "증거를 모아,\n공유할 수 있는 PDF로."
+      ]
+    },
+    "zh-Hans": {
+      "footer": "虚构的演示记录",
+      "paid": "PDF 报告需要付费订阅 LeaveWell Plus",
+      "headlines": [
+        "退租准备，\n井井有条。",
+        "还有哪些待办，\n一目了然。",
+        "逐项检查设施。\n保留相关凭证。",
+        "房屋照片，\n随时轻松查找。",
+        "趁记忆清晰，\n记下细节。",
+        "最终表计读数，\n清晰记录。",
+        "钥匙已交接。\n细节有记录。",
+        "租房文件，\n集中收纳。",
+        "从入住到退租，\n对比相关凭证。",
+        "整理相关凭证，\n导出可分享的 PDF。"
+      ]
+    },
+    "zh-Hant": {
+      "footer": "虛構的示範紀錄",
+      "paid": "PDF 報告需要付費訂閱 LeaveWell Plus",
+      "headlines": [
+        "退租準備，\n井井有條。",
+        "還有哪些待辦，\n一目了然。",
+        "逐項檢查設施。\n保留相關佐證。",
+        "房屋照片，\n隨時輕鬆查找。",
+        "趁記憶清晰，\n記下細節。",
+        "最終錶計讀數，\n清楚記錄。",
+        "鑰匙已交接。\n細節有紀錄。",
+        "租屋文件，\n集中收納。",
+        "從入住到退租，\n比對相關佐證。",
+        "整理相關佐證，\n匯出可分享的 PDF。"
+      ]
+    },
+    "tr": {
+      "footer": "Kurgusal demo kayıtları",
+      "paid": "PDF raporları ücretli LeaveWell Plus aboneliği gerektirir",
+      "headlines": [
+        "Taşınma süreciniz,\ndüzenli ve net.",
+        "Nelerin hâlâ\nilgi beklediğini görün.",
+        "Her öğeyi kontrol edin.\nKanıtları saklayın.",
+        "Evin fotoğraflarını\nkolayca bulun.",
+        "Ayrıntıları unutmadan\nkaydedin.",
+        "Son sayaç okumaları.\nAçıkça kayıtlı.",
+        "Anahtarlar teslim edildi.\nAyrıntılar kaydedildi.",
+        "Kira belgeleriniz,\ntek bir yerde.",
+        "Girişten çıkışa.\nKanıtları karşılaştırın.",
+        "Kanıtlarınız,\npaylaşılabilir bir PDF’te."
+      ]
+    },
+    "id": {
+      "footer": "Catatan demo fiktif",
+      "paid": "Laporan PDF memerlukan langganan LeaveWell Plus berbayar",
+      "headlines": [
+        "Persiapan pindah,\nlebih tertata.",
+        "Lihat yang masih\nperlu diperiksa.",
+        "Periksa setiap bagian.\nSimpan buktinya.",
+        "Foto hunian,\nmudah ditemukan.",
+        "Catat detailnya\nselagi masih ingat.",
+        "Angka meter akhir.\nTercatat dengan jelas.",
+        "Kunci diserahkan.\nDetailnya tersimpan.",
+        "Dokumen sewa Anda,\ndi satu tempat.",
+        "Dari masuk hingga keluar.\nBandingkan buktinya.",
+        "Bukti Anda,\ndalam PDF untuk dibagikan."
+      ]
+    },
+    "sv": {
+      "footer": "Fiktiva demouppgifter",
+      "paid": "PDF-rapporter kräver en betald LeaveWell Plus-prenumeration",
+      "headlines": [
+        "Din utflytt,\ntydligt organiserad.",
+        "Se vad som fortfarande\nbehöver ses över.",
+        "Kontrollera varje del.\nSpara underlagen.",
+        "Bilder från bostaden,\nlätta att hitta.",
+        "Anteckna detaljerna\nmedan du minns dem.",
+        "Slutliga mätarställningar.\nTydligt dokumenterade.",
+        "Nycklarna överlämnade.\nDetaljerna sparade.",
+        "Dina hyresdokument,\npå ett ställe.",
+        "Från inflytt till utflytt.\nJämför underlagen.",
+        "Dina underlag,\ni en PDF att dela."
+      ]
+    }
   }
 }

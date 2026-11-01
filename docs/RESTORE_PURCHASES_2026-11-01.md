@@ -20,7 +20,7 @@ The old restore implementation only refreshed `Transaction.currentEntitlements` 
 
 This app change cannot repair an Apple account session or establish that an unsuccessful server sync succeeded. Existing-account device testing is required after the new build is installed. No App Review submission is included.
 
-The app currently ships English interface copy with fallback. The localization check verifies catalog completeness, not worldwide translated coverage.
+The app includes 17 language bundles. Sixteen translated selected-flow sets cover 117 of 597 strings each (19.6%); other strings fall back to English. Native compilation and selected screenshot flows are checked, not full-app worldwide translation.
 
 ## Regression evidence
 
@@ -31,3 +31,15 @@ The corrected implementation also tests a successful sync discovering a purchase
 The first corrected release attempt passed core/native service checks, but its StoreKit job stopped producing progress during the first lifecycle case. That run was cancelled before archive/upload; it is not a passing test result. The next run pins the simulator destination architecture explicitly to arm64 to avoid duplicate universal simulator builds, and uses Xcode 27.1 for the production SDK to match the Duo captures. Existing-account physical-device confirmation is still pending because no iPad is detected by USB.
 
 A completed parallel check of the same correction passed the cancellation and already-active entitlement regressions, but exposed delayed StoreKit entitlement delivery after the sync callback. Restore now polls verified current entitlements for at most five seconds after sync success/failure. A failed sync remains an error even if Plus becomes available, and no entitlement means no access. The duplicate-tap test now sleeps briefly while awaiting its controlled sync callback instead of busy-yielding the main actor.
+
+
+## Completed and subsequent validation
+
+[Run 41321813824](https://github.com/lanray07/LeaveWell/actions/runs/41321813824) passed all 13 StoreKit lifecycle/regression tests for the corrected PurchaseService. Production SDK validation at `fdc3d24` passed 13 core tests, 16 native service tests (including compiled localized bundle checks) and five Python localization tests.
+
+The subsequent full release run 41322822629 did not upload a build: its failed-sync regression could not establish the initial locked entitlement state after an earlier purchase test. Its baseline wait failed, then the test continued and skipped the sync callback because access was already active. This is a test-isolation failure; it does not prove the device account issue resolved. The test helper now explicitly syncs the cleared StoreKitTest environment before every case, aborts on a baseline timeout, and asserts that the failed-sync callback ran. Release run 41324452015 verifies that change before signing/upload.
+
+No new sandbox tester was created, no Apple Account was switched, and no entitlement verification was bypassed. The physical iPad was not detected over USB during the 1 November check. Existing-account device restore remains unverified until reconnection and installation of the corrected TestFlight build.
+
+
+Run 41324452015 established an empty baseline and passed 12 of 13 cases, including the failed-sync/verified-access regression. The preflight case expected zero sync calls immediately after seeding a test-server purchase, before its client entitlement was visible. It now waits for the actual verified client entitlement before exercising preflight restore. This preserves the regression's contract and assertion; no production behavior was changed for that fixture adjustment. Release run 41326189761 (build number 82) validates the updated fixtures and signed upload. Simulator test compilation is restricted to arm64; no test cases are skipped.

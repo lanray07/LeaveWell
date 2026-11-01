@@ -1,0 +1,18 @@
+﻿bundle_locale,app_store_localization,folder,count,display,width,height
+en-GB,English (U.K.),exports/en-GB/outer,10,iPhone Duo outer,1398,2034
+fr,French,exports/fr/outer,10,iPhone Duo outer,1398,2034
+es,Spanish (Spain),exports/es/outer,10,iPhone Duo outer,1398,2034
+de,German,exports/de/outer,10,iPhone Duo outer,1398,2034
+it,Italian,exports/it/outer,10,iPhone Duo outer,1398,2034
+pt-BR,Portuguese (Brazil),exports/pt-BR/outer,10,iPhone Duo outer,1398,2034
+nl,Dutch,exports/nl/outer,10,iPhone Duo outer,1398,2034
+pl,Polish,exports/pl/outer,10,iPhone Duo outer,1398,2034
+ar,Arabic,exports/ar/outer,10,iPhone Duo outer,1398,2034
+hi,Hindi,exports/hi/outer,10,iPhone Duo outer,1398,2034
+ja,Japanese,exports/ja/outer,10,iPhone Duo outer,1398,2034
+ko,Korean,exports/ko/outer,10,iPhone Duo outer,1398,2034
+zh-Hans,Chinese (Simplified),exports/zh-Hans/outer,10,iPhone Duo outer,1398,2034
+zh-Hant,Chinese (Traditional),exports/zh-Hant/outer,10,iPhone Duo outer,1398,2034
+tr,Turkish,exports/tr/outer,10,iPhone Duo outer,1398,2034
+id,Indonesian,exports/id/outer,10,iPhone Duo outer,1398,2034
+sv,Swedish,exports/sv/outer,10,iPhone Duo outer,1398,2034

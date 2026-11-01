@@ -2,7 +2,7 @@
   "ar": {
     "catalogKeys": 597,
     "independentNativeSpeakerReview": false,
-    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "nativeLayoutValidation": "10 Xcode 27.1 iPhone Duo outer-display captures; matching bundle/Foundation locale checked; exported contact sheet visually inspected by Codex",
     "percent": 19.6,
     "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
     "scope": "Selected screenshot flows; remaining strings fall back to English",
@@ -12,7 +12,7 @@
   "de": {
     "catalogKeys": 597,
     "independentNativeSpeakerReview": false,
-    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "nativeLayoutValidation": "10 Xcode 27.1 iPhone Duo outer-display captures; matching bundle/Foundation locale checked; exported contact sheet visually inspected by Codex",
     "percent": 19.6,
     "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
     "scope": "Selected screenshot flows; remaining strings fall back to English",
@@ -22,7 +22,7 @@
   "es": {
     "catalogKeys": 597,
     "independentNativeSpeakerReview": false,
-    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "nativeLayoutValidation": "10 Xcode 27.1 iPhone Duo outer-display captures; matching bundle/Foundation locale checked; exported contact sheet visually inspected by Codex",
     "percent": 19.6,
     "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
     "scope": "Selected screenshot flows; remaining strings fall back to English",
@@ -32,7 +32,7 @@
   "fr": {
     "catalogKeys": 597,
     "independentNativeSpeakerReview": false,
-    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "nativeLayoutValidation": "10 Xcode 27.1 iPhone Duo outer-display captures; matching bundle/Foundation locale checked; exported contact sheet visually inspected by Codex",
     "percent": 19.6,
     "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
     "scope": "Selected screenshot flows; remaining strings fall back to English",
@@ -42,7 +42,7 @@
   "hi": {
     "catalogKeys": 597,
     "independentNativeSpeakerReview": false,
-    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "nativeLayoutValidation": "10 Xcode 27.1 iPhone Duo outer-display captures; matching bundle/Foundation locale checked; exported contact sheet visually inspected by Codex",
     "percent": 19.6,
     "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
     "scope": "Selected screenshot flows; remaining strings fall back to English",
@@ -52,7 +52,7 @@
   "id": {
     "catalogKeys": 597,
     "independentNativeSpeakerReview": false,
-    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "nativeLayoutValidation": "10 Xcode 27.1 iPhone Duo outer-display captures; matching bundle/Foundation locale checked; exported contact sheet visually inspected by Codex",
     "percent": 19.6,
     "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
     "scope": "Selected screenshot flows; remaining strings fall back to English",
@@ -62,7 +62,7 @@
   "it": {
     "catalogKeys": 597,
     "independentNativeSpeakerReview": false,
-    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "nativeLayoutValidation": "10 Xcode 27.1 iPhone Duo outer-display captures; matching bundle/Foundation locale checked; exported contact sheet visually inspected by Codex",
     "percent": 19.6,
     "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
     "scope": "Selected screenshot flows; remaining strings fall back to English",
@@ -72,7 +72,7 @@
   "ja": {
     "catalogKeys": 597,
     "independentNativeSpeakerReview": false,
-    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "nativeLayoutValidation": "10 Xcode 27.1 iPhone Duo outer-display captures; matching bundle/Foundation locale checked; exported contact sheet visually inspected by Codex",
     "percent": 19.6,
     "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
     "scope": "Selected screenshot flows; remaining strings fall back to English",
@@ -82,7 +82,7 @@
   "ko": {
     "catalogKeys": 597,
     "independentNativeSpeakerReview": false,
-    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "nativeLayoutValidation": "10 Xcode 27.1 iPhone Duo outer-display captures; matching bundle/Foundation locale checked; exported contact sheet visually inspected by Codex",
     "percent": 19.6,
     "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
     "scope": "Selected screenshot flows; remaining strings fall back to English",
@@ -92,7 +92,7 @@
   "nl": {
     "catalogKeys": 597,
     "independentNativeSpeakerReview": false,
-    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "nativeLayoutValidation": "10 Xcode 27.1 iPhone Duo outer-display captures; matching bundle/Foundation locale checked; exported contact sheet visually inspected by Codex",
     "percent": 19.6,
     "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
     "scope": "Selected screenshot flows; remaining strings fall back to English",
@@ -102,7 +102,7 @@
   "pl": {
     "catalogKeys": 597,
     "independentNativeSpeakerReview": false,
-    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "nativeLayoutValidation": "10 Xcode 27.1 iPhone Duo outer-display captures; matching bundle/Foundation locale checked; exported contact sheet visually inspected by Codex",
     "percent": 19.6,
     "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
     "scope": "Selected screenshot flows; remaining strings fall back to English",
@@ -112,7 +112,7 @@
   "pt-BR": {
     "catalogKeys": 597,
     "independentNativeSpeakerReview": false,
-    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "nativeLayoutValidation": "10 Xcode 27.1 iPhone Duo outer-display captures; matching bundle/Foundation locale checked; exported contact sheet visually inspected by Codex",
     "percent": 19.6,
     "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
     "scope": "Selected screenshot flows; remaining strings fall back to English",
@@ -122,7 +122,7 @@
   "sv": {
     "catalogKeys": 597,
     "independentNativeSpeakerReview": false,
-    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "nativeLayoutValidation": "10 Xcode 27.1 iPhone Duo outer-display captures; matching bundle/Foundation locale checked; exported contact sheet visually inspected by Codex",
     "percent": 19.6,
     "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
     "scope": "Selected screenshot flows; remaining strings fall back to English",
@@ -132,7 +132,7 @@
   "tr": {
     "catalogKeys": 597,
     "independentNativeSpeakerReview": false,
-    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "nativeLayoutValidation": "10 Xcode 27.1 iPhone Duo outer-display captures; matching bundle/Foundation locale checked; exported contact sheet visually inspected by Codex",
     "percent": 19.6,
     "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
     "scope": "Selected screenshot flows; remaining strings fall back to English",
@@ -142,7 +142,7 @@
   "zh-Hans": {
     "catalogKeys": 597,
     "independentNativeSpeakerReview": false,
-    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "nativeLayoutValidation": "10 Xcode 27.1 iPhone Duo outer-display captures; matching bundle/Foundation locale checked; exported contact sheet visually inspected by Codex",
     "percent": 19.6,
     "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
     "scope": "Selected screenshot flows; remaining strings fall back to English",
@@ -152,7 +152,7 @@
   "zh-Hant": {
     "catalogKeys": 597,
     "independentNativeSpeakerReview": false,
-    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "nativeLayoutValidation": "10 Xcode 27.1 iPhone Duo outer-display captures; matching bundle/Foundation locale checked; exported contact sheet visually inspected by Codex",
     "percent": 19.6,
     "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
     "scope": "Selected screenshot flows; remaining strings fall back to English",

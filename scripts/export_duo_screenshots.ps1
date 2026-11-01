@@ -50,20 +50,23 @@ foreach ($locale in $Locales) {
                 if ($locale -eq 'ar') { $format.FormatFlags = $format.FormatFlags -bor [System.Drawing.StringFormatFlags]::DirectionRightToLeft }
                 $lines = $text.headlines[$index] -split "`n"
                 $fontSize = [int](86*$scale)
+                $top = [int](430*$scale)
                 do {
                     $headline = [System.Drawing.Font]::new($faceName,$fontSize,[System.Drawing.FontStyle]::Bold,[System.Drawing.GraphicsUnit]::Pixel)
                     $maxTextWidth = 0
                     foreach ($line in $lines) { $maxTextWidth = [Math]::Max($maxTextWidth,$graphics.MeasureString($line,$headline,[int]::MaxValue,$format).Width) }
-                    if ($maxTextWidth -gt ($width-2*$margin)) { $headline.Dispose(); $fontSize-- }
-                } while ($maxTextWidth -gt ($width-2*$margin) -and $fontSize -gt 20)
+                    $lineSpacing = [Math]::Max($fontSize*1.35,$headline.GetHeight($graphics)*1.05)
+                    $tooTall = (127*$scale + $lines.Count*$lineSpacing) -gt ($top-30*$scale)
+                    $tooWide = $maxTextWidth -gt ($width-2*$margin)
+                    if ($tooWide -or $tooTall) { $headline.Dispose(); $fontSize-- }
+                } while (($tooWide -or $tooTall) -and $fontSize -gt 20)
                 if ($fontSize -le 20) { throw "Headline cannot fit: $locale $route" }
                 $y = 127*$scale
                 foreach ($line in $lines) {
                     $rect = [System.Drawing.RectangleF]::new($margin,[single]$y,($width-2*$margin),[single]($fontSize*1.7))
                     $graphics.DrawString($line,$headline,$teal,$rect,$format)
-                    $y += $fontSize*1.35
+                    $y += $lineSpacing
                 }
-                $top = [int](430*$scale)
                 if ($y -gt $top-30*$scale) { throw "Headline overlaps app: $locale $route" }
                 $availableHeight = $height-$top-[int](115*$scale)
                 $factor = [Math]::Min(($width-2*$margin)/$native.Width,$availableHeight/$native.Height)
@@ -74,7 +77,13 @@ foreach ($locale in $Locales) {
                 $graphics.FillRectangle($frame,$left-8,$top-8,$screenWidth+16,$screenHeight+16)
                 $graphics.DrawImage($native,$left,$top,$screenWidth,$screenHeight)
                 $footer = if ($route -eq 'report') {$text.paid} else {$text.footer}
-                $footerFont = [System.Drawing.Font]::new($faceName,[single](23*$scale),[System.Drawing.FontStyle]::Regular,[System.Drawing.GraphicsUnit]::Pixel)
+                $footerSize = [int](32*$scale)
+                do {
+                    $footerFont = [System.Drawing.Font]::new($faceName,[single]$footerSize,[System.Drawing.FontStyle]::Regular,[System.Drawing.GraphicsUnit]::Pixel)
+                    $footerTooWide = $graphics.MeasureString($footer,$footerFont,[int]::MaxValue,$format).Width -gt $width-2*$margin
+                    if ($footerTooWide) { $footerFont.Dispose(); $footerSize-- }
+                } while ($footerTooWide -and $footerSize -gt 24*$scale)
+                if ($footerTooWide) { throw "Footer cannot fit legibly: $locale $route" }
                 $footerRect = [System.Drawing.RectangleF]::new($margin,[single]($height-65*$scale),($width-2*$margin),[single](55*$scale))
                 if ($graphics.MeasureString($footer,$footerFont,[int]::MaxValue,$format).Width -gt $width-2*$margin) { throw "Footer cannot fit: $locale $route" }
                 $graphics.DrawString($footer,$footerFont,$muted,$footerRect,$format)
