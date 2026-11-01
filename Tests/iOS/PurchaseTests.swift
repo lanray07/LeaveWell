@@ -191,10 +191,12 @@ final class PurchaseTests: XCTestCase {
     func testAnnualRefundRemovesAccessAndRenewalPreservesAccess() async throws {
         let session = try await session(); defer { session.clearTransactions() }
         _ = try await session.buyProduct(identifier: PlusPlan.annual, options: [])
-        let purchases = PurchaseService(); await purchases.refreshEntitlements()
+        let purchases = PurchaseService()
+        try await awaitAccess(true, in: purchases)
         XCTAssertTrue(purchases.hasPlus)
         try session.forceRenewalOfSubscription(productIdentifier: PlusPlan.annual)
-        await purchases.refreshEntitlements(); XCTAssertTrue(purchases.hasPlus)
+        try await awaitAccess(true, in: purchases)
+        XCTAssertTrue(purchases.hasPlus)
         let transaction = try XCTUnwrap(session.allTransactions().max { $0.identifier < $1.identifier })
         try session.refundTransaction(identifier: transaction.identifier)
         try await awaitAccess(false, in: purchases); XCTAssertFalse(purchases.hasPlus)
