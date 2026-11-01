@@ -9,7 +9,7 @@ import json
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-SUPPORTED = ['en-GB', 'en-US', 'es', 'fr', 'de', 'it', 'pt', 'nl', 'pl', 'ro', 'ar', 'hi', 'zh-Hans', 'zh-Hant', 'ja', 'ko']
+SUPPORTED = ['en-GB', 'en-US', 'es', 'fr', 'de', 'it', 'pt', 'pt-BR', 'nl', 'pl', 'ro', 'ar', 'hi', 'zh-Hans', 'zh-Hant', 'ja', 'ko', 'tr', 'id', 'sv']
 CATALOG = ROOT / 'LeaveWell/Resources/Localizable.xcstrings'
 
 SPECIALIST_COPY = re.compile(r'privacy|private|legal|liability|dispute|deposit|timestamp|hash|sharing|share|delete|deletion|cloud|backup|backups|original|passcode|Face ID|device protection|declaration|best of my knowledge', re.I)

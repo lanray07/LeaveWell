@@ -42,7 +42,7 @@ struct MarketingCapture: View {
                 if let existing = store.archive.cases.first(where: { $0.nickname == L("Willow flat · Demo") }) { record = existing }
                 else { let demo = try await Self.makeDemo(store: store); try store.add(demo); record = demo }
                 let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-                let ready = ["route": route, "bundleLocale": Bundle.main.preferredLocalizations.first ?? "en-GB", "locale": Locale.current.identifier]
+                let ready = ["route": route, "bundleLocale": Bundle.main.preferredLocalizations.first ?? "en-GB", "locale": Locale.current.identifier, "sampleKitchen": L("Kitchen")]
                 try JSONSerialization.data(withJSONObject: ready).write(to: documents.appendingPathComponent("MarketingReady-" + route))
             } catch { self.error = error.localizedDescription }
         }

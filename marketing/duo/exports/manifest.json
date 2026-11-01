@@ -102,5 +102,6 @@
       "height": 2034
     }
   ],
-  "source": "Real Xcode 27.1 iPhone Duo Simulator captures; original UI preserved with proportional scaling"
+  "source": "Real Xcode 27.1 iPhone Duo Simulator captures; original UI preserved with proportional scaling",
+  "status": "Initial English layout draft; regional bundle locale was not recorded. Regenerate with the compiled catalog and current toolbar UI before upload."
 }

@@ -21,7 +21,7 @@ struct KeysView: View {
             }
             Button(L("Add access item photograph")) { capture = CaptureSelection(label: "Keys and fobs", kind: .photo) }
         }.navigationTitle(L("Keys & access"))
-            .toolbar { Button(L("Add item")) { adding = true } }
+            .toolbar { Button(L("Add item"), systemImage: "plus") { adding = true } }
             .sheet(isPresented: $adding) { KeyEditor(caseID: caseID) }
             .sheet(item: $capture) { EvidenceComposer(caseID: caseID, selection: $0) }
     }

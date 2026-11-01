@@ -1,6 +1,6 @@
 # iPhone Duo screenshots
 
-The English outer-display set contains ten real Xcode 27.1 / iOS 27.1 iPhone Duo captures at 1398 × 2034 pixels, exported as opaque PNGs. The original app images are preserved with proportional scaling. All records and document content are fictional.
+The initial English outer-display layout draft contains ten real Xcode 27.1 / iOS 27.1 iPhone Duo captures at 1398 × 2034 pixels, exported as opaque PNGs. It must be replaced by the latest verified regional-locale capture before upload. The original app images are preserved with proportional scaling. All records and document content are fictional.
 
 `captures/manifest.json` records native source hashes and the GitHub capture run. `exports/manifest.json` records output hashes and dimensions. `english-preview.jpg` is the contact sheet for visual review.
 
@@ -15,8 +15,8 @@ The exporter requires matching native locale provenance. It does not reuse Engli
 ## Localization status
 
 - Ten headlines, fictional-data disclosures and the Plus PDF disclosure are drafted for the 17 priority languages in `copy.json`.
-- French source/UI translations currently cover 117 of 597 catalog strings. This is selected-screen coverage, not full-app localization. Other strings use English fallback. Native French capture/layout validation is in progress.
-- The remaining locale UI translations and native captures are not complete. Caption drafts alone are not localized screenshot deliverables.
+- Sixteen translated selected-flow sets cover 117 of 597 catalog strings each. This is selected-screen coverage, not full-app localization. Other strings use English fallback. `translations/coverage.json` records coverage and review scope.
+- The 17-locale native capture/layout validation is in progress. Caption drafts alone are not localized screenshot deliverables.
 - There is no claim that the app interface is translated into all existing store-listing locales.
 
 ## Inner display
@@ -28,3 +28,5 @@ Apple accepts the listed Duo outer and inner dimensions: https://developer.apple
 ## Release match
 
 The native Duo presentation depends on the iOS 27.1 SDK. The release workflow now selects Xcode 27.1 explicitly for production build/archive; the StoreKit lifecycle suite remains on its separately supported Xcode 16.4 / iOS 18.5 test environment. A successful signed release with the matching catalog must precede publishing non-English assets. No screenshots have been uploaded to App Store Connect by this workflow.
+
+The project generator previously declared the catalog as ordinary JSON, so Xcode copied it without compiling language bundles. It now uses `text.json.xcstrings`, derives project regions from the catalog, and includes a native resource regression test. The earlier French capture was rejected when its bundle language was English, even though its Foundation locale was French.

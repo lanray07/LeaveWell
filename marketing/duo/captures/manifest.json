@@ -4,7 +4,7 @@
   "captures": [
     {
       "locale": "en-GB",
-      "bundleLocale": "en-GB",
+      "bundleLocale": null,
       "family": "outer",
       "route": "home",
       "file": "en-GB/outer/01-home.png",
@@ -12,7 +12,7 @@
     },
     {
       "locale": "en-GB",
-      "bundleLocale": "en-GB",
+      "bundleLocale": null,
       "family": "outer",
       "route": "checkout",
       "file": "en-GB/outer/02-checkout.png",
@@ -20,7 +20,7 @@
     },
     {
       "locale": "en-GB",
-      "bundleLocale": "en-GB",
+      "bundleLocale": null,
       "family": "outer",
       "route": "walkthrough",
       "file": "en-GB/outer/03-walkthrough.png",
@@ -28,7 +28,7 @@
     },
     {
       "locale": "en-GB",
-      "bundleLocale": "en-GB",
+      "bundleLocale": null,
       "family": "outer",
       "route": "evidence",
       "file": "en-GB/outer/04-evidence.png",
@@ -36,7 +36,7 @@
     },
     {
       "locale": "en-GB",
-      "bundleLocale": "en-GB",
+      "bundleLocale": null,
       "family": "outer",
       "route": "notes",
       "file": "en-GB/outer/05-notes.png",
@@ -44,7 +44,7 @@
     },
     {
       "locale": "en-GB",
-      "bundleLocale": "en-GB",
+      "bundleLocale": null,
       "family": "outer",
       "route": "meters",
       "file": "en-GB/outer/06-meters.png",
@@ -52,7 +52,7 @@
     },
     {
       "locale": "en-GB",
-      "bundleLocale": "en-GB",
+      "bundleLocale": null,
       "family": "outer",
       "route": "keys",
       "file": "en-GB/outer/07-keys.png",
@@ -60,7 +60,7 @@
     },
     {
       "locale": "en-GB",
-      "bundleLocale": "en-GB",
+      "bundleLocale": null,
       "family": "outer",
       "route": "documents",
       "file": "en-GB/outer/08-documents.png",
@@ -68,7 +68,7 @@
     },
     {
       "locale": "en-GB",
-      "bundleLocale": "en-GB",
+      "bundleLocale": null,
       "family": "outer",
       "route": "pair",
       "file": "en-GB/outer/09-pair.png",
@@ -76,12 +76,13 @@
     },
     {
       "locale": "en-GB",
-      "bundleLocale": "en-GB",
+      "bundleLocale": null,
       "family": "outer",
       "route": "report",
       "file": "en-GB/outer/10-report.png",
       "sha256": "63f982c03d2e9a244250a40752e09fdc9c84d036be228aac7708a384c2a4f363"
     }
   ],
-  "rejected": "Inner-display frames are black; excluded."
+  "rejected": "Inner-display frames are black; excluded.",
+  "status": "Initial English layout draft; regional bundle locale was not recorded. Regenerate with the compiled catalog and current toolbar UI before upload."
 }
