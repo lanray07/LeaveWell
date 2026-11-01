@@ -1,0 +1,8 @@
+{
+  "locale": "fr",
+  "sourceEntries": 117,
+  "translationSha256": "6aa1b4beeb0775727df9dcd8e80ecaf4e1612f1e6afc86e1c77a67197f4bb372",
+  "review": "Codex linguistic and product-source review; storage and sharing descriptions checked against implementation. No independent native-speaker or legal review claimed.",
+  "nativeLayoutQA": "pending actual simulator captures",
+  "coverage": "Selected screens only; other app strings use English fallback."
+}

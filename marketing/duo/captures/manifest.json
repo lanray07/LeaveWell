@@ -1,0 +1,87 @@
+{
+  "sourceRun": "https://github.com/lanray07/LeaveWell/actions/runs/41320324755",
+  "sourceCommit": "35b265c",
+  "captures": [
+    {
+      "locale": "en-GB",
+      "bundleLocale": "en-GB",
+      "family": "outer",
+      "route": "home",
+      "file": "en-GB/outer/01-home.png",
+      "sha256": "7b60982db61a98bf3fefc273aa9166a0fab90c9100a3d29adbd1540a23f8f7a4"
+    },
+    {
+      "locale": "en-GB",
+      "bundleLocale": "en-GB",
+      "family": "outer",
+      "route": "checkout",
+      "file": "en-GB/outer/02-checkout.png",
+      "sha256": "db34154e66e0e3b6683abce0c40d7dda9ba32a51ae02baa6e455417ed2f578c8"
+    },
+    {
+      "locale": "en-GB",
+      "bundleLocale": "en-GB",
+      "family": "outer",
+      "route": "walkthrough",
+      "file": "en-GB/outer/03-walkthrough.png",
+      "sha256": "549be12d990b2e071e54cb6d6c51457704f982116eb4544cda4980dceb4eb006"
+    },
+    {
+      "locale": "en-GB",
+      "bundleLocale": "en-GB",
+      "family": "outer",
+      "route": "evidence",
+      "file": "en-GB/outer/04-evidence.png",
+      "sha256": "d88e0c3c1226741bb9c7e1da7e593bfed6155b921979784b24719e3afcaf6303"
+    },
+    {
+      "locale": "en-GB",
+      "bundleLocale": "en-GB",
+      "family": "outer",
+      "route": "notes",
+      "file": "en-GB/outer/05-notes.png",
+      "sha256": "8b810a0b6e55343f3664c207d13766fa58f0451ec5e01ad68c291b1ffae2f9d1"
+    },
+    {
+      "locale": "en-GB",
+      "bundleLocale": "en-GB",
+      "family": "outer",
+      "route": "meters",
+      "file": "en-GB/outer/06-meters.png",
+      "sha256": "f6a2db053a61f64be42c7714eb58783a36978e3211103a77798f67a4b88d0763"
+    },
+    {
+      "locale": "en-GB",
+      "bundleLocale": "en-GB",
+      "family": "outer",
+      "route": "keys",
+      "file": "en-GB/outer/07-keys.png",
+      "sha256": "117284639bd87be70c2e4d3e3b96d32e1c34cc10f6657e04eb888273de446fbf"
+    },
+    {
+      "locale": "en-GB",
+      "bundleLocale": "en-GB",
+      "family": "outer",
+      "route": "documents",
+      "file": "en-GB/outer/08-documents.png",
+      "sha256": "4a4a582c0c75857a03d6272d2b9aaca7ec70602d818d8fbacf8affacd7b2cf00"
+    },
+    {
+      "locale": "en-GB",
+      "bundleLocale": "en-GB",
+      "family": "outer",
+      "route": "pair",
+      "file": "en-GB/outer/09-pair.png",
+      "sha256": "6655c47c994d03b5fd0368a3a9778a68506d506f9ac9cc7eb3feff0f64b3b4af"
+    },
+    {
+      "locale": "en-GB",
+      "bundleLocale": "en-GB",
+      "family": "outer",
+      "route": "report",
+      "file": "en-GB/outer/10-report.png",
+      "sha256": "63f982c03d2e9a244250a40752e09fdc9c84d036be228aac7708a384c2a4f363"
+    }
+  ],
+  "rejected": "Inner-display frames are black; excluded."
+}

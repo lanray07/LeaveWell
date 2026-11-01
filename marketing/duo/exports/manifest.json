@@ -1,0 +1,106 @@
+{
+  "fictionalDemoData": true,
+  "captures": [
+    {
+      "file": "en-GB/outer/01-home.png",
+      "locale": "en-GB",
+      "nativeSource": "en-GB/outer/01-home.png",
+      "width": 1398,
+      "sha256": "eace9f410705f269fe3661b8de8528652aff77756e1bd2d9c86649047f65c38c",
+      "family": "outer",
+      "sourceSha256": "7b60982db61a98bf3fefc273aa9166a0fab90c9100a3d29adbd1540a23f8f7a4",
+      "height": 2034
+    },
+    {
+      "file": "en-GB/outer/02-checkout.png",
+      "locale": "en-GB",
+      "nativeSource": "en-GB/outer/02-checkout.png",
+      "width": 1398,
+      "sha256": "e40a1343cae6ea110fb309b9f9e6e8b42f4b39af80fdd5623a6a124f284b5b0d",
+      "family": "outer",
+      "sourceSha256": "db34154e66e0e3b6683abce0c40d7dda9ba32a51ae02baa6e455417ed2f578c8",
+      "height": 2034
+    },
+    {
+      "file": "en-GB/outer/03-walkthrough.png",
+      "locale": "en-GB",
+      "nativeSource": "en-GB/outer/03-walkthrough.png",
+      "width": 1398,
+      "sha256": "2d9e001f66db414c3d9540210e1430e0f3c094e390bda76fce3b217cc7b16e06",
+      "family": "outer",
+      "sourceSha256": "549be12d990b2e071e54cb6d6c51457704f982116eb4544cda4980dceb4eb006",
+      "height": 2034
+    },
+    {
+      "file": "en-GB/outer/04-evidence.png",
+      "locale": "en-GB",
+      "nativeSource": "en-GB/outer/04-evidence.png",
+      "width": 1398,
+      "sha256": "d2c738359222a458b628f43174c3518d5e1ab631b85fac88696fdc1a0a5ccc88",
+      "family": "outer",
+      "sourceSha256": "d88e0c3c1226741bb9c7e1da7e593bfed6155b921979784b24719e3afcaf6303",
+      "height": 2034
+    },
+    {
+      "file": "en-GB/outer/05-notes.png",
+      "locale": "en-GB",
+      "nativeSource": "en-GB/outer/05-notes.png",
+      "width": 1398,
+      "sha256": "409028bad75cc4f9bec6c786d3d9ef6b75d3b6de02d5e249380e566c77877cc9",
+      "family": "outer",
+      "sourceSha256": "8b810a0b6e55343f3664c207d13766fa58f0451ec5e01ad68c291b1ffae2f9d1",
+      "height": 2034
+    },
+    {
+      "file": "en-GB/outer/06-meters.png",
+      "locale": "en-GB",
+      "nativeSource": "en-GB/outer/06-meters.png",
+      "width": 1398,
+      "sha256": "cbeb5732ef0d07739d6efa0ec6331c1d279bc7a07d45d5c26630e05f7cc9f774",
+      "family": "outer",
+      "sourceSha256": "f6a2db053a61f64be42c7714eb58783a36978e3211103a77798f67a4b88d0763",
+      "height": 2034
+    },
+    {
+      "file": "en-GB/outer/07-keys.png",
+      "locale": "en-GB",
+      "nativeSource": "en-GB/outer/07-keys.png",
+      "width": 1398,
+      "sha256": "9eda5d4c0e5086c8e9b47d462da9c05afe1f705122919601bb5915225e4d323a",
+      "family": "outer",
+      "sourceSha256": "117284639bd87be70c2e4d3e3b96d32e1c34cc10f6657e04eb888273de446fbf",
+      "height": 2034
+    },
+    {
+      "file": "en-GB/outer/08-documents.png",
+      "locale": "en-GB",
+      "nativeSource": "en-GB/outer/08-documents.png",
+      "width": 1398,
+      "sha256": "02d40a6b004f3ffd3fa650903205f051e26ba680e74d82cb9a7ee19503eddc3e",
+      "family": "outer",
+      "sourceSha256": "4a4a582c0c75857a03d6272d2b9aaca7ec70602d818d8fbacf8affacd7b2cf00",
+      "height": 2034
+    },
+    {
+      "file": "en-GB/outer/09-pair.png",
+      "locale": "en-GB",
+      "nativeSource": "en-GB/outer/09-pair.png",
+      "width": 1398,
+      "sha256": "f56a622d3ff0b76c307c3b271b426581951ca83ae13c66bf531dce41ec4d84a0",
+      "family": "outer",
+      "sourceSha256": "6655c47c994d03b5fd0368a3a9778a68506d506f9ac9cc7eb3feff0f64b3b4af",
+      "height": 2034
+    },
+    {
+      "file": "en-GB/outer/10-report.png",
+      "locale": "en-GB",
+      "nativeSource": "en-GB/outer/10-report.png",
+      "width": 1398,
+      "sha256": "c751a796d855677f16eeb93f06f03b4bd0bb2a3e26035632fac5e3d4090a6006",
+      "family": "outer",
+      "sourceSha256": "63f982c03d2e9a244250a40752e09fdc9c84d036be228aac7708a384c2a4f363",
+      "height": 2034
+    }
+  ],
+  "source": "Real Xcode 27.1 iPhone Duo Simulator captures; original UI preserved with proportional scaling"
+}
