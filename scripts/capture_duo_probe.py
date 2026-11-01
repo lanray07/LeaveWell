@@ -7,7 +7,11 @@ from pathlib import Path
 
 out = Path('build/DuoProbe')
 def run(*args, check=True, timeout=180):
-    return subprocess.run(args, capture_output=True, text=True, check=check, timeout=timeout).stdout.strip()
+    result = subprocess.run(args, capture_output=True, text=True, timeout=timeout)
+    if check and result.returncode:
+        print(result.stdout, result.stderr, flush=True)
+        result.check_returncode()
+    return result.stdout.strip()
 
 devices = json.loads(run('xcrun', 'simctl', 'list', 'devices', 'available', '-j'))['devices']
 device = next(d for runtime, group in devices.items() if runtime.endswith('iOS-27-1') for d in group if d['name'] == 'iPhone Duo')
@@ -34,17 +38,13 @@ container = Path(run('xcrun', 'simctl', 'get_app_container', udid, 'com.leavewel
 routes = ['home', 'checkout', 'walkthrough', 'evidence', 'notes', 'meters', 'keys', 'documents', 'pair', 'report']
 for family, size in [('outer', (1398, 2034)), ('inner', (2007, 2853))]:
     screen_id = integrated[size]
-    for other in integrated.values():
-        if other != screen_id:
-            run('xcrun', 'simctl', 'io', udid, 'screenConfig', '--display=' + other, 'power', 'off')
-    run('xcrun', 'simctl', 'io', udid, 'screenConfig', '--display=' + screen_id, 'power', 'on')
     folder = out / 'en-GB' / family
     folder.mkdir(parents=True, exist_ok=True)
     for index, route in enumerate(routes, 1):
         run('xcrun', 'simctl', 'terminate', udid, 'com.leavewell.app', check=False)
         marker = container / ('Documents/MarketingReady-' + route)
         marker.unlink(missing_ok=True)
-        run('xcrun', 'simctl', 'launch', udid, 'com.leavewell.app', '-marketing-route', route, '-AppleLanguages', '(en-GB)', '-AppleLocale', 'en_GB')
+        run('xcrun', 'simctl', 'launch', udid, 'com.leavewell.app', '-marketing-route', route)
         for attempt in range(90):
             if marker.exists():
                 break
