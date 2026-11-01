@@ -69,11 +69,31 @@ final class PurchaseService {
         guard !purchasing else { return }
         purchasing = true; message = nil; errorMessage = nil
         defer { purchasing = false }
+        // StoreKit already keeps verified entitlements on this device. An active
+        // subscription needs no forced account authentication to restore access.
+        await refreshEntitlements()
+        guard !Task.isCancelled else { return }
+        if hasPlus {
+            message = L("LeaveWell Plus is active")
+            return
+        }
         do {
             try await syncPurchases(); await refreshEntitlements()
             message = hasPlus ? L("Your LeaveWell Plus subscription has been restored.") : L("No active LeaveWell Plus subscription was found.")
         } catch is CancellationError { }
-        catch { errorMessage = L("Unable to restore purchases. Check your connection and try again.") }
+        catch StoreKitError.userCancelled { }
+        catch {
+            // Sync can fail after authentication while StoreKit still supplies
+            // a valid transaction. Re-read it; never infer access from the error
+            // or from a previously stored flag, and never call failed sync success.
+            await refreshEntitlements()
+            if hasPlus { message = L("LeaveWell Plus is active") }
+            if case StoreKitError.networkError = error {
+                errorMessage = L("Unable to restore purchases. Check your connection and try again.")
+            } else {
+                errorMessage = L("The App Store could not sync purchases. Check that Media & Purchases uses the Apple Account that purchased LeaveWell Plus, then try again. Your records remain available.")
+            }
+        }
     }
     func refreshEntitlements() async {
         var dates: [String: Date] = [:]

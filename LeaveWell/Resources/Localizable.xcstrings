@@ -5523,6 +5523,17 @@
         }
       }
     },
+    "The App Store could not sync purchases. Check that Media & Purchases uses the Apple Account that purchased LeaveWell Plus, then try again. Your records remain available.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The App Store could not sync purchases. Check that Media & Purchases uses the Apple Account that purchased LeaveWell Plus, then try again. Your records remain available."
+          }
+        }
+      }
+    },
     "The PDF contains only selected evidence. A current case review does not mean every source record is included in this export.": {
       "extractionState": "manual",
       "localizations": {

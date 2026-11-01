@@ -81,7 +81,7 @@ jobs:
     # Keep production SDK checks on Xcode 26.6; exercise real StoreKit transactions
     # on the supported iOS 18.5 simulator instead of skipping purchase verification.
     runs-on: macos-15
-    timeout-minutes: 25
+    timeout-minutes: 40
     env:
       DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
     steps:
