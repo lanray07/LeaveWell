@@ -1,0 +1,32 @@
+{
+  "file": "LeaveWell-iPhone-Duo-17-locales.zip",
+  "bytes": 44981075,
+  "sha256": "ef534b66228cfe8a19ae4c544dc7c3105778be8bc74f5df41fb18497a7197b12",
+  "screenshots": 170,
+  "locales": [
+    "en-GB",
+    "fr",
+    "es",
+    "de",
+    "it",
+    "pt-BR",
+    "nl",
+    "pl",
+    "ar",
+    "hi",
+    "ja",
+    "ko",
+    "zh-Hans",
+    "zh-Hant",
+    "tr",
+    "id",
+    "sv"
+  ],
+  "display": "iPhone Duo outer",
+  "width": 1398,
+  "height": 2034,
+  "nativeCaptureRun": "https://github.com/lanray07/LeaveWell/actions/runs/41323083971",
+  "innerDisplayIncluded": false,
+  "fullAppTranslation": false,
+  "independentNativeSpeakerReview": false
+}

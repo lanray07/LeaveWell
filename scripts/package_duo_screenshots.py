@@ -52,6 +52,12 @@ def main():
     with zipfile.ZipFile(target) as archive:
         assert archive.testzip() is None
         assert sum(name.startswith("exports/") and name.endswith(".png") for name in archive.namelist()) == 170
+    delivery = dict(file=target.name, bytes=target.stat().st_size,
+        sha256=hashlib.sha256(target.read_bytes()).hexdigest(), screenshots=170,
+        locales=list(copy["locales"]), display="iPhone Duo outer", width=1398, height=2034,
+        nativeCaptureRun=native["sourceRun"], innerDisplayIncluded=False,
+        fullAppTranslation=False, independentNativeSpeakerReview=False)
+    (BASE / "delivery.json").write_text(json.dumps(delivery, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Verified 170 RGB screenshots, generated 17 review sheets: {target}")
 
 if __name__ == "__main__": main()
