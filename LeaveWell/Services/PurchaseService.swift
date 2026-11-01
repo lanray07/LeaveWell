@@ -78,7 +78,7 @@ final class PurchaseService {
             return
         }
         do {
-            try await syncPurchases(); await refreshEntitlements()
+            try await syncPurchases(); await refreshRestoredEntitlements()
             message = hasPlus ? L("Your LeaveWell Plus subscription has been restored.") : L("No active LeaveWell Plus subscription was found.")
         } catch is CancellationError { }
         catch StoreKitError.userCancelled { }
@@ -86,7 +86,7 @@ final class PurchaseService {
             // Sync can fail after authentication while StoreKit still supplies
             // a valid transaction. Re-read it; never infer access from the error
             // or from a previously stored flag, and never call failed sync success.
-            await refreshEntitlements()
+            await refreshRestoredEntitlements()
             if hasPlus { message = L("LeaveWell Plus is active") }
             if case StoreKitError.networkError = error {
                 errorMessage = L("Unable to restore purchases. Check your connection and try again.")
@@ -94,6 +94,17 @@ final class PurchaseService {
                 errorMessage = L("The App Store could not sync purchases. Check that Media & Purchases uses the Apple Account that purchased LeaveWell Plus, then try again. Your records remain available.")
             }
         }
+    }
+    private func refreshRestoredEntitlements() async {
+        // StoreKit may deliver the verified transaction after sync returns.
+        // Bound the wait, and derive access from verified entitlements on every
+        // attempt. A timeout never turns a failed sync into a successful restore.
+        let deadline = ContinuousClock.now.advanced(by: .seconds(5))
+        repeat {
+            await refreshEntitlements()
+            if hasPlus || Task.isCancelled { return }
+            try? await Task.sleep(for: .milliseconds(200))
+        } while ContinuousClock.now < deadline
     }
     func refreshEntitlements() async {
         var dates: [String: Date] = [:]

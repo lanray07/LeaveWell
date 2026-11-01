@@ -159,7 +159,9 @@ final class PurchaseTests: XCTestCase {
         try await awaitAccess(false, in: purchases)
         let first = Task { await purchases.restore() }
         let deadline = Date().addingTimeInterval(20)
-        while releaseSync == nil && Date() < deadline { await Task.yield() }
+        while releaseSync == nil && Date() < deadline {
+            try await Task.sleep(for: .milliseconds(20))
+        }
         guard let releaseSync else {
             first.cancel()
             XCTFail("Restore did not reach account sync")
