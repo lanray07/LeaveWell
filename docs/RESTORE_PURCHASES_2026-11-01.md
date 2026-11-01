@@ -43,3 +43,9 @@ No new sandbox tester was created, no Apple Account was switched, and no entitle
 
 
 Run 41324452015 established an empty baseline and passed 12 of 13 cases, including the failed-sync/verified-access regression. The preflight case expected zero sync calls immediately after seeding a test-server purchase, before its client entitlement was visible. It now waits for the actual verified client entitlement before exercising preflight restore. This preserves the regression's contract and assertion; no production behavior was changed for that fixture adjustment. Release run 41326189761 (build number 82) validates the updated fixtures and signed upload. Simulator test compilation is restricted to arm64; no test cases are skipped.
+
+
+Run 41326189761 passed all seven restore regressions and five other lifecycle cases. The annual test's initial immediate entitlement assertion failed after a seeded purchase; the test still proceeded through its renewal/refund operations. The annual fixture now awaits verified active access before its assertions, just as the restore fixture does. Assertions for active access, forced renewal and removal after refund remain enabled. Run 41328046507 validates this test-only adjustment before archive/upload. The production PurchaseService and captured app source tree remain unchanged.
+
+
+The obsolete build-82 workflow was cancelled by the build-83 dispatch after all 13 test results had been printed; its annual fixture assertion failed, so it did not archive or upload. Build 83 uses source `ffeb5d99cf31962a79ae6f82c0780bdf8bf6127f`. The app source tree still matches the complete 17-locale capture source; only test fixtures changed.
