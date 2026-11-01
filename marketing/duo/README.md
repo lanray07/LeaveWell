@@ -41,3 +41,7 @@ The ten sequences cover move-out organisation, outstanding checks, fixture obser
 The 17 languages are English (U.K.), French, Spanish (Spain), German, Italian, Portuguese (Brazil), Dutch, Polish, Arabic, Hindi, Japanese, Korean, Simplified Chinese, Traditional Chinese, Turkish, Indonesian and Swedish. Full-app translation and independent native-speaker review remain outstanding. Quantity labels currently combine a count and the singular access-item type; this is a minor grammar limitation in some languages.
 
 The captured app source tree is `aa01e6dc77eea0e798f9b65e40e2352a14a8a054` (`LeaveWell/` in capture commit `2ceac5f`; the subsequent release test-fixture commits retain that same app tree). Subsequent test-fixture fixes do not change that app tree. The source SDK and capture commit are also recorded per language in the native manifest.
+
+## App Store draft upload
+
+On 1 November 2026, all 170 exports were uploaded to their matching 17 iPhone Duo localization slots. Build 83 was selected in the version 1.0 draft, and partial-translation disclosures/review notes were saved. `asc-upload-receipts.json` records the verified counts and output hashes. The physical existing-account restore check remains pending; the draft was not resubmitted for review. See `docs/APP_STORE_DUO_UPLOAD_2026-11-01.txt` for the rollout record. This manual upload does not change the frozen screenshot ZIP or its delivery checksum.

@@ -1,0 +1,13 @@
+Build 83 replaces build 40. LeaveWell is an account-free, local tenancy checkout record app. No reviewer sign-in or demo credentials are required.
+
+Review flow: finish onboarding, create a property, choose rooms and open Start checkout. The checkout workspace connects a fixture walkthrough, linked evidence, move-in/out comparisons, readings/access scope and final handover review. Each fixture check retains its own observation and evidence links; a photograph alone does not complete a check.
+
+Record fixture observations, link/import evidence, pair an inventory entry with an exit record, resolve meter/access details or provide explicit non-applicability reasons, and save the final handover checkpoint. Editing case details afterwards changes the checkpoint to Review needed. The PDF includes selected observations/comparisons and outstanding details. Excluding either comparison source excludes that comparison observation.
+
+Free features include record capture, typed/audio notes, checklist, meters, keys, manual comparisons, access to saved records and original-file export. LeaveWell Plus Monthly (com.LeaveWell.app.plus.monthly) and Annual (com.LeaveWell.app.plus.annual) provide the same paid feature: unlimited PDF report creation/regeneration while subscribed. StoreKit supplies local prices; no free trial is offered. Open Settings > Explore LeaveWell Plus for purchase, Restore purchases and Manage subscription.
+
+Build 83 reads verified active entitlements before forcing account sync, rechecks verified access after sync success/failure and handles cancellation quietly. It never grants Plus from an error or local subscription flag. The signed source passed 13 core, 16 native service, 13 StoreKit lifecycle/restore and five localization tests. Existing-account restore on the owner device remains a pending real-device check; automated tests do not establish that Apple account authentication succeeds.
+
+Camera, microphone, speech and reminders are optional and requested for the corresponding action. OCR suggestions require confirmation. If on-device transcription is unavailable, typed notes and saved audio remain available. Records stay on device and are excluded from automatic backups; export what you need to retain. App lock uses available biometrics or device passcode. Recipients may retain shared report copies. No cloud sync, collaboration, remote generative AI or backend is used.
+
+Duo screenshots show real native views with clearly labelled fictional records. Capture fixtures are Debug-only and are absent from Release. Translation is partial: selected flows cover 117 of 597 strings per non-English language; other text falls back to English. No full-app worldwide localization or independent renter beta is claimed.

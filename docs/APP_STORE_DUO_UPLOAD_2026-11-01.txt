@@ -1,0 +1,19 @@
+App Store draft update — 1 November 2026
+
+App: LeaveWell: Move Out Checklist (6818834817)
+iOS version: 1.0
+Selected App Store build: 83, replacing 40. Saved in App Store Connect.
+
+Uploaded and verified 170 native iPhone Duo outer-display screenshots: 10 in each of the 17 priority localizations (English U.K., French, Spanish Spain, German, Italian, Portuguese Brazil, Dutch, Polish, Arabic, Hindi, Japanese, Korean, Simplified Chinese, Traditional Chinese, Turkish, Indonesian and Swedish).
+
+Each locale was checked in the Duo slot for its own 10 of 10 count after processing. Uploads used the locale-specific export files; inherited English images were replaced by dedicated localized assets. Existing non-Duo media was preserved. All 170 file hashes match the validated export manifest.
+
+The 16 non-English descriptions and promotional texts now disclose partial translation instead of claiming the interface is entirely English. The patch phrases are recorded in marketing/duo/metadata-disclosures.json. Apply these patches after any older metadata import to preserve the accurate language-support statement.
+
+Review notes were updated from build 40 to build 83: connected fixture/evidence walkthrough, comparisons, readings/access scope, checkpoint invalidation, PDF behavior, purchase/restore paths, privacy and current testing limits. Exact text: marketing/duo/review-notes-build83.txt.
+
+Receipt: marketing/duo/asc-upload-receipts.json. Proof JPEGs remain local under build/asc-duo-*.jpg and build/asc-build83-draft.jpg; they are not published to the repository. The completed primary gallery is build/asc-duo-complete.jpg.
+
+No new App Review submission was made. Version 1.0 still shows the prior rejection until it is resubmitted and reviewed. The existing-account Restore Purchases check on a physical iPad remains pending because no device was detected. Source build 83 passed 42 Swift tests and five Python localization checks, was cloud-signed and uploaded successfully, and is assigned to the existing Owner Device Testing group with one tester. No new tester or Apple Account was created.
+
+App translation remains selected-flow coverage: 117 of 597 strings per non-English language. No full-app translation, inner-display captures, independent native-speaker review or independent renter beta testing is claimed.
