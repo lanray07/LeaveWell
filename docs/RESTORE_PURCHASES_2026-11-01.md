@@ -1,5 +1,15 @@
 # Restore Purchases investigation
 
+## Delivery status
+
+[GitHub release run 83](https://github.com/lanray07/LeaveWell/actions/runs/41328046507) succeeded for source `ffeb5d99cf31962a79ae6f82c0780bdf8bf6127f`: 13 core tests, 16 native service tests, 13 StoreKit lifecycle/restore tests and five Python localization checks passed. Xcode 27.1 archived and cloud-signed version 1.0 (83); Apple validation and upload succeeded on 1 November 2026 at 17:05 UTC. Temporary signing material was removed by the workflow.
+
+The 170-image, 17-language Duo outer-display screenshot pack also passed its native locale/source checks, image/export audit and ZIP CRC validation. The captured and shipped app source tree is `aa01e6dc77eea0e798f9b65e40e2352a14a8a054`. The delivery checksum and locale list are in `marketing/duo/delivery.json`.
+
+Apple processed build 83 and App Store Connect lists it as Ready to Submit. It is assigned to the existing Owner Device Testing internal group (one existing tester). Build-specific test instructions were saved; no tester was created.
+
+Existing-account physical-device restore remains unverified: no iPad was detected by USB during this session. No new tester or Apple Account was created, and no App Review submission was made. Non-English app translation remains selected-flow coverage (117/597 strings), not full-app localization.
+
 The owner requested testing with the existing TestFlight Apple Account. No new sandbox tester or account switch is part of this change.
 
 ## Reproduction
@@ -49,3 +59,8 @@ Run 41326189761 passed all seven restore regressions and five other lifecycle ca
 
 
 The obsolete build-82 workflow was cancelled by the build-83 dispatch after all 13 test results had been printed; its annual fixture assertion failed, so it did not archive or upload. Build 83 uses source `ffeb5d99cf31962a79ae6f82c0780bdf8bf6127f`. The app source tree still matches the complete 17-locale capture source; only test fixtures changed.
+
+
+## Existing-account acceptance still required
+
+Install TestFlight 1.0 (83) over the existing app without deleting its records. Open Settings > Explore LeaveWell Plus > Restore purchases. Already-active verified access should need no new account sign-in; otherwise complete any Apple authentication directly on the device and verify real entitlement restoration. Check cancellation/error behavior, record persistence, PDF export and app-lock return. A failed Apple account sync must not be reported as a successful restore. The TestFlight notes give the existing tester these steps and disclose the selected-flow translation limit.
