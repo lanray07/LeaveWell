@@ -64,3 +64,20 @@ The obsolete build-82 workflow was cancelled by the build-83 dispatch after all 
 ## Existing-account acceptance still required
 
 Install TestFlight 1.0 (83) over the existing app without deleting its records. Open Settings > Explore LeaveWell Plus > Restore purchases. Already-active verified access should need no new account sign-in; otherwise complete any Apple authentication directly on the device and verify real entitlement restoration. Check cancellation/error behavior, record persistence, PDF export and app-lock return. A failed Apple account sync must not be reported as a successful restore. The TestFlight notes give the existing tester these steps and disclose the selected-flow translation limit.
+
+
+## Owner iPad verification, 1 November evening
+
+Updated the existing TestFlight installation from build 57 to 83 without deleting app data. Device metadata reports iPadOS 26.7.1. The owner completed Touch ID; the fictional QA property and all four documented fixture checks remained visible. No new tester or Apple Account was created.
+
+Before a fresh purchase, the paywall showed no active entitlement. Restore invoked Apple authentication for the existing account. After the owner completed it, the app displayed its account-sync error and did not grant Plus. That missing-entitlement sync path remains unresolved; the test does not establish a successful sync or determine the underlying error cause. The process-filtered live diagnostic log started afterwards produced no useful corroborating lines.
+
+The monthly TestFlight purchase then succeeded on the existing account and the app displayed active Plus and its purchase-success message. Tapping Restore purchases subsequently changed that message to LeaveWell Plus is active, without an authentication prompt or an error. Native screenshot/XML checkpoints 13, 15 and 16 document these separate outcomes locally under ignored build/device-testing/2026-11-01. Raw device data and identifiers are not committed.
+
+The App Review notes disclose both outcomes explicitly. This is evidence for verified active-entitlement restoration, not a claim that recovery through a failing account sync has been fixed.
+
+
+Build 83, the Plus subscription group, Monthly and Annual were resubmitted at 19:51 GMT on 1 November 2026. App Store Connect showed all four items Waiting for Review. The existing submission ID was retained. Review notes disclose the failed no-active-entitlement sync and successful subsequent purchase/active-entitlement restore separately. No assertion of a fully repaired Apple account sync was submitted.
+
+
+After the active-entitlement restore check, build 83 generated a fresh report and opened its Move-Out Condition Record cover in native Quick Look (local screenshot 25). Full report-content/exclusion validation was not repeated during this restore-focused check. The temporary signed UI-test helper was uninstalled; a subsequent app lookup confirmed LeaveWell 1.0 (83) remained installed.

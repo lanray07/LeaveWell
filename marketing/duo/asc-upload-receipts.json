@@ -3,7 +3,7 @@
   "version": "1.0",
   "selectedBuild": "83",
   "device": "iPhone Duo outer",
-  "submittedForReview": false,
+  "submittedForReview": true,
   "status": "complete",
   "locales": {
     "en-GB": {
@@ -838,5 +838,8 @@
       ],
       "proof": "build/asc-duo-sv.jpg"
     }
-  }
+  },
+  "submissionStatus": "Waiting for Review",
+  "submittedAt": "2026-11-01T19:51:00Z",
+  "submissionID": "6f230d74-12ae-41bf-87c0-87f0434e9c96"
 }
