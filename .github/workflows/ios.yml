@@ -6,7 +6,9 @@ permissions:
 jobs:
   inspect:
     runs-on: xcode-27
-    timeout-minutes: 15
+    timeout-minutes: 25
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
     steps:
       - uses: actions/checkout@v4
       - name: Inspect native Duo simulator capture tools
@@ -20,6 +22,10 @@ jobs:
           xcrun simctl help > build/DuoProbe/simctl.txt
           xcrun simctl io help > build/DuoProbe/io.txt 2>&1 || true
           xcrun simctl help io >> build/DuoProbe/io.txt 2>&1 || true
+      - name: Build and inspect a real Duo app capture
+        run: |
+          xcodebuild -project LeaveWell.xcodeproj -scheme LeaveWell -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath build/DerivedData -configuration Debug CODE_SIGNING_ALLOWED=NO build > build/DuoProbe/build.log 2>&1
+          python3 scripts/capture_duo_probe.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
