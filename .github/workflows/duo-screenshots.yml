@@ -13,6 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build native app and capture auditor
         run: |
+          mkdir -p build
           python3 scripts/validate_project.py
           xcodebuild -project LeaveWell.xcodeproj -scheme LeaveWell -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath build/DerivedData -configuration Debug CODE_SIGNING_ALLOWED=NO build > build/duo-build.log 2>&1 || { tail -60 build/duo-build.log; exit 1; }
           APP=build/DerivedData/Build/Products/Debug-iphonesimulator/LeaveWell.app
@@ -20,6 +21,7 @@ jobs:
           swiftc scripts/audit_native_capture.swift -o build/audit-native-capture
           ditto -c -k --keepParent "$APP" build/DuoCaptureApp.zip
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: DuoCaptureApp
           path: |
