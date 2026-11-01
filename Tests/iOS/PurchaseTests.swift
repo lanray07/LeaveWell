@@ -87,6 +87,9 @@ final class PurchaseTests: XCTestCase {
             syncCalls += 1
             throw StoreKitError.unknown
         })
+        // The preflight contract is about an entitlement already visible on
+        // the client, not merely a purchase seeded on the test server.
+        try await awaitAccess(true, in: purchases)
         await purchases.restore()
         XCTAssertTrue(purchases.hasPlus, "Restore must read StoreKit's verified entitlement even when account sync would fail")
         XCTAssertEqual(syncCalls, 0, "An already active verified subscription needs no account authentication")

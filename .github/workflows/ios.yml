@@ -95,7 +95,7 @@ jobs:
           echo "SIMULATOR_DEVICE=$DEVICE" >> "$GITHUB_ENV"
           xcrun simctl boot "$DEVICE" || true
           xcrun simctl bootstatus "$DEVICE" -b
-          xcodebuild -project LeaveWell.xcodeproj -scheme LeaveWell -destination "platform=iOS Simulator,id=$DEVICE,arch=arm64" -only-testing:LeaveWellTests/PurchaseTests -parallel-testing-enabled NO -derivedDataPath build/DerivedData -resultBundlePath build/Purchases.xcresult CODE_SIGNING_ALLOWED=NO test
+          xcodebuild -project LeaveWell.xcodeproj -scheme LeaveWell -destination "platform=iOS Simulator,id=$DEVICE,arch=arm64" -only-testing:LeaveWellTests/PurchaseTests -parallel-testing-enabled NO -derivedDataPath build/DerivedData -resultBundlePath build/Purchases.xcresult ARCHS=arm64 ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=NO test
       - name: Collect purchase review screenshot
         if: always() && env.SIMULATOR_DEVICE != ''
         run: |
