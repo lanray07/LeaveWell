@@ -103,6 +103,29 @@ final class ReportService: ReportGenerating {
             .text(L("Video and audio are indexed in this report. Share original media separately using data export.")),
             .text(L("Checklist review is recorded by the user and does not certify the property condition."))]
         var result = [SectionRecord(title: L("Move-out summary"), blocks: summary)]
+        if let session = record.checkout {
+            var review: [Block] = [.title(L("Handover review checkpoint")),
+                .text(record.checkoutReviewIsCurrent ? L("Review matches current records") : L("Review needed for current records")),
+                .text(L("This is the renter's review checkpoint, not certification of property condition or recipient acceptance."))]
+            if let date = session.reviewedAt { review.append(.text(L("Last review") + ": " + stamp(date))) }
+            review.append(.text(L("Outstanding areas") + ": \(record.checkoutGaps.count)"))
+            for gap in record.checkoutGaps { review.append(.text(L(gap.title) + ": " + L(gap.detail))) }
+            for meter in session.meters where !meter.exclusionReason.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                review.append(.text(L(meter.type) + " · " + L("Not applicable") + ": " + meter.exclusionReason))
+            }
+            if record.accessItems.isEmpty && !session.noAccessReason.isEmpty { review.append(.text(L("Access inventory exception") + ": " + session.noAccessReason)) }
+            review.append(.text(L("The PDF contains only selected evidence. A current case review does not mean every source record is included in this export.")))
+            result.append(SectionRecord(title: L("Handover review checkpoint"), blocks: review))
+            let selectedIDs = Set(evidence.map(\.id))
+            var pairs: [Block] = [.title(L("Linked move-in and move-out comparisons"))]
+            for pair in session.comparisons where pair.includedInReport && record.validComparison(pair) && selectedIDs.contains(pair.beforeID) && selectedIDs.contains(pair.afterID) {
+                pairs += [.text(L("Move-in") + ": EV-" + pair.beforeID.uuidString), .text(L("Move-out") + ": EV-" + pair.afterID.uuidString), .text(pair.observation)]
+                for id in [pair.beforeID, pair.afterID] {
+                    if let item = evidence.first(where: { $0.id == id }) { pairs += evidenceBlocks(item, url: files[id]) }
+                }
+            }
+            result.append(SectionRecord(title: L("Linked move-in and move-out comparisons"), blocks: pairs))
+        }
         var roomIndex: [Block] = [.title(L("Room index"))]
         for room in record.rooms {
             let count = evidence.filter { $0.roomID == room.id }.count
@@ -112,6 +135,11 @@ final class ReportService: ReportGenerating {
         for room in record.rooms {
             var blocks: [Block] = [.title(room.name)]
             if !room.notes.isEmpty { blocks.append(.text(room.notes)) }
+            let selectedIDs = Set(evidence.map(\.id))
+            for review in record.checkout?.fixtures ?? [] where review.roomID == room.id && room.items.contains(review.fixture) && review.includedInReport && Set(review.evidenceIDs).isSubset(of: selectedIDs) {
+                blocks += [.title(L(review.fixture) + " · " + L(review.outcome.title)), .text(review.observation), .text(stamp(review.reviewedAt))]
+                for id in review.evidenceIDs { blocks.append(.text("EV-" + id.uuidString)) }
+            }
             let items = evidence.filter { $0.roomID == room.id }
             if items.isEmpty { blocks.append(.text(L("No evidence included for this room."))) }
             for item in items { blocks += evidenceBlocks(item, url: files[item.id]) }

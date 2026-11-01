@@ -23,7 +23,9 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build:
-    runs-on: macos-26
+    runs-on: xcode-27
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
     timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
@@ -78,10 +80,10 @@ jobs:
           retention-days: 30
   purchases:
     # Apple FB22237318: iOS 26.5 CLI StoreKitTest returns SKInternalErrorDomain Code=3.
-    # Keep production SDK checks on Xcode 26.6; exercise real StoreKit transactions
+    # Keep production SDK checks on Xcode 27.1; exercise real StoreKit transactions
     # on the supported iOS 18.5 simulator instead of skipping purchase verification.
     runs-on: macos-15
-    timeout-minutes: 25
+    timeout-minutes: 40
     env:
       DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
     steps:
@@ -93,7 +95,7 @@ jobs:
           echo "SIMULATOR_DEVICE=$DEVICE" >> "$GITHUB_ENV"
           xcrun simctl boot "$DEVICE" || true
           xcrun simctl bootstatus "$DEVICE" -b
-          xcodebuild -project LeaveWell.xcodeproj -scheme LeaveWell -destination "platform=iOS Simulator,id=$DEVICE" -only-testing:LeaveWellTests/PurchaseTests -parallel-testing-enabled NO -derivedDataPath build/DerivedData -resultBundlePath build/Purchases.xcresult CODE_SIGNING_ALLOWED=NO test
+          xcodebuild -project LeaveWell.xcodeproj -scheme LeaveWell -destination "platform=iOS Simulator,id=$DEVICE,arch=arm64" -only-testing:LeaveWellTests/PurchaseTests -parallel-testing-enabled NO -derivedDataPath build/DerivedData -resultBundlePath build/Purchases.xcresult ARCHS=arm64 ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=NO test
       - name: Collect purchase review screenshot
         if: always() && env.SIMULATOR_DEVICE != ''
         run: |
@@ -113,7 +115,9 @@ jobs:
   archive:
     if: github.event_name == 'workflow_dispatch' && (inputs.archive || inputs.upload)
     needs: [build, purchases]
-    runs-on: macos-26
+    runs-on: xcode-27
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4

@@ -1,0 +1,171 @@
+﻿locale,position,route,search_intent_theme,localized_headline,disclosure
+en-GB,1,home,move-out checklist and tenancy checkout,"Your move-out, / clearly organised.",Fictional demo records
+en-GB,2,checkout,outstanding property inspection checks,See what still / needs attention.,Fictional demo records
+en-GB,3,walkthrough,room fixtures and condition evidence,Check each fixture. / Keep the evidence.,Fictional demo records
+en-GB,4,evidence,rental property photos,"Rental photos, / ready to find.",Fictional demo records
+en-GB,5,notes,move-out condition notes,Record the details / while they’re fresh.,Fictional demo records
+en-GB,6,meters,final utility meter readings,Final meter readings. / Clearly recorded.,Fictional demo records
+en-GB,7,keys,key handover and access inventory,Keys handed over. / Details kept.,Fictional demo records
+en-GB,8,documents,tenancy paperwork and inventory documents,"Your rental paperwork, / in one place.",Fictional demo records
+en-GB,9,pair,move-in versus move-out comparison,Move-in to move-out. / Compare the evidence.,Fictional demo records
+en-GB,10,report,PDF evidence report sharing,"Your evidence, / in a shareable PDF.",PDF reports require a paid LeaveWell Plus subscription
+fr,1,home,move-out checklist and tenancy checkout,"Votre départ, / bien organisé.",Données de démonstration fictives
+fr,2,checkout,outstanding property inspection checks,Repérez les points / à vérifier.,Données de démonstration fictives
+fr,3,walkthrough,room fixtures and condition evidence,Vérifiez chaque élément. / Gardez les preuves.,Données de démonstration fictives
+fr,4,evidence,rental property photos,"Vos photos du logement, / faciles à retrouver.",Données de démonstration fictives
+fr,5,notes,move-out condition notes,Notez les détails / sur le moment.,Données de démonstration fictives
+fr,6,meters,final utility meter readings,Derniers relevés. / Tout est consigné.,Données de démonstration fictives
+fr,7,keys,key handover and access inventory,Clés remises. / Détails conservés.,Données de démonstration fictives
+fr,8,documents,tenancy paperwork and inventory documents,"Vos documents locatifs, / au même endroit.",Données de démonstration fictives
+fr,9,pair,move-in versus move-out comparison,De l’entrée à la sortie. / Comparez vos preuves.,Données de démonstration fictives
+fr,10,report,PDF evidence report sharing,"Vos preuves, / dans un PDF à partager.",PDF : abonnement payant LeaveWell Plus requis
+es,1,home,move-out checklist and tenancy checkout,"Tu salida del piso, / bien organizada.",Datos ficticios de demostración
+es,2,checkout,outstanding property inspection checks,Descubre qué queda / por revisar.,Datos ficticios de demostración
+es,3,walkthrough,room fixtures and condition evidence,Revisa cada elemento. / Guarda las pruebas.,Datos ficticios de demostración
+es,4,evidence,rental property photos,"Fotos del alquiler, / fáciles de encontrar.",Datos ficticios de demostración
+es,5,notes,move-out condition notes,Anota los detalles / en el momento.,Datos ficticios de demostración
+es,6,meters,final utility meter readings,Lecturas finales. / Todo registrado.,Datos ficticios de demostración
+es,7,keys,key handover and access inventory,Llaves entregadas. / Detalles guardados.,Datos ficticios de demostración
+es,8,documents,tenancy paperwork and inventory documents,"Los documentos del alquiler, / en un solo lugar.",Datos ficticios de demostración
+es,9,pair,move-in versus move-out comparison,De la entrada a la salida. / Compara las pruebas.,Datos ficticios de demostración
+es,10,report,PDF evidence report sharing,"Tus pruebas, / en un PDF para compartir.",Los informes PDF requieren una suscripción de pago a LeaveWell Plus
+de,1,home,move-out checklist and tenancy checkout,"Dein Auszug, / klar organisiert.",Fiktive Demodaten
+de,2,checkout,outstanding property inspection checks,"Sieh, was noch / geprüft werden muss.",Fiktive Demodaten
+de,3,walkthrough,room fixtures and condition evidence,Prüfe jedes Detail. / Sichere die Belege.,Fiktive Demodaten
+de,4,evidence,rental property photos,"Wohnungsfotos, / schnell gefunden.",Fiktive Demodaten
+de,5,notes,move-out condition notes,"Halte Details fest, / solange sie frisch sind.",Fiktive Demodaten
+de,6,meters,final utility meter readings,Letzte Zählerstände. / Klar dokumentiert.,Fiktive Demodaten
+de,7,keys,key handover and access inventory,Schlüssel übergeben. / Details festgehalten.,Fiktive Demodaten
+de,8,documents,tenancy paperwork and inventory documents,"Deine Mietunterlagen, / an einem Ort.",Fiktive Demodaten
+de,9,pair,move-in versus move-out comparison,Vom Einzug zum Auszug. / Vergleiche deine Belege.,Fiktive Demodaten
+de,10,report,PDF evidence report sharing,"Deine Belege, / als PDF zum Teilen.",PDF-Berichte erfordern ein kostenpflichtiges LeaveWell Plus-Abo
+it,1,home,move-out checklist and tenancy checkout,"Il tuo trasloco, / ben organizzato.",Dati dimostrativi fittizi
+it,2,checkout,outstanding property inspection checks,Scopri cosa resta / da controllare.,Dati dimostrativi fittizi
+it,3,walkthrough,room fixtures and condition evidence,Controlla ogni elemento. / Conserva le prove.,Dati dimostrativi fittizi
+it,4,evidence,rental property photos,"Foto dell’alloggio, / facili da trovare.",Dati dimostrativi fittizi
+it,5,notes,move-out condition notes,Annota i dettagli / sul momento.,Dati dimostrativi fittizi
+it,6,meters,final utility meter readings,Letture finali. / Tutto registrato.,Dati dimostrativi fittizi
+it,7,keys,key handover and access inventory,Chiavi consegnate. / Dettagli conservati.,Dati dimostrativi fittizi
+it,8,documents,tenancy paperwork and inventory documents,"I documenti dell’affitto, / in un solo posto.",Dati dimostrativi fittizi
+it,9,pair,move-in versus move-out comparison,Dall’ingresso all’uscita. / Confronta le prove.,Dati dimostrativi fittizi
+it,10,report,PDF evidence report sharing,"Le tue prove, / in un PDF da condividere.",I report PDF richiedono un abbonamento a pagamento LeaveWell Plus
+pt-BR,1,home,move-out checklist and tenancy checkout,"Sua saída do imóvel, / bem organizada.",Dados fictícios de demonstração
+pt-BR,2,checkout,outstanding property inspection checks,Veja o que ainda / precisa de atenção.,Dados fictícios de demonstração
+pt-BR,3,walkthrough,room fixtures and condition evidence,Confira cada item. / Guarde as evidências.,Dados fictícios de demonstração
+pt-BR,4,evidence,rental property photos,"Fotos do imóvel, / fáceis de encontrar.",Dados fictícios de demonstração
+pt-BR,5,notes,move-out condition notes,Registre os detalhes / na hora.,Dados fictícios de demonstração
+pt-BR,6,meters,final utility meter readings,Leituras finais. / Tudo registrado.,Dados fictícios de demonstração
+pt-BR,7,keys,key handover and access inventory,Chaves entregues. / Detalhes guardados.,Dados fictícios de demonstração
+pt-BR,8,documents,tenancy paperwork and inventory documents,"Os documentos do aluguel, / em um só lugar.",Dados fictícios de demonstração
+pt-BR,9,pair,move-in versus move-out comparison,Da entrada à saída. / Compare as evidências.,Dados fictícios de demonstração
+pt-BR,10,report,PDF evidence report sharing,"Suas evidências, / em um PDF para compartilhar.",Relatórios PDF exigem assinatura paga do LeaveWell Plus
+nl,1,home,move-out checklist and tenancy checkout,"Je verhuizing, / helder geregeld.",Fictieve demogegevens
+nl,2,checkout,outstanding property inspection checks,Zie wat nog / aandacht nodig heeft.,Fictieve demogegevens
+nl,3,walkthrough,room fixtures and condition evidence,Controleer elk onderdeel. / Bewaar het bewijs.,Fictieve demogegevens
+nl,4,evidence,rental property photos,"Woningfoto’s, / snel teruggevonden.",Fictieve demogegevens
+nl,5,notes,move-out condition notes,Leg details vast / terwijl ze nog vers zijn.,Fictieve demogegevens
+nl,6,meters,final utility meter readings,Eindmeterstanden. / Duidelijk vastgelegd.,Fictieve demogegevens
+nl,7,keys,key handover and access inventory,Sleutels ingeleverd. / Details bewaard.,Fictieve demogegevens
+nl,8,documents,tenancy paperwork and inventory documents,"Je huurdocumenten, / op één plek.",Fictieve demogegevens
+nl,9,pair,move-in versus move-out comparison,Van intrek tot vertrek. / Vergelijk je bewijs.,Fictieve demogegevens
+nl,10,report,PDF evidence report sharing,"Je bewijs, / in een deelbare PDF.",Voor PDF-rapporten is een betaald LeaveWell Plus-abonnement nodig
+pl,1,home,move-out checklist and tenancy checkout,"Twoja wyprowadzka, / dobrze zorganizowana.",Fikcyjne dane demonstracyjne
+pl,2,checkout,outstanding property inspection checks,"Sprawdź, co jeszcze / wymaga uwagi.",Fikcyjne dane demonstracyjne
+pl,3,walkthrough,room fixtures and condition evidence,Sprawdź każdy element. / Zachowaj dowody.,Fikcyjne dane demonstracyjne
+pl,4,evidence,rental property photos,"Zdjęcia mieszkania, / łatwe do znalezienia.",Fikcyjne dane demonstracyjne
+pl,5,notes,move-out condition notes,Zapisuj szczegóły / na bieżąco.,Fikcyjne dane demonstracyjne
+pl,6,meters,final utility meter readings,Końcowe stany liczników. / Jasno zapisane.,Fikcyjne dane demonstracyjne
+pl,7,keys,key handover and access inventory,Klucze przekazane. / Szczegóły zachowane.,Fikcyjne dane demonstracyjne
+pl,8,documents,tenancy paperwork and inventory documents,"Dokumenty najmu, / w jednym miejscu.",Fikcyjne dane demonstracyjne
+pl,9,pair,move-in versus move-out comparison,Od wprowadzenia do wyprowadzki. / Porównaj dowody.,Fikcyjne dane demonstracyjne
+pl,10,report,PDF evidence report sharing,"Twoje dowody, / w pliku PDF do udostępnienia.",Raporty PDF wymagają płatnej subskrypcji LeaveWell Plus
+ar,1,home,move-out checklist and tenancy checkout,مغادرة منزلك، / بتنظيم ووضوح.,بيانات توضيحية خيالية
+ar,2,checkout,outstanding property inspection checks,اعرف ما لا يزال / بحاجة إلى اهتمام.,بيانات توضيحية خيالية
+ar,3,walkthrough,room fixtures and condition evidence,افحص كل عنصر. / واحتفظ بالأدلة.,بيانات توضيحية خيالية
+ar,4,evidence,rental property photos,صور العقار، / يسهل العثور عليها.,بيانات توضيحية خيالية
+ar,5,notes,move-out condition notes,دوّن التفاصيل / في وقتها.,بيانات توضيحية خيالية
+ar,6,meters,final utility meter readings,القراءات النهائية للعدادات. / موثّقة بوضوح.,بيانات توضيحية خيالية
+ar,7,keys,key handover and access inventory,سُلّمت المفاتيح. / وحُفظت التفاصيل.,بيانات توضيحية خيالية
+ar,8,documents,tenancy paperwork and inventory documents,مستندات إيجارك، / في مكان واحد.,بيانات توضيحية خيالية
+ar,9,pair,move-in versus move-out comparison,من الاستلام إلى التسليم. / قارن الأدلة.,بيانات توضيحية خيالية
+ar,10,report,PDF evidence report sharing,أدلتك، / في ملف PDF للمشاركة.,تتطلب تقارير PDF اشتراك LeaveWell Plus مدفوعًا
+hi,1,home,move-out checklist and tenancy checkout,"घर छोड़ने की तैयारी, / पूरी तरह व्यवस्थित।",काल्पनिक डेमो रिकॉर्ड
+hi,2,checkout,outstanding property inspection checks,"देखें, किन बातों पर / अभी ध्यान देना है।",काल्पनिक डेमो रिकॉर्ड
+hi,3,walkthrough,room fixtures and condition evidence,हर चीज़ जाँचें। / सबूत सँभालें।,काल्पनिक डेमो रिकॉर्ड
+hi,4,evidence,rental property photos,"घर की तस्वीरें, / आसानी से खोजें।",काल्पनिक डेमो रिकॉर्ड
+hi,5,notes,move-out condition notes,विवरण याद रहते ही / लिख लें।,काल्पनिक डेमो रिकॉर्ड
+hi,6,meters,final utility meter readings,मीटर की अंतिम रीडिंग। / साफ़-साफ़ दर्ज।,काल्पनिक डेमो रिकॉर्ड
+hi,7,keys,key handover and access inventory,चाबियाँ सौंप दीं। / विवरण सुरक्षित हैं।,काल्पनिक डेमो रिकॉर्ड
+hi,8,documents,tenancy paperwork and inventory documents,"किराये के दस्तावेज़, / एक ही जगह।",काल्पनिक डेमो रिकॉर्ड
+hi,9,pair,move-in versus move-out comparison,आने से जाने तक। / सबूतों की तुलना करें।,काल्पनिक डेमो रिकॉर्ड
+hi,10,report,PDF evidence report sharing,"आपके सबूत, / साझा करने योग्य PDF में।",PDF रिपोर्ट के लिए LeaveWell Plus की सशुल्क सदस्यता ज़रूरी है
+ja,1,home,move-out checklist and tenancy checkout,退去の準備を、 / すっきり整理。,架空のデモ記録
+ja,2,checkout,outstanding property inspection checks,まだ確認が必要な / 項目がわかる。,架空のデモ記録
+ja,3,walkthrough,room fixtures and condition evidence,設備を一つずつ確認。 / 証拠を残そう。,架空のデモ記録
+ja,4,evidence,rental property photos,住まいの写真を、 / すぐに見つける。,架空のデモ記録
+ja,5,notes,move-out condition notes,気づいたことは、 / その場で記録。,架空のデモ記録
+ja,6,meters,final utility meter readings,最終メーター値を、 / わかりやすく記録。,架空のデモ記録
+ja,7,keys,key handover and access inventory,鍵の返却も、 / 詳細まで記録。,架空のデモ記録
+ja,8,documents,tenancy paperwork and inventory documents,賃貸の書類を、 / ひとまとめに。,架空のデモ記録
+ja,9,pair,move-in versus move-out comparison,入居時から退去時へ。 / 記録を見比べる。,架空のデモ記録
+ja,10,report,PDF evidence report sharing,記録をまとめて、 / 共有できるPDFに。,PDFレポートにはLeaveWell Plusの有料サブスクリプションが必要です
+ko,1,home,move-out checklist and tenancy checkout,"퇴거 준비를, / 체계적으로.",가상의 데모 기록
+ko,2,checkout,outstanding property inspection checks,아직 확인할 내용을 / 한눈에.,가상의 데모 기록
+ko,3,walkthrough,room fixtures and condition evidence,시설을 하나씩 확인하고 / 증거를 남기세요.,가상의 데모 기록
+ko,4,evidence,rental property photos,"집 사진을, / 쉽게 찾아보세요.",가상의 데모 기록
+ko,5,notes,move-out condition notes,기억이 생생할 때 / 세부 사항을 기록하세요.,가상의 데모 기록
+ko,6,meters,final utility meter readings,"최종 계량기 수치, / 명확하게 기록하세요.",가상의 데모 기록
+ko,7,keys,key handover and access inventory,"열쇠 반납, / 세부 사항까지 기록하세요.",가상의 데모 기록
+ko,8,documents,tenancy paperwork and inventory documents,"임대 관련 서류를, / 한곳에.",가상의 데모 기록
+ko,9,pair,move-in versus move-out comparison,입주부터 퇴거까지. / 증거를 비교하세요.,가상의 데모 기록
+ko,10,report,PDF evidence report sharing,"증거를 모아, / 공유할 수 있는 PDF로.",PDF 보고서는 유료 LeaveWell Plus 구독이 필요합니다
+zh-Hans,1,home,move-out checklist and tenancy checkout,退租准备， / 井井有条。,虚构的演示记录
+zh-Hans,2,checkout,outstanding property inspection checks,还有哪些待办， / 一目了然。,虚构的演示记录
+zh-Hans,3,walkthrough,room fixtures and condition evidence,逐项检查设施。 / 保留相关凭证。,虚构的演示记录
+zh-Hans,4,evidence,rental property photos,房屋照片， / 随时轻松查找。,虚构的演示记录
+zh-Hans,5,notes,move-out condition notes,趁记忆清晰， / 记下细节。,虚构的演示记录
+zh-Hans,6,meters,final utility meter readings,最终表计读数， / 清晰记录。,虚构的演示记录
+zh-Hans,7,keys,key handover and access inventory,钥匙已交接。 / 细节有记录。,虚构的演示记录
+zh-Hans,8,documents,tenancy paperwork and inventory documents,租房文件， / 集中收纳。,虚构的演示记录
+zh-Hans,9,pair,move-in versus move-out comparison,从入住到退租， / 对比相关凭证。,虚构的演示记录
+zh-Hans,10,report,PDF evidence report sharing,整理相关凭证， / 导出可分享的 PDF。,PDF 报告需要付费订阅 LeaveWell Plus
+zh-Hant,1,home,move-out checklist and tenancy checkout,退租準備， / 井井有條。,虛構的示範紀錄
+zh-Hant,2,checkout,outstanding property inspection checks,還有哪些待辦， / 一目了然。,虛構的示範紀錄
+zh-Hant,3,walkthrough,room fixtures and condition evidence,逐項檢查設施。 / 保留相關佐證。,虛構的示範紀錄
+zh-Hant,4,evidence,rental property photos,房屋照片， / 隨時輕鬆查找。,虛構的示範紀錄
+zh-Hant,5,notes,move-out condition notes,趁記憶清晰， / 記下細節。,虛構的示範紀錄
+zh-Hant,6,meters,final utility meter readings,最終錶計讀數， / 清楚記錄。,虛構的示範紀錄
+zh-Hant,7,keys,key handover and access inventory,鑰匙已交接。 / 細節有紀錄。,虛構的示範紀錄
+zh-Hant,8,documents,tenancy paperwork and inventory documents,租屋文件， / 集中收納。,虛構的示範紀錄
+zh-Hant,9,pair,move-in versus move-out comparison,從入住到退租， / 比對相關佐證。,虛構的示範紀錄
+zh-Hant,10,report,PDF evidence report sharing,整理相關佐證， / 匯出可分享的 PDF。,PDF 報告需要付費訂閱 LeaveWell Plus
+tr,1,home,move-out checklist and tenancy checkout,"Taşınma süreciniz, / düzenli ve net.",Kurgusal demo kayıtları
+tr,2,checkout,outstanding property inspection checks,Nelerin hâlâ / ilgi beklediğini görün.,Kurgusal demo kayıtları
+tr,3,walkthrough,room fixtures and condition evidence,Her öğeyi kontrol edin. / Kanıtları saklayın.,Kurgusal demo kayıtları
+tr,4,evidence,rental property photos,Evin fotoğraflarını / kolayca bulun.,Kurgusal demo kayıtları
+tr,5,notes,move-out condition notes,Ayrıntıları unutmadan / kaydedin.,Kurgusal demo kayıtları
+tr,6,meters,final utility meter readings,Son sayaç okumaları. / Açıkça kayıtlı.,Kurgusal demo kayıtları
+tr,7,keys,key handover and access inventory,Anahtarlar teslim edildi. / Ayrıntılar kaydedildi.,Kurgusal demo kayıtları
+tr,8,documents,tenancy paperwork and inventory documents,"Kira belgeleriniz, / tek bir yerde.",Kurgusal demo kayıtları
+tr,9,pair,move-in versus move-out comparison,Girişten çıkışa. / Kanıtları karşılaştırın.,Kurgusal demo kayıtları
+tr,10,report,PDF evidence report sharing,"Kanıtlarınız, / paylaşılabilir bir PDF’te.",PDF raporları ücretli LeaveWell Plus aboneliği gerektirir
+id,1,home,move-out checklist and tenancy checkout,"Persiapan pindah, / lebih tertata.",Catatan demo fiktif
+id,2,checkout,outstanding property inspection checks,Lihat yang masih / perlu diperiksa.,Catatan demo fiktif
+id,3,walkthrough,room fixtures and condition evidence,Periksa setiap bagian. / Simpan buktinya.,Catatan demo fiktif
+id,4,evidence,rental property photos,"Foto hunian, / mudah ditemukan.",Catatan demo fiktif
+id,5,notes,move-out condition notes,Catat detailnya / selagi masih ingat.,Catatan demo fiktif
+id,6,meters,final utility meter readings,Angka meter akhir. / Tercatat dengan jelas.,Catatan demo fiktif
+id,7,keys,key handover and access inventory,Kunci diserahkan. / Detailnya tersimpan.,Catatan demo fiktif
+id,8,documents,tenancy paperwork and inventory documents,"Dokumen sewa Anda, / di satu tempat.",Catatan demo fiktif
+id,9,pair,move-in versus move-out comparison,Dari masuk hingga keluar. / Bandingkan buktinya.,Catatan demo fiktif
+id,10,report,PDF evidence report sharing,"Bukti Anda, / dalam PDF untuk dibagikan.",Laporan PDF memerlukan langganan LeaveWell Plus berbayar
+sv,1,home,move-out checklist and tenancy checkout,"Din utflytt, / tydligt organiserad.",Fiktiva demouppgifter
+sv,2,checkout,outstanding property inspection checks,Se vad som fortfarande / behöver ses över.,Fiktiva demouppgifter
+sv,3,walkthrough,room fixtures and condition evidence,Kontrollera varje del. / Spara underlagen.,Fiktiva demouppgifter
+sv,4,evidence,rental property photos,"Bilder från bostaden, / lätta att hitta.",Fiktiva demouppgifter
+sv,5,notes,move-out condition notes,Anteckna detaljerna / medan du minns dem.,Fiktiva demouppgifter
+sv,6,meters,final utility meter readings,Slutliga mätarställningar. / Tydligt dokumenterade.,Fiktiva demouppgifter
+sv,7,keys,key handover and access inventory,Nycklarna överlämnade. / Detaljerna sparade.,Fiktiva demouppgifter
+sv,8,documents,tenancy paperwork and inventory documents,"Dina hyresdokument, / på ett ställe.",Fiktiva demouppgifter
+sv,9,pair,move-in versus move-out comparison,Från inflytt till utflytt. / Jämför underlagen.,Fiktiva demouppgifter
+sv,10,report,PDF evidence report sharing,"Dina underlag, / i en PDF att dela.",PDF-rapporter kräver en betald LeaveWell Plus-prenumeration

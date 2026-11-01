@@ -7,6 +7,35 @@ import UniformTypeIdentifiers
 
 @MainActor
 final class ReportTests: XCTestCase {
+    func testCheckoutPackageIncludesReviewAndPairsButRespectsEvidenceExclusion() async throws {
+        let root = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: root) }
+        let vault = try EvidenceVault(root: root)
+        var record = MoveCase(); let room = Room(name: "Kitchen", category: "Kitchen")
+        record.rooms = [room]; record.checkout = CheckoutSession()
+        let before = Evidence(kind: .document, label: "Before inventory")
+        let after = Evidence(roomID: room.id, kind: .photo, label: "After photograph")
+        record.evidence = [before, after]
+        record.checkout?.comparisons = [EvidenceComparison(beforeID: before.id, afterID: after.id, observation: "Private paired observation marker")]
+        record.checkout?.fixtures = [FixtureReview(roomID: room.id, fixture: "Walls", outcome: .change, observation: "Private fixture observation marker", evidenceIDs: [after.id])]
+        let first = try await ReportService().generate(record: record, options: ReportOptions(), vault: vault)
+        defer { try? FileManager.default.removeItem(at: first.deletingLastPathComponent()) }
+        let text = try XCTUnwrap(PDFDocument(url: first)?.string)
+        XCTAssertTrue(text.contains("Handover review checkpoint"))
+        XCTAssertTrue(text.contains("Review needed for current records"))
+        XCTAssertTrue(text.contains("Private paired observation marker"))
+        XCTAssertTrue(text.contains("Private fixture observation marker"))
+        record.evidence[1].includedInReport = false
+        let second = try await ReportService().generate(record: record, options: ReportOptions(), vault: vault)
+        defer { try? FileManager.default.removeItem(at: second.deletingLastPathComponent()) }
+        let selectedText = try XCTUnwrap(PDFDocument(url: second)?.string)
+        XCTAssertFalse(selectedText.contains("Private paired observation marker"))
+        XCTAssertFalse(selectedText.contains("Private fixture observation marker"))
+        XCTAssertFalse(selectedText.contains(after.reference))
+        let out = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("TestReports")
+        try FileManager.default.createDirectory(at: out, withIntermediateDirectories: true)
+        try Data(contentsOf: first).write(to: out.appendingPathComponent("LeaveWell-checkout-package.pdf"))
+    }
     func testImportedGIFIsEmbeddedAsAnImage() async throws {
         let root = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: root) }

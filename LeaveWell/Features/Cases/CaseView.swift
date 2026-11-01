@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CaseView: View {
+struct CaseRecordsView: View {
     @Environment(CaseStore.self) private var store
     let caseID: UUID
     @State private var editing = false

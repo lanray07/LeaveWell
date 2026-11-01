@@ -8,6 +8,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 project = (ROOT / 'LeaveWell.xcodeproj/project.pbxproj').read_text(encoding='utf-8')
+assert 'lastKnownFileType = text.json.xcstrings;' in project, 'String Catalog must compile, not be copied as raw JSON'
 for file in (ROOT / 'LeaveWell').rglob('*.swift'):
     assert file.relative_to(ROOT).as_posix() in project, f'Unreferenced source: {file}'
 for path in re.findall(r'path = "([^"]+)"; sourceTree = SOURCE_ROOT;', project):

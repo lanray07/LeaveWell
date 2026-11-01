@@ -1,0 +1,114 @@
+{
+  "fr": {
+    "displayName": "French",
+    "oldDescriptionPhrase": "l’interface de l’app est en anglais.",
+    "newDescriptionPhrase": "Certains écrans sont traduits en français ; d’autres textes restent en anglais.",
+    "oldPromoPhrase": "Interface de l’app en anglais.",
+    "newPromoPhrase": "Traduction partielle."
+  },
+  "es": {
+    "displayName": "Spanish (Spain)",
+    "oldDescriptionPhrase": "la interfaz de la app está en inglés.",
+    "newDescriptionPhrase": "Algunas pantallas están traducidas al español; otros textos siguen en inglés.",
+    "oldPromoPhrase": "La interfaz de la app está en inglés.",
+    "newPromoPhrase": "Traducción parcial."
+  },
+  "de": {
+    "displayName": "German",
+    "oldDescriptionPhrase": "Die App-Oberfläche ist auf Englisch.",
+    "newDescriptionPhrase": "Einige Ansichten sind auf Deutsch übersetzt; andere Texte bleiben auf Englisch.",
+    "oldPromoPhrase": "Die App-Oberfläche ist auf Englisch.",
+    "newPromoPhrase": "Teilweise übersetzt."
+  },
+  "it": {
+    "displayName": "Italian",
+    "oldDescriptionPhrase": "L’interfaccia è in inglese.",
+    "newDescriptionPhrase": "Alcune schermate sono tradotte in italiano; altri testi restano in inglese.",
+    "oldPromoPhrase": "Interfaccia in inglese.",
+    "newPromoPhrase": "Traduzione parziale."
+  },
+  "pt-BR": {
+    "displayName": "Portuguese (Brazil)",
+    "oldDescriptionPhrase": "a interface do app está em inglês.",
+    "newDescriptionPhrase": "Algumas telas estão traduzidas para o português; outros textos permanecem em inglês.",
+    "oldPromoPhrase": "A interface do app está em inglês.",
+    "newPromoPhrase": "Tradução parcial."
+  },
+  "nl": {
+    "displayName": "Dutch",
+    "oldDescriptionPhrase": "De app is in het Engels.",
+    "newDescriptionPhrase": "Sommige schermen zijn in het Nederlands vertaald; andere teksten blijven Engels.",
+    "oldPromoPhrase": "De app is in het Engels.",
+    "newPromoPhrase": "Gedeeltelijk vertaald."
+  },
+  "pl": {
+    "displayName": "Polish",
+    "oldDescriptionPhrase": "Interfejs jest po angielsku.",
+    "newDescriptionPhrase": "Wybrane ekrany są przetłumaczone na polski; pozostałe teksty są po angielsku.",
+    "oldPromoPhrase": "Interfejs po angielsku.",
+    "newPromoPhrase": "Częściowe tłumaczenie."
+  },
+  "ar": {
+    "displayName": "Arabic",
+    "oldDescriptionPhrase": "واجهة التطبيق بالإنجليزية.",
+    "newDescriptionPhrase": "بعض الشاشات مترجمة إلى العربية، بينما تبقى نصوص أخرى بالإنجليزية.",
+    "oldPromoPhrase": "واجهة التطبيق بالإنجليزية.",
+    "newPromoPhrase": "ترجمة جزئية."
+  },
+  "hi": {
+    "displayName": "Hindi",
+    "oldDescriptionPhrase": "इंटरफ़ेस अंग्रेज़ी में है।",
+    "newDescriptionPhrase": "कुछ स्क्रीन हिंदी में अनूदित हैं; अन्य पाठ अंग्रेज़ी में हैं।",
+    "oldPromoPhrase": "इंटरफ़ेस अंग्रेज़ी में है।",
+    "newPromoPhrase": "आंशिक अनुवाद।"
+  },
+  "ja": {
+    "displayName": "Japanese",
+    "oldDescriptionPhrase": "アプリの操作画面は英語です。",
+    "newDescriptionPhrase": "一部の画面は日本語に翻訳されていますが、その他のテキストは英語のままです。",
+    "oldPromoPhrase": "アプリの操作画面は英語です。",
+    "newPromoPhrase": "一部のみ日本語対応。"
+  },
+  "ko": {
+    "displayName": "Korean",
+    "oldDescriptionPhrase": "앱 인터페이스는 영어입니다.",
+    "newDescriptionPhrase": "일부 화면은 한국어로 번역되어 있으며, 나머지 텍스트는 영어로 표시됩니다.",
+    "oldPromoPhrase": "앱 인터페이스는 영어입니다.",
+    "newPromoPhrase": "일부 화면만 한국어 지원."
+  },
+  "zh-Hans": {
+    "displayName": "Chinese (Simplified)",
+    "oldDescriptionPhrase": "应用操作界面为英语。",
+    "newDescriptionPhrase": "部分界面已翻译为简体中文，其他文字仍为英语。",
+    "oldPromoPhrase": "应用操作界面为英语。",
+    "newPromoPhrase": "部分界面已翻译。"
+  },
+  "zh-Hant": {
+    "displayName": "Chinese (Traditional)",
+    "oldDescriptionPhrase": "應用程式介面為英語。",
+    "newDescriptionPhrase": "部分畫面已翻譯為繁體中文，其他文字仍為英文。",
+    "oldPromoPhrase": "應用程式介面為英語。",
+    "newPromoPhrase": "部分畫面已翻譯。"
+  },
+  "tr": {
+    "displayName": "Turkish",
+    "oldDescriptionPhrase": "Arayüz İngilizcedir.",
+    "newDescriptionPhrase": "Bazı ekranlar Türkçeye çevrilmiştir; diğer metinler İngilizce olarak kalır.",
+    "oldPromoPhrase": "Arayüz İngilizcedir.",
+    "newPromoPhrase": "Kısmen çevrilmiştir."
+  },
+  "id": {
+    "displayName": "Indonesian",
+    "oldDescriptionPhrase": "Antarmuka berbahasa Inggris.",
+    "newDescriptionPhrase": "Sebagian layar diterjemahkan ke bahasa Indonesia; teks lainnya tetap berbahasa Inggris.",
+    "oldPromoPhrase": "Antarmuka berbahasa Inggris.",
+    "newPromoPhrase": "Terjemahan sebagian."
+  },
+  "sv": {
+    "displayName": "Swedish",
+    "oldDescriptionPhrase": "Appen är på engelska.",
+    "newDescriptionPhrase": "Vissa skärmar är översatta till svenska; andra texter är kvar på engelska.",
+    "oldPromoPhrase": "Appen är på engelska.",
+    "newPromoPhrase": "Delvis översatt."
+  }
+}

@@ -20,7 +20,7 @@ struct MetersView: View {
             }
             Button(L("Add meter photograph")) { selection = CaptureSelection(label: "Meter", kind: .photo) }
         }.navigationTitle(L("Meter readings"))
-            .toolbar { Button(L("Add reading")) { adding = true } }
+            .toolbar { Button(L("Add reading"), systemImage: "plus") { adding = true } }
             .sheet(isPresented: $adding) { MeterEditor(caseID: caseID) }
             .sheet(item: $selection) { EvidenceComposer(caseID: caseID, selection: $0) }
     }
