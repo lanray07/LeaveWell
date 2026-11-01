@@ -20,8 +20,10 @@ final class PurchaseService {
     private(set) var errorMessage: String?
     private var expirationDates: [String: Date] = [:]
     @ObservationIgnored private var listener: Task<Void, Never>?
+    @ObservationIgnored private let syncPurchases: @MainActor () async throws -> Void
     var hasPlus: Bool { expirationDates.values.contains { $0 > Date() } }
-    init() {
+    init(syncPurchases: @escaping @MainActor () async throws -> Void = { try await AppStore.sync() }) {
+        self.syncPurchases = syncPurchases
         listener = Task { [weak self] in
             for await result in Transaction.updates {
                 guard let self, case .verified(let transaction) = result, PlusPlan.productIDs.contains(transaction.productID) else { continue }
@@ -68,7 +70,7 @@ final class PurchaseService {
         purchasing = true; message = nil; errorMessage = nil
         defer { purchasing = false }
         do {
-            try await AppStore.sync(); await refreshEntitlements()
+            try await syncPurchases(); await refreshEntitlements()
             message = hasPlus ? L("Your LeaveWell Plus subscription has been restored.") : L("No active LeaveWell Plus subscription was found.")
         } catch is CancellationError { }
         catch { errorMessage = L("Unable to restore purchases. Check your connection and try again.") }

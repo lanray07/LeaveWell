@@ -71,6 +71,56 @@ final class PurchaseTests: XCTestCase {
         do { try await purchases.requirePlus(); XCTFail("Expired subscriptions must lose report creation") }
         catch { XCTAssertTrue(error is PurchaseError) }
     }
+    func testRestoreRecognisesVerifiedAccessBeforeRequestingAccountSync() async throws {
+        let session = try session(); defer { session.clearTransactions() }
+        _ = try await session.buyProduct(identifier: PlusPlan.monthly, options: [])
+        var syncCalls = 0
+        let purchases = PurchaseService(syncPurchases: {
+            syncCalls += 1
+            throw StoreKitError.unknown
+        })
+        await purchases.restore()
+        XCTAssertTrue(purchases.hasPlus, "Restore must read StoreKit's verified entitlement even when account sync would fail")
+        XCTAssertEqual(syncCalls, 0, "An already active verified subscription needs no account authentication")
+        XCTAssertNil(purchases.errorMessage)
+        XCTAssertNotNil(purchases.message)
+        XCTAssertFalse(purchases.purchasing)
+    }
+    func testRestoreRefreshesVerifiedAccessAfterSyncFails() async throws {
+        let session = try session(); defer { session.clearTransactions() }
+        let purchases = PurchaseService(syncPurchases: {
+            // A transaction can become available while Apple is authenticating.
+            _ = try await session.buyProduct(identifier: PlusPlan.monthly, options: [])
+            throw StoreKitError.unknown
+        })
+        try await awaitAccess(false, in: purchases)
+        await purchases.restore()
+        XCTAssertTrue(purchases.hasPlus)
+        XCTAssertNotNil(purchases.errorMessage, "A failed sync must still be disclosed even when verified access is available")
+        XCTAssertNotNil(purchases.message)
+        XCTAssertFalse(purchases.purchasing)
+    }
+    func testCancelledRestoreDoesNotShowFailureOrUnlockAccess() async throws {
+        let session = try session(); defer { session.clearTransactions() }
+        let purchases = PurchaseService(syncPurchases: { throw StoreKitError.userCancelled })
+        try await awaitAccess(false, in: purchases)
+        await purchases.restore()
+        XCTAssertFalse(purchases.hasPlus)
+        XCTAssertNil(purchases.errorMessage)
+        XCTAssertNil(purchases.message)
+        XCTAssertFalse(purchases.purchasing)
+    }
+    func testFailedRestoreWithoutEntitlementNeverUnlocksAccess() async throws {
+        let session = try session(); defer { session.clearTransactions() }
+        let purchases = PurchaseService(syncPurchases: { throw StoreKitError.unknown })
+        try await awaitAccess(false, in: purchases)
+        await purchases.restore()
+        XCTAssertFalse(purchases.hasPlus)
+        XCTAssertTrue(purchases.ownedProductIDs.isEmpty)
+        XCTAssertNotNil(purchases.errorMessage)
+        XCTAssertNil(purchases.message)
+        XCTAssertFalse(purchases.purchasing)
+    }
     func testAnnualRefundRemovesAccessAndRenewalPreservesAccess() async throws {
         let session = try session(); defer { session.clearTransactions() }
         _ = try await session.buyProduct(identifier: PlusPlan.annual, options: [])
