@@ -1,0 +1,162 @@
+{
+  "ar": {
+    "catalogKeys": 597,
+    "independentNativeSpeakerReview": false,
+    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "percent": 19.6,
+    "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
+    "scope": "Selected screenshot flows; remaining strings fall back to English",
+    "translatedKeys": 117,
+    "translationSha256": "7c8a2dd66012584f77b66756867b94b7cae2ad936826fd985d6ae7885fe32b8b"
+  },
+  "de": {
+    "catalogKeys": 597,
+    "independentNativeSpeakerReview": false,
+    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "percent": 19.6,
+    "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
+    "scope": "Selected screenshot flows; remaining strings fall back to English",
+    "translatedKeys": 117,
+    "translationSha256": "a7df56c178a661124f51ee9f462ceeeb2b9213190638b03d5e6f387ed85c0f23"
+  },
+  "es": {
+    "catalogKeys": 597,
+    "independentNativeSpeakerReview": false,
+    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "percent": 19.6,
+    "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
+    "scope": "Selected screenshot flows; remaining strings fall back to English",
+    "translatedKeys": 117,
+    "translationSha256": "dbce2ca3a7f7c775a9c1dede3480f432cda678adc827784792ad28f26b042add"
+  },
+  "fr": {
+    "catalogKeys": 597,
+    "independentNativeSpeakerReview": false,
+    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "percent": 19.6,
+    "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
+    "scope": "Selected screenshot flows; remaining strings fall back to English",
+    "translatedKeys": 117,
+    "translationSha256": "d25f44d0cf7a67278efddeb6678d61c33987cf02b29cd99771c8b527406e1b81"
+  },
+  "hi": {
+    "catalogKeys": 597,
+    "independentNativeSpeakerReview": false,
+    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "percent": 19.6,
+    "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
+    "scope": "Selected screenshot flows; remaining strings fall back to English",
+    "translatedKeys": 117,
+    "translationSha256": "edf2c788900f6040e8cff7bf5d9b24a1da8afe1ff74a9d86c3f042bdcbd01413"
+  },
+  "id": {
+    "catalogKeys": 597,
+    "independentNativeSpeakerReview": false,
+    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "percent": 19.6,
+    "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
+    "scope": "Selected screenshot flows; remaining strings fall back to English",
+    "translatedKeys": 117,
+    "translationSha256": "b8550b050844187e332f8dffbc38c01001bf4cea811c729e6a04247c00c7c7df"
+  },
+  "it": {
+    "catalogKeys": 597,
+    "independentNativeSpeakerReview": false,
+    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "percent": 19.6,
+    "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
+    "scope": "Selected screenshot flows; remaining strings fall back to English",
+    "translatedKeys": 117,
+    "translationSha256": "ff97c7dd03be809d3b4b1af332ef4869c5bc63d24b3e1cd1690ac47612088671"
+  },
+  "ja": {
+    "catalogKeys": 597,
+    "independentNativeSpeakerReview": false,
+    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "percent": 19.6,
+    "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
+    "scope": "Selected screenshot flows; remaining strings fall back to English",
+    "translatedKeys": 117,
+    "translationSha256": "fb8d4960cd0f723d1e4004d2f68996175eabb597acf718c2bf8d674420263211"
+  },
+  "ko": {
+    "catalogKeys": 597,
+    "independentNativeSpeakerReview": false,
+    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "percent": 19.6,
+    "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
+    "scope": "Selected screenshot flows; remaining strings fall back to English",
+    "translatedKeys": 117,
+    "translationSha256": "da222cdecfc87d5f30d31c2fe585e9bbfc6237411a61cea3d0c3991dbeeb4ec4"
+  },
+  "nl": {
+    "catalogKeys": 597,
+    "independentNativeSpeakerReview": false,
+    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "percent": 19.6,
+    "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
+    "scope": "Selected screenshot flows; remaining strings fall back to English",
+    "translatedKeys": 117,
+    "translationSha256": "22df72db6339153341efc229ded236301e10facf04e2eb4470e45bb31d52f4bd"
+  },
+  "pl": {
+    "catalogKeys": 597,
+    "independentNativeSpeakerReview": false,
+    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "percent": 19.6,
+    "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
+    "scope": "Selected screenshot flows; remaining strings fall back to English",
+    "translatedKeys": 117,
+    "translationSha256": "519a31878834ad9aaac7a9e6c92899093f1eb609dcf902170cf23264e4aa27d4"
+  },
+  "pt-BR": {
+    "catalogKeys": 597,
+    "independentNativeSpeakerReview": false,
+    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "percent": 19.6,
+    "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
+    "scope": "Selected screenshot flows; remaining strings fall back to English",
+    "translatedKeys": 117,
+    "translationSha256": "cea612caee7a1a5f8467dd01763ca4432159e6bfa2daf336c80f8934f0033647"
+  },
+  "sv": {
+    "catalogKeys": 597,
+    "independentNativeSpeakerReview": false,
+    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "percent": 19.6,
+    "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
+    "scope": "Selected screenshot flows; remaining strings fall back to English",
+    "translatedKeys": 117,
+    "translationSha256": "f669829e6b7a71f895219131ea3f9459e09b2f01972a4a37a6053b8bc29c8a5d"
+  },
+  "tr": {
+    "catalogKeys": 597,
+    "independentNativeSpeakerReview": false,
+    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "percent": 19.6,
+    "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
+    "scope": "Selected screenshot flows; remaining strings fall back to English",
+    "translatedKeys": 117,
+    "translationSha256": "25d801da57117fd4ce0c33adcec202d077b01194352b9cdc288841320415da61"
+  },
+  "zh-Hans": {
+    "catalogKeys": 597,
+    "independentNativeSpeakerReview": false,
+    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "percent": 19.6,
+    "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
+    "scope": "Selected screenshot flows; remaining strings fall back to English",
+    "translatedKeys": 117,
+    "translationSha256": "efe0adf0b554d8d8d52ad266641b892d514ce44d14cec0529fb2fc14347464fb"
+  },
+  "zh-Hant": {
+    "catalogKeys": 597,
+    "independentNativeSpeakerReview": false,
+    "nativeLayoutValidation": "Requires per-locale capture and visual inspection",
+    "percent": 19.6,
+    "review": "Codex linguistic/product-source review; privacy/sharing meanings checked against implementation",
+    "scope": "Selected screenshot flows; remaining strings fall back to English",
+    "translatedKeys": 117,
+    "translationSha256": "a10084afc8e0f7e195df00e2ea3bb39aff6e4c4c562a0b73b6102a53c0e74c57"
+  }
+}

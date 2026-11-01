@@ -65,7 +65,7 @@ struct CheckoutWorkspaceView: View {
                         Text(L("A review is your record of checks, not a certification of condition or a deposit decision.")).font(.footnote).foregroundStyle(.secondary)
                     }.padding(24).frame(maxWidth: 760).frame(maxWidth: .infinity)
                 }.background(Theme.background).navigationTitle(L("Checkout workspace")).navigationBarTitleDisplayMode(.inline)
-                    .toolbar { Button(L("Property details")) { editing = true } }
+                    .toolbar { Button(L("Property details"), systemImage: "slider.horizontal.3") { editing = true } }
                     .sheet(isPresented: $editing) { PropertyEditor(record: record) }
             } else { ContentUnavailableView(L("Record unavailable"), systemImage: "folder") }
         }.errorAlert($error)

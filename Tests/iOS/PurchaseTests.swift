@@ -121,6 +121,59 @@ final class PurchaseTests: XCTestCase {
         XCTAssertNil(purchases.message)
         XCTAssertFalse(purchases.purchasing)
     }
+    func testRestoreSyncsWhenNoActiveEntitlementExists() async throws {
+        let session = try session(); defer { session.clearTransactions() }
+        var syncCalls = 0
+        let purchases = PurchaseService(syncPurchases: { syncCalls += 1 })
+        try await awaitAccess(false, in: purchases)
+        await purchases.restore()
+        XCTAssertEqual(syncCalls, 1)
+        XCTAssertFalse(purchases.hasPlus)
+        XCTAssertNil(purchases.errorMessage)
+        XCTAssertEqual(purchases.message, L("No active LeaveWell Plus subscription was found."))
+    }
+    func testRestoreDiscoversVerifiedPurchaseAfterSuccessfulSync() async throws {
+        let session = try session(); defer { session.clearTransactions() }
+        var syncCalls = 0
+        let purchases = PurchaseService(syncPurchases: {
+            syncCalls += 1
+            try await AppStore.sync()
+            _ = try await session.buyProduct(identifier: PlusPlan.annual, options: [])
+        })
+        try await awaitAccess(false, in: purchases)
+        await purchases.restore()
+        XCTAssertEqual(syncCalls, 1)
+        XCTAssertTrue(purchases.hasPlus)
+        XCTAssertNil(purchases.errorMessage)
+        XCTAssertEqual(purchases.message, L("Your LeaveWell Plus subscription has been restored."))
+        try await purchases.requirePlus()
+    }
+    func testRepeatedRestoreTapDoesNotStartSecondSync() async throws {
+        let session = try session(); defer { session.clearTransactions() }
+        var releaseSync: CheckedContinuation<Void, Never>?
+        var syncCalls = 0
+        let purchases = PurchaseService(syncPurchases: {
+            syncCalls += 1
+            await withCheckedContinuation { releaseSync = $0 }
+        })
+        try await awaitAccess(false, in: purchases)
+        let first = Task { await purchases.restore() }
+        let deadline = Date().addingTimeInterval(20)
+        while releaseSync == nil && Date() < deadline {
+            try await Task.sleep(for: .milliseconds(20))
+        }
+        guard let releaseSync else {
+            first.cancel()
+            XCTFail("Restore did not reach account sync")
+            return
+        }
+        await purchases.restore()
+        XCTAssertEqual(syncCalls, 1)
+        XCTAssertTrue(purchases.purchasing)
+        releaseSync.resume()
+        await first.value
+        XCTAssertFalse(purchases.purchasing)
+    }
     func testAnnualRefundRemovesAccessAndRenewalPreservesAccess() async throws {
         let session = try session(); defer { session.clearTransactions() }
         _ = try await session.buyProduct(identifier: PlusPlan.annual, options: [])
