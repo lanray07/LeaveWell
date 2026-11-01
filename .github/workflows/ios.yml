@@ -1,6 +1,11 @@
 name: iPhone Duo capture tools
 on:
   workflow_dispatch:
+    inputs:
+      locale:
+        type: choice
+        options: [en-GB, fr]
+        default: fr
 permissions:
   contents: read
 jobs:
@@ -27,9 +32,10 @@ jobs:
       - name: Build and inspect a real Duo app capture
         run: |
           xcodebuild -project LeaveWell.xcodeproj -scheme LeaveWell -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath build/DerivedData -configuration Debug CODE_SIGNING_ALLOWED=NO build > build/DuoProbe/build.log 2>&1
-          python3 scripts/capture_duo_probe.py
-          swift scripts/ocr_captures.swift build/DuoProbe/en-GB/outer/*.png > build/DuoProbe/ocr-outer.json
-          swift scripts/ocr_captures.swift build/DuoProbe/en-GB/inner/*.png > build/DuoProbe/ocr-inner.json
+          python3 scripts/capture_duo_probe.py --locale '${{ inputs.locale }}'
+      - name: OCR evidence for layout review
+        continue-on-error: true
+        run: swift scripts/ocr_captures.swift build/DuoProbe/${{ inputs.locale }}/outer/*.png > build/DuoProbe/ocr-outer.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:

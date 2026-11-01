@@ -3,6 +3,13 @@ import subprocess
 import time
 import re
 import struct
+import argparse
+import hashlib
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--locale', default='en-GB', choices=['en-GB', 'fr'])
+options = parser.parse_args()
+locale = options.locale
 from pathlib import Path
 
 out = Path('build/DuoProbe')
@@ -36,15 +43,18 @@ run('xcrun', 'simctl', 'status_bar', udid, 'override', '--time', '9:41', '--batt
 run('xcrun', 'simctl', 'install', udid, str(app))
 container = Path(run('xcrun', 'simctl', 'get_app_container', udid, 'com.leavewell.app', 'data'))
 routes = ['home', 'checkout', 'walkthrough', 'evidence', 'notes', 'meters', 'keys', 'documents', 'pair', 'report']
-for family, size in [('outer', (1398, 2034)), ('inner', (2007, 2853))]:
+captures = []
+for family, size in [('outer', (1398, 2034))]:
     screen_id = integrated[size]
-    folder = out / 'en-GB' / family
+    folder = out / locale / family
     folder.mkdir(parents=True, exist_ok=True)
     for index, route in enumerate(routes, 1):
         run('xcrun', 'simctl', 'terminate', udid, 'com.leavewell.app', check=False)
         marker = container / ('Documents/MarketingReady-' + route)
         marker.unlink(missing_ok=True)
-        run('xcrun', 'simctl', 'launch', udid, 'com.leavewell.app', '-marketing-route', route)
+        region = 'fr_FR' if locale == 'fr' else 'en_GB'
+        run('xcrun', 'simctl', 'launch', udid, 'com.leavewell.app', '-marketing-route', route,
+            '-AppleLanguages', '("' + locale + '")', '-AppleLocale', region)
         for attempt in range(90):
             if marker.exists():
                 break
@@ -52,7 +62,12 @@ for family, size in [('outer', (1398, 2034)), ('inner', (2007, 2853))]:
         else:
             raise RuntimeError('Demo route did not become ready: ' + route)
         time.sleep(3)
+        ready = json.loads(marker.read_text())
+        assert ready['bundleLocale'] == locale, ready
         path = folder / f'{index:02d}-{route}.png'
         run('xcrun', 'simctl', 'io', udid, 'screenshot', '--display=' + screen_id, str(path))
         assert struct.unpack('>II', path.read_bytes()[16:24]) == size
+        captures.append(dict(locale=locale, bundleLocale=ready['bundleLocale'], family=family,
+                             route=route, file=path.relative_to(out).as_posix(), sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
         print('Captured', family, route, flush=True)
+(out / 'manifest.json').write_text(json.dumps(dict(captures=captures), indent=2) + '\n')

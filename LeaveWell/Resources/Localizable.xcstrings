@@ -9,6 +9,12 @@
             "state": "translated",
             "value": "1 · Walk the property"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 · Parcourir le logement"
+          }
         }
       }
     },
@@ -20,6 +26,12 @@
             "state": "translated",
             "value": "2 · Explain what changed"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "2 · Décrire les changements"
+          }
         }
       }
     },
@@ -30,6 +42,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "3 · Close the handover"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "3 · Finaliser la remise"
           }
         }
       }
@@ -52,6 +70,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "A calm move starts here."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un départ serein commence ici."
           }
         }
       }
@@ -251,6 +275,12 @@
             "state": "translated",
             "value": "Add access item photograph"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter une photo d’un moyen d’accès"
+          }
         }
       }
     },
@@ -261,6 +291,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Add another property"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter un autre logement"
           }
         }
       }
@@ -295,6 +331,12 @@
             "state": "translated",
             "value": "Add item"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter un élément"
+          }
         }
       }
     },
@@ -305,6 +347,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Add meter photograph"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter une photo du compteur"
           }
         }
       }
@@ -338,6 +386,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Add reading"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter un relevé"
           }
         }
       }
@@ -438,6 +492,12 @@
             "state": "translated",
             "value": "Agent · Demo"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agent · Démo"
+          }
         }
       }
     },
@@ -449,6 +509,12 @@
             "state": "translated",
             "value": "Alex · Demo"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alex · Démo"
+          }
         }
       }
     },
@@ -459,6 +525,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "All evidence"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toutes les preuves"
           }
         }
       }
@@ -526,6 +598,12 @@
             "state": "translated",
             "value": "An organised record, ready to share."
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un dossier organisé, prêt à partager."
+          }
         }
       }
     },
@@ -569,6 +647,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Areas needing attention"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Points à vérifier"
           }
         }
       }
@@ -636,6 +720,12 @@
             "state": "translated",
             "value": "Bathroom"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salle de bains"
+          }
         }
       }
     },
@@ -646,6 +736,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Bedroom"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chambre"
           }
         }
       }
@@ -724,6 +820,12 @@
             "state": "translated",
             "value": "Building fob"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Badge de l’immeuble"
+          }
         }
       }
     },
@@ -779,6 +881,12 @@
             "state": "translated",
             "value": "Capture time unknown"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Date de prise de vue inconnue"
+          }
         }
       }
     },
@@ -800,6 +908,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ceiling"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plafond"
           }
         }
       }
@@ -866,6 +980,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Checked condition"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "État vérifié"
           }
         }
       }
@@ -944,6 +1064,12 @@
             "state": "translated",
             "value": "Checkout confirmation · Demo"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirmation de sortie · Démo"
+          }
         }
       }
     },
@@ -954,6 +1080,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Checkout evidence package"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dossier de preuves de sortie"
           }
         }
       }
@@ -976,6 +1108,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Checkout workspace"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Préparer l’état des lieux de sortie"
           }
         }
       }
@@ -1042,6 +1180,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Cleaning receipt · Demo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reçu de nettoyage · Démo"
           }
         }
       }
@@ -1142,6 +1286,12 @@
             "state": "translated",
             "value": "Condition"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "État"
+          }
         }
       }
     },
@@ -1230,6 +1380,12 @@
             "state": "translated",
             "value": "Contributor"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auteur"
+          }
         }
       }
     },
@@ -1285,6 +1441,12 @@
             "state": "translated",
             "value": "Created"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Création"
+          }
         }
       }
     },
@@ -1306,6 +1468,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Current handover review saved"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vérification finale à jour et enregistrée"
           }
         }
       }
@@ -1384,6 +1552,12 @@
             "state": "translated",
             "value": "Declaration"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Déclaration"
+          }
         }
       }
     },
@@ -1405,6 +1579,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Delete evidence"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer la preuve"
           }
         }
       }
@@ -1582,6 +1762,12 @@
             "state": "translated",
             "value": "Document vault"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Documents"
+          }
         }
       }
     },
@@ -1592,6 +1778,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Doors"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Portes"
           }
         }
       }
@@ -1604,6 +1796,12 @@
             "state": "translated",
             "value": "Editable description"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Description modifiable"
+          }
         }
       }
     },
@@ -1614,6 +1812,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Electricity"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Électricité"
           }
         }
       }
@@ -1692,6 +1896,12 @@
             "state": "translated",
             "value": "Evidence comparison board"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comparer les preuves"
+          }
         }
       }
     },
@@ -1713,6 +1923,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Evidence details"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Détails de la preuve"
           }
         }
       }
@@ -1769,6 +1985,12 @@
             "state": "translated",
             "value": "Evidence pair · Demo"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preuves associées · Démo"
+          }
         }
       }
     },
@@ -1790,6 +2012,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Example property, England"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logement fictif, Angleterre"
           }
         }
       }
@@ -1834,6 +2062,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Explore LeaveWell Plus"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Découvrir LeaveWell Plus"
           }
         }
       }
@@ -1901,6 +2135,12 @@
             "state": "translated",
             "value": "Fictional demo: checked and photographed."
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Démo fictive : élément vérifié et photographié."
+          }
         }
       }
     },
@@ -1933,6 +2173,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Fictional inventory: kitchen worktop edge has a small chip beside the sink."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "État des lieux fictif : petit éclat sur le bord du plan de travail de la cuisine, près de l’évier."
           }
         }
       }
@@ -1989,6 +2235,12 @@
             "state": "translated",
             "value": "Final reading checked against the display. Demo record."
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Relevé final vérifié sur l’affichage. Fiche de démonstration."
+          }
         }
       }
     },
@@ -2044,6 +2296,12 @@
             "state": "translated",
             "value": "Fixture route"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parcours des éléments à vérifier"
+          }
         }
       }
     },
@@ -2077,6 +2335,12 @@
             "state": "translated",
             "value": "Flooring"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sol"
+          }
         }
       }
     },
@@ -2098,6 +2362,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Front door key"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clé de la porte d’entrée"
           }
         }
       }
@@ -2176,6 +2446,12 @@
             "state": "translated",
             "value": "Gas"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gaz"
+          }
         }
       }
     },
@@ -2186,6 +2462,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Generate PDF report"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Créer le rapport PDF"
           }
         }
       }
@@ -2241,6 +2523,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Handed over"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remis"
           }
         }
       }
@@ -2318,6 +2606,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Handover review still needed"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vérification finale à effectuer"
           }
         }
       }
@@ -2462,6 +2756,12 @@
             "state": "translated",
             "value": "Imported"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importé"
+          }
         }
       }
     },
@@ -2472,6 +2772,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "In person"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En main propre"
           }
         }
       }
@@ -2495,6 +2801,12 @@
             "state": "translated",
             "value": "Include deposit details"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inclure les détails du dépôt de garantie"
+          }
         }
       }
     },
@@ -2517,6 +2829,12 @@
             "state": "translated",
             "value": "Include in report"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inclure dans le rapport"
+          }
         }
       }
     },
@@ -2527,6 +2845,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Include landlord / agent contact"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inclure les coordonnées du bailleur ou de l’agent"
           }
         }
       }
@@ -2539,6 +2863,12 @@
             "state": "translated",
             "value": "Include my declaration"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inclure ma déclaration"
+          }
         }
       }
     },
@@ -2549,6 +2879,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Included evidence"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preuves incluses"
           }
         }
       }
@@ -2571,6 +2907,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Inspect final handover review"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consulter la vérification finale"
           }
         }
       }
@@ -2627,6 +2969,12 @@
             "state": "translated",
             "value": "Issue documented"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Point signalé et documenté"
+          }
         }
       }
     },
@@ -2659,6 +3007,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Keep the displayed digits, including leading zeroes. Add a photograph and confirm the reading yourself."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conservez les chiffres affichés, y compris les zéros initiaux. Ajoutez une photo et vérifiez vous-même le relevé."
           }
         }
       }
@@ -2715,6 +3069,12 @@
             "state": "translated",
             "value": "Keys & access"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clés et accès"
+          }
         }
       }
     },
@@ -2737,6 +3097,12 @@
             "state": "translated",
             "value": "Kitchen"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cuisine"
+          }
         }
       }
     },
@@ -2747,6 +3113,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kitchen · whole room"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cuisine · vue d’ensemble"
           }
         }
       }
@@ -2769,6 +3141,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Label"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titre"
           }
         }
       }
@@ -3023,6 +3401,12 @@
             "state": "translated",
             "value": "Living room"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salon"
+          }
         }
       }
     },
@@ -3033,6 +3417,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Living room · final check"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salon · vérification finale"
           }
         }
       }
@@ -3077,6 +3467,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Look, document, then review"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Observer, documenter, puis vérifier"
           }
         }
       }
@@ -3221,6 +3617,12 @@
             "state": "translated",
             "value": "Meter readings"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Relevés de compteurs"
+          }
         }
       }
     },
@@ -3287,6 +3689,12 @@
             "state": "translated",
             "value": "Move out organised. Leave with the evidence."
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Préparez votre départ. Gardez vos preuves."
+          }
         }
       }
     },
@@ -3331,6 +3739,12 @@
             "state": "translated",
             "value": "Move-in"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À l’entrée"
+          }
         }
       }
     },
@@ -3353,6 +3767,12 @@
             "state": "translated",
             "value": "Move-in inventory · Demo"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "État des lieux d’entrée · Démo"
+          }
         }
       }
     },
@@ -3374,6 +3794,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Move-out"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À la sortie"
           }
         }
       }
@@ -3430,6 +3856,12 @@
             "state": "translated",
             "value": "My move"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mon départ"
+          }
         }
       }
     },
@@ -3440,6 +3872,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Needs attention"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À vérifier"
           }
         }
       }
@@ -3529,6 +3967,12 @@
             "state": "translated",
             "value": "No issue noted"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun problème constaté"
+          }
         }
       }
     },
@@ -3617,6 +4061,12 @@
             "state": "translated",
             "value": "Not applicable"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sans objet"
+          }
         }
       }
     },
@@ -3638,6 +4088,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Not checked"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Non vérifié"
           }
         }
       }
@@ -3748,6 +4204,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Open original"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrir l’original"
           }
         }
       }
@@ -3903,6 +4365,12 @@
             "state": "translated",
             "value": "Outstanding areas"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Points restant à traiter"
+          }
         }
       }
     },
@@ -3924,6 +4392,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "PDF reports are included with LeaveWell Plus."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les rapports PDF sont inclus dans LeaveWell Plus."
           }
         }
       }
@@ -3957,6 +4431,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pair original inventory records with current photographs"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Associez les documents d’entrée aux photos actuelles"
           }
         }
       }
@@ -4178,6 +4658,12 @@
             "state": "translated",
             "value": "Private by default. Saved on device."
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privé par défaut. Enregistré sur l’appareil."
+          }
         }
       }
     },
@@ -4199,6 +4685,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Property details"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Détails du logement"
           }
         }
       }
@@ -4332,6 +4824,12 @@
             "state": "translated",
             "value": "Readings and access scope"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compteurs et moyens d’accès"
+          }
         }
       }
     },
@@ -4342,6 +4840,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Recipient"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Destinataire"
           }
         }
       }
@@ -4387,6 +4891,12 @@
             "state": "translated",
             "value": "Record each access item and who received it. Only mark handover when it has happened."
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consignez chaque moyen d’accès et son destinataire. N’indiquez sa remise qu’une fois celle-ci effectuée."
+          }
         }
       }
     },
@@ -4397,6 +4907,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Record information"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Informations de la fiche"
           }
         }
       }
@@ -4486,6 +5002,12 @@
             "state": "translated",
             "value": "Record what applies to this property, including exceptions"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Précisez ce qui s’applique à ce logement, y compris les exceptions"
+          }
         }
       }
     },
@@ -4496,6 +5018,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Recorded"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistré"
           }
         }
       }
@@ -4750,6 +5278,12 @@
             "state": "translated",
             "value": "Review handover & prepare report"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vérifier la remise et préparer le rapport"
+          }
         }
       }
     },
@@ -4772,6 +5306,12 @@
             "state": "translated",
             "value": "Review matches current records"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vérification à jour pour les données actuelles"
+          }
         }
       }
     },
@@ -4782,6 +5322,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Review needed for current records"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vérification nécessaire pour les données actuelles"
           }
         }
       }
@@ -4815,6 +5361,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Review your evidence before exporting. Anyone you share the PDF with can keep a copy."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vérifiez vos preuves avant l’exportation. Toute personne avec qui vous partagez le PDF peut en conserver une copie."
           }
         }
       }
@@ -4981,6 +5533,12 @@
             "state": "translated",
             "value": "Save changes"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrer les modifications"
+          }
         }
       }
     },
@@ -5080,6 +5638,12 @@
             "state": "translated",
             "value": "Saved on device"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistré sur l’appareil"
+          }
         }
       }
     },
@@ -5123,6 +5687,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Search labels, notes and rooms"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rechercher titres, notes et pièces"
           }
         }
       }
@@ -5201,6 +5771,12 @@
             "state": "translated",
             "value": "Serial number"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Numéro de série"
+          }
         }
       }
     },
@@ -5245,6 +5821,12 @@
             "state": "translated",
             "value": "Settings"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réglages"
+          }
         }
       }
     },
@@ -5266,6 +5848,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sharing controls"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Options de partage"
           }
         }
       }
@@ -5299,6 +5887,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Small chip at the front edge beside the sink. I noted it in the move-in inventory and photographed the same area before leaving. Demo record."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Petit éclat sur le bord avant, près de l’évier. Je l’ai noté dans l’état des lieux d’entrée et j’ai photographié la même zone avant mon départ. Fiche de démonstration."
           }
         }
       }
@@ -5354,6 +5948,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Start at the doorway and follow the fixtures in order. Each check keeps its own observation and evidence links. A photo alone does not complete a check."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commencez à la porte et vérifiez les éléments dans l’ordre. Chaque vérification conserve ses observations et les preuves associées. Une photo seule ne suffit pas à valider une vérification."
           }
         }
       }
@@ -5523,6 +6123,17 @@
         }
       }
     },
+    "The App Store could not sync purchases. Check that Media & Purchases uses the Apple Account that purchased LeaveWell Plus, then try again. Your records remain available.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The App Store could not sync purchases. Check that Media & Purchases uses the Apple Account that purchased LeaveWell Plus, then try again. Your records remain available."
+          }
+        }
+      }
+    },
     "The PDF contains only selected evidence. A current case review does not mean every source record is included in this export.": {
       "extractionState": "manual",
       "localizations": {
@@ -5596,6 +6207,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "The property address, tenant name and contributor names appear in the report. Imported documents may contain private information."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le rapport contient l’adresse du logement, le nom du locataire et ceux des auteurs. Les documents importés peuvent contenir des informations privées."
           }
         }
       }
@@ -5729,6 +6346,12 @@
             "state": "translated",
             "value": "To the best of my knowledge, this record reflects the property and information I documented at the stated dates and times."
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À ma connaissance, ce dossier reflète le logement et les informations que j’ai documentés aux dates et heures indiquées."
+          }
         }
       }
     },
@@ -5806,6 +6429,12 @@
             "state": "translated",
             "value": "Two keys handed over at the agreed checkout. Demo record."
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deux clés remises lors du rendez-vous de sortie convenu. Fiche de démonstration."
+          }
         }
       }
     },
@@ -5871,6 +6500,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Unfinished checks are shown in the PDF. Comparisons and fixture observations linked to excluded evidence are omitted. Check inclusion before sharing."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les vérifications inachevées figurent dans le PDF. Les comparaisons et observations liées à des preuves exclues sont omises. Vérifiez le contenu inclus avant tout partage."
           }
         }
       }
@@ -5948,6 +6583,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Updated"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modification"
           }
         }
       }
@@ -6103,6 +6744,12 @@
             "state": "translated",
             "value": "Walls"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Murs"
+          }
         }
       }
     },
@@ -6124,6 +6771,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Water"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eau"
           }
         }
       }
@@ -6169,6 +6822,12 @@
             "state": "translated",
             "value": "Whole room"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vue d’ensemble de la pièce"
+          }
         }
       }
     },
@@ -6190,6 +6849,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Willow flat · Demo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Appartement Willow · Démo"
           }
         }
       }
@@ -6213,6 +6878,12 @@
             "state": "translated",
             "value": "Windows"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fenêtres"
+          }
         }
       }
     },
@@ -6224,6 +6895,12 @@
             "state": "translated",
             "value": "Work through each room, explain changes, then review readings and access handover. Saved work stays available as you go."
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parcourez chaque pièce, décrivez les changements, puis vérifiez les relevés et la remise des clés. Vos données enregistrées restent accessibles à chaque étape."
+          }
         }
       }
     },
@@ -6234,6 +6911,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Worktop edge · observation"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bord du plan de travail · observation"
           }
         }
       }
@@ -6268,6 +6951,12 @@
             "state": "translated",
             "value": "Your checkout, one connected record"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Votre départ, un dossier cohérent"
+          }
         }
       }
     },
@@ -6300,6 +6989,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Your evidence report"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Votre rapport de preuves"
           }
         }
       }
@@ -6411,6 +7106,12 @@
             "state": "translated",
             "value": "Your notes"
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vos notes"
+          }
         }
       }
     },
@@ -6488,6 +7189,12 @@
             "state": "translated",
             "value": "Your report includes the evidence you selected, room records, readings, access items and supporting documents."
           }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Votre rapport rassemble les preuves sélectionnées, les fiches des pièces, les relevés, les moyens d’accès et les documents justificatifs."
+          }
         }
       }
     },
@@ -6509,6 +7216,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "documented fixture checks"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "éléments vérifiés et documentés"
           }
         }
       }
