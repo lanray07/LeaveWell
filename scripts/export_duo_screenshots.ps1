@@ -2,7 +2,7 @@ param(
     [Parameter(Mandatory=$true)][string]$RawPath,
     [string]$OutputPath,
     [string[]]$Locales = @('en-GB'),
-    [ValidateSet('outer','inner')][string[]]$Families = @('outer')
+    [ValidateSet('outer','inner','iphone','ipad')][string[]]$Families = @('outer')
 )
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Drawing
@@ -23,10 +23,12 @@ foreach ($locale in $Locales) {
         default { 'Segoe UI' }
     }
     foreach ($family in $Families) {
-        $width = if ($family -eq 'outer') {1398} else {2007}
-        $height = if ($family -eq 'outer') {2034} else {2853}
-        $scale = $width / 1398.0
-        $margin = [int](78*$scale)
+        $sizes = switch ($family) {
+            'outer' { '1398x2034' }
+            'inner' { '2007x2853' }
+            'iphone' { '1179x2556'; '1206x2622' }
+            'ipad' { '2048x2732'; '2064x2752' }
+        }
         for ($index=0; $index -lt 10; $index++) {
             $route = $copy.routes[$index]
             $capture = @($captureManifest.captures | Where-Object { $_.locale -eq $locale -and $_.family -eq $family -and $_.route -eq $route })
@@ -35,7 +37,11 @@ foreach ($locale in $Locales) {
             $raw = Join-Path $RawPath $capture[0].file
             $native = [System.Drawing.Image]::FromFile($raw)
             try {
-                if ($native.Width -ne $width -or $native.Height -ne $height) { throw "Wrong native display dimensions: $raw" }
+                $width = $native.Width
+                $height = $native.Height
+                if ("$($width)x$($height)" -notin $sizes) { throw "Wrong native display dimensions: $raw" }
+                $scale = $width / 1398.0
+                $margin = [int](78*$scale)
                 if ((Get-FileHash -LiteralPath $raw -Algorithm SHA256).Hash.ToLowerInvariant() -ne $capture[0].sha256) { throw "Capture hash mismatch: $raw" }
                 $bitmap = [System.Drawing.Bitmap]::new($width,$height,[System.Drawing.Imaging.PixelFormat]::Format24bppRgb)
                 $graphics = [System.Drawing.Graphics]::FromImage($bitmap)
@@ -98,5 +104,5 @@ foreach ($locale in $Locales) {
         }
     }
 }
-@{source='Real Xcode 27.1 iPhone Duo Simulator captures; original UI preserved with proportional scaling'; fictionalDemoData=$true; captures=$exports} | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $OutputPath 'manifest.json') -Encoding UTF8
-Write-Output "Exported $($exports.Count) validated iPhone Duo screenshots."
+@{source='Real Xcode 27.1 simulator captures; original UI preserved with proportional scaling'; fictionalDemoData=$true; captures=$exports} | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $OutputPath 'manifest.json') -Encoding UTF8
+Write-Output "Exported $($exports.Count) validated native storefront screenshots."

@@ -18,12 +18,13 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--run', required=True, type=int)
     parser.add_argument('--available', action='store_true', help='Collect finished locales while other jobs run')
+    parser.add_argument('--dest', type=Path, default=ROOT / 'marketing/duo/captures')
     options = parser.parse_args()
     assert options.run > 0
     repo = 'lanray07/LeaveWell'
     response = json.loads(gh('api', f'repos/{repo}/actions/runs/{options.run}/artifacts?per_page=100'))
     artifacts = {a['name']: a for a in response['artifacts'] if not a['expired']}
-    dest = ROOT / 'marketing/duo/captures'
+    dest = options.dest
     downloads = ROOT / 'build/duo-downloads' / str(options.run)
     rows = []
     sources = {}
