@@ -42,22 +42,38 @@ def main():
         expected_kitchen = json.loads((ROOT / f'marketing/duo/translations/{locale}-values.json').read_text(encoding='utf-8'))[12]
     devices = json.loads(run('xcrun', 'simctl', 'list', 'devices', 'available', '-j'))['devices']
     family = options.family
-    runtime, group = next((runtime, group) for runtime, group in devices.items() if runtime.endswith('iOS-27-1'))
     if family == 'outer':
+        runtime, group = next((runtime, group) for runtime, group in devices.items() if runtime.endswith('iOS-27-1'))
         udid = next(d['udid'] for d in group if d['name'] == 'iPhone Duo')
     else:
         types = json.loads(run('xcrun', 'simctl', 'list', 'devicetypes', '-j'))['devicetypes']
         if family == 'iphone':
-            model = next((d for name in ('iPhone 18 Pro', 'iPhone 17 Pro', 'iPhone 17')
-                          for d in types if d['name'] == name), None)
+            models = [d for name in ('iPhone 18 Pro', 'iPhone 17 Pro', 'iPhone 17', 'iPhone 16 Pro')
+                      for d in types if d['name'] == name]
         else:
-            model = next((d for d in types if d['name'].startswith('iPad Pro') and '13' in d['name']), None)
-        if model is None:
-            raise RuntimeError(f'Missing simulator device type for {family}: {[d["name"] for d in types]}')
-        existing = next((d for d in group if d['name'] == model['name']), None)
-        udid = existing['udid'] if existing else run(
-            'xcrun', 'simctl', 'create', 'LeaveWell Storefront', model['identifier'], runtime)
-        print('Capturing', model['name'], flush=True)
+            models = [d for d in types if d['name'].startswith('iPad Pro') and '13' in d['name']]
+        runtimes = json.loads(run('xcrun', 'simctl', 'list', 'runtimes', '-j'))['runtimes']
+        runtimes = sorted((r for r in runtimes if r['isAvailable'] and r['name'].startswith('iOS ')),
+                          key=lambda r: tuple(map(int, r['version'].split('.'))), reverse=True)
+        udid = None
+        for simulator_runtime in runtimes:
+            runtime = simulator_runtime['identifier']
+            supported = {d['identifier'] for d in simulator_runtime.get('supportedDeviceTypes', [])}
+            for model in models:
+                if supported and model['identifier'] not in supported:
+                    continue
+                existing = next((d for d in devices.get(runtime, []) if d['deviceTypeIdentifier'] == model['identifier']), None)
+                if existing:
+                    udid = existing['udid']
+                else:
+                    udid = run('xcrun', 'simctl', 'create', 'LeaveWell Storefront', model['identifier'], runtime, check=False)
+                if udid:
+                    print('Capturing', model['name'], simulator_runtime['name'], flush=True)
+                    break
+            if udid:
+                break
+        if not udid:
+            raise RuntimeError(f'No compatible {family} simulator. Installed runtimes: {[r["name"] for r in runtimes]}')
     run('xcrun', 'simctl', 'boot', udid, check=False)
     run('xcrun', 'simctl', 'bootstatus', udid, '-b', timeout=600)
     capture_display = []
@@ -101,7 +117,7 @@ def main():
         print('Captured and validated', locale, route, flush=True)
     source_commit = run('git', 'rev-parse', 'HEAD')
     options.out.joinpath('manifest.json').write_text(json.dumps(dict(sourceCommit=source_commit,
-        sourceSDK='Xcode 27.1 / iOS 27.1', captures=captures), ensure_ascii=False, indent=2) + '\n')
+        sourceSDK='Xcode 27.1 / ' + runtime.rsplit('.', 1)[-1], captures=captures), ensure_ascii=False, indent=2) + '\n')
     run('xcrun', 'simctl', 'shutdown', udid)
 
 if __name__ == '__main__':
