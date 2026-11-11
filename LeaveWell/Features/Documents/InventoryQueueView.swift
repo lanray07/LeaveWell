@@ -295,3 +295,15 @@ private struct InventoryObservationView: View {
         }
     }
 }
+
+#if DEBUG
+extension InventoryQueueView {
+    static func captureSource(caseID: UUID, source: Evidence) -> some View {
+        InventorySourceView(caseID: caseID, source: source, reader: InventoryReader())
+    }
+
+    static func captureObservation(caseID: UUID, check: InventoryCheck) -> some View {
+        InventoryObservationView(caseID: caseID, check: check)
+    }
+}
+#endif

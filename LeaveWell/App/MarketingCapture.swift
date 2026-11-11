@@ -25,6 +25,14 @@ struct MarketingCapture: View {
                             case "comparison": ComparisonView(caseID: record.id)
                             case "plan": PlanView(caseID: record.id)
                             case "report": ReportView(caseID: record.id)
+                            case "inventory-source":
+                                if let source = record.evidence.first(where: { $0.kind == .document }) {
+                                    InventoryQueueView.captureSource(caseID: record.id, source: source)
+                                }
+                            case "inventory-observation":
+                                if let check = record.checkout?.inventoryChecks?.first {
+                                    InventoryQueueView.captureObservation(caseID: record.id, check: check)
+                                }
                             case "checkout": CheckoutWorkspaceView(caseID: record.id)
                             case "walkthrough": RoomCheckoutView(caseID: record.id, roomID: record.rooms[0].id)
                             case "handover": HandoverReviewView(caseID: record.id)
@@ -83,6 +91,14 @@ struct MarketingCapture: View {
         }
         demo.checkout?.comparisons = [EvidenceComparison(beforeID: demo.evidence.first { $0.kind == .document }!.id,
             afterID: demo.evidence[0].id, observation: L("Fictional demo: the inventory records a chip beside the sink; compare with the current photograph."), createdAt: date)]
+        if let source = demo.evidence.first(where: { $0.kind == .document }) {
+            var check = InventoryCheck(sourceID: source.id, page: 1, roomID: kitchen.id,
+                                       sourceText: L("Fictional inventory: kitchen worktop edge has a small chip beside the sink."))
+            check.state = .checked
+            check.observation = demo.evidence[1].notes
+            check.evidenceIDs = [demo.evidence[0].id]
+            demo.checkout?.inventoryChecks = [check]
+        }
         demo.activities = [Activity(action: "Property created", detail: "Willow flat · Demo", contributor: demo.tenant, date: date.addingTimeInterval(-86400*21)), Activity(action: "Evidence added", detail: "Kitchen · whole room", contributor: demo.tenant, date: date), Activity(action: "Meter reading recorded", detail: "Electricity · 04821", contributor: demo.tenant, date: date.addingTimeInterval(600))]
         return demo
     }
