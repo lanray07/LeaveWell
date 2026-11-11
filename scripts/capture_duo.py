@@ -42,14 +42,22 @@ def main():
         expected_kitchen = json.loads((ROOT / f'marketing/duo/translations/{locale}-values.json').read_text(encoding='utf-8'))[12]
     devices = json.loads(run('xcrun', 'simctl', 'list', 'devices', 'available', '-j'))['devices']
     family = options.family
-    group = next(group for runtime, group in devices.items() if runtime.endswith('iOS-27-1'))
+    runtime, group = next((runtime, group) for runtime, group in devices.items() if runtime.endswith('iOS-27-1'))
     if family == 'outer':
-        device = next(d for d in group if d['name'] == 'iPhone Duo')
-    elif family == 'iphone':
-        device = next(d for d in group if d['name'] in ('iPhone 18 Pro', 'iPhone 17 Pro', 'iPhone 17'))
+        udid = next(d['udid'] for d in group if d['name'] == 'iPhone Duo')
     else:
-        device = next(d for d in group if 'iPad Pro 13' in d['name'])
-    udid = device['udid']
+        types = json.loads(run('xcrun', 'simctl', 'list', 'devicetypes', '-j'))['devicetypes']
+        if family == 'iphone':
+            model = next((d for name in ('iPhone 18 Pro', 'iPhone 17 Pro', 'iPhone 17')
+                          for d in types if d['name'] == name), None)
+        else:
+            model = next((d for d in types if d['name'].startswith('iPad Pro') and '13' in d['name']), None)
+        if model is None:
+            raise RuntimeError(f'Missing simulator device type for {family}: {[d["name"] for d in types]}')
+        existing = next((d for d in group if d['name'] == model['name']), None)
+        udid = existing['udid'] if existing else run(
+            'xcrun', 'simctl', 'create', 'LeaveWell Storefront', model['identifier'], runtime)
+        print('Capturing', model['name'], flush=True)
     run('xcrun', 'simctl', 'boot', udid, check=False)
     run('xcrun', 'simctl', 'bootstatus', udid, '-b', timeout=600)
     capture_display = []
