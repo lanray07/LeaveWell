@@ -21,7 +21,7 @@ def generate():
     def obj(key, body):
         objects.append(f'{uid(key)} = {{ {body} }};')
     for path in files:
-        kind = 'sourcecode.swift' if path.endswith('.swift') else ('folder.assetcatalog' if path.endswith('.xcassets') else 'text.json' if path.endswith('.xcstrings') else 'text.xml')
+        kind = 'sourcecode.swift' if path.endswith('.swift') else ('folder.assetcatalog' if path.endswith('.xcassets') else 'text.json.xcstrings' if path.endswith('.xcstrings') else 'text.xml')
         obj('file:' + path, f'isa = PBXFileReference; lastKnownFileType = {kind}; path = {quote(path)}; sourceTree = SOURCE_ROOT;')
         obj('build:' + path, f'isa = PBXBuildFile; fileRef = {uid("file:" + path)};')
     for name, ext, kind in [('LeaveWell', 'app', 'wrapper.application'), ('LeaveWellTests', 'xctest', 'wrapper.cfbundle')]:
@@ -57,7 +57,11 @@ def generate():
     for config in ['Debug', 'Release']:
         obj('global:' + config, f'isa = XCBuildConfiguration; buildSettings = {{ CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; }}; name = {config};')
     obj('globalconfigs', 'isa = XCConfigurationList; buildConfigurations = (' + ','.join(uid('global:' + c) for c in ['Debug', 'Release']) + '); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;')
-    obj('project', f'isa = PBXProject; attributes = {{ LastUpgradeCheck = 2600; BuildIndependentTargetsInParallel = YES; }}; buildConfigurationList = {uid("globalconfigs")}; compatibilityVersion = "Xcode 14.0"; developmentRegion = "en-GB"; hasScannedForEncodings = 0; knownRegions = ("en-GB", en, Base); mainGroup = {uid("main")}; productRefGroup = {uid("products")}; projectDirPath = ""; projectRoot = ""; targets = ({uid("target:LeaveWell")},{uid("target:LeaveWellTests")});')
+    catalog = json.loads((ROOT / 'LeaveWell/Resources/Localizable.xcstrings').read_text(encoding='utf-8'))
+    regions = {'en', 'Base', catalog['sourceLanguage']}
+    regions.update(locale for entry in catalog['strings'].values() for locale in entry.get('localizations', {}))
+    region_list = ','.join(quote(region) for region in sorted(regions))
+    obj('project', f'isa = PBXProject; attributes = {{ LastUpgradeCheck = 2600; BuildIndependentTargetsInParallel = YES; }}; buildConfigurationList = {uid("globalconfigs")}; compatibilityVersion = "Xcode 14.0"; developmentRegion = "en-GB"; hasScannedForEncodings = 0; knownRegions = ({region_list}); mainGroup = {uid("main")}; productRefGroup = {uid("products")}; projectDirPath = ""; projectRoot = ""; targets = ({uid("target:LeaveWell")},{uid("target:LeaveWellTests")});')
     project = ROOT / 'LeaveWell.xcodeproj'
     project.mkdir(exist_ok=True)
     (project / 'project.pbxproj').write_text('// !$*UTF8*$!\n{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {\n' + '\n'.join(objects) + f'\n}}; rootObject = {uid("project")}; }}\n', encoding='utf-8')

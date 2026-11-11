@@ -1,0 +1,8 @@
+{
+  "locale": "fr",
+  "sourceEntries": 117,
+  "translationSha256": "d25f44d0cf7a67278efddeb6678d61c33987cf02b29cd99771c8b527406e1b81",
+  "review": "Codex linguistic and product-source review; storage and sharing descriptions checked against implementation. No independent native-speaker or legal review claimed.",
+  "nativeLayoutQA": "Prior attempt rejected because catalog was copied as JSON; regenerated capture pending.",
+  "coverage": "Selected screens only; other app strings use English fallback."
+}

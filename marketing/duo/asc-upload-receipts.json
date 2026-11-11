@@ -1,0 +1,845 @@
+{
+  "appID": "6818834817",
+  "version": "1.0",
+  "selectedBuild": "83",
+  "device": "iPhone Duo outer",
+  "submittedForReview": true,
+  "status": "complete",
+  "locales": {
+    "en-GB": {
+      "locale": "en-GB",
+      "count": 10,
+      "verifiedAt": "2026-11-01T17:15:25.922Z",
+      "files": [
+        {
+          "file": "en-GB/outer/01-home.png",
+          "sha256": "d3244c2b9684f09e502512392bf7270d15ea492e224130b487657a924846d4d8"
+        },
+        {
+          "file": "en-GB/outer/02-checkout.png",
+          "sha256": "7accadb065eb2115c15b52cc3f66af2eed0b330d5d6f8b56670a3857fe06a37a"
+        },
+        {
+          "file": "en-GB/outer/03-walkthrough.png",
+          "sha256": "c97d7676c128e8914112136610dd5bb5490a0b11209f7d5d5c8533fea98994be"
+        },
+        {
+          "file": "en-GB/outer/04-evidence.png",
+          "sha256": "f4044bf8cfd26dfb55e5b99d4273cf2ee061ce0f3c6fae7f8f23ab1788bade8b"
+        },
+        {
+          "file": "en-GB/outer/05-notes.png",
+          "sha256": "47a62ac22b26dac38e88c9c20bdb4cb260f7e8c7f75ee3219b14623a5e96b047"
+        },
+        {
+          "file": "en-GB/outer/06-meters.png",
+          "sha256": "ccbfac8f2668a9407137f4ca42b355fa1dc858979cf6ea0d3adeb40d5541688d"
+        },
+        {
+          "file": "en-GB/outer/07-keys.png",
+          "sha256": "db0807ef3a33ac06693f36e95d896e81b02c25aa017b42e5506783d6d2eb6724"
+        },
+        {
+          "file": "en-GB/outer/08-documents.png",
+          "sha256": "3d04bf007513a125f7c4a9b1d43676870af97a2e44a911c98aab1ea4d2c1352e"
+        },
+        {
+          "file": "en-GB/outer/09-pair.png",
+          "sha256": "cfeb6f5a72f7e4c797b2f9a11b9d0dcf34e952610c83a650c34aa23fd1244622"
+        },
+        {
+          "file": "en-GB/outer/10-report.png",
+          "sha256": "0babcb809c8566f7a075ff026b7c179debc36e3a9413ed3bd8dcab3b5e7167b1"
+        }
+      ],
+      "proof": "build/asc-duo-en-GB.jpg"
+    },
+    "fr": {
+      "locale": "fr",
+      "count": 10,
+      "partialTranslationDisclosure": true,
+      "verifiedAt": "2026-11-01T17:18:34.249Z",
+      "files": [
+        {
+          "file": "fr/outer/01-home.png",
+          "sha256": "b2ac6b3bcf1b9fc18d85489f4fa310c29752fb834c990b1765af6b3b725e81d3"
+        },
+        {
+          "file": "fr/outer/02-checkout.png",
+          "sha256": "5e62e4afb38707dc7753273e308314b644ee01e05f67361f9fd1a4e2f383d5ee"
+        },
+        {
+          "file": "fr/outer/03-walkthrough.png",
+          "sha256": "fa314afde4dabade65fb2e1c84ecd989c8f59378f085ec103afdead87c63c938"
+        },
+        {
+          "file": "fr/outer/04-evidence.png",
+          "sha256": "4a9b8d6f0b371bbf823ae3a390d9f0f3d0dd8e86c71e6be76f0065d8cc8ab9f5"
+        },
+        {
+          "file": "fr/outer/05-notes.png",
+          "sha256": "d66de8eec6960555d7069242f2485310831ba057d5374cc902c1da49b3f6ba00"
+        },
+        {
+          "file": "fr/outer/06-meters.png",
+          "sha256": "aad38a477310801cd39dabffa3f7a212bd9dfa4b93b69b288a5e31ba79b9932a"
+        },
+        {
+          "file": "fr/outer/07-keys.png",
+          "sha256": "b85d7e1bdbf7b0f2a8909b0f1a5743d173226a8dbea2289aa870b5b5a97438dc"
+        },
+        {
+          "file": "fr/outer/08-documents.png",
+          "sha256": "c93f47a3f278a1918b563249c6d2d7685cf39c32398643815ece9adb088df902"
+        },
+        {
+          "file": "fr/outer/09-pair.png",
+          "sha256": "e8cb36417b4dd1845aa6251a6eb915585f5c0ab1e0ff09649ad1e6b2998a4c10"
+        },
+        {
+          "file": "fr/outer/10-report.png",
+          "sha256": "91cf1a475e2bec0c443fb684c88e6804c51f44eb6624dbdcecfdc453079b14d1"
+        }
+      ],
+      "proof": "build/asc-duo-fr.jpg"
+    },
+    "es": {
+      "locale": "es",
+      "count": 10,
+      "partialTranslationDisclosure": true,
+      "verifiedAt": "2026-11-01T17:19:33.375Z",
+      "files": [
+        {
+          "file": "es/outer/01-home.png",
+          "sha256": "2aa5af4b953d7accbd456ea575ccf1f5e88ab5f548bace39143ad6df605a93ec"
+        },
+        {
+          "file": "es/outer/02-checkout.png",
+          "sha256": "68bd0a58c09ce83e63808a3bcf2186a9c7834d274fe141729345b45a1f13d874"
+        },
+        {
+          "file": "es/outer/03-walkthrough.png",
+          "sha256": "5118550294617c96b0fd63fab186a76be0d03dd1cb447cabd70bea45c878de03"
+        },
+        {
+          "file": "es/outer/04-evidence.png",
+          "sha256": "d63fa199bd053e81af9179a2a5ab7c24b06949b7443d3c5c57dc50cc119a97f4"
+        },
+        {
+          "file": "es/outer/05-notes.png",
+          "sha256": "c46689c44e50930f028c845793714a1f4f836e07abe51144627cd2c0b9464a36"
+        },
+        {
+          "file": "es/outer/06-meters.png",
+          "sha256": "62eb3a726bd5c1d6622f03ee8e3b42188d4a97ea3d54dc40913b33e965a88d9a"
+        },
+        {
+          "file": "es/outer/07-keys.png",
+          "sha256": "e0b1260520f189723e0672c285e698c250d726662882f9bba31a191762cc9a4e"
+        },
+        {
+          "file": "es/outer/08-documents.png",
+          "sha256": "cf78ebc50b2b5e042fdc6cda83a918fde353733e92a48379f5742d31e1c05019"
+        },
+        {
+          "file": "es/outer/09-pair.png",
+          "sha256": "7f93a66e224824d9bac4cef90fffc1a6fbc0ce7b0c51fdb8c23bb137ae83e55b"
+        },
+        {
+          "file": "es/outer/10-report.png",
+          "sha256": "3429fff028eb92457195fa4c497d4765ef0618b37c068ccda432e971dec3bae5"
+        }
+      ],
+      "proof": "build/asc-duo-es.jpg"
+    },
+    "de": {
+      "locale": "de",
+      "count": 10,
+      "partialTranslationDisclosure": true,
+      "verifiedAt": "2026-11-01T17:20:19.028Z",
+      "files": [
+        {
+          "file": "de/outer/01-home.png",
+          "sha256": "4a1585fd409685dc821856bbc3ef2ba14625c52cd7e0d2025ac099d091bb924e"
+        },
+        {
+          "file": "de/outer/02-checkout.png",
+          "sha256": "6ac9ebb2a92b8bab6795de742a096fbb90977d834cfc5b886fc6c81fc2875e5d"
+        },
+        {
+          "file": "de/outer/03-walkthrough.png",
+          "sha256": "ad3306a4c8c74cbf7524a91b1d3f3dd6249cfb6a0f7c278f758bd3817011fd79"
+        },
+        {
+          "file": "de/outer/04-evidence.png",
+          "sha256": "3a2969706858a7e273a3bd1f69e441ed2bf05b1076a6c03e6826861a068d5e8c"
+        },
+        {
+          "file": "de/outer/05-notes.png",
+          "sha256": "2dd5d96de3613229e63d3159a630d47af5b5ec03377e7e2390a678ec88ae30c9"
+        },
+        {
+          "file": "de/outer/06-meters.png",
+          "sha256": "a8c8e5be21974c2477c1cbc6b282ed8546d54601d8a60b654eb74c0c2a0c0d0f"
+        },
+        {
+          "file": "de/outer/07-keys.png",
+          "sha256": "84552d8323da999966ad2c99db2332b38dc65da2c09e0256e26d5c3853c7ca4a"
+        },
+        {
+          "file": "de/outer/08-documents.png",
+          "sha256": "6bdb2a9cdff6562aa4ee7cbe993c8941e6ec865738dfd226d880f740c7817f44"
+        },
+        {
+          "file": "de/outer/09-pair.png",
+          "sha256": "6865abd22bcd1c1afc99906b386e3e365c544b2ec683318dca113a6184a097f2"
+        },
+        {
+          "file": "de/outer/10-report.png",
+          "sha256": "956cf54ef0de6435dae0e4b960ed3599e08f1f23a36bb0be69bb0803cec82fd9"
+        }
+      ],
+      "proof": "build/asc-duo-de.jpg"
+    },
+    "it": {
+      "locale": "it",
+      "count": 10,
+      "partialTranslationDisclosure": true,
+      "verifiedAt": "2026-11-01T17:21:19.431Z",
+      "files": [
+        {
+          "file": "it/outer/01-home.png",
+          "sha256": "6cbaa510a0aad3aff86ba830c0bec5a5d0287df873b447940a99b0f151a8e9f5"
+        },
+        {
+          "file": "it/outer/02-checkout.png",
+          "sha256": "c7d6b454d16969d606ec16ab7c246ce7df757692024feecf28ed4fb1f9fca092"
+        },
+        {
+          "file": "it/outer/03-walkthrough.png",
+          "sha256": "337cdc69562a4adff9c9c1fe2cca10275025d511c2e7d8710e4d45226ea38900"
+        },
+        {
+          "file": "it/outer/04-evidence.png",
+          "sha256": "6eef617e011ed16c8c058d7519e1fedbd7cfb1f9b51f01e4f9e0feaf518a04b2"
+        },
+        {
+          "file": "it/outer/05-notes.png",
+          "sha256": "d1d1f1cc22d42e7815b6be8d76f0789b1ea1bfdd0c65f56c2ff98b8e3a2910f1"
+        },
+        {
+          "file": "it/outer/06-meters.png",
+          "sha256": "0a89e74f1ee8902c08a5baa4463514b9ffb70c4caa871e67cb63ed4f716c8047"
+        },
+        {
+          "file": "it/outer/07-keys.png",
+          "sha256": "b2299f94d5f2f9b187a38c8d328687df5fe818d01db1136cebe17a4b9cc587fb"
+        },
+        {
+          "file": "it/outer/08-documents.png",
+          "sha256": "0aa45166db7e42b1228b4566d37ae5d9d7c821c0b9717484002d2dcba125aa5f"
+        },
+        {
+          "file": "it/outer/09-pair.png",
+          "sha256": "c557c6c7fc5317de04849227f719e48d38b281e166ac0958ea5a76411813c03b"
+        },
+        {
+          "file": "it/outer/10-report.png",
+          "sha256": "72fe2fad75a0c0aec79e9e437209bba04b9d49daf0f94e4247863c5ddf14ecd0"
+        }
+      ],
+      "proof": "build/asc-duo-it.jpg"
+    },
+    "pt-BR": {
+      "locale": "pt-BR",
+      "count": 10,
+      "partialTranslationDisclosure": true,
+      "verifiedAt": "2026-11-01T17:22:33.505Z",
+      "files": [
+        {
+          "file": "pt-BR/outer/01-home.png",
+          "sha256": "fc3f8c3a9a796299d89f8a3b1480c2bac72f919a24fc635730196fb2a31e5bd4"
+        },
+        {
+          "file": "pt-BR/outer/02-checkout.png",
+          "sha256": "241d576581f70cf8adfebeee706aa0c3d1804fa40ef2546a79245a342e5f75b0"
+        },
+        {
+          "file": "pt-BR/outer/03-walkthrough.png",
+          "sha256": "20e36ad4273d47a639b8012c305e7bbb385edc4ad0ae94bce7fe1d04b050acf2"
+        },
+        {
+          "file": "pt-BR/outer/04-evidence.png",
+          "sha256": "bf8697aef8295ab0fd085725510c3a9c14f957b0112fd610c3af5d1297c99344"
+        },
+        {
+          "file": "pt-BR/outer/05-notes.png",
+          "sha256": "636f96325f975907e5e56d46773037fa9d323dd2f023f09f571270fde0aba81f"
+        },
+        {
+          "file": "pt-BR/outer/06-meters.png",
+          "sha256": "494d59875c16d9f88bd7f9e435f2b1f0c3f7396ff835acbfb6be620a54477288"
+        },
+        {
+          "file": "pt-BR/outer/07-keys.png",
+          "sha256": "f9a4ec5b5e466ac005d9635506edac0c34ffd94b11245ad4f1310d24167fcbe2"
+        },
+        {
+          "file": "pt-BR/outer/08-documents.png",
+          "sha256": "8a5b74699f37ad97743a019e30d46dfe308cc7ad5453c135994f2f8414f9c7ed"
+        },
+        {
+          "file": "pt-BR/outer/09-pair.png",
+          "sha256": "52fceaa3400b645d81ae03bbf0c012c71950e4e697ab922bcd5192825d6168b1"
+        },
+        {
+          "file": "pt-BR/outer/10-report.png",
+          "sha256": "1d327a07b870625250acc471f0838a2631bb9948748def4c647a407ec322c29f"
+        }
+      ],
+      "proof": "build/asc-duo-pt-BR.jpg"
+    },
+    "nl": {
+      "locale": "nl",
+      "count": 10,
+      "partialTranslationDisclosure": true,
+      "verifiedAt": "2026-11-01T17:23:37.116Z",
+      "files": [
+        {
+          "file": "nl/outer/01-home.png",
+          "sha256": "30e7ec84cdd51602a95358b9a12f690e27c965db7330a14ee55d25d2028250da"
+        },
+        {
+          "file": "nl/outer/02-checkout.png",
+          "sha256": "b99abe8d6e63bbc582fea0787ee6bb5fcdec0517f66d7a00a5f2748ad737ab9c"
+        },
+        {
+          "file": "nl/outer/03-walkthrough.png",
+          "sha256": "752561efc9f5633408c9fd6dc48b71edf0215097b09626fc66c79ab4f6626abc"
+        },
+        {
+          "file": "nl/outer/04-evidence.png",
+          "sha256": "9437d2bd4ac678dcc6c9b40e6c6e56ddb882743838c3dfcbf3b47ff504393102"
+        },
+        {
+          "file": "nl/outer/05-notes.png",
+          "sha256": "8245ad1d400ddb2f8a0cb26ab282a3a6ac32aba79862e908b99e236d2a9bd8f9"
+        },
+        {
+          "file": "nl/outer/06-meters.png",
+          "sha256": "5e9efc91ddd92537b2645ecaabe7220189c1f4faed1a0063792888b112d575e0"
+        },
+        {
+          "file": "nl/outer/07-keys.png",
+          "sha256": "f88f109a8e30b61d81a1bc04c937d948c0eef2abb0a5dacef9f4a070dfd48779"
+        },
+        {
+          "file": "nl/outer/08-documents.png",
+          "sha256": "3076eef52be607ff2408dd3ed8a9676ca5aacd6cbb991c18158296a71923d69a"
+        },
+        {
+          "file": "nl/outer/09-pair.png",
+          "sha256": "fd487c5dba20b4acecd58891c33e62b56b4872246f02aa66580cc2bbc2012128"
+        },
+        {
+          "file": "nl/outer/10-report.png",
+          "sha256": "60b381cde1fc6b40fbad8e3615e04e21771ee3fb5e02f9b83c612454e1a5027f"
+        }
+      ],
+      "proof": "build/asc-duo-nl.jpg"
+    },
+    "pl": {
+      "locale": "pl",
+      "count": 10,
+      "partialTranslationDisclosure": true,
+      "verifiedAt": "2026-11-01T17:24:19.236Z",
+      "files": [
+        {
+          "file": "pl/outer/01-home.png",
+          "sha256": "ca2901217e9a70ce2609d50d9cc8eab2707f0ed6c63ff25a30bbc6a77ca42425"
+        },
+        {
+          "file": "pl/outer/02-checkout.png",
+          "sha256": "2953794aab275d34d186e8ec7627441b2d1718189be4698a1812ef2c36219918"
+        },
+        {
+          "file": "pl/outer/03-walkthrough.png",
+          "sha256": "c3d7ab11dbb13198b59a29a1a28f3676234c0622ae5d01b37938ab85e49f4d83"
+        },
+        {
+          "file": "pl/outer/04-evidence.png",
+          "sha256": "74a75af513c454f22d1adc40fe8e4bee6ef0389c5704f3791b118fa51abee2b1"
+        },
+        {
+          "file": "pl/outer/05-notes.png",
+          "sha256": "1b07499ec404a3f5aededdb7e2e6bc91a3ae6d5ec1ba54e9e2eaa7f9e6a1f87f"
+        },
+        {
+          "file": "pl/outer/06-meters.png",
+          "sha256": "3b55b061ef5402f5b5b1c3a285f06735e0cd8d024dd7dc7347dbf3336f02a165"
+        },
+        {
+          "file": "pl/outer/07-keys.png",
+          "sha256": "971a5396e8936c4a4da91e3b4493f3a2395b53253808ef011ab65278757778b5"
+        },
+        {
+          "file": "pl/outer/08-documents.png",
+          "sha256": "5ab8f5bf92fe360639aabddd2dbb51e7a2bfcea0c770b9059cb75518b80823cb"
+        },
+        {
+          "file": "pl/outer/09-pair.png",
+          "sha256": "2f23ef4fef40d260997b47cf8a7fb5b901998b08619fe6e942249958955d1890"
+        },
+        {
+          "file": "pl/outer/10-report.png",
+          "sha256": "10a330415cfbef02ec6b01ac3839186d75894237a4ae022d1c13e3ba1855c937"
+        }
+      ],
+      "proof": "build/asc-duo-pl.jpg"
+    },
+    "ar": {
+      "locale": "ar",
+      "count": 10,
+      "partialTranslationDisclosure": true,
+      "verifiedAt": "2026-11-01T17:25:56.305Z",
+      "files": [
+        {
+          "file": "ar/outer/01-home.png",
+          "sha256": "e4218df2ffe97c02a647d1a82afe979c7c77e2f0351ce926995d215e5248a0aa"
+        },
+        {
+          "file": "ar/outer/02-checkout.png",
+          "sha256": "2c0b86d4a13b25f2936a47343ec671c533cc39349d338ff76d7c2b82c301e740"
+        },
+        {
+          "file": "ar/outer/03-walkthrough.png",
+          "sha256": "a6b4c5d7303e599c6768a7212d7337b1451614d4e46783d5c4783f109fbe7e81"
+        },
+        {
+          "file": "ar/outer/04-evidence.png",
+          "sha256": "dc6e130b477fc7c06874e5714c00d8284e7fe259bae52b14746670fc5c4f3208"
+        },
+        {
+          "file": "ar/outer/05-notes.png",
+          "sha256": "7fc0bc560f4f378356897158a08123659bc6aa42431b3d8bd107a7d00d81aa63"
+        },
+        {
+          "file": "ar/outer/06-meters.png",
+          "sha256": "832776ff613b4597baa979e1ae4cbd5cce293af157d980e81111761d65257c2a"
+        },
+        {
+          "file": "ar/outer/07-keys.png",
+          "sha256": "7d9866f06781c89f67e46d918e280131edc4b29b102976a80adabe90185a3b46"
+        },
+        {
+          "file": "ar/outer/08-documents.png",
+          "sha256": "2fccf70f6f71d1a603ee8ff69df2fb84deeb4f7f0bd1ea8c08d2b0bf01197fbe"
+        },
+        {
+          "file": "ar/outer/09-pair.png",
+          "sha256": "4fd729d91541c31a6c14479e7e585478773493f173cbf8431d18cf30294ed838"
+        },
+        {
+          "file": "ar/outer/10-report.png",
+          "sha256": "ad1075de6598f8a6531d9da52c1bbb495e7607f4b8d1c977f3ec9c620e2f49f7"
+        }
+      ],
+      "proof": "build/asc-duo-ar.jpg"
+    },
+    "hi": {
+      "locale": "hi",
+      "count": 10,
+      "partialTranslationDisclosure": true,
+      "verifiedAt": "2026-11-01T17:27:10.067Z",
+      "files": [
+        {
+          "file": "hi/outer/01-home.png",
+          "sha256": "d39306cbef25a2f185a49b743e3540c8c98a1672b0d40a0d2b38de7194285144"
+        },
+        {
+          "file": "hi/outer/02-checkout.png",
+          "sha256": "a8115ed4bdff4a3e4ef508eb54cdef44ba484e278256733cd2829eaaa64b145b"
+        },
+        {
+          "file": "hi/outer/03-walkthrough.png",
+          "sha256": "e0cf68e790edaa38f854cb6864b10fa823fe69dda5c39a5feb404c717e9a3d50"
+        },
+        {
+          "file": "hi/outer/04-evidence.png",
+          "sha256": "0155b8e8f9adce4e091588202ba22f90a4f05d5658eb614087a25beae99544d9"
+        },
+        {
+          "file": "hi/outer/05-notes.png",
+          "sha256": "f1b5a70c89967caaf9c64649d89c45d8b31bd901a6d6f15172b32faa9156fbcf"
+        },
+        {
+          "file": "hi/outer/06-meters.png",
+          "sha256": "c32faf49254b90833320faa6bf4f3c5c31ee2835c152b64ae8e0cae21413d095"
+        },
+        {
+          "file": "hi/outer/07-keys.png",
+          "sha256": "f4145c6509cec241b78d94c91e2dedf208eaab723a5807831271cbe8a57be320"
+        },
+        {
+          "file": "hi/outer/08-documents.png",
+          "sha256": "03ed2677a35868f3a853a63fe663237312ae1347f1bddb8b5be6bdb56fdd6356"
+        },
+        {
+          "file": "hi/outer/09-pair.png",
+          "sha256": "dde6f0de5b217a36247b2101e63ed2ccc2445ad90433dc5ef11b3526df480ba1"
+        },
+        {
+          "file": "hi/outer/10-report.png",
+          "sha256": "d10e9ae5c91e5b6ab7023769a07b88f9839db55cc06993c8b795fa003a6dbdaf"
+        }
+      ],
+      "proof": "build/asc-duo-hi.jpg"
+    },
+    "ja": {
+      "locale": "ja",
+      "count": 10,
+      "partialTranslationDisclosure": true,
+      "verifiedAt": "2026-11-01T17:27:53.581Z",
+      "files": [
+        {
+          "file": "ja/outer/01-home.png",
+          "sha256": "fc42c7c735f902551051488f263f012f0a50910c1bd673dab589dc8bf2c05e18"
+        },
+        {
+          "file": "ja/outer/02-checkout.png",
+          "sha256": "cb28bb09565207c1bae95ae0c54d5fdae1ea127c6495b852823d3b19f6467568"
+        },
+        {
+          "file": "ja/outer/03-walkthrough.png",
+          "sha256": "9efd9333db87e4161c2a30115c53253c9faf28b592bf2dee53388e383af82cb2"
+        },
+        {
+          "file": "ja/outer/04-evidence.png",
+          "sha256": "bc24c8f63c7f70a913c300d98cba1bf16c39d64337aecf7a83319ad3ada48657"
+        },
+        {
+          "file": "ja/outer/05-notes.png",
+          "sha256": "2e9fcd90fea473d046b9f5fce1be393fc9789a7c49b4cd40bb37729c7cfa30b7"
+        },
+        {
+          "file": "ja/outer/06-meters.png",
+          "sha256": "faf7c07925690dbf8371e958a20abbf2af763863de128e8a43deb521c3151816"
+        },
+        {
+          "file": "ja/outer/07-keys.png",
+          "sha256": "80785f662bb4b08fbde383a357ab19ca2af49ea94076542d24ce885c5cb0053c"
+        },
+        {
+          "file": "ja/outer/08-documents.png",
+          "sha256": "abca1b9573ea43d9c6e44744150d4ea01267d216664537b1541b62ad13569b93"
+        },
+        {
+          "file": "ja/outer/09-pair.png",
+          "sha256": "86d9022d26fbc72bd6a920adc67d6297fc8c6e6cd60737661ce9efd397507da0"
+        },
+        {
+          "file": "ja/outer/10-report.png",
+          "sha256": "157682ccb3ae52c1e1387b29220f4d8f55c3422c2f8ecfbc184fb504d27751ad"
+        }
+      ],
+      "proof": "build/asc-duo-ja.jpg"
+    },
+    "ko": {
+      "locale": "ko",
+      "count": 10,
+      "partialTranslationDisclosure": true,
+      "verifiedAt": "2026-11-01T17:29:21.937Z",
+      "files": [
+        {
+          "file": "ko/outer/01-home.png",
+          "sha256": "bc75a9938f7ac1ea6bd4f9e28eada9a071b5487626a4c724b7bc8c80820c8df7"
+        },
+        {
+          "file": "ko/outer/02-checkout.png",
+          "sha256": "4db96426a8cf707392044b3e567dc324fc8e2bb5109779ca30b58b3f534782e4"
+        },
+        {
+          "file": "ko/outer/03-walkthrough.png",
+          "sha256": "bf01ca2cad11cc8829a1c9e8a9ee2812f9fcc3c3b4c1fca2fe3e30337af14462"
+        },
+        {
+          "file": "ko/outer/04-evidence.png",
+          "sha256": "328cbcd91655e44ef92754f0f10c7fd045e6f70aa297ec1f6095fa798a505aee"
+        },
+        {
+          "file": "ko/outer/05-notes.png",
+          "sha256": "e88697316073919aafb82684ec2ccec1cb4962322f46ce4879f762bbfab22b24"
+        },
+        {
+          "file": "ko/outer/06-meters.png",
+          "sha256": "bf4040074483a60668d1b15a18a3ded49ed1993d13fc0112f624fb68174bdf92"
+        },
+        {
+          "file": "ko/outer/07-keys.png",
+          "sha256": "81af6fa42f461ca7b267285bbb230a1c7c8e53f553a6702da88828b46ee7ccf2"
+        },
+        {
+          "file": "ko/outer/08-documents.png",
+          "sha256": "e34c7459f2c0e5320ea3fb76ebd445acb9935fd93ee6f92f83bbb0d2e1895c31"
+        },
+        {
+          "file": "ko/outer/09-pair.png",
+          "sha256": "25e913b321ba4a3f2d7df06c344107b0a83d4660212d19b84f16057a681906e9"
+        },
+        {
+          "file": "ko/outer/10-report.png",
+          "sha256": "f437bb89c09c4fa37466900f479ba170f0b0ea2f44e1d939a422761886506005"
+        }
+      ],
+      "proof": "build/asc-duo-ko.jpg"
+    },
+    "zh-Hans": {
+      "locale": "zh-Hans",
+      "count": 10,
+      "partialTranslationDisclosure": true,
+      "verifiedAt": "2026-11-01T17:30:06.706Z",
+      "files": [
+        {
+          "file": "zh-Hans/outer/01-home.png",
+          "sha256": "2dd67a47a2f6ecc85752cf483e3eb120a19f1889f5a7b65bcde8352687fa6fa7"
+        },
+        {
+          "file": "zh-Hans/outer/02-checkout.png",
+          "sha256": "f73794b2757ae177204c846fbe551cb4c6c5b47e2f4799f4bb42d29b5c02344c"
+        },
+        {
+          "file": "zh-Hans/outer/03-walkthrough.png",
+          "sha256": "177c1c43798110bfb074f32a68b4f7921e8c61d75f48efc9054d487a3b8d44d0"
+        },
+        {
+          "file": "zh-Hans/outer/04-evidence.png",
+          "sha256": "ceacb49203b71dc0434db9316456ee43525fc68cbca1331e5932568f1ca88a74"
+        },
+        {
+          "file": "zh-Hans/outer/05-notes.png",
+          "sha256": "bbaba63da5b8cc69f4c7bef4cd1f7eb091a56cfb8bcf5a951431cb4939ebc134"
+        },
+        {
+          "file": "zh-Hans/outer/06-meters.png",
+          "sha256": "b7b34c40786e09cb5ae3651090b267b1e21b4e358104df3c220066ddca34b8c2"
+        },
+        {
+          "file": "zh-Hans/outer/07-keys.png",
+          "sha256": "6d4c0351aaa1dd829b3637f308412b6636875886453668d6131e9634001983b8"
+        },
+        {
+          "file": "zh-Hans/outer/08-documents.png",
+          "sha256": "0b34835bcef8e7f05894f07d3c2125dfdf153cd3cc248d7c4624f8a931bfc117"
+        },
+        {
+          "file": "zh-Hans/outer/09-pair.png",
+          "sha256": "52ebce847e31429bb7503e9d64600fed2ada66d1bc57c7d1f63bb390fbdd2b02"
+        },
+        {
+          "file": "zh-Hans/outer/10-report.png",
+          "sha256": "cdcc908b543185065fe8ff05e1b13af105de3caabb0c1da35299d2a28bd7aea0"
+        }
+      ],
+      "proof": "build/asc-duo-zh-Hans.jpg"
+    },
+    "zh-Hant": {
+      "locale": "zh-Hant",
+      "count": 10,
+      "partialTranslationDisclosure": true,
+      "verifiedAt": "2026-11-01T17:30:52.710Z",
+      "files": [
+        {
+          "file": "zh-Hant/outer/01-home.png",
+          "sha256": "461e33ec7f8a55fe3b183360c9d9d8586d020738e2b27d0228bfe3aabf5112d9"
+        },
+        {
+          "file": "zh-Hant/outer/02-checkout.png",
+          "sha256": "50a876bebe817176a9eff32b152cfba3d74a4687da5d26ce9f492dd3de853709"
+        },
+        {
+          "file": "zh-Hant/outer/03-walkthrough.png",
+          "sha256": "8ac858bcb16e10708f86306ca10d9a88574191a23941f488cfc2ea373749c80b"
+        },
+        {
+          "file": "zh-Hant/outer/04-evidence.png",
+          "sha256": "52f6c8e524bf21c14a6b9426cdaf6a77c584f9765e131e0b0698816aef2591bf"
+        },
+        {
+          "file": "zh-Hant/outer/05-notes.png",
+          "sha256": "22cb7dd95201900d451d8f520e6d8cae4a9d42f62db3704616bd61f4b83e5dd2"
+        },
+        {
+          "file": "zh-Hant/outer/06-meters.png",
+          "sha256": "f7aafe37c18c4d3db4699bf012d7cd7389e6f568626feec59af2fe01c4e11602"
+        },
+        {
+          "file": "zh-Hant/outer/07-keys.png",
+          "sha256": "a0e74885c693b4176414b10788995e342e679eae248676b2816321c3d2cd478b"
+        },
+        {
+          "file": "zh-Hant/outer/08-documents.png",
+          "sha256": "2807db95c08283c225b2915949be6f9861ac103104baf3b49eff1da66a4c2b14"
+        },
+        {
+          "file": "zh-Hant/outer/09-pair.png",
+          "sha256": "1eb0d5d01d76ea6ab2d4ac297306bb4435eb6c757c13693c809b1bbf9cef0f4d"
+        },
+        {
+          "file": "zh-Hant/outer/10-report.png",
+          "sha256": "a0dc0ec15d85c0b9128ef0a177fc6259c02fdba949dc883cf68dece60563d7a0"
+        }
+      ],
+      "proof": "build/asc-duo-zh-Hant.jpg"
+    },
+    "tr": {
+      "locale": "tr",
+      "count": 10,
+      "partialTranslationDisclosure": true,
+      "verifiedAt": "2026-11-01T17:32:07.188Z",
+      "files": [
+        {
+          "file": "tr/outer/01-home.png",
+          "sha256": "ad5b002945b7b767723f48266b26690333f947b6bcb9aa78d21ee7cfca3f7ec4"
+        },
+        {
+          "file": "tr/outer/02-checkout.png",
+          "sha256": "b27d4c2a6e3de98206102a7757db7d1f294b17cce0089f3e8e668f61b1b04f3d"
+        },
+        {
+          "file": "tr/outer/03-walkthrough.png",
+          "sha256": "92fb3547c188921cb995158b5c245a7c051f8d2d6fda0657ac32d183c7b52d40"
+        },
+        {
+          "file": "tr/outer/04-evidence.png",
+          "sha256": "e67272aa2140d549eba28aa30b95d20a26e7504e20f3a42fcfc725165ea46508"
+        },
+        {
+          "file": "tr/outer/05-notes.png",
+          "sha256": "84064163133fbcecb940ac844cd99bc6cb376e4a735b6c3126f9c9952096f3a9"
+        },
+        {
+          "file": "tr/outer/06-meters.png",
+          "sha256": "21dba2b23df68092229a8146ef0eb8f1c2020e71f3eaac63f8ddfbddf0f9c840"
+        },
+        {
+          "file": "tr/outer/07-keys.png",
+          "sha256": "2e5bd4a6e9c71615f6e53665801732b5241016635ac422c6310d122af4ba776f"
+        },
+        {
+          "file": "tr/outer/08-documents.png",
+          "sha256": "445f0464410dd4ac97057990b8eeaeb555e70e8fa7ee385c662a355158b6dd7f"
+        },
+        {
+          "file": "tr/outer/09-pair.png",
+          "sha256": "e459e8f4e6b9173216a5a862a1334402f388c5dc2ede1b8dfa0cf93df758cbb3"
+        },
+        {
+          "file": "tr/outer/10-report.png",
+          "sha256": "5a0401c4b09eaf7236fedfabbc54b41bb6f1f7029ea45971b9da93ec7be8a73c"
+        }
+      ],
+      "proof": "build/asc-duo-tr.jpg"
+    },
+    "id": {
+      "locale": "id",
+      "count": 10,
+      "partialTranslationDisclosure": true,
+      "verifiedAt": "2026-11-01T17:33:28.840Z",
+      "files": [
+        {
+          "file": "id/outer/01-home.png",
+          "sha256": "3748e12789bcf6a70accd342d92be66a3644204bcc1b1261c64b9ba3c5d17d7b"
+        },
+        {
+          "file": "id/outer/02-checkout.png",
+          "sha256": "6df80522e2f9ae0f0d3525e177b0278b3c5fbdf54b1be761ea5b7184225ed042"
+        },
+        {
+          "file": "id/outer/03-walkthrough.png",
+          "sha256": "1fe18a31076b0a092f99fedfbde8cdb3accf6d5295781bf28be611c49ee11815"
+        },
+        {
+          "file": "id/outer/04-evidence.png",
+          "sha256": "71a9ac17aaf4226034abf893a51d91c7c98cc2f36e0efaa84e18a683b0f4e31c"
+        },
+        {
+          "file": "id/outer/05-notes.png",
+          "sha256": "0a2256e51c9b7b316ccc5a45cbb72c39f9f12412a1848ca298866457adae2127"
+        },
+        {
+          "file": "id/outer/06-meters.png",
+          "sha256": "e0951d4732c2702492964d9381969cb82f3275ad6137d13e6ed23662b5f72b3e"
+        },
+        {
+          "file": "id/outer/07-keys.png",
+          "sha256": "0e4ff8c19c2582ea03a70e275e4977123c2241b495a6370d796c7d92265fe0b6"
+        },
+        {
+          "file": "id/outer/08-documents.png",
+          "sha256": "5731ef64782f1cdbd340ba2ab4e7aa5322c5e0346e91089a8e0288a9af8ab1fe"
+        },
+        {
+          "file": "id/outer/09-pair.png",
+          "sha256": "7ce5a88acd14b5bc806276a98677bf8c8cfc2001380d8ad49639c1479fc30f95"
+        },
+        {
+          "file": "id/outer/10-report.png",
+          "sha256": "078cf178c1deee35ba2d9db006dd4bd5560ba915291e2a07c342bf71127b206b"
+        }
+      ],
+      "proof": "build/asc-duo-id.jpg"
+    },
+    "sv": {
+      "locale": "sv",
+      "count": 10,
+      "partialTranslationDisclosure": true,
+      "verifiedAt": "2026-11-01T17:34:51.243Z",
+      "files": [
+        {
+          "file": "sv/outer/01-home.png",
+          "sha256": "efcaa485967b63138d4b04510025b72f0f84859acc7129f357bddcc6fe5b0530"
+        },
+        {
+          "file": "sv/outer/02-checkout.png",
+          "sha256": "00ea3c5e8cdf5d01c5b0804d83aa1c4fdf17d48b330f0d2c4cc0b2d27483c00b"
+        },
+        {
+          "file": "sv/outer/03-walkthrough.png",
+          "sha256": "5892d72196a3efe80c38bdc46b6e463604cebf2df0a1f1dbf9c98afa5a1a61b8"
+        },
+        {
+          "file": "sv/outer/04-evidence.png",
+          "sha256": "050856248aecb48c104c5b1f790e4dbfadca71b4f9f3cb7bc11989c18ee42da3"
+        },
+        {
+          "file": "sv/outer/05-notes.png",
+          "sha256": "c58ed13998457192e5c346c855b645631a70c40c59167fb1628f560036153bb2"
+        },
+        {
+          "file": "sv/outer/06-meters.png",
+          "sha256": "9fe065309edb6d38d7b7fa5acbc1b6f168729a89a8a9d76f793895af5694e629"
+        },
+        {
+          "file": "sv/outer/07-keys.png",
+          "sha256": "c28944f945fa85e9e510bf5ee553469601dcae45897c5e847b84dd2c9f332c85"
+        },
+        {
+          "file": "sv/outer/08-documents.png",
+          "sha256": "9029ab5582524c482835def123da4c9a6195d2013822815bcf66326ab8d0111b"
+        },
+        {
+          "file": "sv/outer/09-pair.png",
+          "sha256": "7b8c86a48481f42b38376fa8480be798ec19462214671bffb509fcc1fb2dc006"
+        },
+        {
+          "file": "sv/outer/10-report.png",
+          "sha256": "5d9d83b3c892644b461af636b51d16a04739a001025b4d77b77ee15113794a5b"
+        }
+      ],
+      "proof": "build/asc-duo-sv.jpg"
+    }
+  },
+  "submissionStatus": "Waiting for Review",
+  "submittedAt": "2026-11-01T19:51:00Z",
+  "submissionID": "6f230d74-12ae-41bf-87c0-87f0434e9c96"
+}

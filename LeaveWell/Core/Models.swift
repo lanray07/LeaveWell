@@ -152,6 +152,7 @@ public enum MovePlan {
 }
 
 public struct MoveCase: Codable, Identifiable, Equatable, Sendable {
+    public var isPracticeRecord: Bool?
     public var id = UUID()
     public var nickname = ""
     public var address = ""
@@ -175,6 +176,8 @@ public struct MoveCase: Codable, Identifiable, Equatable, Sendable {
     public var accessItems: [AccessItem] = []
     public var activities: [Activity] = []
     public var completedTasks: Set<String> = []
+    // Optional so records written before the checkout workspace remain readable.
+    public var checkout: CheckoutSession?
     public let createdAt: Date
     public var updatedAt: Date
     public init(now: Date = Date()) { createdAt = now; updatedAt = now }

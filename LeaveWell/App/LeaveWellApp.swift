@@ -7,7 +7,6 @@ struct LeaveWellApp: App {
     @State private var lock = AppLock()
     @State private var purchases = PurchaseService()
     @Environment(\.scenePhase) private var scenePhase
-    @AppStorage("onboardingComplete") private var onboardingComplete = false
     @AppStorage("appLockEnabled") private var appLockEnabled = false
     var body: some Scene {
         WindowGroup {
@@ -20,7 +19,7 @@ struct LeaveWellApp: App {
                                 Button(L("Retry")) { Task { await store.load() } }
                             } else { ProgressView(L("Opening your records…")) }
                         }
-                    } else { appContent(store: store).environment(store) }
+                    } else { appContent.environment(store) }
                 } else if let startupError {
                     ContentUnavailableView(L("Unable to open LeaveWell"), systemImage: "exclamationmark.triangle", description: Text(startupError))
                 } else { ProgressView() }
@@ -61,16 +60,14 @@ struct LeaveWellApp: App {
             .onChange(of: lock.unlocked) { _, _ in lock.updateShield(enabled: appLockEnabled, active: scenePhase == .active) }
         }
     }
-    @ViewBuilder private func appContent(store: CaseStore) -> some View {
+    @ViewBuilder private var appContent: some View {
         #if DEBUG
         if let index = ProcessInfo.processInfo.arguments.firstIndex(of: "-marketing-route"),
            ProcessInfo.processInfo.arguments.indices.contains(index + 1) {
             MarketingCapture(route: ProcessInfo.processInfo.arguments[index + 1])
-        } else if !onboardingComplete { OnboardingView { onboardingComplete = true } }
-        else { HomeView() }
+        } else { HomeView() }
         #else
-        if !onboardingComplete { OnboardingView { onboardingComplete = true } }
-        else { HomeView() }
+        HomeView()
         #endif
     }
 }

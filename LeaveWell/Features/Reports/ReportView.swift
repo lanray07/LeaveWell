@@ -25,6 +25,14 @@ struct ReportView: View {
                     Toggle(L("Include deposit details"), isOn: $options.includeDepositDetails)
                     Text(L("The property address, tenant name and contributor names appear in the report. Imported documents may contain private information.")).font(.footnote)
                 }
+                if record.checkout != nil {
+                    Section(L("Checkout evidence package")) {
+                        Label(record.checkoutReviewIsCurrent ? L("Review matches current records") : L("Review needed for current records"), systemImage: "list.bullet.clipboard")
+                        Text(L("Outstanding areas") + ": \(record.checkoutGaps.count)")
+                        NavigationLink(L("Inspect final handover review")) { HandoverReviewView(caseID: caseID) }
+                        Text(L("Unfinished checks are shown in the PDF. Comparisons and fixture observations linked to excluded evidence are omitted. Check inclusion before sharing.")).font(.footnote)
+                    }
+                }
                 Section(L("Declaration")) {
                     Text(L("To the best of my knowledge, this record reflects the property and information I documented at the stated dates and times."))
                     Toggle(L("Include my declaration"), isOn: $options.declarationAccepted)
@@ -59,5 +67,6 @@ struct ReportView: View {
             .onChange(of: options.includeContactDetails) { _, _ in url = nil }
             .onChange(of: options.includeDepositDetails) { _, _ in url = nil }
             .onChange(of: options.declarationAccepted) { _, _ in url = nil }
+            .onChange(of: store.record(caseID)) { _, _ in url = nil }
     }
 }

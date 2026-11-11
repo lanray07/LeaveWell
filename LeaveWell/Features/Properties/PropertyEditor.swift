@@ -10,7 +10,9 @@ struct PropertyEditor: View {
     @State private var error: String?
     @State private var busy = false
     private let editing: Bool
-    init(record: MoveCase? = nil) {
+    private let onCreated: ((UUID) -> Void)?
+    init(record: MoveCase? = nil, onCreated: ((UUID) -> Void)? = nil) {
+        self.onCreated = onCreated
         _draft = State(initialValue: record ?? MoveCase())
         _selectedRooms = State(initialValue: record == nil ? Set(["Kitchen", "Bedroom", "Bathroom", "Living room"]) : [])
         _checkoutEnabled = State(initialValue: record?.checkoutAt != nil)
@@ -82,8 +84,10 @@ struct PropertyEditor: View {
                     let rooms = current.rooms + draft.rooms.filter { new in !current.rooms.contains { $0.id == new.id } }
                     let evidence = current.evidence; let meters = current.meters; let keys = current.accessItems
                     let activities = current.activities; let tasks = current.completedTasks
+                    let checkout = current.checkout
                     current = draft; current.rooms = rooms; current.evidence = evidence; current.meters = meters
                     current.accessItems = keys; current.activities = activities; current.completedTasks = tasks
+                    current.checkout = checkout
                 }
             } else {
                 draft.rooms.insert(contentsOf: RoomGuide.categories.filter { selectedRooms.contains($0) }.map { Room(name: L($0), category: $0) }, at: 0)
@@ -92,7 +96,11 @@ struct PropertyEditor: View {
             }
             Task {
                 defer { busy = false }
-                do { try await ReminderService.refreshIfScheduled(draft); dismiss() }
+                do {
+                    try await ReminderService.refreshIfScheduled(draft)
+                    if !editing { onCreated?(draft.id) }
+                    dismiss()
+                }
                 catch { self.error = error.localizedDescription }
             }
         } catch { busy = false; self.error = error.localizedDescription }
