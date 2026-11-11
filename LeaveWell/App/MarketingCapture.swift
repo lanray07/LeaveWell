@@ -72,11 +72,13 @@ struct MarketingCapture: View {
         demo.evidence.append(Evidence(roomID: living.id, kind: .note, label: L("Living room · final check"), notes: L("Belongings removed. Windows closed. Radiator and sockets checked. Demo record."), contributor: demo.tenant, now: date.addingTimeInterval(240)))
         for (label, text) in [("Move-in inventory · Demo", "Fictional inventory: kitchen worktop edge has a small chip beside the sink."), ("Cleaning receipt · Demo", "Fictional cleaning receipt for screenshot demonstration only."), ("Checkout confirmation · Demo", "Fictional correspondence: checkout appointment confirmed for 24 October.")] {
             let localizedLabel = L(label); let localizedText = L(text)
-            let renderer = UIGraphicsPDFRenderer(bounds: CGRect(x: 0, y: 0, width: 595, height: 842))
+            let isInventory = label == "Move-in inventory · Demo"
+            let pageHeight: CGFloat = isInventory ? 290 : 842
+            let renderer = UIGraphicsPDFRenderer(bounds: CGRect(x: 0, y: 0, width: 595, height: pageHeight))
             let data = renderer.pdfData { context in
                 context.beginPage()
                 (localizedLabel as NSString).draw(in: CGRect(x: 40, y: 40, width: 515, height: 80), withAttributes: [.font: UIFont.boldSystemFont(ofSize: 24)])
-                (localizedText as NSString).draw(in: CGRect(x: 40, y: 140, width: 515, height: 250), withAttributes: [.font: UIFont.systemFont(ofSize: 16)])
+                (localizedText as NSString).draw(in: CGRect(x: 40, y: isInventory ? 108 : 140, width: 515, height: isInventory ? 140 : 250), withAttributes: [.font: UIFont.systemFont(ofSize: isInventory ? 21 : 16)])
             }
             let file = try await store.vault.store(data, name: localizedLabel + ".pdf", origin: .imported, capturedAt: nil)
             demo.evidence.append(Evidence(kind: .document, label: localizedLabel, notes: L("Fictional sample document."), original: file, contributor: demo.tenant, now: date.addingTimeInterval(-86400)))
