@@ -63,9 +63,13 @@ actor InventoryReader {
         }
         try Task.checkCancellation()
         var seen = Set<String>()
-        let suggestions = lines.lazy.map { String($0.trimmingCharacters(in: .whitespacesAndNewlines).prefix(1000)) }
-            .filter { !$0.isEmpty && seen.insert($0).inserted }
-        return InventoryPage(preview: preview, suggestions: Array(suggestions.prefix(60)))
+        var suggestions: [String] = []
+        for line in lines {
+            let trimmed = String(line.trimmingCharacters(in: .whitespacesAndNewlines).prefix(1000))
+            if !trimmed.isEmpty && seen.insert(trimmed).inserted { suggestions.append(trimmed) }
+            if suggestions.count == 60 { break }
+        }
+        return InventoryPage(preview: preview, suggestions: suggestions)
     }
 }
 

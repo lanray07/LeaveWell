@@ -36,6 +36,28 @@ final class ReportTests: XCTestCase {
         try FileManager.default.createDirectory(at: out, withIntermediateDirectories: true)
         try Data(contentsOf: first).write(to: out.appendingPathComponent("LeaveWell-checkout-package.pdf"))
     }
+    func testInventoryReportOmitsObservationWhenOriginalIsExcluded() async throws {
+        let root = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: root) }
+        let store = try CaseStore(root: root)
+        let sampleID = try await store.practiceInventory()
+        var record = try XCTUnwrap(store.record(sampleID))
+        let source = try XCTUnwrap(record.evidence.first)
+        let room = try XCTUnwrap(record.rooms.first)
+        var check = InventoryCheck(sourceID: source.id, page: 1, roomID: room.id, sourceText: "Marks beside sink")
+        check.state = .checked
+        check.observation = "Distinct tenant observation marker"
+        record.checkout?.inventoryChecks = [check]
+        let first = try await ReportService().generate(record: record, options: ReportOptions(), vault: store.vault)
+        defer { try? FileManager.default.removeItem(at: first.deletingLastPathComponent()) }
+        let text = try XCTUnwrap(PDFDocument(url: first)?.string)
+        XCTAssertTrue(text.contains(check.observation))
+        XCTAssertTrue(text.contains("Page 1"))
+        record.evidence[0].includedInReport = false
+        let second = try await ReportService().generate(record: record, options: ReportOptions(), vault: store.vault)
+        defer { try? FileManager.default.removeItem(at: second.deletingLastPathComponent()) }
+        XCTAssertFalse(try XCTUnwrap(PDFDocument(url: second)?.string).contains(check.observation))
+    }
     func testImportedGIFIsEmbeddedAsAnImage() async throws {
         let root = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: root) }
