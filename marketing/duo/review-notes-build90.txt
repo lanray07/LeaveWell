@@ -1,0 +1,15 @@
+LeaveWell 1.0 (90) introduces inventory-led checkout in response to guideline 4.3(b). Renters can turn a move-in inventory they already received into room checks for handover. Each confirmed entry keeps its original file and page reference alongside the renter's checkout observation and selected evidence.
+
+Reviewer walkthrough
+1. On the opening screen, tap Try a fictional inventory. This opens a separate practice record. A LeaveWell account is unnecessary.
+2. Select a suggested inventory line, confirm it against the original PDF page, assign it to Kitchen, and save a checkout check. Users can correct the suggested text before saving. The app also accepts a scanned PDF or image and can extract text on device.
+3. Open the saved check. Compare the source page and confirmed text with the current condition. Choose a checkout status, enter an observation, and save it. On a wide iPad layout, the source and editor appear side by side.
+4. Open the checkout workspace, then Review handover & prepare report. The review identifies outstanding checks. From Prepare handover evidence package, active LeaveWell Plus users can generate a PDF that includes eligible linked observations and source references. The export respects the user's inclusion choices.
+
+Purchases
+LeaveWell Plus Monthly (com.LeaveWell.app.plus.monthly) and Annual (com.LeaveWell.app.plus.annual) unlock PDF evidence report creation while active. StoreKit supplies prices. Open Settings and select LeaveWell Plus to access the plans or manage an existing subscription and use Restore purchases.
+
+Verification as of 11 November 2026
+On an iPad running iPadOS 26.7.1, the owner tested TestFlight build 90 with the existing Apple Account. Touch ID unlocked the saved records. The fictional inventory opened and showed extracted text. A saved checkout observation appeared in the queue and in the generated PDF. Restore Purchases confirmed that the existing verified Plus entitlement was active. The device already had that entitlement, so this session did not exercise recovery through Apple account sync. The prior build returned an Apple sync error during that separate recovery scenario. The release CI passed the automated StoreKit restore and lifecycle cases.
+
+The app keeps records locally. The practice record and screenshots use fictional content. The updated inventory screens use English fallback where translated text is unavailable.
