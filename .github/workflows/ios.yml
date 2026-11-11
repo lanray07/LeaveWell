@@ -2,6 +2,10 @@ name: Native localized iPhone Duo screenshots
 on:
   workflow_dispatch:
     inputs:
+      only_locale:
+        description: Render a single Duo locale (leave blank to render all)
+        type: string
+        default: ''
       required_sizes:
         description: Capture the primary iPhone and iPad galleries
         type: boolean
@@ -49,7 +53,7 @@ jobs:
       fail-fast: false
       max-parallel: 4
       matrix:
-        locale: [en-GB, fr, es, de, it, pt-BR, nl, pl, ar, hi, ja, ko, zh-Hans, zh-Hant, tr, id, sv]
+        locale: ${{ inputs.only_locale != '' && fromJSON(format('[{0}]', toJSON(inputs.only_locale))) || fromJSON('["en-GB","fr","es","de","it","pt-BR","nl","pl","ar","hi","ja","ko","zh-Hans","zh-Hant","tr","id","sv"]') }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
@@ -57,12 +61,13 @@ jobs:
           name: DuoCaptureApp
           path: build
       - name: Capture the actual localized app
+        env:
+          CAPTURE_LOCALE: ${{ matrix.locale }}
         run: |
           ditto -x -k build/DuoCaptureApp.zip build
           chmod +x build/audit-native-capture
-          python3 scripts/capture_duo.py --locale '${{ matrix.locale }}'
+          python3 scripts/capture_duo.py --locale "$CAPTURE_LOCALE"
       - uses: actions/upload-artifact@v4
-        if: always()
         with:
           name: Duo-${{ matrix.locale }}
           path: build/DuoRaw

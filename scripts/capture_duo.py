@@ -95,8 +95,15 @@ def main():
         run('xcrun', 'simctl', 'terminate', udid, 'com.leavewell.app', check=False)
         marker = container / ('Documents/MarketingReady-' + route)
         marker.unlink(missing_ok=True)
-        run('xcrun', 'simctl', 'launch', udid, 'com.leavewell.app', '-marketing-route', route,
-            '-AppleLanguages', '("' + locale + '")', '-AppleLocale', REGIONS[locale])
+        launch = ('xcrun', 'simctl', 'launch', udid, 'com.leavewell.app', '-marketing-route', route,
+                  '-AppleLanguages', '("' + locale + '")', '-AppleLocale', REGIONS[locale])
+        try:
+            run(*launch)
+        except subprocess.CalledProcessError as error:
+            if error.returncode != -6 or 'Invalid parameter not satisfying: devicePair' not in error.stderr:
+                raise
+            # A transient CoreSimulator pairing notification can abort simctl before launch.
+            run(*launch)
         for attempt in range(90):
             if marker.exists():
                 break

@@ -17,15 +17,18 @@ def gh(*args):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--run', required=True, type=int)
+    parser.add_argument('--retry-run', type=int, action='append', default=[], help='Use replacement locale artifacts from these runs')
     parser.add_argument('--available', action='store_true', help='Collect finished locales while other jobs run')
     parser.add_argument('--dest', type=Path, default=ROOT / 'marketing/duo/captures')
     options = parser.parse_args()
     assert options.run > 0
     repo = 'lanray07/LeaveWell'
-    response = json.loads(gh('api', f'repos/{repo}/actions/runs/{options.run}/artifacts?per_page=100'))
-    artifacts = {a['name']: a for a in response['artifacts'] if not a['expired']}
+    artifacts = {}
+    for run_id in (options.run, *options.retry_run):
+        response = json.loads(gh('api', f'repos/{repo}/actions/runs/{run_id}/artifacts?per_page=100'))
+        artifacts.update({a['name']: run_id for a in response['artifacts'] if not a['expired']})
     dest = options.dest
-    downloads = ROOT / 'build/duo-downloads' / str(options.run)
+    downloads = ROOT / 'build/duo-downloads'
     rows = []
     sources = {}
     missing = []
@@ -34,14 +37,16 @@ def main():
         if name not in artifacts:
             missing.append(locale)
             continue
-        folder = downloads / name
+        artifact_run = artifacts[name]
+        folder = downloads / str(artifact_run) / name
         if not (folder / 'manifest.json').exists():
             folder.mkdir(parents=True, exist_ok=True)
-            gh('run', 'download', str(options.run), '--repo', repo, '--name', name, '--dir', str(folder))
+            gh('run', 'download', str(artifact_run), '--repo', repo, '--name', name, '--dir', str(folder))
         manifest = json.loads((folder / 'manifest.json').read_text(encoding='utf-8'))
         captures = manifest['captures']
         assert len(captures) == 10 and {c['route'] for c in captures} == set(COPY['routes']), locale
         sources[locale] = {key: manifest[key] for key in ['sourceCommit', 'sourceSDK']}
+        sources[locale]['run'] = artifact_run
         for record in captures:
             assert record['locale'] == record['bundleLocale'] == locale, record
             assert record['family'] == 'outer'
