@@ -34,4 +34,17 @@ The proposed differentiator is this continuous workflow from a renter's existing
 - Build 83 verified an active Plus entitlement and generated a PDF on the owner iPad. Account sync with no active entitlement returned an error. Keep that distinction in payment QA and retest the missing-entitlement recovery path separately.
 - Capture the updated flow from the release candidate, then write reviewer steps that begin with the fictional sample and show the source-to-report path. Check localized UI, screenshots, and store claims against what that candidate actually contains.
 
-The next submission should contain the implemented journey and evidence from the tested build. The product proposal has not yet been implemented or validated.
+## Implementation checkpoint
+
+The inventory flow is implemented at commit `858c4ba`. Home offers inventory, manual setup, and a separate fictional practice record. Inventory import accepts PDFs and images. PDF extraction and Vision OCR offer editable lines for confirmation. Checks retain a source file, page, room, observation, and any linked checkout evidence. Pending or broken links are visible in handover review. Export applies source and attachment inclusion settings before it writes the linked observation.
+
+The English source catalog and existing localized strings passed validation. New strings use English fallback in the other bundled languages until reviewed translations are available. No change to StoreKit restore logic is included in this build.
+
+### TestFlight session
+
+1. Start with **Try a fictional inventory**. Choose a suggested line, confirm the source against the page, assign it to Kitchen, and save. Open the check, mark it checked, and add an observation.
+2. Repeat with a text PDF and an image-only PDF on a separate property. Import a duplicate and check that it reopens the same source. On iPad, check that the source page and editor appear together. On iPhone, check that the workflow works with larger text and VoiceOver.
+3. Mark one entry **Could not verify** with a reason. Open handover review and make sure pending entries remain visible. Generate a PDF with the source selected, then exclude the source and regenerate. Check that its linked observation disappears.
+4. Reopen the app and confirm that the fictional case stays separate, the real record remains accessible, and observations retain the right source and page. Test purchase recovery separately using the existing Apple Account.
+
+The next App Review submission needs results from these device and renter sessions and storefront assets captured from the tested candidate.
