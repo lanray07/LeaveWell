@@ -117,6 +117,22 @@ final class ReportService: ReportGenerating {
             review.append(.text(L("The PDF contains only selected evidence. A current case review does not mean every source record is included in this export.")))
             result.append(SectionRecord(title: L("Handover review checkpoint"), blocks: review))
             let selectedIDs = Set(evidence.map(\.id))
+            let checks = (session.inventoryChecks ?? []).filter { record.inventoryCheckCanExport($0, selectedIDs: selectedIDs) }
+            if !checks.isEmpty {
+                let title = L("Source-linked inventory checks")
+                var blocks: [Block] = [.title(title)]
+                for check in checks {
+                    guard let source = evidence.first(where: { $0.id == check.sourceID }),
+                          let room = record.rooms.first(where: { $0.id == check.roomID }) else { continue }
+                    blocks += [.text(room.name + " · " + L(check.state.title)),
+                               .text(source.label + " · " + L("Page") + " " + check.page.formatted() + " · " + source.reference),
+                               .text(check.sourceText), .text(check.observation)]
+                    for id in check.evidenceIDs {
+                        if let linked = evidence.first(where: { $0.id == id }) { blocks.append(.text(linked.reference)) }
+                    }
+                }
+                result.append(SectionRecord(title: title, blocks: blocks))
+            }
             var pairs: [Block] = [.title(L("Linked move-in and move-out comparisons"))]
             for pair in session.comparisons where pair.includedInReport && record.validComparison(pair) && selectedIDs.contains(pair.beforeID) && selectedIDs.contains(pair.afterID) {
                 pairs += [.text(L("Move-in") + ": EV-" + pair.beforeID.uuidString), .text(L("Move-out") + ": EV-" + pair.afterID.uuidString), .text(pair.observation)]

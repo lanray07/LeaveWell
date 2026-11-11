@@ -605,6 +605,17 @@
         }
       }
     },
+    "Add a room in property details before confirming checks.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add a room in property details before confirming checks."
+          }
+        }
+      }
+    },
     "Add a room note": {
       "extractionState": "manual",
       "localizations": {
@@ -734,6 +745,17 @@
         }
       }
     },
+    "Add an observation or a reason before finishing this check.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add an observation or a reason before finishing this check."
+          }
+        }
+      }
+    },
     "Add another property": {
       "extractionState": "manual",
       "localizations": {
@@ -848,6 +870,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Add any proposed deductions"
+          }
+        }
+      }
+    },
+    "Add checkout check": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add checkout check"
           }
         }
       }
@@ -1257,6 +1290,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Added by"
+          }
+        }
+      }
+    },
+    "Added to the room checks": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Added to the room checks"
           }
         }
       }
@@ -1924,6 +1968,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ask LeaveWell"
+          }
+        }
+      }
+    },
+    "Awaiting checkout check": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Awaiting checkout check"
           }
         }
       }
@@ -2672,6 +2727,17 @@
         }
       }
     },
+    "Check the original record against what you find today": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the original record against what you find today"
+          }
+        }
+      }
+    },
     "Check unresolved repairs": {
       "extractionState": "manual",
       "localizations": {
@@ -2679,6 +2745,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Check unresolved repairs"
+          }
+        }
+      }
+    },
+    "Checked at move-out": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checked at move-out"
           }
         }
       }
@@ -3070,6 +3147,17 @@
         }
       }
     },
+    "Checkout observation": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checkout observation"
+          }
+        }
+      }
+    },
     "Checkout started": {
       "extractionState": "manual",
       "localizations": {
@@ -3077,6 +3165,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Checkout started"
+          }
+        }
+      }
+    },
+    "Checkout status": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checkout status"
           }
         }
       }
@@ -3217,6 +3316,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Choose the evidence pair"
+          }
+        }
+      }
+    },
+    "Choose what to check, record what you find, and keep both sides together for handover.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose what to check, record what you find, and keep both sides together for handover."
           }
         }
       }
@@ -3379,6 +3489,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Compare move-in and move-out evidence"
+          }
+        }
+      }
+    },
+    "Compare the suggested text with the page. Correct it or type an entry yourself.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compare the suggested text with the page. Correct it or type an entry yourself."
           }
         }
       }
@@ -3567,6 +3688,17 @@
         }
       }
     },
+    "Confirm an inventory entry": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirm an inventory entry"
+          }
+        }
+      }
+    },
     "Confirm checkout arrangements": {
       "extractionState": "manual",
       "localizations": {
@@ -3618,6 +3750,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "Continue"
+          }
+        }
+      }
+    },
+    "Continue to checkout workspace": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continue to checkout workspace"
+          }
+        }
+      }
+    },
+    "Continue to the next check": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continue to the next check"
           }
         }
       }
@@ -3725,6 +3879,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "記錄者"
+          }
+        }
+      }
+    },
+    "Could not verify": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not verify"
           }
         }
       }
@@ -3876,6 +4041,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "建立時間"
+          }
+        }
+      }
+    },
+    "Cupboard: all handles present.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cupboard: all handles present."
           }
         }
       }
@@ -4557,6 +4733,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "文件庫"
+          }
+        }
+      }
+    },
+    "Done": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Done"
           }
         }
       }
@@ -5873,6 +6060,17 @@
         }
       }
     },
+    "Fictional practice inventory": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fictional practice inventory"
+          }
+        }
+      }
+    },
     "Fictional sample document.": {
       "extractionState": "manual",
       "localizations": {
@@ -5880,6 +6078,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Fictional sample document."
+          }
+        }
+      }
+    },
+    "Fictional test property": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fictional test property"
           }
         }
       }
@@ -7147,6 +7356,17 @@
         }
       }
     },
+    "Import inventory": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Import inventory"
+          }
+        }
+      }
+    },
     "Import inventory or inspect older comparison notes": {
       "extractionState": "manual",
       "localizations": {
@@ -8069,6 +8289,50 @@
         }
       }
     },
+    "Inventory check confirmed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inventory check confirmed"
+          }
+        }
+      }
+    },
+    "Inventory check removed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inventory check removed"
+          }
+        }
+      }
+    },
+    "Inventory imported": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inventory imported"
+          }
+        }
+      }
+    },
+    "Inventory observation saved": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inventory observation saved"
+          }
+        }
+      }
+    },
     "Inventory or photograph": {
       "extractionState": "manual",
       "localizations": {
@@ -8076,6 +8340,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Inventory or photograph"
+          }
+        }
+      }
+    },
+    "Inventory page image": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inventory page image"
           }
         }
       }
@@ -9958,6 +10233,39 @@
         }
       }
     },
+    "Move-in documents": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move-in documents"
+          }
+        }
+      }
+    },
+    "Move-in inventory": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move-in inventory"
+          }
+        }
+      }
+    },
+    "Move-in inventory checks": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move-in inventory checks"
+          }
+        }
+      }
+    },
     "Move-in inventory or photograph": {
       "extractionState": "manual",
       "localizations": {
@@ -11140,6 +11448,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "開啟原始檔"
+          }
+        }
+      }
+    },
+    "Opening inventory…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opening inventory…"
           }
         }
       }
@@ -13091,6 +13410,17 @@
         }
       }
     },
+    "Remove checkout check": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove checkout check"
+          }
+        }
+      }
+    },
     "Remove comparison": {
       "extractionState": "manual",
       "localizations": {
@@ -13109,6 +13439,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Remove missing evidence link"
+          }
+        }
+      }
+    },
+    "Remove missing evidence links": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove missing evidence links"
           }
         }
       }
@@ -13304,6 +13645,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Review handover details"
+          }
+        }
+      }
+    },
+    "Review inventory checks": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review inventory checks"
           }
         }
       }
@@ -13912,6 +14264,17 @@
         }
       }
     },
+    "Save checkout observation": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save checkout observation"
+          }
+        }
+      }
+    },
     "Save communications": {
       "extractionState": "manual",
       "localizations": {
@@ -14287,6 +14650,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Select a record"
+          }
+        }
+      }
+    },
+    "Select a room": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select a room"
           }
         }
       }
@@ -14700,6 +15074,17 @@
         }
       }
     },
+    "Sink: light scratches beside the drain.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sink: light scratches beside the drain."
+          }
+        }
+      }
+    },
     "Small chip at the front edge beside the sink. I noted it in the move-in inventory and photographed the same area before leaving. Demo record.": {
       "extractionState": "manual",
       "localizations": {
@@ -14818,6 +15203,17 @@
         }
       }
     },
+    "Some inventory entries need an observation or a source or evidence link restored.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Some inventory entries need an observation or a source or evidence link restored."
+          }
+        }
+      }
+    },
     "Something needs attention": {
       "extractionState": "manual",
       "localizations": {
@@ -14825,6 +15221,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "Something needs attention"
+          }
+        }
+      }
+    },
+    "Source unavailable": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Source unavailable"
+          }
+        }
+      }
+    },
+    "Source-linked inventory checks": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Source-linked inventory checks"
           }
         }
       }
@@ -14969,6 +15387,28 @@
         }
       }
     },
+    "Start from an inventory": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start from an inventory"
+          }
+        }
+      }
+    },
+    "Start with the inventory you received": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start with the inventory you received"
+          }
+        }
+      }
+    },
     "Start with the whole room": {
       "extractionState": "manual",
       "localizations": {
@@ -14976,6 +15416,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Start with the whole room"
+          }
+        }
+      }
+    },
+    "Start without an inventory": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start without an inventory"
           }
         }
       }
@@ -15108,6 +15559,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Terms of use"
+          }
+        }
+      }
+    },
+    "Text from the inventory": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Text from the inventory"
           }
         }
       }
@@ -15351,6 +15813,17 @@
         }
       }
     },
+    "This entry is already in the room checks.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This entry is already in the room checks."
+          }
+        }
+      }
+    },
     "This handover has happened": {
       "extractionState": "manual",
       "localizations": {
@@ -15358,6 +15831,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "This handover has happened"
+          }
+        }
+      }
+    },
+    "This inventory page could not be opened. Check the file and try again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This inventory page could not be opened. Check the file and try again."
           }
         }
       }
@@ -15564,6 +16048,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "Transcription timed out. Your recording is still available."
+          }
+        }
+      }
+    },
+    "Try a fictional inventory": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try a fictional inventory"
+          }
+        }
+      }
+    },
+    "Turn entries from your move-in inventory into checks for handover.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn entries from your move-in inventory into checks for handover."
           }
         }
       }
@@ -16411,6 +16917,17 @@
         }
       }
     },
+    "What did you see, or why could you not check?": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What did you see, or why could you not check?"
+          }
+        }
+      }
+    },
     "What does this record show?": {
       "extractionState": "manual",
       "localizations": {
@@ -17001,6 +17518,17 @@
         }
       }
     },
+    "Worktop: small mark near the window.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Worktop: small mark near the window."
+          }
+        }
+      }
+    },
     "Worktops": {
       "extractionState": "manual",
       "localizations": {
@@ -17332,6 +17860,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Your move-out record"
+          }
+        }
+      }
+    },
+    "Your move-out records": {
+      "extractionState": "manual",
+      "localizations": {
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your move-out records"
           }
         }
       }

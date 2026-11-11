@@ -152,6 +152,7 @@ public enum MovePlan {
 }
 
 public struct MoveCase: Codable, Identifiable, Equatable, Sendable {
+    public var isPracticeRecord: Bool?
     public var id = UUID()
     public var nickname = ""
     public var address = ""

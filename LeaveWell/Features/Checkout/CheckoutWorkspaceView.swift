@@ -32,6 +32,11 @@ struct CheckoutWorkspaceView: View {
                                 }
                             }
                         }
+                        NavigationLink { InventoryQueueView(caseID: caseID) } label: {
+                            FeatureRow(title: L("Move-in inventory checks"),
+                                       subtitle: L("Check the original record against what you find today"),
+                                       symbol: "doc.text.magnifyingglass")
+                        }.buttonStyle(.plain)
                         if record.checkout != nil {
                             Text(L("1 · Walk the property")).font(.title2.bold())
                             if record.rooms.isEmpty { Button(L("Add rooms in property details")) { editing = true } }

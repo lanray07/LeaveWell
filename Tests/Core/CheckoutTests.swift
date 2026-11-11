@@ -75,4 +75,33 @@ final class CheckoutTests: XCTestCase {
         XCTAssertTrue(record.checkoutGaps.contains { $0.area == .comparisons })
         XCTAssertEqual(record.checkout?.comparisons[0].observation, "Same mark visible")
     }
+    func testInventoryCheckPersistsAndRequiresSelectedSourceAndEvidenceForExport() throws {
+        var record = completeCase()
+        let room = record.rooms[0]
+        let original = OriginalFile(relativePath: "originals/inventory.pdf", originalName: "inventory.pdf",
+                                    sha256: "fixture", byteCount: 1, origin: .imported)
+        let source = Evidence(kind: .document, label: "Inventory", original: original)
+        let note = Evidence(roomID: room.id, kind: .note, label: "Window note")
+        record.evidence = [source, note]
+        var check = InventoryCheck(sourceID: source.id, page: 3, roomID: room.id, sourceText: "Window closes")
+        record.checkout?.inventoryChecks = [check]
+        XCTAssertTrue(record.checkoutGaps.contains { $0.area == .inventory })
+        check.state = .checked
+        check.observation = "Latch still closes"
+        check.evidenceIDs = [note.id]
+        record.checkout?.inventoryChecks = [check]
+        try record.finishCheckoutReview()
+        var archive = Archive()
+        archive.cases = [record]
+        var saved = try XCTUnwrap(ArchiveCodec.decode(ArchiveCodec.encode(archive)).cases.first)
+        let persisted = try XCTUnwrap(saved.checkout?.inventoryChecks?.first)
+        XCTAssertEqual(persisted, check)
+        XCTAssertTrue(saved.checkoutReviewIsCurrent)
+        XCTAssertTrue(saved.inventoryCheckCanExport(persisted, selectedIDs: [source.id, note.id]))
+        XCTAssertFalse(saved.inventoryCheckCanExport(persisted, selectedIDs: [note.id]))
+        XCTAssertFalse(saved.inventoryCheckCanExport(persisted, selectedIDs: [source.id]))
+        saved.evidence.removeAll { $0.id == source.id }
+        XCTAssertFalse(saved.checkoutReviewIsCurrent)
+        XCTAssertTrue(saved.checkoutGaps.contains { $0.area == .inventory })
+    }
 }

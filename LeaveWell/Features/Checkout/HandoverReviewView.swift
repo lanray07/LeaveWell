@@ -157,6 +157,7 @@ struct HandoverReviewView: View {
             else { CheckoutWorkspaceView(caseID: caseID) }
         case .meters, .keys: CheckoutRequirementsView(caseID: caseID)
         case .comparisons: ComparisonView(caseID: caseID)
+        case .inventory: InventoryQueueView(caseID: caseID)
         }
     }
 }

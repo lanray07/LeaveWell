@@ -46,10 +46,41 @@ public struct MeterRequirement: Codable, Equatable, Sendable, Identifiable {
     public init(type: String, exclusionReason: String = "") { self.type = type; self.exclusionReason = exclusionReason }
 }
 
+public enum InventoryCheckState: String, Codable, CaseIterable, Sendable {
+    case awaitingCheck, checked, cannotVerify
+
+    public var title: String {
+        switch self {
+        case .awaitingCheck: "Awaiting checkout check"
+        case .checked: "Checked at move-out"
+        case .cannotVerify: "Could not verify"
+        }
+    }
+}
+
+public struct InventoryCheck: Codable, Equatable, Sendable, Identifiable {
+    public var id = UUID()
+    public var sourceID: UUID
+    public var page: Int
+    public var roomID: UUID
+    public var sourceText: String
+    public var state: InventoryCheckState = .awaitingCheck
+    public var observation = ""
+    public var evidenceIDs: [UUID] = []
+
+    public init(sourceID: UUID, page: Int, roomID: UUID, sourceText: String) {
+        self.sourceID = sourceID
+        self.page = page
+        self.roomID = roomID
+        self.sourceText = sourceText
+    }
+}
+
 public struct CheckoutSession: Codable, Equatable, Sendable {
     public var startedAt: Date
     public var fixtures: [FixtureReview] = []
     public var comparisons: [EvidenceComparison] = []
+    public var inventoryChecks: [InventoryCheck]?
     public var meters = ["Electricity", "Gas", "Water"].map { MeterRequirement(type: $0) }
     public var accessInventoryChecked = false
     public var noAccessReason = ""
@@ -59,7 +90,7 @@ public struct CheckoutSession: Codable, Equatable, Sendable {
 }
 
 public struct CheckoutGap: Identifiable, Equatable, Sendable {
-    public enum Area: String, Sendable { case rooms, meters, keys, comparisons }
+    public enum Area: String, Sendable { case rooms, meters, keys, comparisons, inventory }
     public var id: String
     public var area: Area
     public var roomID: UUID?
@@ -87,6 +118,21 @@ extension MoveCase {
               let before = evidence.first(where: { $0.id == comparison.beforeID }),
               let after = evidence.first(where: { $0.id == comparison.afterID }) else { return false }
         return [.photo, .document].contains(before.kind) && after.kind == .photo
+    }
+    public func inventorySourceIsAvailable(_ check: InventoryCheck) -> Bool {
+        check.page > 0 && rooms.contains { $0.id == check.roomID } &&
+            evidence.contains { $0.id == check.sourceID && $0.kind == .document && $0.original != nil }
+    }
+    public func inventoryCheckIsResolved(_ check: InventoryCheck) -> Bool {
+        inventorySourceIsAvailable(check) && check.state != .awaitingCheck &&
+            !check.observation.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty &&
+            check.evidenceIDs.allSatisfy { id in
+                evidence.contains { $0.id == id && $0.roomID == check.roomID && [.photo, .audio, .note].contains($0.kind) }
+            }
+    }
+    public func inventoryCheckCanExport(_ check: InventoryCheck, selectedIDs: Set<UUID>) -> Bool {
+        inventoryCheckIsResolved(check) && selectedIDs.contains(check.sourceID) &&
+            Set(check.evidenceIDs).isSubset(of: selectedIDs)
     }
     public var checkoutGaps: [CheckoutGap] {
         var gaps: [CheckoutGap] = []
@@ -117,6 +163,10 @@ extension MoveCase {
         }
         for comparison in session.comparisons where !validComparison(comparison) {
             gaps.append(.init(id: comparison.id.uuidString, area: .comparisons, title: "Repair an evidence comparison", detail: "A linked record is missing or the observation is incomplete."))
+        }
+        if (session.inventoryChecks ?? []).contains(where: { !inventoryCheckIsResolved($0) }) {
+            gaps.append(.init(id: "inventory-checks", area: .inventory, title: "Review inventory checks",
+                              detail: "Some inventory entries need an observation or a source or evidence link restored."))
         }
         return gaps
     }
