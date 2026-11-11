@@ -1,6 +1,11 @@
 name: Native localized iPhone Duo screenshots
 on:
   workflow_dispatch:
+    inputs:
+      required_sizes:
+        description: Capture the primary iPhone and iPad galleries
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -30,6 +35,7 @@ jobs:
             build/duo-build.log
           retention-days: 7
   capture:
+    if: ${{ !inputs.required_sizes }}
     needs: app
     runs-on: xcode-27
     timeout-minutes: 20
@@ -55,6 +61,35 @@ jobs:
         if: always()
         with:
           name: Duo-${{ matrix.locale }}
+          path: build/DuoRaw
+          if-no-files-found: error
+          retention-days: 30
+
+  required:
+    if: inputs.required_sizes
+    needs: app
+    runs-on: xcode-27
+    timeout-minutes: 20
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+    strategy:
+      fail-fast: false
+      matrix:
+        family: [iphone, ipad]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: DuoCaptureApp
+          path: build
+      - name: Capture native primary gallery
+        run: |
+          ditto -x -k build/DuoCaptureApp.zip build
+          chmod +x build/audit-native-capture
+          python3 scripts/capture_duo.py --locale en-GB --family '${{ matrix.family }}'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Gallery-en-GB-${{ matrix.family }}
           path: build/DuoRaw
           if-no-files-found: error
           retention-days: 30

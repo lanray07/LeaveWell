@@ -29,6 +29,7 @@ def run(*args, check=True, timeout=180):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--locale', choices=COPY['locales'], required=True)
+    parser.add_argument('--family', choices=['outer', 'iphone', 'ipad'], default='outer')
     parser.add_argument('--app', type=Path, default=Path('build/LeaveWell.app'))
     parser.add_argument('--out', type=Path, default=Path('build/DuoRaw'))
     options = parser.parse_args()
@@ -40,23 +41,30 @@ def main():
     else:
         expected_kitchen = json.loads((ROOT / f'marketing/duo/translations/{locale}-values.json').read_text(encoding='utf-8'))[12]
     devices = json.loads(run('xcrun', 'simctl', 'list', 'devices', 'available', '-j'))['devices']
-    device = next(d for runtime, group in devices.items() if runtime.endswith('iOS-27-1')
-                  for d in group if d['name'] == 'iPhone Duo')
+    family = options.family
+    group = next(group for runtime, group in devices.items() if runtime.endswith('iOS-27-1'))
+    if family == 'outer':
+        device = next(d for d in group if d['name'] == 'iPhone Duo')
+    elif family == 'iphone':
+        device = next(d for d in group if d['name'] in ('iPhone 18 Pro', 'iPhone 17 Pro', 'iPhone 17'))
+    else:
+        device = next(d for d in group if 'iPad Pro 13' in d['name'])
     udid = device['udid']
     run('xcrun', 'simctl', 'boot', udid, check=False)
     run('xcrun', 'simctl', 'bootstatus', udid, '-b', timeout=600)
-    screens = run('xcrun', 'simctl', 'io', udid, 'enumerate')
-    screen_id = None
-    for block in re.split(r'(?=\(\d+\) [^\n]+:)', screens):
-        if 'Screen Type: Integrated' in block and 'Pixel Size: {1398, 2034}' in block:
-            screen_id = re.search(r'Screen ID: (\d+)', block)[1]
-    assert screen_id, 'No native Duo outer display found'
+    capture_display = []
+    if family == 'outer':
+        screens = run('xcrun', 'simctl', 'io', udid, 'enumerate')
+        for block in re.split(r'(?=\(\d+\) [^\n]+:)', screens):
+            if 'Screen Type: Integrated' in block and 'Pixel Size: {1398, 2034}' in block:
+                capture_display = ['--display=' + re.search(r'Screen ID: (\d+)', block)[1]]
+        assert capture_display, 'No native Duo outer display found'
     run('xcrun', 'simctl', 'ui', udid, 'appearance', 'light')
     run('xcrun', 'simctl', 'status_bar', udid, 'override', '--time', '9:41',
         '--batteryState', 'charged', '--batteryLevel', '100')
     run('xcrun', 'simctl', 'install', udid, str(options.app))
     container = Path(run('xcrun', 'simctl', 'get_app_container', udid, 'com.leavewell.app', 'data'))
-    destination = options.out / locale / 'outer'
+    destination = options.out / locale / family
     destination.mkdir(parents=True, exist_ok=True)
     captures = []
     for index, route in enumerate(COPY['routes'], 1):
@@ -76,10 +84,10 @@ def main():
         assert ready['sampleKitchen'] == expected_kitchen, ready
         time.sleep(3)
         path = destination / f'{index:02d}-{route}.png'
-        run('xcrun', 'simctl', 'io', udid, 'screenshot', '--display=' + screen_id, str(path))
-        run('build/audit-native-capture', str(path))
+        run('xcrun', 'simctl', 'io', udid, 'screenshot', *capture_display, str(path))
+        run('build/audit-native-capture', str(path), family)
         captures.append(dict(locale=locale, bundleLocale=ready['bundleLocale'],
-                             foundationLocale=ready['locale'], family='outer', route=route,
+                             foundationLocale=ready['locale'], family=family, route=route,
                              file=path.relative_to(options.out).as_posix(),
                              sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
         print('Captured and validated', locale, route, flush=True)

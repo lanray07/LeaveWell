@@ -2,12 +2,20 @@ import Foundation
 import ImageIO
 import CoreGraphics
 
-for path in CommandLine.arguments.dropFirst() {
+let arguments = Array(CommandLine.arguments.dropFirst())
+guard let path = arguments.first else { fatalError("A capture path is required") }
+let family = arguments.dropFirst().first ?? "outer"
+let accepted: [String: Set<String>] = [
+    "outer": ["1398x2034"],
+    "iphone": ["1179x2556", "1206x2622"],
+    "ipad": ["2064x2752", "2048x2732"]
+]
+do {
     let url = URL(fileURLWithPath: path)
     guard let source = CGImageSourceCreateWithURL(url as CFURL, nil),
           let image = CGImageSourceCreateImageAtIndex(source, 0, nil),
-          image.width == 1398, image.height == 2034 else {
-        fatalError("Wrong or unreadable native Duo outer capture: \(url.lastPathComponent)")
+          accepted[family]?.contains("\(image.width)x\(image.height)") == true else {
+        fatalError("Wrong or unreadable native screenshot: \(url.lastPathComponent)")
     }
     var pixels = [UInt8](repeating: 0, count: 32 * 32 * 4)
     let valid = pixels.withUnsafeMutableBytes { buffer -> Bool in
