@@ -39,7 +39,7 @@ def collect_primary(run):
             source = (destination / row["file"]).resolve()
             assert source.is_relative_to(destination.resolve())
             checked_image(source, row["sha256"], family)
-        subprocess.run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File",
+        subprocess.run(["pwsh", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File",
                         str(ROOT / "scripts/export_duo_screenshots.ps1"),
                         "-RawPath", str(destination), "-OutputPath", str(WORK / family / "exports"),
                         "-Families", family], check=True)
